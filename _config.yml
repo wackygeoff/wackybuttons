@@ -13,9 +13,9 @@ author :
   twitter : 
   web : 
 
-production_url : wackybuttons.com
+production_url : http://nicholasgunner.com/wackybuttons
 
-baseurl : http://wackybuttons.com/test/template/_site
+baseurl : http://nicholasgunner.com/wackybuttons
         
 analytics :
   google : 
