@@ -41,3 +41,11 @@ background-color: #ffffff;
 .nav p {
 text-align: center;
 }
+
+.nav img {
+opacity: 0.8;
+}
+
+.nav img:hover {
+opacity: 1;
+}
