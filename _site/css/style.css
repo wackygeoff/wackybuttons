@@ -1,5 +1,11 @@
 /********** TOP LEVEL **********/
 
+body {
+font-family:Century Gothic, Arial, Helvetica, Verdana, MS Serif, Serif;
+font-size:14px;
+line-height:16px;
+}
+
 p {
 font-family:Century Gothic, Arial, Helvetica, Verdana, MS Serif, Serif;
 font-size:14px;
