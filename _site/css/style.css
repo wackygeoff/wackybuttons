@@ -49,3 +49,8 @@ opacity: 0.8;
 .nav img:hover {
 opacity: 1;
 }
+
+/***** Buttons *****/
+.btn-wacky {
+background-color: #FD9A00;
+}
