@@ -44,7 +44,7 @@ background-color: #1094C4;
 background-color: #ffffff;
 }
 
-.nav p {
+.nav h4 {
 text-align: center;
 }
 
@@ -60,3 +60,5 @@ opacity: 1;
 .btn-wacky {
 background-color: #FD9A00;
 }
+
+/********** CUSTOM ELEMENTS **********/
