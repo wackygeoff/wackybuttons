@@ -90,3 +90,17 @@ background-color: #FD9A00;
 }
 
 /********** CUSTOM ELEMENTS **********/
+
+.wacky-footer {
+background-color: #FD9A00;
+padding-top: 50px;
+padding-bottom: 50px;
+}
+
+.social-icons {
+margin-top: 5px;
+}
+
+.footer-menu {
+margin-top: 5px;
+}
