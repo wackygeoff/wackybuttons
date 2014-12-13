@@ -104,3 +104,16 @@ margin-top: 5px;
 .footer-menu {
 margin-top: 5px;
 }
+
+/** wacky-products **/
+.wacky-products h4{
+text-align: center;
+}
+
+.wacky-products img {
+opacity: 0.8;
+}
+
+.wacky-products img:hover {
+opacity: 1;
+}
