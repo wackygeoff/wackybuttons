@@ -1,5 +1,4 @@
 /********** TOP LEVEL **********/
-
 body {
 font-family:Century Gothic, Arial, Helvetica, Verdana, MS Serif, Serif;
 font-size:14px;
@@ -13,6 +12,9 @@ line-height:16px;
 }
 
 
+
+
+
 /********** BOOTSTRAP OVERRIDES **********/
 
 /***** Buttons *****/
@@ -23,6 +25,37 @@ font-size: 14px;
 font-family: Century Gothic, Arial, Helvetica, Verdana, MS Serif, Serif;
 font-weight: bold;
 color: white;
+}
+
+/***** Carousel *****/
+.carousel {
+height: 400px;
+overflow: hidden;
+}
+
+.carousel-caption {
+top: 100px;
+}
+
+.carousel-caption h3 {
+font-weight: bold;
+}
+
+.carousel-caption-wacky {
+background-color: rgba(0, 0, 0, 0.4);
+padding: 1px 5px 10px 5px;
+border-radius: 20px;
+}
+
+/* Caeousel on small screens */
+@media (max-width: 768px) {
+	.carousel {
+	height: 200px;
+	}
+
+	.carousel-caption {
+	top: 20px;
+	}
 }
 
 /***** Dropdown menu *****/
@@ -74,37 +107,14 @@ opacity: 0.8;
 opacity: 1;
 }
 
-/***** Slider *****/
-.carousel {
-height: 400px;
-overflow: hidden;
-}
-
-.carousel-caption {
-top: 100px;
-}
-
-.carousel-caption-wacky {
-background-color: rgba(0, 0, 0, 0.4);
-padding: 1px 5px 10px 5px;
-border-radius: 500px;
-}
-
-/* Slider on small screens */
-@media (max-width: 768px) {
-	.carousel {
-	height: 200px;
-	}
-
-	.carousel-caption {
-	top: 20px;
-	}
-}
-
 /***** Thumbnails *****/
 .thumbnail {
 border-radius: 20px;
 }
+
+
+
+
 
 /********** CUSTOM ELEMENTS **********/
 
