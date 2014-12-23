@@ -35,6 +35,8 @@ background-color: #1094C4;
 .navbar-wacky {
 background-color: #1094C4;
 margin-bottom: 0px;
+border-radius: 0px;
+border: none;
 }
 
 .navbar-wacky-nav {
