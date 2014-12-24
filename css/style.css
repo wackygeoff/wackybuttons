@@ -139,10 +139,14 @@ text-align: center;
 
 .wacky-products img {
 opacity: 0.8;
+-webkit-filter: grayscale(1);
+filter: grayscale(1);
 }
 
 .wacky-products img:hover {
 opacity: 1;
+-webkit-filter: grayscale(0);
+filter: grayscale(0);
 }
 
 /***** Utilities *****/
