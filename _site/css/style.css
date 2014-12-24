@@ -11,6 +11,13 @@ font-size:14px;
 line-height:16px;
 }
 
+h4 {
+font-family:Century Gothic, Arial, Helvetica, Verdana, MS Serif, Serif;
+font-size: 16px;
+font-weight: bold;
+text-align: center;
+}
+
 
 
 
@@ -117,6 +124,12 @@ border-radius: 20px;
 
 
 /********** CUSTOM ELEMENTS **********/
+
+.icon {
+font-size: 80px;
+text-align: center;
+margin: 20px;
+}
 
 .wacky-footer {
 background-color: #FD9A00;
