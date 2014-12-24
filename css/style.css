@@ -144,3 +144,13 @@ opacity: 0.8;
 .wacky-products img:hover {
 opacity: 1;
 }
+
+/***** Utilities *****/
+.u-blue {
+background-color: #1094C4;
+}
+
+.u-texture {
+background-image: url(/img/handmadepaper.png);
+background-repeat: repeat;
+}
