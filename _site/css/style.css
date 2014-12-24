@@ -125,6 +125,17 @@ border-radius: 20px;
 
 /********** CUSTOM ELEMENTS **********/
 
+.caption {
+font-size: 12px;
+text-align: center;
+font-style: italic;
+}
+
+.chart {
+border: 2px;
+border-bottom-color: #1094C4;
+}
+
 .icon {
 font-size: 80px;
 text-align: center;
