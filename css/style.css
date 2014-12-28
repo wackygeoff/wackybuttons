@@ -11,11 +11,26 @@ font-size:14px;
 line-height:16px;
 }
 
+h2 {
+font-family:Century Gothic, Arial, Helvetica, Verdana, MS Serif, Serif;
+font-size: 30px;
+color: #1094C4;
+}
+
 h4 {
 font-family:Century Gothic, Arial, Helvetica, Verdana, MS Serif, Serif;
 font-size: 16px;
 font-weight: bold;
 text-align: center;
+color: #1094C4;
+}
+
+li {
+padding-bottom: 10px;
+}
+
+td {
+padding: 10px;
 }
 
 
@@ -25,6 +40,10 @@ text-align: center;
 /********** BOOTSTRAP OVERRIDES **********/
 
 /***** Buttons *****/
+.btn {
+border-radius: 20px;
+}
+
 .btn-wacky {
 background-color: #FD9A00;
 border-radius: 20px;
@@ -131,11 +150,6 @@ text-align: center;
 font-style: italic;
 }
 
-.chart {
-border: 2px;
-border-bottom-color: #1094C4;
-}
-
 .icon {
 font-size: 80px;
 text-align: center;
@@ -178,6 +192,12 @@ filter: grayscale(0);
 }
 
 /***** Utilities *****/
+.u-border-blue {
+border: 1px #1094c4 solid;
+border-radius: 20px;
+padding: 20px;
+}
+
 .u-blue {
 background-color: #1094C4;
 }
