@@ -209,13 +209,6 @@ opacity: 1;
 filter: grayscale(0);
 }
 
-@media (max-width: 768px) {
-	.products .thumbnail {
-	margin-left: 10px;
-	margin-right: 10px;
-	}
-}
-
 /***** Utilities *****/
 .u-border-blue {
 border: 1px #1094c4 solid;
