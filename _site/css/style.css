@@ -183,25 +183,34 @@ margin-top: 5px;
 margin-top: 5px;
 }
 
-/** wacky-products **/
-.wacky-products h4{
+/** products **/
+.products {
+max-width: 100%;
+}
+
+.products h4{
 text-align: center;
 }
 
-.wacky-products img {
+.products h2{
+text-align: center;
+color: white;
+}
+
+.products img {
 opacity: 0.8;
 -webkit-filter: grayscale(1);
 filter: grayscale(1);
 }
 
-.wacky-products img:hover {
+.products img:hover {
 opacity: 1;
 -webkit-filter: grayscale(0);
 filter: grayscale(0);
 }
 
 @media (max-width: 768px) {
-	.wacky-products .thumbnail {
+	.products .thumbnail {
 	margin-left: 10px;
 	margin-right: 10px;
 	}
