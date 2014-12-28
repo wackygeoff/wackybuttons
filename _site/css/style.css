@@ -89,6 +89,11 @@ border-radius: 20px;
 background-color: #1094C4;
 }
 
+/***** Modals *****/
+.modal-content {
+border-radius: 20px;
+}
+
 /***** Navbar *****/
 /* Add 'navbar-wacky' to 'navbar-default' bootstrap navbars and 'navbar-wacky-nav' to bootstrap navs to get a wacky navbar! */
 .navbar-wacky {
@@ -131,6 +136,10 @@ opacity: 0.8;
 
 .nav img:hover {
 opacity: 1;
+}
+
+.nav li {
+padding-bottom: 0px;
 }
 
 /***** Thumbnails *****/
@@ -189,6 +198,13 @@ filter: grayscale(1);
 opacity: 1;
 -webkit-filter: grayscale(0);
 filter: grayscale(0);
+}
+
+@media (max-width: 768px) {
+	.wacky-products .thumbnail {
+	margin-left: 10px;
+	margin-right: 10px;
+	}
 }
 
 /***** Utilities *****/
