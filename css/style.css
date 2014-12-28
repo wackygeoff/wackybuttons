@@ -94,6 +94,10 @@ background-color: #1094C4;
 border-radius: 20px;
 }
 
+.modal-title {
+color: #1094C4 !important;
+}
+
 /***** Navbar *****/
 /* Add 'navbar-wacky' to 'navbar-default' bootstrap navbars and 'navbar-wacky-nav' to bootstrap navs to get a wacky navbar! */
 .navbar-wacky {
