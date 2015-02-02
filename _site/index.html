@@ -21,6 +21,10 @@
 
 <!-- Custom CSS -->
 <link href="/css/style.css" title="compact" rel="stylesheet" type="text/css" />
+
+<!-- Javascript -->
+<!-- Vimeo Communication Script -->
+<script src="/js/froogaloop.js"></script>
 	<body>
 		<div class="container">
 	<a href="">
@@ -285,7 +289,7 @@
 <div class="col-md-2">
 	<a href="#" data-toggle="modal" data-target="#standardPinback">
 		<div class="thumbnail">
-			<img src="http://www.wackybuttons.com/images/products/pinbackmouseover.jpg" class="img-responsive center-block">
+			<img src="http://www.wackybuttons.com/images/products/pinbackmouseover.jpg" class="img-responsive center-block" onclick="iframe=document.getElementById('video-pinback');$f(iframe).api('play');">
 			<h4>Standard Pinback</h4>
 		</div><!-- thumbnail -->
 	</a>
@@ -305,7 +309,7 @@
       		<div class="modal-body">
       		
 				<!----- CONTENT ----->      		
-				<iframe src="//player.vimeo.com/video/113842509?title=0&amp;byline=0&amp;portrait=0" height="350px" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+				<iframe id="video-pinback" src="//player.vimeo.com/video/113842509?title=0&byline=0&portrait=0&api=1&player_id=video-pinback" height="350px" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 				<p>Buttons are great for political, special interest campaigns, or fundraising! Promote a product, band, event, idea, or yourself! Express yourself by pinning your buttons on your clothing, hat, backpack, or purse!</p>
 				<h4>Available in the following sizes</h4>
 				<img src="http://www.wackybuttons.com/images/products/sizescompare.jpg" alt="pin back buttons different button sizes" class="img-responsive center-block" />
@@ -438,7 +442,6 @@
 				<div class="u-border-blue">
 					<table>
 						<tr><td><b>Size</b></td><td><b>Common Household Object</b></td></tr>
-						<tr><td>1 inch</td><td>US quarter</td></tr>
 						<tr><td>1.5 inch</td><td>gallon milk jug or dixie cup bottom</td></tr>
 						<tr><td>2.25 inch</td><td>soda can top</td></tr>
 						<tr><td>3 inch</td><td>campbells chunky soup can top</td></tr>
@@ -447,7 +450,9 @@
 				</div><!-- u-border-blue -->
 				<h4>Product Specifications</h4>
 				<div class="u-border-blue">
-					<li>The entire button is made of 5 pieces (Clasp Pin, Metal Back, Metal Shell, Paper Graphic, Clear Plastic Cover)</li>
+					<li><strong>Warning:</strong> This product contains strong magnets which can be dangerous to children, people with pacemakers, electronics, and magnetic media. Full product warning can be found <a href="http://www.wackybuttons.com/documents/products/magnet_caution.pdf">here</a>.
+					<li>The entire button is made of 5 pieces (Round Neodymium Magnet, Metal Back, Metal Shell, Paper Graphic, Clear Plastic Cover)</li>
+					<li>The magnet is strong enough to hold the button to a thick sweater or jacket</li>
 					<li>The metal components are made of tin-plated steel</li>
 					<li>We print using high quality Epson Photo Inkjet Printers (Digital CMYK).</li>
 					<li>The paper we use is a special ordered thin custom bright white paper with a matte finish specifically designed for superior color quality and brightness for inkjet printing.</li>
