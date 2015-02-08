@@ -67,6 +67,11 @@ top: 100px;
 font-weight: bold;
 }
 
+/* Centers the Carousel Image */
+.carousel-inner > .item > img {
+margin: 0 auto;
+}
+
 .carousel-caption-wacky {
 background-color: rgba(0, 0, 0, 0.4);
 padding: 1px 5px 10px 5px;
