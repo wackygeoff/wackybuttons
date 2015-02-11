@@ -174,6 +174,11 @@ text-align: center;
 margin: 20px;
 }
 
+.responsive-table {
+max-width: 100%;
+overflow: scroll;
+}
+
 .services {
 padding-bottom: 40px;
 }
@@ -216,6 +221,10 @@ filter: grayscale(1);
 opacity: 1;
 -webkit-filter: grayscale(0);
 filter: grayscale(0);
+}
+
+.create-thumbnail{
+height:285px;
 }
 
 /***** Utilities *****/
