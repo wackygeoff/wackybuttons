@@ -132,6 +132,17 @@ color: #ffffff;
 background-color: #1094C4;
 }
 
+/** Default nav on small screens **/
+@media (max-width: 767px) {
+	.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+	color: #ffffff;
+	}
+	.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover { 
+	color: #FD9A00;
+	background-color: #ffffff;
+	}
+}
+
 .navbar-default .navbar-wacky-toggle {
 background-color: #ffffff;
 }
