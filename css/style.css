@@ -1,43 +1,13 @@
-/********** TOP LEVEL **********/
-body {
-font-family:Century Gothic, Arial, Helvetica, Verdana, MS Serif, Serif;
-font-size:14px;
-line-height:16px;
-}
+/* Top Level styles */
+@import url("top-level.css");
 
-p {
-font-family:Century Gothic, Arial, Helvetica, Verdana, MS Serif, Serif;
-font-size:14px;
-line-height:16px;
-}
+/* Carousel Styles */
+@import url("carousel.css");
 
-h2 {
-font-family:Century Gothic, Arial, Helvetica, Verdana, MS Serif, Serif;
-font-size: 30px;
-color: #1094C4;
-}
-
-h4 {
-font-family:Century Gothic, Arial, Helvetica, Verdana, MS Serif, Serif;
-font-size: 16px;
-font-weight: bold;
-text-align: center;
-color: #1094C4;
-}
-
-li {
-padding-bottom: 10px;
-}
-
-td {
-padding: 10px;
-}
+/* Navbar Styles */
+@import url("navbar.css");
 
 
-
-
-
-/********** BOOTSTRAP OVERRIDES **********/
 
 /***** Buttons *****/
 .btn {
@@ -53,48 +23,6 @@ font-weight: bold;
 color: white;
 }
 
-/***** Carousel *****/
-.carousel {
-height: 400px;
-overflow: hidden;
-}
-
-.carousel-caption {
-top: 100px;
-}
-
-.carousel-caption h3 {
-font-weight: bold;
-}
-
-/* Centers the Carousel Image */
-.carousel-inner > .item > img {
-margin: 0 auto;
-min-width: 100%;
-}
-
-.carousel-caption-wacky {
-background-color: rgba(0, 0, 0, 0.4);
-padding: 1px 5px 10px 5px;
-border-radius: 20px;
-}
-
-/* Caeousel on small screens */
-@media (max-width: 768px) {
-	.carousel {
-	height: 200px;
-	}
-
-	.carousel-caption {
-	top: 20px;
-	}
-}
-
-/***** Dropdown menu *****/
-.dropdown-menu {
-background-color: #1094C4;
-}
-
 /***** Modals *****/
 .modal-content {
 border-radius: 20px;
@@ -102,65 +30,6 @@ border-radius: 20px;
 
 .modal-title {
 color: #1094C4 !important;
-}
-
-/***** Navbar *****/
-/* Add 'navbar-wacky' to 'navbar-default' bootstrap navbars and 'navbar-wacky-nav' to bootstrap navs to get a wacky navbar! */
-.navbar-wacky {
-background-color: #1094C4;
-margin-bottom: 0px;
-border-radius: 0px;
-border: none;
-}
-
-.navbar-wacky-nav {
-font-family:Century Gothic, Arial, Helvetica, Verdana, MS Serif, Serif;
-font-size: 16px;
-font-weight: bold;
-}
-
-.navbar-default .navbar-wacky-nav>li>a {
-color: #ffffff;
-}
-
-.navbar-default .navbar-wacky-nav>li>a:hover { 
-color: #FD9A00;
-}
-
-.navbar-default .navbar-wacky-nav>.open>a, .navbar-default .navbar-wacky-nav>.open>a:hover, .navbar-default .navbar-wacky-nav>.open>a:focus{
-color: #ffffff;
-background-color: #1094C4;
-}
-
-/** Default nav on small screens **/
-@media (max-width: 767px) {
-	.navbar-default .navbar-nav .open .dropdown-menu>li>a {
-	color: #ffffff;
-	}
-	.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover { 
-	color: #FD9A00;
-	background-color: #ffffff;
-	}
-}
-
-.navbar-default .navbar-wacky-toggle {
-background-color: #ffffff;
-}
-
-.nav h4 {
-text-align: center;
-}
-
-.nav img {
-opacity: 0.8;
-}
-
-.nav img:hover {
-opacity: 1;
-}
-
-.nav li {
-padding-bottom: 0px;
 }
 
 /***** Thumbnails *****/

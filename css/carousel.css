@@ -1,0 +1,36 @@
+/***** Carousel *****/
+.carousel {
+height: 400px;
+overflow: hidden;
+}
+
+.carousel-caption {
+top: 100px;
+}
+
+.carousel-caption h3 {
+font-weight: bold;
+}
+
+/* Centers the Carousel Image */
+.carousel-inner > .item > img {
+margin: 0 auto;
+min-width: 100%;
+}
+
+.carousel-caption-wacky {
+background-color: rgba(0, 0, 0, 0.4);
+padding: 1px 5px 10px 5px;
+border-radius: 20px;
+}
+
+/* Caeousel on small screens */
+@media (max-width: 768px) {
+	.carousel {
+	height: 200px;
+	}
+
+	.carousel-caption {
+	top: 20px;
+	}
+}
