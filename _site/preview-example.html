@@ -22,9 +22,13 @@
 <!-- Custom CSS -->
 <link href="/css/style.css" title="compact" rel="stylesheet" type="text/css" />
 
+
+
 <!-- Javascript -->
 <!-- Vimeo Communication Script -->
 <script src="/js/froogaloop.js"></script>
+
+<script src="./js/preview-example.js"></script>
 	<body>
 		<div class="container">
 	<a href="">
@@ -303,7 +307,7 @@ If you removed any designs from your preview page you can restore them:
 <b>Important:</b><br />
 All sales are final. If you are worried about how your buttons will look, we recommend buying just one button before buying a lot more. Wacky Buttons, Inc. does not offer refunds or accept returns for all button orders. Make sure you like what you see before you buy. Complete terms and conditions can be found <a href="http://www.wackybuttons.com/termsandconditions.php">here</a>.
 
-<img src="http://www.wackybuttons.com/images/order/addmultiplecart.gif" style="margin-bottom:0px; margin-top:10px; display:block; text-decoration:none; float:right; cursor:pointer;" width="250" height="29" alt="Add Multiple Items To Cart" onclick="javascript:addMultipleItems();" />
+<img src="http://www.wackybuttons.com/images/order/addmultiplecart.gif" style="margin-bottom:0px; margin-top:10px; display:block; text-decoration:none; float:right; cursor:pointer;" width="250" height="29" alt="Add Multiple Items To Cart" data-toggle="modal" data-target="#dialog_win" onclick="addMultipleItems();" />
 
 
 
@@ -647,6 +651,28 @@ Share:
 </div><!-- row -->
 </div><!-- container -->
 
+
+
+
+
+<!-- modal order multiple -->
+<div class="modal fade" id="dialog_win" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+    	<div class="modal-content">
+      		<div class="modal-header">
+        		<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        		<h2 class="modal-title" id="dialog_title">Title</h2>
+      		</div><!-- modal-header -->
+      		<div class="modal-body" id="dialog_content">
+      		
+				
+      		</div><!-- modal-body -->
+      		<div class="modal-footer">
+        		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      		</div><!-- modal-footer -->
+    	</div><!-- modal-content -->
+	</div><!-- modal-dialog -->
+</div><!-- modal fade -->
 		<div class="wacky-footer">
 	<div class="container">
 		<div class="row">

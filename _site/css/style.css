@@ -123,3 +123,7 @@ background-color: #1094C4;
 background-image: url(http://nicholasgunner.com/wackybuttons/img/handmadepaper.png);
 background-repeat: repeat;
 }
+
+.u-center {
+text-align: center;
+}

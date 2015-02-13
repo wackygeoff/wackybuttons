@@ -22,9 +22,13 @@
 <!-- Custom CSS -->
 <link href="/css/style.css" title="compact" rel="stylesheet" type="text/css" />
 
+
+
 <!-- Javascript -->
 <!-- Vimeo Communication Script -->
 <script src="/js/froogaloop.js"></script>
+
+
 	<body>
 		<div class="container">
 	<a href="">
@@ -292,12 +296,17 @@
 	<div class="row">
         <div class="col-md-10">
         	<h2>Price Chart</h2>
-			<table>
-				<tr>
-					<td>Prices shown in the chart below are for <a href="http://www.wackybuttons.com/products.php">Standard Pinback Buttons</a>&nbsp;&nbsp;&nbsp;</td><td><img src="http://www.wackybuttons.com/images/products/pinbackmouseover.jpg" width="50" height="50" alt="custom pin back buttons" border="0" /></td>
-				</tr>
-			</table>
-			<p>Prices in the chart reflect that every button has the same design. For split orders use the price calculator below.</p>
+	
+
+			
+					Prices shown in the chart below are for <a href="http://www.wackybuttons.com/products.php">Standard Pinback Buttons</a>&nbsp;&nbsp;&nbsp;<span><img src="http://www.wackybuttons.com/images/products/pinbackmouseover.jpg" width="50" height="50" alt="custom pin back buttons" border="0" /></span>
+
+			<br />
+			<p>Prices in the chart reflect that every button has the same design.<br />
+			
+						For split orders (orders with multiple designs): use the <a href="#pricecalc">Price and Turnaround Calculator</a> below.
+			</p>
+			
 			<div class="responsive-table">
 				<table border="0" width="100%" cellspacing="0" cellpadding="5" bgcolor="#ffffff">
 					<tr>
@@ -378,8 +387,12 @@
 						<td valign="top" align="center"><a href="http://www.wackybuttons.com/prices.php?product=nothing"><img src="http://www.wackybuttons.com/images/products/nobackmouseover.jpg" width="50" height="50" alt="flat back buttons" border="0" /><br />Buttons with<br />Nothing on<br />the back</a></td>
 					</tr>
 				</table>
+				</div><!-- responsive-table -->
+				
+				
 				<hr>
-				<h2>Price Calculator</h2>
+				<a name="pricecalc"></a>
+				<h2>Price and Turnaround Calculator</h2>
 				<script language="JavaScript" type="text/javascript">
 					<!--
 
@@ -398,42 +411,48 @@
 					}
 
 					function toggleSize(designnum){
-
-					if(document.getElementById('prod'+designnum).value == 'Standard Pin Back'){outputtext = "";outputtext = outputtext + '<select name="buttonsize[]" id="size'+designnum+'" width="200" style="width:200px">';
+					if(document.getElementById('prod'+designnum).value == 'Standard Pin Back'){outputtext = "";outputtext = outputtext + '<select name="buttonsize[]" id="size'+designnum+'">';
+					//if(document.getElementById('prod'+designnum).value == 'Standard Pin Back'){outputtext = "";outputtext = outputtext + '<select name="buttonsize[]" id="size'+designnum+'" width="200" style="width:200px">';
 					outputtext = outputtext + '<option value="">Choose a button size</option>';
 					outputtext = outputtext + '<option value="1 inch round button with locking pin back" id="op1inpb'+designnum+'">1 inch</option>';
 					outputtext = outputtext + '<option value="1-1/2 inch round button with locking pin back" id="op115inpb'+designnum+'">1.5 inch</option>';
 					outputtext = outputtext + '<option value="2-1/4 inch round button with locking pin back" id="op225inpb'+designnum+'">2.25 inch</option>';
 					outputtext = outputtext + '<option value="3 inch round button with locking pin back" id="op3inpb'+designnum+'">3 inch</option>';
 					outputtext = outputtext + '</select>';
-					}if(document.getElementById('prod'+designnum).value == 'Refrigerator Magnet'){outputtext = "";outputtext = outputtext + '<select name="buttonsize[]" id="size'+designnum+'" width="200" style="width:200px">';
+					}if(document.getElementById('prod'+designnum).value == 'Refrigerator Magnet'){outputtext = "";outputtext = outputtext + '<select name="buttonsize[]" id="size'+designnum+'">';
+					//}if(document.getElementById('prod'+designnum).value == 'Refrigerator Magnet'){outputtext = "";outputtext = outputtext + '<select name="buttonsize[]" id="size'+designnum+'" width="200" style="width:200px">';
 					outputtext = outputtext + '<option value="">Choose a button size</option>';
 					outputtext = outputtext + '<option value="1 inch round button with magnet back" id="op1inmagb'+designnum+'">1 inch</option>';
 					outputtext = outputtext + '<option value="1-1/2 inch round button with magnet back" id="op115inmagb'+designnum+'">1.5 inch</option>';
 					outputtext = outputtext + '<option value="2-1/4 inch round button with magnet back" id="op225inmagb'+designnum+'">2.25 inch</option>';
 					outputtext = outputtext + '<option value="3 inch round button with magnet back" id="op3inmagb'+designnum+'">3 inch</option>';
 					outputtext = outputtext + '</select>';
-					}if(document.getElementById('prod'+designnum).value == 'Clothing Magnet'){outputtext = "";outputtext = outputtext + '<select name="buttonsize[]" id="size'+designnum+'" width="200" style="width:200px">';
+					}if(document.getElementById('prod'+designnum).value == 'Clothing Magnet'){outputtext = "";outputtext = outputtext + '<select name="buttonsize[]" id="size'+designnum+'">';
+					//}if(document.getElementById('prod'+designnum).value == 'Clothing Magnet'){outputtext = "";outputtext = outputtext + '<select name="buttonsize[]" id="size'+designnum+'" width="200" style="width:200px">';
 					outputtext = outputtext + '<option value="">Choose a button size</option>';
 					outputtext = outputtext + '<option value="1-1/2 inch round button with clothing magnet back" id="op115incmagb'+designnum+'">1.5 inch</option>';
 					outputtext = outputtext + '<option value="2-1/4 inch round button with clothing magnet back" id="op225incmagb'+designnum+'">2.25 inch</option>';
 					outputtext = outputtext + '<option value="3 inch round button with clothing magnet back" id="op3incmagb'+designnum+'">3 inch</option>';
 					outputtext = outputtext + '</select>';
-					}if(document.getElementById('prod'+designnum).value == 'Bottle Opener'){outputtext = "";outputtext = outputtext + '<select name="buttonsize[]" id="size'+designnum+'" width="200" style="width:200px">';
+					}if(document.getElementById('prod'+designnum).value == 'Bottle Opener'){outputtext = "";outputtext = outputtext + '<select name="buttonsize[]" id="size'+designnum+'">';
+					//}if(document.getElementById('prod'+designnum).value == 'Bottle Opener'){outputtext = "";outputtext = outputtext + '<select name="buttonsize[]" id="size'+designnum+'" width="200" style="width:200px">';
 					outputtext = outputtext + '<option value="">Choose a button size</option>';
 					outputtext = outputtext + '<option value="2-1/4 inch round button with bottle opener back" id="op225inbob'+designnum+'">2.25 inch</option>';
 					outputtext = outputtext + '</select>';
-					}if(document.getElementById('prod'+designnum).value == 'Mirror Back'){outputtext = "";outputtext = outputtext + '<select name="buttonsize[]" id="size'+designnum+'" width="200" style="width:200px">';
+					}if(document.getElementById('prod'+designnum).value == 'Mirror Back'){outputtext = "";outputtext = outputtext + '<select name="buttonsize[]" id="size'+designnum+'">';
+					//}if(document.getElementById('prod'+designnum).value == 'Mirror Back'){outputtext = "";outputtext = outputtext + '<select name="buttonsize[]" id="size'+designnum+'" width="200" style="width:200px">';
 					outputtext = outputtext + '<option value="">Choose a button size</option>';
 					outputtext = outputtext + '<option value="2-1/4 inch round button with mirror back" id="op225inmirb'+designnum+'">2.25 inch</option>';
 					outputtext = outputtext + '<option value="3 inch round button with mirror back" id="op3inmirb'+designnum+'">3 inch</option>';
 					outputtext = outputtext + '</select>';
-					}if(document.getElementById('prod'+designnum).value == 'Clip Back'){outputtext = "";outputtext = outputtext + '<select name="buttonsize[]" id="size'+designnum+'" width="200" style="width:200px">';
+					}if(document.getElementById('prod'+designnum).value == 'Clip Back'){outputtext = "";outputtext = outputtext + '<select name="buttonsize[]" id="size'+designnum+'">';
+					//}if(document.getElementById('prod'+designnum).value == 'Clip Back'){outputtext = "";outputtext = outputtext + '<select name="buttonsize[]" id="size'+designnum+'" width="200" style="width:200px">';
 					outputtext = outputtext + '<option value="">Choose a button size</option>';
 					outputtext = outputtext + '<option value="2-1/4 inch round button with clip back" id="op225incbb'+designnum+'">2.25 inch</option>';
 					outputtext = outputtext + '<option value="3 inch round button with clip back" id="op3incbb'+designnum+'">3 inch</option>';
 					outputtext = outputtext + '</select>';
-					}if(document.getElementById('prod'+designnum).value == 'Nothing on Back'){outputtext = "";outputtext = outputtext + '<select name="buttonsize[]" id="size'+designnum+'" width="200" style="width:200px">';
+					}if(document.getElementById('prod'+designnum).value == 'Nothing on Back'){outputtext = "";outputtext = outputtext + '<select name="buttonsize[]" id="size'+designnum+'">';
+					//}if(document.getElementById('prod'+designnum).value == 'Nothing on Back'){outputtext = "";outputtext = outputtext + '<select name="buttonsize[]" id="size'+designnum+'" width="200" style="width:200px">';
 					outputtext = outputtext + '<option value="">Choose a button size</option>';
 					outputtext = outputtext + '<option value="1 inch round button with nothing on back" id="op1innobb'+designnum+'">1 inch</option>';
 					outputtext = outputtext + '<option value="1-1/2 inch round button with nothing on back" id="op15innobb'+designnum+'">1.5 inch</option>';
@@ -444,7 +463,8 @@
 
 					if(document.getElementById('prod'+designnum).value == ''){
 					outputtext = "";
-					outputtext = outputtext + '<select name="buttonsize[]" id="size'+designnum+'" width="200" style="width:200px" disabled="disabled">';
+					outputtext = outputtext + '<select name="buttonsize[]" id="size'+designnum+'" disabled="disabled">';
+					//outputtext = outputtext + '<select name="buttonsize[]" id="size'+designnum+'" width="200" style="width:200px" disabled="disabled">';
 					outputtext = outputtext + '<option value="">Choose a button size</option>';
 					outputtext = outputtext + '</select>';
 					}
@@ -482,12 +502,12 @@
 					}
 
 					function oneMoreDesign(destoadd){
-					texttoadd = 'Get the price of any quantity of buttons and for multiple button designs.';
+					texttoadd = 'Get a complete price and turnaround quotation.';
 					texttoadd = texttoadd + '<br /><img src="http://www.wackybuttons.com/images/spacer.gif" width="1" height="5" alt="" />';
-					texttoadd = texttoadd + '<table summary="" cellpadding="2" cellspacing="2" width="600" border="1">';
+					texttoadd = texttoadd + '<table summary="" border="1" style="width:700px;">';
 					texttoadd = texttoadd + '<tr>';
 
-					texttoadd = texttoadd + '<td valign="top"></td><td valign="top"></td><td valign="top">Product Type</td><td valign="top">Button Size</td></tr><tr>';
+					texttoadd = texttoadd + '<td valign="top"> </td><td valign="top"> </td><td valign="top">Product Type</td><td valign="top">Button Size</td></tr><tr>';
 
 					//loop
 					for (i = 1; i <= destoadd; i ++){
@@ -499,8 +519,8 @@
 					}
 
 
-
-					texttoadd = texttoadd + '<select name="product[]" id="prod'+i+'" onchange="javascript:toggleSize('+i+');" width="175" style="width:175px">';
+          texttoadd = texttoadd + '<select name="product[]" id="prod'+i+'" onchange="javascript:toggleSize('+i+');">';
+					//texttoadd = texttoadd + '<select name="product[]" id="prod'+i+'" onchange="javascript:toggleSize('+i+');" width="175" style="width:175px">';
 					texttoadd = texttoadd + '<option value="">Choose a Product</option>';
 
 					productwasselected = false;
@@ -618,9 +638,11 @@
 					texttoadd = texttoadd + '<div id="sizewrapper'+i+'">';
 
 					if(productwasselected == false){
-					texttoadd = texttoadd + '<select name="buttonsize[]" id="size'+i+'" width="200" style="width:200px" disabled=disabled>';
+					texttoadd = texttoadd + '<select name="buttonsize[]" id="size'+i+'" disabled=disabled>';
+					//texttoadd = texttoadd + '<select name="buttonsize[]" id="size'+i+'" width="200" style="width:200px" disabled=disabled>';
 					}else{
-					texttoadd = texttoadd + '<select name="buttonsize[]" id="size'+i+'" width="200" style="width:200px">';
+					texttoadd = texttoadd + '<select name="buttonsize[]" id="size'+i+'">';
+					//texttoadd = texttoadd + '<select name="buttonsize[]" id="size'+i+'" width="200" style="width:200px">';
 					}
 
 					texttoadd = texttoadd + '<option value="">Choose a button size</option>';
@@ -995,7 +1017,7 @@
 					texttoadd = texttoadd + '</tr><tr>';
 					}
 					//end loop
-					texttoadd = texttoadd + '<td valign="top" colspan="3">';
+					texttoadd = texttoadd + '<td valign="top" colspan="4">';
 					texttoadd = texttoadd + '<input type="button" value="Add another design" onclick="oneMoreDesign('+(destoadd+1)+');">';
 					if(destoadd > 1){
 					texttoadd = texttoadd + '<input type="button" value="Remove one design" onclick="oneMoreDesign('+(destoadd-1)+');">';
@@ -1122,31 +1144,33 @@
 
 
 					document.write('<form action="pricecalc.php" id="formx" name="formx" method="post" onsubmit="javascript:return checkFields();">');
-					document.write('Get the price of any quantity of buttons and for multiple button designs.');
+					document.write('Get a complete price and turnaround quotation.');
 					document.write('<br /><img src="http://www.wackybuttons.com/images/spacer.gif" width="1" height="5" alt="" />');
-					document.write('<table summary="" cellpadding="2" cellspacing="2" width="600" border="1">');
+					document.write('<table summary="" border="1" style="width:700px;">');
 					document.write('<tr>');
 
-					document.write('<td valign="top"></td><td valign="top"></td><td valign="top">Product Type</td><td valign="top">Button Size</td></tr><tr>');
+					document.write('<td valign="top"> </td><td valign="top"> </td><td valign="top">Product Type</td><td valign="top">Button Size</td></tr><tr>');
 
 					document.write('<td valign="top">Design #1: </td>');
 					document.write('<td valign="top">Quantity: <input name="qty[]" id="qty1" type="text" size="6" /></td><td valign="top">');
 
-					document.write('<select name="product[]" id="prod1" onchange="javascript:toggleSize(1);" width="175" style="width:175px">');
+					document.write('<select name="product[]" id="prod1" onchange="javascript:toggleSize(1);">');
+					//document.write('<select name="product[]" id="prod1" onchange="javascript:toggleSize(1);" width="175" style="width:175px">');
 					document.write('<option value="">Choose a Product</option>');
 
 					document.write('<option value="Standard Pin Back" id="idsbp1">Standard Pin Back</option>');document.write('<option value="Refrigerator Magnet" id="idrf1">Refrigerator Magnet</option>');document.write('<option value="Clothing Magnet" id="idcm1">Clothing Magnet</option>');document.write('<option value="Bottle Opener" id="idbo1">Bottle Opener</option>');document.write('<option value="Mirror Back" id="idpm1">Mirror Back</option>');document.write('<option value="Clip Back" id="idcb1">Clip Back</option>');document.write('<option value="Nothing on Back" id="idnob1">Nothing on Back</option>');
 					document.write('</select></td><td valign="top">');
 
 					document.write('<div id="sizewrapper1">');
-					document.write('<select name="buttonsize[]" id="size1" width="200" style="width:200px" disabled="disabled">');
+					document.write('<select name="buttonsize[]" id="size1" disabled="disabled">');
+					//document.write('<select name="buttonsize[]" id="size1" width="200" style="width:200px" disabled="disabled">');
 					document.write('<option value="">Choose a button size</option>');
 					document.write('</select>');
 					document.write('</div>');
 
 					document.write('</td>');
 					document.write('</tr><tr>');
-					document.write('<td valign="top" colspan="3"><input type="button" value="Add another design" onclick="javascript:oneMoreDesign(2);"> <a href="javascript:helpAddMore();">What does this mean?</a></td>');
+					document.write('<td valign="top" colspan="4"><input type="button" value="Add another design" onclick="javascript:oneMoreDesign(2);"> <a href="javascript:helpAddMore();">What does this mean?</a></td>');
 
 					document.write('</tr>');
 					document.write('</table>');
@@ -1249,7 +1273,7 @@
 					//-->
 				</script>
 				<hr>
-			</div><!-- responsive-table -->
+			
 		</div><!-- col-md-10 -->
 		<div class="col-md-2">
 			<h2>Information</h2>
