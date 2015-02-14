@@ -13,19 +13,24 @@ $("div[id='"+inp+"']").toggle();
 }
 
 function show_large_photo(photo){
-newWindow = window.open(photo, 'newWindow', 'width=450, height=450, resizable=no, scrollbars=no, toolbar=no, location=no, directories=no, status=no, menubar=no, copyhistory=no');
+$('#dialog_title').html("Button Design Preview");
+//inpcode = '<div style="border:1px solid black;">';
+inpcode = '<img src="' + photo + '" width="400" height="400" style="display:block;margin-left:auto;margin-right:auto;" />';
+//inpcode = inpcode + '</div>';
+$('#dialog_content').html(inpcode);
 }
 
 function show_size_info(){
-newwindow = window.open("about:blank",'name','height=375,width=650,left=100,top=100,resizable=no,scrollbars=yes,toolbar=no,status=no');
-newwindow.document.write('<div align="left"><b>This chart shows the difference in button sizes in relation to a US Quarter (25 cent piece).</b><br /> <br />');
-newwindow.document.write('<img src="http://www.wackybuttons.com/images/order/sizedifferences.gif" alt="" width="603" height="230" />');
-newwindow.document.write('<br />The size of the button is based on the length of the diameter. For example: a 3 inch button has exactly a 3 inch diameter across the face of the button. Using a ruler will help you determine the exact size.<br /></div>');
+
+$('#dialog_title').html("Button Sizes");
+inpcode = '<div style="overflow-x:scroll;text-align:left;">';
+inpcode = inpcode + '<b>This chart shows the difference in button sizes in relation to a US Quarter (25 cent piece).</b><br /> <br />';
+inpcode = inpcode + '<img src="http://www.wackybuttons.com/images/order/sizedifferences.gif" alt="" width="603" height="230" />';
+inpcode = inpcode + '<br />The size of the button is based on the length of the diameter. For example: a 3 inch button has exactly a 3 inch diameter across the face of the button. Using a ruler will help you determine the exact size.';
+inpcode = inpcode + '<br /> <br /></div>';
+$('#dialog_content').html(inpcode);
 }
 
-function closeJDialog(){
-$('#jDialog').dialog("close");
-}
 
 
 function changeAllSizes(totalelems){
@@ -228,8 +233,11 @@ inpcode = inpcode + '<input type="hidden" name="operation" value="addmultipletoc
 inpcode = inpcode + '<table cellpadding="2" cellspacing="2" border="0">';
 
 inpcode = inpcode + '<tr>';
+inpcode = inpcode + '<td colspan="5"><b>Change All Items Below:</b></td>';
+inpcode = inpcode + '</tr>';
+
+inpcode = inpcode + '<tr>';
 inpcode = inpcode + '<td align="center">Check All</td>';
-inpcode = inpcode + '<td align="center">&nbsp;</td>';
 inpcode = inpcode + '<td align="center">Product</td>';
 inpcode = inpcode + '<td align="center">Size</td>';
 inpcode = inpcode + '<td align="center">Quantity</td>';
@@ -237,7 +245,6 @@ inpcode = inpcode + '</tr>';
 
 inpcode = inpcode + '<tr>';
 inpcode = inpcode + '<td align="center" valign="top"><input type="checkbox" id="main_checkbox" onchange="javascript:checkAllItems(34);" /></td>';
-inpcode = inpcode + '<td align="center" valign="top">ALL BELOW</td>';
 inpcode = inpcode + '<td align="center" valign="top">';
 inpcode = inpcode + '<select name="main_prodchooser" id="main_prodchooser" onchange="javascript:changeAllProds(this.value, 34);">';
 inpcode = inpcode + '<option value="">Choose a Product</option>';
@@ -261,22 +268,22 @@ inpcode = inpcode + '</td>';
 inpcode = inpcode + '<td align="center" valign="top"><input type="text" name="main_qty" id="main_qty" maxlength="30" size="5" value="" onchange="changeAllQtys(34);" /><br /><a href="javascript:changeAllQtys(34);" style="color:blue;font-size:12px;">apply</a></td>';
 inpcode = inpcode + '</tr>';
 
-inpcode = inpcode + '<tr>';
-inpcode = inpcode + '<td colspan="5"><hr /></td>';
-inpcode = inpcode + '</tr>';
 
 for(i = 0; i < designcodes.length; i++){
 
 inpcode = inpcode + '<tr>';
-inpcode = inpcode + '<td>';
-inpcode = inpcode + '<input type="checkbox" name="checked_'+i+'" id="checked_'+i+'" value="yes" /><b>'+designcodes[i]+'</b>';
-inpcode = inpcode + '</td>';
-inpcode = inpcode + '<td>';
+inpcode = inpcode + '<td colspan="5"><hr /></td>';
+inpcode = inpcode + '</tr>';
+
+inpcode = inpcode + '<tr>';
+inpcode = inpcode + '<td align="center">';
+inpcode = inpcode + '<input type="checkbox" name="checked_'+i+'" id="checked_'+i+'" value="yes" /><br /><b>'+designcodes[i]+'</b><br />';
 inpcode = inpcode + '<input type="hidden" name="title_'+i+'" value="'+titlet[i]+'" />';
 inpcode = inpcode + '<input type="hidden" name="item_number_'+i+'" id="item_number_'+i+'" value="'+designcodes[i]+'" />';
-inpcode = inpcode + '<img src="http://www.wackybuttons.com/designcodes/'+designcodes[i].substr(0, 3)+"/"+designcodes[i]+'.jpg" width="50" height="50" border="0" alt="" />';
+inpcode = inpcode + '<img src="http://www.wackybuttons.com/designcodes/'+designcodes[i].substr(0, 3)+"/"+designcodes[i]+'.jpg" width="75" height="75" border="0" alt="" />';
 inpcode = inpcode + '</td>';
-inpcode = inpcode + '<td>';
+inpcode = inpcode + '<td align="center">';
+inpcode = inpcode + 'Product<br /> <br />';
 inpcode = inpcode + '<select name="prod_chooser_'+i+'" id="prod_chooser_'+i+'"  onchange="javascript:genButtonSizeDD('+"'"+'prod_chooser_'+i+"'"+', '+"'"+'size_chooser_cont_'+i+"'"+', '+"'"+'item_name_'+i+"'"+');">';
 inpcode = inpcode + '<option value="">Choose a Product</option>';
 inpcode = inpcode + '<option value="Standard Pin Back">Standard Pin Back</option>';
@@ -290,7 +297,8 @@ inpcode = inpcode + '<option value="Nothing on Back">Nothing on Back</option>';
 inpcode = inpcode + '</select>';
 inpcode = inpcode + '</td>';
 
-inpcode = inpcode + '<td>';
+inpcode = inpcode + '<td align="center">';
+inpcode = inpcode + 'Size<br /> <br />';
 inpcode = inpcode + '<div id="size_chooser_cont_'+i+'">';
 inpcode = inpcode + '<select name="item_name_'+i+'" id="item_name_'+i+'" disabled="disabled">';
 inpcode = inpcode + '<option value="">Choose a Button Size</option>';
@@ -298,7 +306,8 @@ inpcode = inpcode + '</select>';
 inpcode = inpcode + '</div>';
 inpcode = inpcode + '</td>';
 
-inpcode = inpcode + '<td>';
+inpcode = inpcode + '<td align="center">';
+inpcode = inpcode + 'Quantity<br /> <br />';
 //inpcode = inpcode + '<input type="hidden" name="on0_'+i+'" value="number of buttons" />'; ------may not need
 inpcode = inpcode + '<input type="text" name="os0_'+i+'" id="os0_'+i+'" maxlength="30" size="5" value="" />';
 inpcode = inpcode + '</td>';
@@ -425,26 +434,27 @@ return true;
 
 
 function designChangeReq(designcodenum){
+$('#dialog_title').html("Change Design Code: "+ designcodenum);
+inpcode = '<div align="left" style="font-family:Century Gothic, Arial, Helvetica, Verdana, MS Serif;font-size:10pt;line-height:16px;">';
+inpcode = inpcode + 'Because this design is already finalized, you are not able to edit this design yourself. Only one of our artists can change the design for you. Please describe what you would like to see changed and we will make the changes for you.';
+inpcode = inpcode + '<br /> <br /><form action="http://www.wackybuttons.com/formemail/designchange/designchange.php" method="post">';
+inpcode = inpcode + '<input type="hidden" name="design_code" value="'+designcodenum+'">';
+inpcode = inpcode + 'Design Change Request:<br /><textarea name="ChangeRequest" rows="7" cols="40"></textarea>';
+inpcode = inpcode + '<br /> <br /><img src="http://www.wackybuttons.com/images/captcha/5.gif" alt="" style="border:black 2px solid;"><br />Please type the word you see in the box above: <input type="text" name="captcha" value="" /><br />(This way we know you are not a robot spammer)';
+inpcode = inpcode + '<input type="hidden" name="ar_subject" value="Wacky Buttons Change Request" />';
+inpcode = inpcode + '<input type="hidden" name="comingfrom" value="http://www.wackybuttons.com/order.php" />';
+inpcode = inpcode + '<br /> <br /><input type="submit" value="Submit your design change request">';
+inpcode = inpcode + '</form>';
+inpcode = inpcode + 'Once we complete your request, you will receive an email with a link to view the new button design. Design requests can take up to one business day to complete. If you are submitting your design change during our regular business hours (9-5, M-F), your design change will usually get completed within 1 hour from the time you submit this form. ';
+inpcode = inpcode + '</div>';
 
-newwindow = window.open("about:blank",'name','height=525,width=500,left=100,top=100,resizable=no,scrollbars=yes,toolbar=no,status=no');
-newwindow.document.write('<div align="left" style="font-family:Century Gothic, Arial, Helvetica, Verdana, MS Serif;font-size:10pt;line-height:16px;"><b>Change Design Code: '+ designcodenum +'</b><br /> <br />');
-newwindow.document.write('Because this design is already finalized, you are not able to edit this design yourself. Only one of our artists can change the design for you. Please describe what you would like to see changed and we will make the changes for you.');
-newwindow.document.write('<br /> <br /><form action="http://www.wackybuttons.com/formemail/designchange/designchange.php" method="post">');
-newwindow.document.write('<input type="hidden" name="design_code" value="'+designcodenum+'">');
-newwindow.document.write('Design Change Request:<br /><textarea name="ChangeRequest" rows="7" cols="40"></textarea>');
-newwindow.document.write('<br /> <br /><img src="http://www.wackybuttons.com/images/captcha/5.gif" alt="" style="border:black 2px solid;"><br />Please type the word you see in the box above: <input type="text" name="captcha" value="" /><br />(This way we know you are not a robot spammer)');
-newwindow.document.write('<input type="hidden" name="ar_subject" value="Wacky Buttons Change Request" />');
-newwindow.document.write('<input type="hidden" name="comingfrom" value="http://www.wackybuttons.com/order.php" />');
-newwindow.document.write('<br /> <br /><input type="submit" value="Submit your design change request">');
-newwindow.document.write('</form>');
-newwindow.document.write('Once we complete your request, you will receive an email with a link to view the new button design. Design requests can take up to one business day to complete. If you are submitting your design change during our regular business hours (9-5, M-F), your design change will usually get completed within 1 hour from the time you submit this form. ');
-newwindow.document.write('</div>');
-
+$('#dialog_content').html(inpcode);
 }
 
 function info1(){
-newwindow = window.open("about:blank",'name','height=200,width=400,left=100,top=100,resizable=no,scrollbars=yes,toolbar=no,status=no');
-newwindow.document.write('<div align="left" style="font-family:Century Gothic, Arial, Helvetica, Verdana, MS Serif;font-size:10pt;line-height:16px;"><b>What is a Design Code?</b><br /> <br />');
-newwindow.document.write('It is a unique number that represents a design in our system. We use the Design Code to lookup and print your button design. The design code will never change so you can use it to order buttons anytime in the future.');
-newwindow.document.write('</div>');
+$('#dialog_title').html("What is a design code?");
+inpcode = '<div align="left" style="font-family:Century Gothic, Arial, Helvetica, Verdana, MS Serif;font-size:10pt;line-height:16px;">';
+inpcode = inpcode + 'It is a unique number that represents a design in our system. We use the Design Code to lookup and print your button design. The design code will never change so you can use it to order buttons anytime in the future.';
+inpcode = inpcode + '</div>';
+$('#dialog_content').html(inpcode);
 }
