@@ -8,8 +8,66 @@ layout: wackybuttons
 
 {% include products/products.html %}	
 
-<div class="container">
-	<hr>
+<div class="container" style="padding-top:10px;padding-bottom:10px;">
+<!--div class="container u-texture" style="padding-top:10px;padding-bottom:10px;"--><!--with texture-->
+
+	<div class="row">
+	<div class="col-md-6">
+	<!--price calculator-->
+	<h2>Quick Price and Turnaround</h2>
+	
+	<form action="http://www.wackybuttons.com/pricecalc.php" id="formx" name="formx" method="post">
+
+
+<table summary="" cellpadding="2" cellspacing="0" border="0">
+<tr><td>Product:</td><td colspan="2"><select name="buttonsize[]">
+<option value="1 inch round button with locking pin back">1 inch - Standard Pin Back</option><option value="1 inch round button with magnet back">1 inch - Fridge Magnet Back</option><option value="1 inch round button with nothing on back">1 inch - Nothing on Back</option><option value="1-1/2 inch round button with locking pin back">1.5 inch - Standard Pin Back</option><option value="1-1/2 inch round button with magnet back">1.5 inch - Fridge Magnet Back</option><option value="1-1/2 inch round button with clothing magnet back">1.5 inch - Clothing Magnet Back</option><option value="1-1/2 inch round button with nothing on back">1.5 inch - Nothing on Back</option><option value="2-1/4 inch round button with locking pin back">2.25 inch - Standard Pin Back</option><option value="2-1/4 inch round button with magnet back">2.25 inch - Fridge Magnet Back</option><option value="2-1/4 inch round button with clothing magnet back">2.25 inch - Clothing Magnet Back</option><option value="2-1/4 inch round button with bottle opener back">2.25 inch - Bottle Opener</option><option value="2-1/4 inch round button with mirror back">2.25 inch - Mirror Back</option><option value="2-1/4 inch round button with clip back">2.25 inch - Clip Back</option><option value="2-1/4 inch round button with nothing on back">2.25 inch - Nothing on Back</option><option value="3 inch round button with locking pin back">3 inch - Standard Pin Back</option><option value="3 inch round button with magnet back">3 inch - Fridge Magnet Back</option><option value="3 inch round button with clothing magnet back">3 inch - Clothing Magnet Back</option><option value="3 inch round button with mirror back">3 inch - Mirror Back</option><option value="3 inch round button with clip back">3 inch - Clip Back</option><option value="3 inch round button with nothing on back">3 inch - Nothing on Back</option></select></td></tr>
+
+<tr><td>Quantity:</td><td colspan="2"><input name="qty[]" type="text" size="6" /> <a href="javascript:info4();"> See Size Differences</a></td></tr>
+<tr><td colspan="3" class="smallbold">Calculate shipping (optional)</td></tr>
+
+<tr><td>USA Zipcode:</td><td><input type="text" name="zip" size="5" maxlength="5" />
+</td><td rowspan="2" align="right" valign="bottom">
+<input type="submit" class="btn btn-default btn-wacky" value="Calculate Price" name="submit" />
+</td></tr>
+<tr><td colspan="2">
+<a href="http://www.wackybuttons.com/prices.php">Ship to a different country</a>
+</td></tr>
+
+</table>
+
+
+</form>
+	
+	<!--end price calculator-->
+	</div><!-- col-md-6 -->
+	<div class="col-md-6">
+	<!--Start Designing-->
+	
+	
+	<h2>It is FREE to design your buttons</h2>
+
+<table cellpadding="5" cellspacing="0" border="0"><tr><td valign="top">
+<img src="http://www.wackybuttons.com/images/home/wbidsscreensmall.jpg" width="150" height="109" alt="Design Your Buttons Now!" />
+
+</td><td valign="top">
+Have one of our talented artists design your
+buttons for you or use our online design studio to create
+your custom<br />buttons fast!<br /> <br />
+<a href="#"><button class="btn btn-default btn-wacky pull-right">Design Buttons</button></a>
+</td>
+
+
+</tr></table>
+	
+	
+	<!--end Start Designing-->
+	</div><!-- col-md-6 -->
+	</div><!-- row -->
+</div><!-- container -->	
+	
+<div class="container" style="padding-top:10px;padding-bottom:15px;">
+<hr />
 	<div class="row">
 		<div class="col-md-3">
 			<div class="icon">
@@ -38,7 +96,7 @@ layout: wackybuttons
 			<h4>Read wacky reviews</h4>
 		</div><!-- col-md-3 -->
 	</div><!-- row -->
-	<hr>
+
 </div><!-- container -->
 
 <!-- OLD CODE THAT MIGHT STILL BE NEEDED -->
