@@ -1,0 +1,33 @@
+.store-menu-container{
+border-top-left-radius:10px;
+border-top-right-radius:10px;
+border: 2px solid #1094C4;
+margin: 10px;
+}
+
+.store-menu-header{
+background-color: orange;
+color: white;
+border-top-left-radius:10px;
+border-top-right-radius:10px;
+height: 25px;
+padding: 5px;
+font-size:18px;
+font-weight:bold;
+  background: -webkit-linear-gradient(#ffcc99, orange); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#ffcc99, orange); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#ffcc99, orange); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#ffcc99, orange); /* Standard syntax */
+}
+
+.store-button-preview{
+cursor:pointer;
+max-width:50%;
+display:inline;
+float:left;
+}
+
+.no-gutter [class*="-4"] {
+    padding-left:0;
+		padding-right:0;
+}

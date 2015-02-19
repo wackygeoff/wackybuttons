@@ -7,6 +7,19 @@ $preloadimage.src = "http://www.wackybuttons.com/images/backofbutton.jpg";
 
 //-------------begin functions------------------
 
+//for collapsing the left store side navigation menu on smaller screens
+$(window).bind('resize load',function(){
+if( $(window).width() < 767 )
+{
+$('#side-menu-collapse').removeClass('in');
+$('#side-menu-collapse').addClass('out');
+}
+else
+{
+$('#side-menu-collapse').removeClass('out');
+$('#side-menu-collapse').addClass('in');
+}   
+});
 
 function show_hide(inp){
 $("div[id='"+inp+"']").toggle();
@@ -132,16 +145,16 @@ document.getElementById('pricedisp').src = 'http://www.wackybuttons.com/smallpri
 //---More Details Popup---
 function moreDetails(designcode, titlet){
 
+$('#dialog_title').html("Add to cart");
+
 var inpcode = "";
 
-inpcode = '<div align="center" style="background-color:#ffffff;padding:5px;">';
+inpcode = '<div align="center">';
 inpcode = inpcode + '<div align="center">';
 inpcode = inpcode + '<table cellpadding="0" cellspacing="0" border="0"><tr><td valign="top" align="center">';
 
 inpcode = inpcode + '<div>';
-inpcode = inpcode + '<a href="javascript:show_large_photo(' + "'" + 'http://www.wackybuttons.com/designcodes/' + designcode.substring(0,3) + '/' + designcode +'.jpg' + "'" + ');" title="View Larger Image">';
 inpcode = inpcode + '<img src="http://www.wackybuttons.com/designcodes/' + designcode.substring(0,3) + '/' + designcode +'.jpg" width="200" height="200" border="0" />';
-inpcode = inpcode + '</a>';
 inpcode = inpcode + '<div style="margin-bottom:10px;font-size:16px;"><b>Design Code: </b><div style="border:2px solid black;display:inline;padding:2px;"><b>' + designcode +'</b></div></div>';
 inpcode = inpcode + '</div>';
 
@@ -158,9 +171,9 @@ inpcode = inpcode + '<input type="hidden" name="operation" value="addtocart" />'
 inpcode = inpcode + '<input type="hidden" name="title" value="'+titlet+'" />';
 inpcode = inpcode + '<input type="hidden" name="item_number" value="' + designcode + '" />';
 
-inpcode = inpcode + '<table summary="" bgcolor="#fea82b" align="center" cellpadding="10" cellspacing="0">';
+inpcode = inpcode + '<table summary="" align="center" cellpadding="10" cellspacing="0">';
 inpcode = inpcode + '<tr>';
-inpcode = inpcode + '<td style="color:#ffffff; font-weight:bold; font-size:12pt;">';
+inpcode = inpcode + '<td font-weight:bold; font-size:12pt;">';
 
 inpcode = inpcode + 'Choose a Product:';
 inpcode = inpcode + '<br /><img src="http://www.wackybuttons.com/images/spacer.gif" width="1" height="5" alt="" />';
@@ -208,7 +221,7 @@ inpcode = inpcode + '</form>';
 //$('#jDialog').dialog("option", "title", "Order This Button");
 //('#jDialog').dialog("option", "width", 520);
 //$('#jDialog').dialog("option", "height", 650);
-$('#order_multiple_win_content').html(inpcode);
+$('#dialog_content').html(inpcode);
 //$('#jDialog').dialog("open");
 
 }
