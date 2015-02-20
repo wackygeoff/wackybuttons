@@ -10,15 +10,25 @@ background-color: orange;
 color: white;
 border-top-left-radius:10px;
 border-top-right-radius:10px;
-height: 25px;
+/*height: 25px;*/
 padding: 5px;
 font-size:18px;
+line-height: 25px;
 font-weight:bold;
   background: -webkit-linear-gradient(#ffcc99, orange); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(#ffcc99, orange); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(#ffcc99, orange); /* For Firefox 3.6 to 15 */
   background: linear-gradient(#ffcc99, orange); /* Standard syntax */
 }
+
+.store-navbar-brand{
+font-size:18px;
+line-height: 25px;
+font-weight:bold;
+color: white;
+padding: 0px;
+}
+
 
 .store-button-preview{
 cursor:pointer;

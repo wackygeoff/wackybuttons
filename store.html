@@ -10,7 +10,7 @@ css_inc: <link href="/css/store.css" title="compact" rel="stylesheet" type="text
 <div class="row">
 <div class="col-md-12">
 
-<h1 style="display:inline;margin-bottom:15px;">Welcome to the Wacky Buttons Store</h1><img src="http://www.wackybuttons.com/images/order/addmultiplecart.gif" style="margin-bottom:15px; display:inline; text-decoration:none; float:right; cursor:pointer;" width="250" height="29" alt="Add Multiple Items To Cart" data-toggle="modal" data-target="#dialog_win" onclick="javascript:addMultipleItems();" />
+<h2 style="display:inline;padding:10px;">Welcome to the Wacky Buttons Store</h2><img src="http://www.wackybuttons.com/images/order/addmultiplecart.gif" style="margin:10px; display:inline; text-decoration:none; float:right; cursor:pointer;" width="250" height="29" alt="Add Multiple Items To Cart" data-toggle="modal" data-target="#dialog_win" onclick="javascript:addMultipleItems();" />
 
 
 </div><!--col-md-12-->
@@ -23,30 +23,52 @@ css_inc: <link href="/css/store.css" title="compact" rel="stylesheet" type="text
 <!--left side menu-->
 <div class="col-md-3">
 
-<div class="store-menu-container">
+<div class="navbar navbar-default store-menu-container" role="navigation">
 
-<!--need to make this div pretty-->
-<!--div class="collapse-toggle" data-toggle="collapse" data-parent="menu-container" data-target="#side-menu-collapse" style=""-->
-<div class="collapse-toggle collapsed store-menu-header" data-toggle="collapse" data-target="#side-menu-collapse" data-parent="store-menu-container" style="cursor:pointer;">
-Wacky Buttons Store <span class="fa fa-caret-down"></span>
-</div>
-      
-			<div id="MainMenu">
-        <div class="list-group panel collapse in" id="side-menu-collapse">
-				
-          <a href="#" class="list-group-item" data-parent="#MainMenu">Item 1</a>
-          
-					<a href="#demo4" class="list-group-item" data-toggle="collapse" data-parent="#MainMenu">Item 4  <i class="fa fa-caret-down"></i></a>
-          <div class="collapse" id="demo4">
+<!-- Brand and toggle get grouped for better mobile display -->
+    	<div class="navbar-header store-menu-header">
+
+      		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#store-menu">
+        		<span class="sr-only">Toggle navigation</span>
+        		<span class="icon-bar"></span>
+        		<span class="icon-bar"></span>
+        		<span class="icon-bar"></span>
+      		</button>
+					<a class="store-navbar-brand" href="#">Wacky Buttons Store</a>
+    	</div><!-- navbar-header -->
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    	<div class="collapse navbar-collapse" id="store-menu">
+      		<ul class="nav nav-pills nav-stacked">
+        		<li style="margin-top:40px;"><a href="#">Item 1</a></li>
+        		<li><a href="#">Item 2</a></li>
+						
+						
+					<li><a href="#menu3" class="list-group-item" data-toggle="collapse">Item 3  <i class="fa fa-caret-down"></i></a>
+          <div class="collapse" id="menu3">
             <a href="" class="list-group-item">Subitem 1</a>
             <a href="" class="list-group-item">Subitem 2</a>
             <a href="" class="list-group-item">Subitem 3</a>
           </div>
-					
-					<a href="#" class="list-group-item" data-parent="#MainMenu">Item 2</a>
+						</li>
+						
+        		<li><a href="#">Item 4</a></li>
+						
+											<li><a href="#menu4" class="list-group-item" data-toggle="collapse">Item 4  <i class="fa fa-caret-down"></i></a>
+          <div class="collapse" id="menu4">
+            <a href="" class="list-group-item">Subitem 1</a>
+            <a href="" class="list-group-item">Subitem 2</a>
+            <a href="" class="list-group-item">Subitem 3</a>
+          </div>
+						</li>
+						
+        		<li><a href="#">Item 5</a></li>
+						
 
-        </div><!--side-menu-collapse-->
-      </div>
+						
+      		</ul>
+    	</div><!-- collapse navbar-collapse -->
+
 
 </div><!--end menu-container-->
 			
@@ -57,10 +79,11 @@ Wacky Buttons Store <span class="fa fa-caret-down"></span>
 <div class="col-md-9">
 
 <!--begin instructions, see more-->
-<div>
-Click on a button to see larger images and ordering options.
-<a href="http://www.wackybuttons.com/store/random.php"><img src="http://www.wackybuttons.com/images/general/btnseemore.gif" width="113" height="46" alt="See More..." border="0" style="margin-left: 150px;" /></a>
-</div>
+<table summary="" width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left">Click on a button to see larger images and ordering options.</td><td align="right"><a href="http://www.wackybuttons.com/store/random.php" style="font-size:16px; font-weight:bold;"><img src="http://www.wackybuttons.com/images/general/btnseemore.gif" width="113" height="46" alt="See More..." border="0" /></a></td></td>
+</tr>
+</table>
 <!--end instructions, see more-->
 
 <!--begin nested columns, button images-->
