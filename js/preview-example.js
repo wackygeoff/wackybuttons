@@ -56,11 +56,11 @@ $('#os0_'+i).val($('#main_qty').val());
 //---generate button size drop down list--
 function genButtonSizeDD(inpid, receivingid, itemid){
 
-if($('#'+inpid).val() == "Standard Pin Back"){outputtext = "";outputtext = outputtext + '<select name="'+itemid+'" id="'+itemid+'" onchange="javascript:changeProdTypeImage(this);">';outputtext = outputtext + '<option value="">Choose a button size</option>';outputtext = outputtext + '<option value="1 inch round button with locking pin back">1 inch</option>';outputtext = outputtext + '<option value="1-1/2 inch round button with locking pin back">1.5 inch</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with locking pin back">2.25 inch</option>';outputtext = outputtext + '<option value="3 inch round button with locking pin back">3 inch</option>';outputtext = outputtext + '</select>';}if($('#'+inpid).val() == "Refrigerator Magnet"){outputtext = "";outputtext = outputtext + '<select name="'+itemid+'" id="'+itemid+'" onchange="javascript:changeProdTypeImage(this);">';outputtext = outputtext + '<option value="">Choose a button size</option>';outputtext = outputtext + '<option value="1 inch round button with magnet back">1 inch</option>';outputtext = outputtext + '<option value="1-1/2 inch round button with magnet back">1.5 inch</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with magnet back">2.25 inch</option>';outputtext = outputtext + '<option value="3 inch round button with magnet back">3 inch</option>';outputtext = outputtext + '</select>';}if($('#'+inpid).val() == "Clothing Magnet"){outputtext = "";outputtext = outputtext + '<select name="'+itemid+'" id="'+itemid+'" onchange="javascript:changeProdTypeImage(this);">';outputtext = outputtext + '<option value="">Choose a button size</option>';outputtext = outputtext + '<option value="1-1/2 inch round button with clothing magnet back">1.5 inch</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with clothing magnet back">2.25 inch</option>';outputtext = outputtext + '<option value="3 inch round button with clothing magnet back">3 inch</option>';outputtext = outputtext + '</select>';}if($('#'+inpid).val() == "Keychain"){outputtext = "";outputtext = outputtext + '<select name="'+itemid+'" id="'+itemid+'" onchange="javascript:changeProdTypeImage(this);">';outputtext = outputtext + '<option value="">Choose a button size</option>';outputtext = outputtext + '<option value="1-1/2 inch round button with keychain back">1.5 inch</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with keychain back">2.25 inch</option>';outputtext = outputtext + '</select>';}if($('#'+inpid).val() == "Bottle Opener"){outputtext = "";outputtext = outputtext + '<select name="'+itemid+'" id="'+itemid+'" onchange="javascript:changeProdTypeImage(this);">';outputtext = outputtext + '<option value="">Choose a button size</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with bottle opener back">2.25 inch</option>';outputtext = outputtext + '</select>';}if($('#'+inpid).val() == "Mirror Back"){outputtext = "";outputtext = outputtext + '<select name="'+itemid+'" id="'+itemid+'" onchange="javascript:changeProdTypeImage(this);">';outputtext = outputtext + '<option value="">Choose a button size</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with mirror back">2.25 inch</option>';outputtext = outputtext + '<option value="3 inch round button with mirror back">3 inch</option>';outputtext = outputtext + '</select>';}if($('#'+inpid).val() == "Clip Back"){outputtext = "";outputtext = outputtext + '<select name="'+itemid+'" id="'+itemid+'" onchange="javascript:changeProdTypeImage(this);">';outputtext = outputtext + '<option value="">Choose a button size</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with clip back">2.25 inch</option>';outputtext = outputtext + '<option value="3 inch round button with clip back">3 inch</option>';outputtext = outputtext + '</select>';}if($('#'+inpid).val() == "Nothing on Back"){outputtext = "";outputtext = outputtext + '<select name="'+itemid+'" id="'+itemid+'" onchange="javascript:changeProdTypeImage(this);">';outputtext = outputtext + '<option value="">Choose a button size</option>';outputtext = outputtext + '<option value="1 inch round button with nothing on back">1 inch</option>';outputtext = outputtext + '<option value="1-1/2 inch round button with nothing on back">1.5 inch</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with nothing on back">2.25 inch</option>';outputtext = outputtext + '<option value="3 inch round button with nothing on back">3 inch</option>';outputtext = outputtext + '</select>';}
+if($('#'+inpid).val() == "Standard Pin Back"){outputtext = "";outputtext = outputtext + '<select class="form-control"  name="'+itemid+'" id="'+itemid+'" onchange="javascript:changeProdTypeImage(this);">';outputtext = outputtext + '<option value="">Choose Size</option>';outputtext = outputtext + '<option value="1 inch round button with locking pin back">1 inch</option>';outputtext = outputtext + '<option value="1-1/2 inch round button with locking pin back">1.5 inch</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with locking pin back">2.25 inch</option>';outputtext = outputtext + '<option value="3 inch round button with locking pin back">3 inch</option>';outputtext = outputtext + '</select>';}if($('#'+inpid).val() == "Refrigerator Magnet"){outputtext = "";outputtext = outputtext + '<select class="form-control" name="'+itemid+'" id="'+itemid+'" onchange="javascript:changeProdTypeImage(this);">';outputtext = outputtext + '<option value="">Choose Size</option>';outputtext = outputtext + '<option value="1 inch round button with magnet back">1 inch</option>';outputtext = outputtext + '<option value="1-1/2 inch round button with magnet back">1.5 inch</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with magnet back">2.25 inch</option>';outputtext = outputtext + '<option value="3 inch round button with magnet back">3 inch</option>';outputtext = outputtext + '</select>';}if($('#'+inpid).val() == "Clothing Magnet"){outputtext = "";outputtext = outputtext + '<select class="form-control" name="'+itemid+'" id="'+itemid+'" onchange="javascript:changeProdTypeImage(this);">';outputtext = outputtext + '<option value="">Choose Size</option>';outputtext = outputtext + '<option value="1-1/2 inch round button with clothing magnet back">1.5 inch</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with clothing magnet back">2.25 inch</option>';outputtext = outputtext + '<option value="3 inch round button with clothing magnet back">3 inch</option>';outputtext = outputtext + '</select>';}if($('#'+inpid).val() == "Keychain"){outputtext = "";outputtext = outputtext + '<select class="form-control" name="'+itemid+'" id="'+itemid+'" onchange="javascript:changeProdTypeImage(this);">';outputtext = outputtext + '<option value="">Choose Size</option>';outputtext = outputtext + '<option value="1-1/2 inch round button with keychain back">1.5 inch</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with keychain back">2.25 inch</option>';outputtext = outputtext + '</select>';}if($('#'+inpid).val() == "Bottle Opener"){outputtext = "";outputtext = outputtext + '<select class="form-control" name="'+itemid+'" id="'+itemid+'" onchange="javascript:changeProdTypeImage(this);">';outputtext = outputtext + '<option value="">Choose Size</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with bottle opener back">2.25 inch</option>';outputtext = outputtext + '</select>';}if($('#'+inpid).val() == "Mirror Back"){outputtext = "";outputtext = outputtext + '<select class="form-control" name="'+itemid+'" id="'+itemid+'" onchange="javascript:changeProdTypeImage(this);">';outputtext = outputtext + '<option value="">Choose Size</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with mirror back">2.25 inch</option>';outputtext = outputtext + '<option value="3 inch round button with mirror back">3 inch</option>';outputtext = outputtext + '</select>';}if($('#'+inpid).val() == "Clip Back"){outputtext = "";outputtext = outputtext + '<select class="form-control" name="'+itemid+'" id="'+itemid+'" onchange="javascript:changeProdTypeImage(this);">';outputtext = outputtext + '<option value="">Choose Size</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with clip back">2.25 inch</option>';outputtext = outputtext + '<option value="3 inch round button with clip back">3 inch</option>';outputtext = outputtext + '</select>';}if($('#'+inpid).val() == "Nothing on Back"){outputtext = "";outputtext = outputtext + '<select class="form-control" name="'+itemid+'" id="'+itemid+'" onchange="javascript:changeProdTypeImage(this);">';outputtext = outputtext + '<option value="">Choose Size</option>';outputtext = outputtext + '<option value="1 inch round button with nothing on back">1 inch</option>';outputtext = outputtext + '<option value="1-1/2 inch round button with nothing on back">1.5 inch</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with nothing on back">2.25 inch</option>';outputtext = outputtext + '<option value="3 inch round button with nothing on back">3 inch</option>';outputtext = outputtext + '</select>';}
 if($('#'+inpid).val() == ''){
 outputtext = "";
-outputtext = outputtext + '<select name="'+itemid+'" id="'+itemid+'" onchange="javascript:changeProdTypeImage(this);" disabled="disabled">';
-outputtext = outputtext + '<option value="">Choose a button size</option>';
+outputtext = outputtext + '<select class="form-control" name="'+itemid+'" id="'+itemid+'" onchange="javascript:changeProdTypeImage(this);" disabled="disabled">';
+outputtext = outputtext + '<option value="">Choose Size</option>';
 outputtext = outputtext + '</select>';
 }
 
@@ -75,11 +75,11 @@ $('#'+receivingid).html(outputtext);
 //---generate button size drop down list for all products multiple add to cart--
 function changeAllProds(inpval, totalelems){
 
-if($('#main_prodchooser').val() == "Standard Pin Back"){outputtext = "";outputtext = outputtext + '<select name="main_sizechooser" id="main_sizechooser" onchange="javascript:changeAllSizes(34);">';outputtext = outputtext + '<option value="">Choose a button size</option>';outputtext = outputtext + '<option value="1 inch round button with locking pin back">1 inch</option>';outputtext = outputtext + '<option value="1-1/2 inch round button with locking pin back">1.5 inch</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with locking pin back">2.25 inch</option>';outputtext = outputtext + '<option value="3 inch round button with locking pin back">3 inch</option>';outputtext = outputtext + '</select>';}if($('#main_prodchooser').val() == "Refrigerator Magnet"){outputtext = "";outputtext = outputtext + '<select name="main_sizechooser" id="main_sizechooser" onchange="javascript:changeAllSizes(34);">';outputtext = outputtext + '<option value="">Choose a button size</option>';outputtext = outputtext + '<option value="1 inch round button with magnet back">1 inch</option>';outputtext = outputtext + '<option value="1-1/2 inch round button with magnet back">1.5 inch</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with magnet back">2.25 inch</option>';outputtext = outputtext + '<option value="3 inch round button with magnet back">3 inch</option>';outputtext = outputtext + '</select>';}if($('#main_prodchooser').val() == "Clothing Magnet"){outputtext = "";outputtext = outputtext + '<select name="main_sizechooser" id="main_sizechooser" onchange="javascript:changeAllSizes(34);">';outputtext = outputtext + '<option value="">Choose a button size</option>';outputtext = outputtext + '<option value="1-1/2 inch round button with clothing magnet back">1.5 inch</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with clothing magnet back">2.25 inch</option>';outputtext = outputtext + '<option value="3 inch round button with clothing magnet back">3 inch</option>';outputtext = outputtext + '</select>';}if($('#main_prodchooser').val() == "Keychain"){outputtext = "";outputtext = outputtext + '<select name="main_sizechooser" id="main_sizechooser" onchange="javascript:changeAllSizes(34);">';outputtext = outputtext + '<option value="">Choose a button size</option>';outputtext = outputtext + '<option value="1-1/2 inch round button with keychain back">1.5 inch</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with keychain back">2.25 inch</option>';outputtext = outputtext + '</select>';}if($('#main_prodchooser').val() == "Bottle Opener"){outputtext = "";outputtext = outputtext + '<select name="main_sizechooser" id="main_sizechooser" onchange="javascript:changeAllSizes(34);">';outputtext = outputtext + '<option value="">Choose a button size</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with bottle opener back">2.25 inch</option>';outputtext = outputtext + '</select>';}if($('#main_prodchooser').val() == "Mirror Back"){outputtext = "";outputtext = outputtext + '<select name="main_sizechooser" id="main_sizechooser" onchange="javascript:changeAllSizes(34);">';outputtext = outputtext + '<option value="">Choose a button size</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with mirror back">2.25 inch</option>';outputtext = outputtext + '<option value="3 inch round button with mirror back">3 inch</option>';outputtext = outputtext + '</select>';}if($('#main_prodchooser').val() == "Clip Back"){outputtext = "";outputtext = outputtext + '<select name="main_sizechooser" id="main_sizechooser" onchange="javascript:changeAllSizes(34);">';outputtext = outputtext + '<option value="">Choose a button size</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with clip back">2.25 inch</option>';outputtext = outputtext + '<option value="3 inch round button with clip back">3 inch</option>';outputtext = outputtext + '</select>';}if($('#main_prodchooser').val() == "Nothing on Back"){outputtext = "";outputtext = outputtext + '<select name="main_sizechooser" id="main_sizechooser" onchange="javascript:changeAllSizes(34);">';outputtext = outputtext + '<option value="">Choose a button size</option>';outputtext = outputtext + '<option value="1 inch round button with nothing on back">1 inch</option>';outputtext = outputtext + '<option value="1-1/2 inch round button with nothing on back">1.5 inch</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with nothing on back">2.25 inch</option>';outputtext = outputtext + '<option value="3 inch round button with nothing on back">3 inch</option>';outputtext = outputtext + '</select>';}
+if($('#main_prodchooser').val() == "Standard Pin Back"){outputtext = "";outputtext = outputtext + '<select name="main_sizechooser"  id="main_sizechooser" class="form-control" onchange="javascript:changeAllSizes(34);">';outputtext = outputtext + '<option value="">Choose Size</option>';outputtext = outputtext + '<option value="1 inch round button with locking pin back">1 inch</option>';outputtext = outputtext + '<option value="1-1/2 inch round button with locking pin back">1.5 inch</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with locking pin back">2.25 inch</option>';outputtext = outputtext + '<option value="3 inch round button with locking pin back">3 inch</option>';outputtext = outputtext + '</select>';}if($('#main_prodchooser').val() == "Refrigerator Magnet"){outputtext = "";outputtext = outputtext + '<select name="main_sizechooser" id="main_sizechooser" class="form-control" onchange="javascript:changeAllSizes(34);">';outputtext = outputtext + '<option value="">Choose Size</option>';outputtext = outputtext + '<option value="1 inch round button with magnet back">1 inch</option>';outputtext = outputtext + '<option value="1-1/2 inch round button with magnet back">1.5 inch</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with magnet back">2.25 inch</option>';outputtext = outputtext + '<option value="3 inch round button with magnet back">3 inch</option>';outputtext = outputtext + '</select>';}if($('#main_prodchooser').val() == "Clothing Magnet"){outputtext = "";outputtext = outputtext + '<select name="main_sizechooser" id="main_sizechooser" class="form-control" onchange="javascript:changeAllSizes(34);">';outputtext = outputtext + '<option value="">Choose Size</option>';outputtext = outputtext + '<option value="1-1/2 inch round button with clothing magnet back">1.5 inch</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with clothing magnet back">2.25 inch</option>';outputtext = outputtext + '<option value="3 inch round button with clothing magnet back">3 inch</option>';outputtext = outputtext + '</select>';}if($('#main_prodchooser').val() == "Keychain"){outputtext = "";outputtext = outputtext + '<select name="main_sizechooser" id="main_sizechooser" class="form-control" onchange="javascript:changeAllSizes(34);">';outputtext = outputtext + '<option value="">Choose Size</option>';outputtext = outputtext + '<option value="1-1/2 inch round button with keychain back">1.5 inch</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with keychain back">2.25 inch</option>';outputtext = outputtext + '</select>';}if($('#main_prodchooser').val() == "Bottle Opener"){outputtext = "";outputtext = outputtext + '<select name="main_sizechooser" id="main_sizechooser"  class="form-control" onchange="javascript:changeAllSizes(34);">';outputtext = outputtext + '<option value="">Choose Size</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with bottle opener back">2.25 inch</option>';outputtext = outputtext + '</select>';}if($('#main_prodchooser').val() == "Mirror Back"){outputtext = "";outputtext = outputtext + '<select name="main_sizechooser" id="main_sizechooser" class="form-control" onchange="javascript:changeAllSizes(34);">';outputtext = outputtext + '<option value="">Choose Size</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with mirror back">2.25 inch</option>';outputtext = outputtext + '<option value="3 inch round button with mirror back">3 inch</option>';outputtext = outputtext + '</select>';}if($('#main_prodchooser').val() == "Clip Back"){outputtext = "";outputtext = outputtext + '<select name="main_sizechooser" id="main_sizechooser" class="form-control" onchange="javascript:changeAllSizes(34);">';outputtext = outputtext + '<option value="">Choose Size</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with clip back">2.25 inch</option>';outputtext = outputtext + '<option value="3 inch round button with clip back">3 inch</option>';outputtext = outputtext + '</select>';}if($('#main_prodchooser').val() == "Nothing on Back"){outputtext = "";outputtext = outputtext + '<select name="main_sizechooser" id="main_sizechooser" class="form-control" onchange="javascript:changeAllSizes(34);">';outputtext = outputtext + '<option value="">Choose Size</option>';outputtext = outputtext + '<option value="1 inch round button with nothing on back">1 inch</option>';outputtext = outputtext + '<option value="1-1/2 inch round button with nothing on back">1.5 inch</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with nothing on back">2.25 inch</option>';outputtext = outputtext + '<option value="3 inch round button with nothing on back">3 inch</option>';outputtext = outputtext + '</select>';}
 if($('#main_prodchooser').val() == ''){
 outputtext = "";
-outputtext = outputtext + '<select name="main_sizechooser" id="main_sizechooser" disabled="disabled" onchange="javascript:changeAllSizes(34);">';
-outputtext = outputtext + '<option value="">Choose a button size</option>';
+outputtext = outputtext + '<select name="main_sizechooser" id="main_sizechooser" class="form-control" disabled="disabled" onchange="javascript:changeAllSizes(34);">';
+outputtext = outputtext + '<option value="">Choose Size</option>';
 outputtext = outputtext + '</select>';
 }
 
@@ -135,36 +135,44 @@ $('#dialog_title').html("Add to cart");
 
 var inpcode = "";
 
-inpcode = '<div align="center">';
-inpcode = inpcode + '<div align="center">';
-inpcode = inpcode + '<table cellpadding="0" cellspacing="0" border="0"><tr><td valign="top" align="center">';
+inpcode = '<div class="container" style="max-width:550px;">';//overall div
 
-inpcode = inpcode + '<div>';
+//--button preview
+inpcode = inpcode + '<div class="row">';
+
+inpcode = inpcode + '<div class="col-md-6">';
 inpcode = inpcode + '<img src="http://www.wackybuttons.com/designcodes/' + designcode.substring(0,3) + '/' + designcode +'.jpg" width="200" height="200" border="0" />';
 inpcode = inpcode + '<div style="margin-bottom:10px;font-size:16px;"><b>Design Code: </b><div style="border:2px solid black;display:inline;padding:2px;"><b>' + designcode +'</b></div></div>';
 inpcode = inpcode + '</div>';
 
-inpcode = inpcode + '</td><td valign="top" align="center">';
-inpcode = inpcode + '<div id="prod">';
-inpcode = inpcode + '<img src="http://www.wackybuttons.com/images/backofbutton.jpg" width="200" height="200" border="0" alt="Preview of what the back of your button will look like will show here after you choose a product type in the form above." />';
-inpcode = inpcode + '</div>';
-inpcode = inpcode + '</td></tr></table>';
+
+inpcode = inpcode + '<div id="prod" class="col-md-6">';
+inpcode = inpcode + '<img src="http://www.wackybuttons.com/images/backofbutton.jpg" border="0" alt="Preview of what the back of your button will look like will show here after you choose a product type in the form above." />';
 inpcode = inpcode + '</div>';
 
+inpcode = inpcode + '</div>';//end div row
+//--end button preview
+
+
+//--hr row
+inpcode = inpcode + '<div class="row">';
+inpcode = inpcode + '<div class="col-md-12">';
+inpcode = inpcode + '<hr />';
+inpcode = inpcode + '</div>';//end div col-md-12
+inpcode = inpcode + '</div>';//end div row
+//--end hr row
+
+//--form to order
+inpcode = inpcode + '<div class="row">';
 
 inpcode = inpcode + '<form name="frm_single_item" action="http://www.wackybuttons.com/shopcart.php" onsubmit="return checkSingleForm(this);" method="post" enctype="application/x-www-form-urlencoded" id="inpcode" target="cart">';
 inpcode = inpcode + '<input type="hidden" name="operation" value="addtocart" />';
 inpcode = inpcode + '<input type="hidden" name="title" value="'+titlet+'" />';
 inpcode = inpcode + '<input type="hidden" name="item_number" value="' + designcode + '" />';
 
-inpcode = inpcode + '<table summary="" align="center" cellpadding="10" cellspacing="0">';
-inpcode = inpcode + '<tr>';
-inpcode = inpcode + '<td font-weight:bold; font-size:12pt;">';
-
-inpcode = inpcode + 'Choose a Product:';
-inpcode = inpcode + '<br /><img src="http://www.wackybuttons.com/images/spacer.gif" width="1" height="5" alt="" />';
-inpcode = inpcode + '<select name="prod_chooser" id="prod_chooser" onchange="javascript:genButtonSizeDD('+"'"+'prod_chooser'+"'"+', '+"'"+'size_chooser'+"'"+', '+"'"+'item_name'+"'"+');">';
-inpcode = inpcode + '<option value="">Choose a Product</option>';
+inpcode = inpcode + '<div style="max-width:75%;margin-left:auto;margin-right:auto;">';
+inpcode = inpcode + '<select name="prod_chooser" class="form-control" id="prod_chooser" onchange="javascript:genButtonSizeDD('+"'"+'prod_chooser'+"'"+', '+"'"+'size_chooser'+"'"+', '+"'"+'item_name'+"'"+');">';
+inpcode = inpcode + '<option value="">Choose Product</option>';
 
 inpcode = inpcode + '<option value="Standard Pin Back">Standard Pin Back</option>';
 inpcode = inpcode + '<option value="Refrigerator Magnet">Refrigerator Magnet</option>';
@@ -175,32 +183,39 @@ inpcode = inpcode + '<option value="Clip Back">Clip Back</option>';
 inpcode = inpcode + '<option value="Nothing on Back">Nothing on Back</option>';
 
 inpcode = inpcode + '</select>';
+inpcode = inpcode + '</div>';
 
-inpcode = inpcode + '<br /><img src="http://www.wackybuttons.com/images/spacer.gif" width="1" height="10" alt="" />';
-inpcode = inpcode + 'Choose a Button Size:';
-inpcode = inpcode + '<br /><img src="http://www.wackybuttons.com/images/spacer.gif" width="1" height="5" alt="" />';
-inpcode = inpcode + '<div id="size_chooser">';
-inpcode = inpcode + '<select name="item_name" onchange="javascript:changeProdTypeImage(this);" disabled="disabled">';
-inpcode = inpcode + '<option value="">Choose a Button Size</option>';
+
+inpcode = inpcode + '<div id="size_chooser" style="max-width:75%;margin-top:10px;margin-bottom:10px;margin-left:auto;margin-right:auto;">';
+inpcode = inpcode + '<select name="item_name" class="form-control" onchange="javascript:changeProdTypeImage(this);" disabled="disabled">';
+inpcode = inpcode + '<option value="">Choose Size</option>';
 inpcode = inpcode + '</select>';
 inpcode = inpcode + '</div>';
-inpcode = inpcode + '<a href="javascript:show_size_info();" class="smalllink">See Size Differences</a>';
 
 
-inpcode = inpcode + '<br /><img src="http://www.wackybuttons.com/images/spacer.gif" width="1" height="10" alt="" />';
-inpcode = inpcode + 'Quantity: <input type="hidden" name="on0" value="number of buttons" />';
-inpcode = inpcode + '<input type="text" name="os0" maxlength="30" size="9" value="" /><br /> <br />';
-inpcode = inpcode + '<input name="button" type="button" value=" calculate price " onclick="javascript:calcprice();" />';
+inpcode = inpcode + '<div style="max-width:75%;margin-left:auto;margin-right:auto;">';//div for qty, price, and submit
+
+inpcode = inpcode + '<a href="javascript:show_size_info();" class="smalllink">See Size Differences</a> <br /> <br />';
+
+inpcode = inpcode + '<label for="on0">Quantity:</label> <input type="hidden" name="on0" value="number of buttons" />';
+inpcode = inpcode + '<input type="text" class="form-control" name="os0" maxlength="30" size="9" value="" style="width:25%;display:inline;" /><br />';
+inpcode = inpcode + '<input name="button" type="button" class="btn-default btn-wacky" value=" calculate price " style="margin-top:10px;margin-bottom:10px;" onclick="javascript:calcprice();" />';
 inpcode = inpcode + '<div id="pricedispcont" style="display:none;"><iframe name="pricedisp" id="pricedisp" height="35" width="150" scrolling="no" src="" frameborder="0">Could not calculate price. Press "Add To Cart" Below to view the price of the item in your shopping cart.</iframe></div>';
 
 
-inpcode = inpcode + '</td>';
-inpcode = inpcode + '</tr>';
-inpcode = inpcode + '</table>';
+inpcode = inpcode + '<br /> <br /><input type="image" name="Submit" value="Add to Cart" alt="Add to Cart" src="http://www.wackybuttons.com/images/order/addtocart.gif" style="border:0px;" />';
+inpcode = inpcode + '</div>';//end div for qty, price, and submit
 
-inpcode = inpcode + '<br /><img src="http://www.wackybuttons.com/images/spacer.gif" width="1" height="5" alt="" />';
-inpcode = inpcode + '<input type="image" name="Submit" value="Add to Cart" alt="Add to Cart" src="http://www.wackybuttons.com/images/order/addtocart.gif" style="border:0px;" />';
+
 inpcode = inpcode + '</form>';
+
+
+inpcode = inpcode + '</div>';//end div row
+//--end form to order
+
+inpcode = inpcode + '</div>';//end div container
+
+
 //inpcode = inpcode + '<br /> <br />';
 //inpcode = inpcode + '<a href="javascript:closeJDialog();">Close [X]</a></div>';
 
@@ -246,8 +261,8 @@ inpcode = inpcode + 'Check All <br /><input type="checkbox" id="main_checkbox" o
 inpcode = inpcode + '</div>';//col-md-2
 
 inpcode = inpcode + '<div class="col-md-4 multiple-add-cell">';
-inpcode = inpcode + 'Product <br /><select name="main_prodchooser" id="main_prodchooser" onchange="javascript:changeAllProds(this.value, 34);">';
-inpcode = inpcode + '<option value="">Choose a Product</option>';
+inpcode = inpcode + 'Product <br /><select name="main_prodchooser" id="main_prodchooser" class="form-control" onchange="javascript:changeAllProds(this.value, 34);">';
+inpcode = inpcode + '<option value="">Choose Product</option>';
 inpcode = inpcode + '<option value="Standard Pin Back">Standard Pin Back</option>';
 inpcode = inpcode + '<option value="Refrigerator Magnet">Refrigerator Magnet</option>';
 inpcode = inpcode + '<option value="Clothing Magnet">Clothing Magnet</option>';
@@ -261,14 +276,14 @@ inpcode = inpcode + '</div>';//col-md-4
 
 inpcode = inpcode + '<div class="col-md-4 multiple-add-cell">';
 inpcode = inpcode + 'Size <br /><div id="main_sizechooser_cont">';
-inpcode = inpcode + '<select name="main_sizechooser" id="main_sizechooser" disabled="disabled" onchange="javascript:changeAllSizes(34);">';
-inpcode = inpcode + '<option value="">Choose a Button Size</option>';
+inpcode = inpcode + '<select name="main_sizechooser" id="main_sizechooser" class="form-control" disabled="disabled" onchange="javascript:changeAllSizes(34);">';
+inpcode = inpcode + '<option value="">Choose Size</option>';
 inpcode = inpcode + '</select>';
 inpcode = inpcode + '</div>';
 inpcode = inpcode + '</div>';//col-md-4
 
 inpcode = inpcode + '<div class="col-md-2 multiple-add-cell">';
-inpcode = inpcode + 'Quantity <br /><input type="text" name="main_qty" id="main_qty" maxlength="30" size="5" value="" onchange="changeAllQtys(34);" /><br /><a href="javascript:changeAllQtys(34);" style="color:blue;font-size:12px;">apply</a>';
+inpcode = inpcode + 'Quantity <br /><input type="text" name="main_qty" id="main_qty" class="form-control" style="max-width:100px;" maxlength="30" size="5" value="" onchange="changeAllQtys(34);" /><br /><a href="javascript:changeAllQtys(34);" style="color:blue;font-size:12px;">apply</a>';
 inpcode = inpcode + '</div>'; //col-md-2
 
 inpcode = inpcode + '</div>'; //row
@@ -290,12 +305,12 @@ inpcode = inpcode + '<div class="col-md-2 multiple-add-cell">';
 inpcode = inpcode + '<input type="checkbox" name="checked_'+i+'" id="checked_'+i+'" value="yes" /><br /><b>'+designcodes[i]+'</b><br />';
 inpcode = inpcode + '<input type="hidden" name="title_'+i+'" value="'+titlet[i]+'" />';
 inpcode = inpcode + '<input type="hidden" name="item_number_'+i+'" id="item_number_'+i+'" value="'+designcodes[i]+'" />';
-inpcode = inpcode + '<img src="http://www.wackybuttons.com/designcodes/'+designcodes[i].substr(0, 3)+"/"+designcodes[i]+'.jpg" border="0" alt="" style="max-width:50px;" />';
+inpcode = inpcode + '<img src="http://www.wackybuttons.com/designcodes/'+designcodes[i].substr(0, 3)+"/"+designcodes[i]+'.jpg" border="0" alt="" width="50" height="50" />';
 inpcode = inpcode + '</div>';//col-md-2
 inpcode = inpcode + '<div class="col-md-4 multiple-add-cell">';
 inpcode = inpcode + 'Product<br />';
-inpcode = inpcode + '<select name="prod_chooser_'+i+'" id="prod_chooser_'+i+'"  onchange="javascript:genButtonSizeDD('+"'"+'prod_chooser_'+i+"'"+', '+"'"+'size_chooser_cont_'+i+"'"+', '+"'"+'item_name_'+i+"'"+');">';
-inpcode = inpcode + '<option value="">Choose a Product</option>';
+inpcode = inpcode + '<select name="prod_chooser_'+i+'" id="prod_chooser_'+i+'" class="form-control" onchange="javascript:genButtonSizeDD('+"'"+'prod_chooser_'+i+"'"+', '+"'"+'size_chooser_cont_'+i+"'"+', '+"'"+'item_name_'+i+"'"+');">';
+inpcode = inpcode + '<option value="">Choose Product</option>';
 inpcode = inpcode + '<option value="Standard Pin Back">Standard Pin Back</option>';
 inpcode = inpcode + '<option value="Refrigerator Magnet">Refrigerator Magnet</option>';
 inpcode = inpcode + '<option value="Clothing Magnet">Clothing Magnet</option>';
@@ -310,8 +325,8 @@ inpcode = inpcode + '</div>';//col-md-4
 inpcode = inpcode + '<div class="col-md-4 multiple-add-cell">';
 inpcode = inpcode + 'Size<br />';
 inpcode = inpcode + '<div id="size_chooser_cont_'+i+'">';
-inpcode = inpcode + '<select name="item_name_'+i+'" id="item_name_'+i+'" disabled="disabled">';
-inpcode = inpcode + '<option value="">Choose a Button Size</option>';
+inpcode = inpcode + '<select name="item_name_'+i+'" id="item_name_'+i+'" class="form-control" disabled="disabled">';
+inpcode = inpcode + '<option value="">Choose Size</option>';
 inpcode = inpcode + '</select>';
 inpcode = inpcode + '</div>';
 inpcode = inpcode + '</div>';//col-md-4
@@ -319,7 +334,7 @@ inpcode = inpcode + '</div>';//col-md-4
 inpcode = inpcode + '<div class="col-md-2 multiple-add-cell">';
 inpcode = inpcode + 'Quantity<br />';
 //inpcode = inpcode + '<input type="hidden" name="on0_'+i+'" value="number of buttons" />'; ------may not need
-inpcode = inpcode + '<input type="text" name="os0_'+i+'" id="os0_'+i+'" maxlength="30" size="5" value="" />';
+inpcode = inpcode + '<input type="text" name="os0_'+i+'" id="os0_'+i+'" class="form-control" style="max-width:100px;" maxlength="30" size="5" value="" />';
 inpcode = inpcode + '</div>'; //col-md-2
 inpcode = inpcode + '</div>'; //row
 
