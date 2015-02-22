@@ -7,20 +7,6 @@ $preloadimage.src = "http://www.wackybuttons.com/images/backofbutton.jpg";
 
 //-------------begin functions------------------
 
-//for collapsing the left store side navigation menu on smaller screens
-$(window).bind('resize load',function(){
-if( $(window).width() < 767 )
-{
-$('#side-menu-collapse').removeClass('in');
-$('#side-menu-collapse').addClass('out');
-}
-else
-{
-$('#side-menu-collapse').removeClass('out');
-$('#side-menu-collapse').addClass('in');
-}   
-});
-
 function show_hide(inp){
 $("div[id='"+inp+"']").toggle();
 }
@@ -243,23 +229,24 @@ $('#dialog_title').html("Add multiple items to your cart");
 inpcode = '<div align="center" style="background-color:#ffffff;padding:5px;">';
 inpcode = inpcode + '<form name="frm_add_multiple" action="http://www.wackybuttons.com/shopcart.php" onsubmit="return checkMultipleForm(this, 34);" method="post" enctype="application/x-www-form-urlencoded" id="frm_add_multiple" target="cart" style="color:black;">';
 inpcode = inpcode + '<input type="hidden" name="operation" value="addmultipletocart" />';
-inpcode = inpcode + '<table cellpadding="2" cellspacing="2" border="0">';
 
-inpcode = inpcode + '<tr>';
-inpcode = inpcode + '<td colspan="5"><b>Change All Items Below:</b></td>';
-inpcode = inpcode + '</tr>';
+inpcode = inpcode + '<div class="container" style="max-width:550px;">';
 
-inpcode = inpcode + '<tr>';
-inpcode = inpcode + '<td align="center">Check All</td>';
-inpcode = inpcode + '<td align="center">Product</td>';
-inpcode = inpcode + '<td align="center">Size</td>';
-inpcode = inpcode + '<td align="center">Quantity</td>';
-inpcode = inpcode + '</tr>';
+inpcode = inpcode + '<div class="row">';
+inpcode = inpcode + '<div class="col-md-12  multiple-add-cell">';
+inpcode = inpcode + '<b>Change All Items Below:</b>';
+inpcode = inpcode + '</div>';
+inpcode = inpcode + '</div>';
 
-inpcode = inpcode + '<tr>';
-inpcode = inpcode + '<td align="center" valign="top"><input type="checkbox" id="main_checkbox" onchange="javascript:checkAllItems(34);" /></td>';
-inpcode = inpcode + '<td align="center" valign="top">';
-inpcode = inpcode + '<select name="main_prodchooser" id="main_prodchooser" onchange="javascript:changeAllProds(this.value, 34);">';
+
+//--next row
+inpcode = inpcode + '<div class="row">';
+inpcode = inpcode + '<div class="col-md-2 multiple-add-cell">';
+inpcode = inpcode + 'Check All <br /><input type="checkbox" id="main_checkbox" onchange="javascript:checkAllItems(34);" />';
+inpcode = inpcode + '</div>';//col-md-2
+
+inpcode = inpcode + '<div class="col-md-4 multiple-add-cell">';
+inpcode = inpcode + 'Product <br /><select name="main_prodchooser" id="main_prodchooser" onchange="javascript:changeAllProds(this.value, 34);">';
 inpcode = inpcode + '<option value="">Choose a Product</option>';
 inpcode = inpcode + '<option value="Standard Pin Back">Standard Pin Back</option>';
 inpcode = inpcode + '<option value="Refrigerator Magnet">Refrigerator Magnet</option>';
@@ -270,33 +257,43 @@ inpcode = inpcode + '<option value="Clip Back">Clip Back</option>';
 inpcode = inpcode + '<option value="Nothing on Back">Nothing on Back</option>';
 
 inpcode = inpcode + '</select>';
-inpcode = inpcode + '</td>';
-inpcode = inpcode + '<td align="center" valign="top">';
-inpcode = inpcode + '<div id="main_sizechooser_cont">';
+inpcode = inpcode + '</div>';//col-md-4
+
+inpcode = inpcode + '<div class="col-md-4 multiple-add-cell">';
+inpcode = inpcode + 'Size <br /><div id="main_sizechooser_cont">';
 inpcode = inpcode + '<select name="main_sizechooser" id="main_sizechooser" disabled="disabled" onchange="javascript:changeAllSizes(34);">';
 inpcode = inpcode + '<option value="">Choose a Button Size</option>';
 inpcode = inpcode + '</select>';
 inpcode = inpcode + '</div>';
-inpcode = inpcode + '</td>';
-inpcode = inpcode + '<td align="center" valign="top"><input type="text" name="main_qty" id="main_qty" maxlength="30" size="5" value="" onchange="changeAllQtys(34);" /><br /><a href="javascript:changeAllQtys(34);" style="color:blue;font-size:12px;">apply</a></td>';
-inpcode = inpcode + '</tr>';
+inpcode = inpcode + '</div>';//col-md-4
 
+inpcode = inpcode + '<div class="col-md-2 multiple-add-cell">';
+inpcode = inpcode + 'Quantity <br /><input type="text" name="main_qty" id="main_qty" maxlength="30" size="5" value="" onchange="changeAllQtys(34);" /><br /><a href="javascript:changeAllQtys(34);" style="color:blue;font-size:12px;">apply</a>';
+inpcode = inpcode + '</div>'; //col-md-2
 
+inpcode = inpcode + '</div>'; //row
+//--end next row
+
+//--next row
 for(i = 0; i < designcodes.length; i++){
 
-inpcode = inpcode + '<tr>';
-inpcode = inpcode + '<td colspan="5"><hr /></td>';
-inpcode = inpcode + '</tr>';
 
-inpcode = inpcode + '<tr>';
-inpcode = inpcode + '<td align="center">';
+inpcode = inpcode + '<div class="row">';
+inpcode = inpcode + '<div class="col-md-12">';
+inpcode = inpcode + '<hr>';
+inpcode = inpcode + '</div>';
+inpcode = inpcode + '</div>';
+
+
+inpcode = inpcode + '<div class="row">';
+inpcode = inpcode + '<div class="col-md-2 multiple-add-cell">';
 inpcode = inpcode + '<input type="checkbox" name="checked_'+i+'" id="checked_'+i+'" value="yes" /><br /><b>'+designcodes[i]+'</b><br />';
 inpcode = inpcode + '<input type="hidden" name="title_'+i+'" value="'+titlet[i]+'" />';
 inpcode = inpcode + '<input type="hidden" name="item_number_'+i+'" id="item_number_'+i+'" value="'+designcodes[i]+'" />';
-inpcode = inpcode + '<img src="http://www.wackybuttons.com/designcodes/'+designcodes[i].substr(0, 3)+"/"+designcodes[i]+'.jpg" width="75" height="75" border="0" alt="" />';
-inpcode = inpcode + '</td>';
-inpcode = inpcode + '<td align="center">';
-inpcode = inpcode + 'Product<br /> <br />';
+inpcode = inpcode + '<img src="http://www.wackybuttons.com/designcodes/'+designcodes[i].substr(0, 3)+"/"+designcodes[i]+'.jpg" border="0" alt="" style="max-width:50px;" />';
+inpcode = inpcode + '</div>';//col-md-2
+inpcode = inpcode + '<div class="col-md-4 multiple-add-cell">';
+inpcode = inpcode + 'Product<br />';
 inpcode = inpcode + '<select name="prod_chooser_'+i+'" id="prod_chooser_'+i+'"  onchange="javascript:genButtonSizeDD('+"'"+'prod_chooser_'+i+"'"+', '+"'"+'size_chooser_cont_'+i+"'"+', '+"'"+'item_name_'+i+"'"+');">';
 inpcode = inpcode + '<option value="">Choose a Product</option>';
 inpcode = inpcode + '<option value="Standard Pin Back">Standard Pin Back</option>';
@@ -308,28 +305,28 @@ inpcode = inpcode + '<option value="Clip Back">Clip Back</option>';
 inpcode = inpcode + '<option value="Nothing on Back">Nothing on Back</option>';
 
 inpcode = inpcode + '</select>';
-inpcode = inpcode + '</td>';
+inpcode = inpcode + '</div>';//col-md-4
 
-inpcode = inpcode + '<td align="center">';
-inpcode = inpcode + 'Size<br /> <br />';
+inpcode = inpcode + '<div class="col-md-4 multiple-add-cell">';
+inpcode = inpcode + 'Size<br />';
 inpcode = inpcode + '<div id="size_chooser_cont_'+i+'">';
 inpcode = inpcode + '<select name="item_name_'+i+'" id="item_name_'+i+'" disabled="disabled">';
 inpcode = inpcode + '<option value="">Choose a Button Size</option>';
 inpcode = inpcode + '</select>';
 inpcode = inpcode + '</div>';
-inpcode = inpcode + '</td>';
+inpcode = inpcode + '</div>';//col-md-4
 
-inpcode = inpcode + '<td align="center">';
-inpcode = inpcode + 'Quantity<br /> <br />';
+inpcode = inpcode + '<div class="col-md-2 multiple-add-cell">';
+inpcode = inpcode + 'Quantity<br />';
 //inpcode = inpcode + '<input type="hidden" name="on0_'+i+'" value="number of buttons" />'; ------may not need
 inpcode = inpcode + '<input type="text" name="os0_'+i+'" id="os0_'+i+'" maxlength="30" size="5" value="" />';
-inpcode = inpcode + '</td>';
+inpcode = inpcode + '</div>'; //col-md-2
+inpcode = inpcode + '</div>'; //row
 
-inpcode = inpcode + '</tr>';
 
 }//end for i
 
-inpcode = inpcode + '</table>';
+inpcode = inpcode + '</div>';//container
 
 inpcode = inpcode + '<input type="image" name="Submit" value="Add Checked Items to Cart" alt="Add Checked Items to Cart" src="http://www.wackybuttons.com/images/order/addcheckedcart.gif" style="border:0px;" />';
 
