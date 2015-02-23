@@ -144,6 +144,11 @@ background-repeat: repeat;
 text-align: center;
 }
 
+.u-block-center{
+margin-left:auto;
+margin-right:auto;
+}
+
 /***** For modal in store, dclookup, and preview pages *****/
 .multiple-add-cell{
 margin-bottom:15px;
