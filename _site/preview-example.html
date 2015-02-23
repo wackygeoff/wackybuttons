@@ -22,18 +22,22 @@
 <!-- Custom CSS -->
 <link href="/css/style.css" title="compact" rel="stylesheet" type="text/css" />
 
+<!-- Custom CSS to include -->
 
-
-<!-- Javascript -->
-<!-- Vimeo Communication Script -->
-<script src="/js/froogaloop.js"></script>
-
-<script src="./js/preview-example.js"></script>
 	<body>
 		<div class="container">
-	<a href="">
-		<img src="/img/banner.jpg" class="img-responsive center-block">
-	</a>
+	<div class="row">
+		<div class="col-md-8">
+			<a href="">
+				<img src="/img/banner.jpg" class="img-responsive center-block">
+			</a>
+		</div><!-- col-md-8 -->
+		<div class="col-md-4">
+			<div class="row pull-right">
+					<button class="btn btn-lg btn-default btn-wacky-lg"><span class="fa fa-shopping-cart"></span> My Cart</button><button class="btn btn-lg btn-default btn-wacky-lg"><span class="fa fa-paint-brush"></span> My Designs</button>
+			</div><!-- row -->
+		</div><!-- col-md-4 -->
+	</div><!-- row -->
 </div><!-- container -->
 		<!-- NAVBAR -->
 <nav class="navbar yamm navbar-default navbar-wacky" role="navigation">
@@ -148,7 +152,10 @@
 				<div class="col-md-2">				
 					<div class="thumbnail create-thumbnail">
 						<a href="#">
-						<img src="http://www.wackybuttons.com/images/create/crtOp1.gif" class="img-responsive center-block">
+						<!--img src="/img/create/crtOp1.jpg" class="img-responsive center-block"-->
+					<div class="create-icon">
+						<span class="fa fa-pencil-square-o"></span>
+					</div><!-- icon -->
 						<h4 style="height:30px;">Design Your Buttons Online</h4>
 						</a>
 						<p>Design your own buttons using our online design studio. Use this option to order immediately!</p>
@@ -157,7 +164,10 @@
 				<div class="col-md-2">				
 					<div class="thumbnail create-thumbnail">
 						<a href="#">
-						<img src="http://www.wackybuttons.com/images/create/crtOp2.gif" class="img-responsive center-block">
+						<!--img src="/img/create/crtOp2.jpg" class="img-responsive center-block"-->
+					<div class="create-icon">
+						<span class="fa fa-arrow-up"></span>
+					</div><!-- icon -->
 						<h4 style="height:30px;">Upload an Image</h4>
 						</a>
 						<p>Upload pictures or designs you created yourself. One of our artists will review your design for proper setup.</p>
@@ -166,7 +176,10 @@
 				<div class="col-md-2">				
 					<div class="thumbnail create-thumbnail">
 						<a href="#">
-						<img src="http://www.wackybuttons.com/images/create/crtOp3.gif" class="img-responsive center-block">
+						<!--img src="/img/create/crtOp3.jpg" class="img-responsive center-block"-->
+					<div class="create-icon">
+						<span class="fa fa-lightbulb-o"></span>
+					</div><!-- icon -->
 						<h4 style="height:30px;">Let us Design Your Buttons</h4>
 						</a>
 						<p>Tell us what your your buttons should look like. We will design them for FREE!</p>
@@ -175,7 +188,10 @@
 				<div class="col-md-2">				
 					<div class="thumbnail create-thumbnail">
 						<a href="#">
-						<img src="http://www.wackybuttons.com/images/create/crtOp4.gif" class="img-responsive center-block">
+						<!--img src="/img/create/crtOp4.jpg" class="img-responsive center-block"-->
+					<div class="create-icon">
+						<span class="fa fa-at"></span>
+					</div><!-- icon -->
 						<h4 style="height:30px;">Email us your design idea</h4>
 						</a>
 						<p>You can always just email us details on how you want your buttons to look.</p>
@@ -184,16 +200,22 @@
 				<div class="col-md-2">				
 					<div class="thumbnail create-thumbnail">
 						<a href="#">
-						<img src="http://www.wackybuttons.com/images/create/crtOp5.gif" class="img-responsive center-block">
+						<!--img src="/img/create/crtOp5.jpg" class="img-responsive center-block"-->
+					<div class="create-icon">
+						<span class="fa fa-envelope-o"></span>
+					</div><!-- icon -->
 						<h4 style="height:30px;">Mail us your design idea</h4>
 						</a>
 						<p>Send your pictures or ideas by regular mail (snail mail).</p>
 					</div><!-- thumbnail -->
 				</div><!-- col-md-2 -->
-				<div class="col-md-2">				
+				<div class="col-md-2" style="border-left:2px solid white;">				
 					<div class="thumbnail create-thumbnail">
 						<a href="#">
-						<!--image placeholder to be replaced later--><div style="padding:15px;width:88px;height:100px;">OPTIONAL</div><!--end image place holder-->
+						<!--image placeholder to be replaced later--><!--div style="padding:15px;width:88px;height:100px;">OPTIONAL</div><!--end image place holder-->
+					<div class="create-icon">
+						<span class="fa fa-download"></span>
+					</div><!-- icon -->
 						<h4 style="height:30px;">Download a Template</h4>
 						</a>
 						<p>Save Time if you are able to design professionally by following these instructions.</p>
@@ -202,12 +224,13 @@
 			</div><!-- row -->			
 			
 			<div class="row"> 
-			<div class="col-md-9">
+			<div class="col-md-10">
 			<!--div class="thumbnail"-->
 			<div style="color:white;margin-bottom:15px;">
+			<img src="/img/createoptionarrow.jpg" alt="" class="hidden-xs" style="max-width:100%;" /><br /> <br />
 			All services are FREE! Setup your artwork first, then pay for your buttons when you are ready.</div>
 			</div>
-			<div class="col-md-3">
+			<div class="col-md-2">
 					<a href="#">
 						<button class="btn btn-default btn-wacky pull-right">More details >></button>
 					</a>
@@ -237,38 +260,50 @@
 			<div class="row"> 
 			
 				<div class="col-md-3">				
-					<div class="thumbnail">
+					<div class="thumbnail order-thumbnail">
 						<a href="#">
-						<h4>Start Designing your buttons</h4>
+					<div class="order-icon">
+						<span class="fa fa-pencil-square-o"></span>
+					</div><!-- icon -->
+						<h4>Start Designing</h4>
 						</a>
 						<p>If this is your first time ordering then you will want to start here.</p>
 					</div><!-- thumbnail -->
 				</div><!-- col-md-3 -->
 				
 				<div class="col-md-3">				
-					<div class="thumbnail">
+					<div class="thumbnail order-thumbnail">
 						<a href="#">
-						<h4>Order with a Design Code</h4>
+					<div class="order-icon">
+						<span class="fa fa-star"></span>
+					</div><!-- icon -->
+						<h4>Order by Design Code</h4>
 						</a>
 						<p>If you received an email with a Design Code, you can order here using the code you received.</p>
 					</div><!-- thumbnail -->
 				</div><!-- col-md-3 -->
 				
 				<div class="col-md-3">				
-					<div class="thumbnail">
+					<div class="thumbnail order-thumbnail">
 						<a href="#">
+					<div class="order-icon">
+						<span class="fa fa-binoculars"></span>
+					</div><!-- icon -->
 						<h4>Lookup past designs</h4>
 						</a>
-						<p>You can lookup any button design you ever created on our website.</p>
+						<p>You can lookup any button design you ever created on our website by entering your email address.</p>
 					</div><!-- thumbnail -->
 				</div><!-- col-md-3 -->
 				
 				<div class="col-md-3">				
-					<div class="thumbnail">
+					<div class="thumbnail order-thumbnail">
 						<a href="#">
-						<h4>Reseller Account Login</h4>
+					<div class="order-icon">
+						<span class="fa fa-key"></span>
+					</div><!-- icon -->
+						<h4>Account Login</h4>
 						</a>
-						<p>If you are a reseller you can access your account here.</p>
+						<p>If you have an account, you can view past orders and reorder here.</p>
 					</div><!-- thumbnail -->
 				</div><!-- col-md-3 -->
 
@@ -326,12 +361,12 @@ All sales are final. If you are worried about how your buttons will look, we rec
 <div style="font-size:20px;font-weight:bold;margin-top:10px;padding:5px;">
 Design Code: <span style="border:black 2px solid;padding:2px;">5076349</span>
 <br />
-<a href="javascript:info1();" style="font-size:16px;font-weight:normal;padding:15px;">What's This?</a>
+<a href="javascript:info1();" style="font-size:16px;font-weight:normal;padding:15px;" data-toggle="modal" data-target="#dialog_win" onclick="info1();">What's This?</a>
 </div>
 
-<a href="javascript:show_large_photo('http://www.wackybuttons.com/designcodes/507/5076349.jpg');">
-<img src="http://www.wackybuttons.com/designcodes/507/5076349.jpg" alt="5076349 - click to see larger image" style="max-width:100%;">
-</a>
+
+<img src="http://www.wackybuttons.com/designcodes/507/5076349.jpg" alt="5076349 - click to see larger image" style="max-width:100%;" data-toggle="modal" data-target="#dialog_win" onclick="show_large_photo('http://www.wackybuttons.com/designcodes/507/5076349.jpg');">
+
 
 <form action="http://www.wackybuttons.com/php/removefrompreview.php" method="post" onsubmit="if(confirm('Are you sure you want to remove this button design from your preview page?')){return true;}else{return false;}">
 <input type="hidden" name="removepreview" value="yes" />
@@ -351,7 +386,7 @@ Design Code: <span style="border:black 2px solid;padding:2px;">5076349</span>
 <img src="http://www.wackybuttons.com/images/previewpage/enlarge.gif" alt="See Enlarged Image" width="50" height="50" border="0" />
 </a>
 
-<a href="javascript:designChangeReq('5076349');"><img src="http://www.wackybuttons.com/images/previewpage/change.gif" width="50" height="50" alt="Make changes to this button design" border="0" /></a>
+<a href="javascript:designChangeReq('5076349');" data-toggle="modal" data-target="#dialog_win" onclick="designChangeReq('5076349');"><img src="http://www.wackybuttons.com/images/previewpage/change.gif" width="50" height="50" alt="Make changes to this button design" border="0" /></a>
 
 </div><!--end buttons left-->
 
@@ -390,26 +425,26 @@ Share:
 
 <!--Choose Product:-->
 <!--br /><img src="http://www.wackybuttons.com/images/spacer.gif" width="1" height="5" alt=""><br /-->
-<select name="prodchooser" id="prodchooser0" onchange="javascript:genButtonSizeDD('prodchooser0', 'sizechooser0', 'item_name');">
+<select name="prodchooser" id="prodchooser0" class="form-control" style="max-width:75%;margin-left:auto;margin-right:auto;" onchange="javascript:genButtonSizeDD('prodchooser0', 'sizechooser0', 'item_name');">
 
 <option value="">Choose a Product</option>
 <option value="Standard Pin Back">Standard Pin Back</option><option value="Refrigerator Magnet">Refrigerator Magnet</option><option value="Clothing Magnet">Clothing Magnet</option><option value="Bottle Opener">Bottle Opener</option><option value="Mirror Back">Mirror Back</option><option value="Clip Back">Clip Back</option><option value="Nothing on Back">Nothing on Back</option></select>
 <!--br /><img src="http://www.wackybuttons.com/images/spacer.gif" width="1" height="5" alt="" /><br /-->
 
 <!--Choose a Button Size:-->
-<br /><img src="http://www.wackybuttons.com/images/spacer.gif" width="1" height="10" alt="" />
-<div id="sizechooser0">
-<select name="item_name" disabled="disabled">
+
+<div id="sizechooser0" style="max-width:75%;margin-left:auto;margin-right:auto;margin-top:10px;margin-bottom:10px;">
+<select name="item_name" class="form-control" disabled="disabled">
 <option value="">Choose a Button Size</option>
 </select>
 </div>
-<a href="javascript:show_size_info();" class="smalllink">See Size Differences</a>
-<br /><img src="http://www.wackybuttons.com/images/spacer.gif" width="1" height="5" alt="">Quantity: <input type="text" name="os0" size="7" value="1" maxlength="7">
+<a href="javascript:show_size_info();" data-toggle="modal" data-target="#dialog_win" onclick="show_size_info();">See Size Differences</a>
+<br /> <br />Quantity: <input type="text" name="os0" class="form-control" style="max-width:25%;margin-left:auto;margin-right:auto;display:inline;" size="7" value="1" maxlength="7">
 
 <input name="title" type="hidden" value="Custom Design">
-<br /><img src="http://www.wackybuttons.com/images/spacer.gif" width="1" height="5" alt="">
 <!--input type="image" name="Submit" value="add to cart" alt="Add to Cart" src="http://www.wackybuttons.com/images/previewpage/addtocart.gif" style="border:0px;" onclick="javascript:if(navigator.userAgent.toLowerCase().indexOf('safari') > -1){window.open('http://www.wackybuttons.com/shopcart.php','cart')}"><br /-->
-<input type="image" name="Submit" value="add to cart" alt="Add to Cart" src="http://www.wackybuttons.com/images/previewpage/addtocart.gif" style="border:0px;" onclick="javascript:if(navigator.userAgent.toLowerCase().indexOf('safari') > -1){window.open('http://www.wackybuttons.com/shopcart.php','cart')}"><br />
+<br />
+<input type="image" name="Submit" value="add to cart" alt="Add to Cart" src="http://www.wackybuttons.com/images/previewpage/addtocart.gif" style="border:0px;margin-top:10px;" onclick="javascript:if(navigator.userAgent.toLowerCase().indexOf('safari') > -1){window.open('http://www.wackybuttons.com/shopcart.php','cart')}"><br />
 
 
 
@@ -437,12 +472,12 @@ Share:
 <div style="font-size:20px;font-weight:bold;margin-top:10px;padding:5px;">
 Design Code: <span style="border:black 2px solid;padding:2px;">5076349</span>
 <br />
-<a href="javascript:info1();" style="font-size:16px;font-weight:normal;padding:15px;">What's This?</a>
+<a href="javascript:info1();" style="font-size:16px;font-weight:normal;padding:15px;" data-toggle="modal" data-target="#dialog_win" onclick="info1();">What's This?</a>
 </div>
 
-<a href="javascript:show_large_photo('http://www.wackybuttons.com/designcodes/507/5076349.jpg');">
-<img src="http://www.wackybuttons.com/designcodes/507/5076349.jpg" alt="5076349 - click to see larger image" style="max-width:100%;">
-</a>
+
+<img src="http://www.wackybuttons.com/designcodes/507/5076349.jpg" alt="5076349 - click to see larger image" style="max-width:100%;" data-toggle="modal" data-target="#dialog_win" onclick="show_large_photo('http://www.wackybuttons.com/designcodes/507/5076349.jpg');">
+
 
 <form action="http://www.wackybuttons.com/php/removefrompreview.php" method="post" onsubmit="if(confirm('Are you sure you want to remove this button design from your preview page?')){return true;}else{return false;}">
 <input type="hidden" name="removepreview" value="yes" />
@@ -462,7 +497,7 @@ Design Code: <span style="border:black 2px solid;padding:2px;">5076349</span>
 <img src="http://www.wackybuttons.com/images/previewpage/enlarge.gif" alt="See Enlarged Image" width="50" height="50" border="0" />
 </a>
 
-<a href="javascript:designChangeReq('5076349');"><img src="http://www.wackybuttons.com/images/previewpage/change.gif" width="50" height="50" alt="Make changes to this button design" border="0" /></a>
+<a href="javascript:designChangeReq('5076349');" data-toggle="modal" data-target="#dialog_win" onclick="designChangeReq('5076349');"><img src="http://www.wackybuttons.com/images/previewpage/change.gif" width="50" height="50" alt="Make changes to this button design" border="0" /></a>
 
 </div><!--end buttons left-->
 
@@ -501,26 +536,26 @@ Share:
 
 <!--Choose Product:-->
 <!--br /><img src="http://www.wackybuttons.com/images/spacer.gif" width="1" height="5" alt=""><br /-->
-<select name="prodchooser" id="prodchooser0" onchange="javascript:genButtonSizeDD('prodchooser0', 'sizechooser0', 'item_name');">
+<select name="prodchooser" id="prodchooser0" class="form-control" style="max-width:75%;margin-left:auto;margin-right:auto;" onchange="javascript:genButtonSizeDD('prodchooser0', 'sizechooser0', 'item_name');">
 
 <option value="">Choose a Product</option>
 <option value="Standard Pin Back">Standard Pin Back</option><option value="Refrigerator Magnet">Refrigerator Magnet</option><option value="Clothing Magnet">Clothing Magnet</option><option value="Bottle Opener">Bottle Opener</option><option value="Mirror Back">Mirror Back</option><option value="Clip Back">Clip Back</option><option value="Nothing on Back">Nothing on Back</option></select>
 <!--br /><img src="http://www.wackybuttons.com/images/spacer.gif" width="1" height="5" alt="" /><br /-->
 
 <!--Choose a Button Size:-->
-<br /><img src="http://www.wackybuttons.com/images/spacer.gif" width="1" height="10" alt="" />
-<div id="sizechooser0">
-<select name="item_name" disabled="disabled">
+
+<div id="sizechooser0" style="max-width:75%;margin-left:auto;margin-right:auto;margin-top:10px;margin-bottom:10px;">
+<select name="item_name" class="form-control" disabled="disabled">
 <option value="">Choose a Button Size</option>
 </select>
 </div>
-<a href="javascript:show_size_info();" class="smalllink">See Size Differences</a>
-<br /><img src="http://www.wackybuttons.com/images/spacer.gif" width="1" height="5" alt="">Quantity: <input type="text" name="os0" size="7" value="1" maxlength="7">
+<a href="javascript:show_size_info();" data-toggle="modal" data-target="#dialog_win" onclick="show_size_info();">See Size Differences</a>
+<br /> <br />Quantity: <input type="text" name="os0" class="form-control" style="max-width:25%;margin-left:auto;margin-right:auto;display:inline;" size="7" value="1" maxlength="7">
 
 <input name="title" type="hidden" value="Custom Design">
-<br /><img src="http://www.wackybuttons.com/images/spacer.gif" width="1" height="5" alt="">
 <!--input type="image" name="Submit" value="add to cart" alt="Add to Cart" src="http://www.wackybuttons.com/images/previewpage/addtocart.gif" style="border:0px;" onclick="javascript:if(navigator.userAgent.toLowerCase().indexOf('safari') > -1){window.open('http://www.wackybuttons.com/shopcart.php','cart')}"><br /-->
-<input type="image" name="Submit" value="add to cart" alt="Add to Cart" src="http://www.wackybuttons.com/images/previewpage/addtocart.gif" style="border:0px;" onclick="javascript:if(navigator.userAgent.toLowerCase().indexOf('safari') > -1){window.open('http://www.wackybuttons.com/shopcart.php','cart')}"><br />
+<br />
+<input type="image" name="Submit" value="add to cart" alt="Add to Cart" src="http://www.wackybuttons.com/images/previewpage/addtocart.gif" style="border:0px;margin-top:10px;" onclick="javascript:if(navigator.userAgent.toLowerCase().indexOf('safari') > -1){window.open('http://www.wackybuttons.com/shopcart.php','cart')}"><br />
 
 
 
@@ -548,12 +583,12 @@ Share:
 <div style="font-size:20px;font-weight:bold;margin-top:10px;padding:5px;">
 Design Code: <span style="border:black 2px solid;padding:2px;">5076349</span>
 <br />
-<a href="javascript:info1();" style="font-size:16px;font-weight:normal;padding:15px;">What's This?</a>
+<a href="javascript:info1();" style="font-size:16px;font-weight:normal;padding:15px;" data-toggle="modal" data-target="#dialog_win" onclick="info1();">What's This?</a>
 </div>
 
-<a href="javascript:show_large_photo('http://www.wackybuttons.com/designcodes/507/5076349.jpg');">
-<img src="http://www.wackybuttons.com/designcodes/507/5076349.jpg" alt="5076349 - click to see larger image" style="max-width:100%;">
-</a>
+
+<img src="http://www.wackybuttons.com/designcodes/507/5076349.jpg" alt="5076349 - click to see larger image" style="max-width:100%;" data-toggle="modal" data-target="#dialog_win" onclick="show_large_photo('http://www.wackybuttons.com/designcodes/507/5076349.jpg');">
+
 
 <form action="http://www.wackybuttons.com/php/removefrompreview.php" method="post" onsubmit="if(confirm('Are you sure you want to remove this button design from your preview page?')){return true;}else{return false;}">
 <input type="hidden" name="removepreview" value="yes" />
@@ -573,7 +608,7 @@ Design Code: <span style="border:black 2px solid;padding:2px;">5076349</span>
 <img src="http://www.wackybuttons.com/images/previewpage/enlarge.gif" alt="See Enlarged Image" width="50" height="50" border="0" />
 </a>
 
-<a href="javascript:designChangeReq('5076349');"><img src="http://www.wackybuttons.com/images/previewpage/change.gif" width="50" height="50" alt="Make changes to this button design" border="0" /></a>
+<a href="javascript:designChangeReq('5076349');" data-toggle="modal" data-target="#dialog_win" onclick="designChangeReq('5076349');"><img src="http://www.wackybuttons.com/images/previewpage/change.gif" width="50" height="50" alt="Make changes to this button design" border="0" /></a>
 
 </div><!--end buttons left-->
 
@@ -612,26 +647,26 @@ Share:
 
 <!--Choose Product:-->
 <!--br /><img src="http://www.wackybuttons.com/images/spacer.gif" width="1" height="5" alt=""><br /-->
-<select name="prodchooser" id="prodchooser0" onchange="javascript:genButtonSizeDD('prodchooser0', 'sizechooser0', 'item_name');">
+<select name="prodchooser" id="prodchooser0" class="form-control" style="max-width:75%;margin-left:auto;margin-right:auto;" onchange="javascript:genButtonSizeDD('prodchooser0', 'sizechooser0', 'item_name');">
 
 <option value="">Choose a Product</option>
 <option value="Standard Pin Back">Standard Pin Back</option><option value="Refrigerator Magnet">Refrigerator Magnet</option><option value="Clothing Magnet">Clothing Magnet</option><option value="Bottle Opener">Bottle Opener</option><option value="Mirror Back">Mirror Back</option><option value="Clip Back">Clip Back</option><option value="Nothing on Back">Nothing on Back</option></select>
 <!--br /><img src="http://www.wackybuttons.com/images/spacer.gif" width="1" height="5" alt="" /><br /-->
 
 <!--Choose a Button Size:-->
-<br /><img src="http://www.wackybuttons.com/images/spacer.gif" width="1" height="10" alt="" />
-<div id="sizechooser0">
-<select name="item_name" disabled="disabled">
+
+<div id="sizechooser0" style="max-width:75%;margin-left:auto;margin-right:auto;margin-top:10px;margin-bottom:10px;">
+<select name="item_name" class="form-control" disabled="disabled">
 <option value="">Choose a Button Size</option>
 </select>
 </div>
-<a href="javascript:show_size_info();" class="smalllink">See Size Differences</a>
-<br /><img src="http://www.wackybuttons.com/images/spacer.gif" width="1" height="5" alt="">Quantity: <input type="text" name="os0" size="7" value="1" maxlength="7">
+<a href="javascript:show_size_info();" data-toggle="modal" data-target="#dialog_win" onclick="show_size_info();">See Size Differences</a>
+<br /> <br />Quantity: <input type="text" name="os0" class="form-control" style="max-width:25%;margin-left:auto;margin-right:auto;display:inline;" size="7" value="1" maxlength="7">
 
 <input name="title" type="hidden" value="Custom Design">
-<br /><img src="http://www.wackybuttons.com/images/spacer.gif" width="1" height="5" alt="">
 <!--input type="image" name="Submit" value="add to cart" alt="Add to Cart" src="http://www.wackybuttons.com/images/previewpage/addtocart.gif" style="border:0px;" onclick="javascript:if(navigator.userAgent.toLowerCase().indexOf('safari') > -1){window.open('http://www.wackybuttons.com/shopcart.php','cart')}"><br /-->
-<input type="image" name="Submit" value="add to cart" alt="Add to Cart" src="http://www.wackybuttons.com/images/previewpage/addtocart.gif" style="border:0px;" onclick="javascript:if(navigator.userAgent.toLowerCase().indexOf('safari') > -1){window.open('http://www.wackybuttons.com/shopcart.php','cart')}"><br />
+<br />
+<input type="image" name="Submit" value="add to cart" alt="Add to Cart" src="http://www.wackybuttons.com/images/previewpage/addtocart.gif" style="border:0px;margin-top:10px;" onclick="javascript:if(navigator.userAgent.toLowerCase().indexOf('safari') > -1){window.open('http://www.wackybuttons.com/shopcart.php','cart')}"><br />
 
 
 
@@ -653,26 +688,6 @@ Share:
 
 
 
-
-
-<!-- modal order multiple -->
-<div class="modal fade" id="dialog_win" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
-    	<div class="modal-content">
-      		<div class="modal-header">
-        		<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        		<h2 class="modal-title" id="dialog_title">Title</h2>
-      		</div><!-- modal-header -->
-      		<div class="modal-body" id="dialog_content">
-      		
-				
-      		</div><!-- modal-body -->
-      		<div class="modal-footer">
-        		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      		</div><!-- modal-footer -->
-    	</div><!-- modal-content -->
-	</div><!-- modal-dialog -->
-</div><!-- modal fade -->
 		<div class="wacky-footer">
 	<div class="container">
 		<div class="row">
@@ -1024,7 +1039,7 @@ Share:
       		<div class="modal-body">
       		
 				<!----- CONTENT ----->      		
-				<iframe id="video-pinback" src="//player.vimeo.com/video/113842509?title=0&byline=0&portrait=0&api=1&player_id=video-pinback" height="350px" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+				<iframe src="//player.vimeo.com/video/113842509?title=0&amp;byline=0&amp;portrait=0" height="350px" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 				<p>Buttons are great for political, special interest campaigns, or fundraising! Promote a product, band, event, idea, or yourself! Express yourself by pinning your buttons on your clothing, hat, backpack, or purse!</p>
 				<h4>Available in the following sizes</h4>
 				<img src="http://www.wackybuttons.com/images/products/sizescompare.jpg" alt="pin back buttons different button sizes" class="img-responsive center-block" />
@@ -1203,10 +1218,31 @@ Share:
     	</div><!-- modal-content -->
 	</div><!-- modal-dialog -->
 </div><!-- modal fade -->
+<div class="modal fade" id="dialog_win" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+    	<div class="modal-content">
+      		<div class="modal-header">
+        		<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        		<h2 class="modal-title" id="dialog_title">Title</h2>
+      		</div><!-- modal-header -->
+      		<div class="modal-body" id="dialog_content">
+      		
+				
+      		</div><!-- modal-body -->
+      		<div class="modal-footer">
+        		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      		</div><!-- modal-footer -->
+    	</div><!-- modal-content -->
+	</div><!-- modal-dialog -->
+</div><!-- modal fade -->
 		<!-- jQuery -->
 <script src="/plugins/jquery/jquery-1.11.1.min.js"></script>
 <!-- Bootstrap js -->
 <script src="/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Custom Javascript -->
+<script src="./js/preview-example.js"></script>
+
 
 <!-- face book script -->
 <div id="fb-root"></div>

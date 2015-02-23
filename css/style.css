@@ -23,6 +23,13 @@ font-weight: bold;
 color: white;
 }
 
+@media (min-width: 767px) {
+	.btn-wacky-lg {
+	margin-top: 24px;
+	margin-left: 3px;
+	}
+}
+
 /***** Modals *****/
 .modal-content {
 border-radius: 20px;
