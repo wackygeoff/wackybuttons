@@ -55,6 +55,18 @@ text-align: center;
 margin: 20px;
 }
 
+.create-icon {
+font-size: 50px;
+text-align: center;
+margin: 5px;
+}
+
+.order-icon {
+font-size: 80px;
+text-align: center;
+margin: 5px;
+}
+
 .responsive-table {
 max-width: 100%;
 overflow: scroll;
@@ -105,7 +117,11 @@ filter: grayscale(0);
 }
 
 .create-thumbnail{
-height:285px;
+height:265px;
+}
+
+.order-thumbnail{
+height:245px;
 }
 
 /***** Utilities *****/
@@ -126,4 +142,14 @@ background-repeat: repeat;
 
 .u-center {
 text-align: center;
+}
+
+.u-block-center{
+margin-left:auto;
+margin-right:auto;
+}
+
+/***** For modal in store, dclookup, and preview pages *****/
+.multiple-add-cell{
+margin-bottom:15px;
 }
