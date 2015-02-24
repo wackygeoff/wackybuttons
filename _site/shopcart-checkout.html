@@ -23,7 +23,7 @@
 <link href="/css/style.css" title="compact" rel="stylesheet" type="text/css" />
 
 <!-- Custom CSS to include -->
-<link href="./css/store.css" title="compact" rel="stylesheet" type="text/css" />
+
 	<body>
 		<div class="container">
 	<div class="row">
@@ -329,114 +329,141 @@
 </nav>
 		<div class="container">
 
-<!--top of store-->
-<div class="row">
-<div class="col-md-12">
+<!--begin form-->
+<form action="http://www.wackybuttons.com/shopcart.php" method="post" name="contents" style="color:#000000; font-weight:normal;" onSubmit="javascript:return checkpg1();">
+<input name="operation" type="hidden" value="checkout2">
 
-<h2 style="display:inline;padding:10px;">Welcome to the Wacky Buttons Store</h2><img src="http://www.wackybuttons.com/images/order/addmultiplecart.gif" style="margin:10px; display:inline; text-decoration:none; float:right; cursor:pointer;" width="250" height="29" alt="Add Multiple Items To Cart" data-toggle="modal" data-target="#dialog_win" onclick="javascript:addMultipleItems();" />
-
-
-</div><!--col-md-12-->
+<div class="row" style="margin-top:10px;">
+<div class="col-md-10">
+<h1>Shopping Cart Contents</h1>
+</div><!--col-md-10-->
+<div class="col-md-2">
+<a href="javascript:emailcart();">Email this Cart</a>
+</div><!--col-md-2-->
 </div><!--row-->
-<!--end top of store-->
 
+<div class="container"><!--cart data container-->
+<table class="table">
+    <thead style="background-color:orange; color:#ffffff; font-weight:bold;">
+      <tr>
+        <th>Design</th>
+        <th>Product</th>
+        <th>Product Description</th>
+				<th>Design Code</th>
+				<th>Quantity</th>
+				<th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
 
-<div class="row">
-
-<!--left side menu-->
-<div class="col-md-3">
-
-<div class="navbar navbar-default store-menu-container" role="navigation">
-
-<!-- Brand and toggle get grouped for better mobile display -->
-    	<div class="navbar-header store-menu-header">
-
-      		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#store-menu">
-        		<span class="sr-only">Toggle navigation</span>
-        		<span class="icon-bar"></span>
-        		<span class="icon-bar"></span>
-        		<span class="icon-bar"></span>
-      		</button>
-					<a class="store-navbar-brand" href="#">Wacky Buttons Store</a>
-    	</div><!-- navbar-header -->
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    	<div class="collapse navbar-collapse" id="store-menu">
-      		<ul class="nav nav-pills nav-stacked store-menu-ul">
-        		<li style="margin-top:40px;"><a href="#">Item 1</a></li>
-        		<li><a href="#">Item 2</a></li>
-						
-						
-					<li><a href="#menu3" class="list-group-item" data-toggle="collapse">Item 3  <i class="fa fa-caret-down"></i></a>
-          <div class="collapse" id="menu3">
-            <a href="" class="list-group-item">Subitem 1</a>
-            <a href="" class="list-group-item">Subitem 2</a>
-            <a href="" class="list-group-item">Subitem 3</a>
-          </div>
-						</li>
-						
-        		<li><a href="#">Item 4</a></li>
-						
-											<li><a href="#menu4" class="list-group-item" data-toggle="collapse">Item 4  <i class="fa fa-caret-down"></i></a>
-          <div class="collapse" id="menu4">
-            <a href="" class="list-group-item">Subitem 1</a>
-            <a href="" class="list-group-item">Subitem 2</a>
-            <a href="" class="list-group-item">Subitem 3</a>
-          </div>
-						</li>
-						
-        		<li><a href="#">Item 5</a></li>
-						
-
-						
-      		</ul>
-    	</div><!-- collapse navbar-collapse -->
-
-
-</div><!--end menu-container-->
-			
-</div><!--col-md-3-->
-<!--end left side menu-->
-
-<!--wacky buttons to the right of menu-->
-<div class="col-md-9">
-
-<!--begin instructions, see more-->
-<table summary="" width="100%" border="0" cellpadding="0" cellspacing="0">
 <tr>
-<td align="left">Click on a button to see larger images and ordering options.</td><td align="right"><a href="http://www.wackybuttons.com/store/random.php" style="font-size:16px; font-weight:bold;"><img src="http://www.wackybuttons.com/images/general/btnseemore.gif" width="113" height="46" alt="See More..." border="0" /></a></td></td>
+<td>
+<a href="http://www.wackybuttons.com/designcodes/047/0470121.jpg" target="_blank">
+<img src="http://www.wackybuttons.com/designcodes/047/0470121.jpg" height="100" width="100" border="0"></a>
+</td>
+<td>
+<img src="http://www.wackybuttons.com/images/backs/1.5inchpinback.jpg" height="100" width="100" border="0">
+</td>
+<td>1-1/2 inch round button with locking pin back</td>
+<td>0470121<br />Wacky Buttons Design</td>
+<td>100</td>
+<td>$30.00</td>
+</tr>
+
+
+<tr>
+<td>
+<a href="http://www.wackybuttons.com/designcodes/110/1100071.jpg" target="_blank">
+<img src="http://www.wackybuttons.com/designcodes/110/1100071.jpg" height="100" width="100" border="0"></a>
+</td>
+<td>
+<img src="http://www.wackybuttons.com/images/backs/1inchpinback.jpg" height="100" width="100" border="0">
+</td>
+<td>1 inch round button with locking pin back</td>
+<td>1100071<br />Wacky Buttons Design</td>
+<td>25</td>
+<td>$7.50</td>
+</tr>
+
+<tr>
+<td colspan="3">
+Total number of items in cart: 2
+</td>
+<td colspan="3" style="text-align:right;">
+Cart Subtotal: $37.50
+</td>
+</tr>
+
+</tbody>
+</table>
+</div><!--end cart data container-->
+
+
+<div class="container" style="margin:10px;"><!--shipping address container-->
+<h2>Check Out</h2>
+
+
+<br />
+<b>International</b><br />
+Ship to a different country other than United States of America?&nbsp;&nbsp;<a href="http://www.wackybuttons.com/shopcart.php?operation=icheckout"><button class="btn btn-default btn-wacky">Checkout Here &gt;&gt;</button></a>
+<br /> <br />
+<b>Local Pickup</b><br />
+Are you picking up your order in person in <a href="javascript:pickuploc();">Rochester, New York</a>? <a href="http://www.wackybuttons.com/shopcart.php?operation=pickup"><button class="btn btn-default btn-wacky">Checkout Here &gt;&gt;</button></a>
+<br /> <br />
+<b>Shipping Address</b><br />
+Must be an address within the United States of America
+<br /> <br />
+
+<table width="600" cellspacing="0" cellpadding="3" align="left" style="" border="0"><tr>
+<td colspan="2" bordercolor="#000000" valign="top"></td></tr>
+<tr><td align="right">first name</td>
+<td align="left"><input type="text" name="first_name" maxlength="32" value=""></td></tr>
+<tr><td align="right">last name</td><td align="left"><input type="text" name="last_name" maxlength="64" value=""></td></tr>
+<tr><td align="right">street address</td><td align="left"><input type="text" name="address1" maxlength="100" value=""></td></tr>
+<tr><td align="right">address, line 2 (optional)</td><td align="left"><input type="text" name="address2" maxlength="100" value=""> <a href="javascript:streetaddyhelp();" style="border:0;background-color:#eeeeee;text-decoration:none;color:#000000;" title="What is Address line 2?">&nbsp;?&nbsp;</a></td></tr>
+<tr><td align="right">city/town</td><td align="left"><input type="text" name="city" maxlength="40" value=""></td></tr>
+<tr><td align="right">state/territory</td><td align="left">
+<select name="state" size="1">
+<option value="NONE">Select a state</option>
+<option value="AE">AE Armed Forces (Africa, Canada, Europe, Middle East)</option><option value="AA">AA Armed Forces (Americas)</option><option value="AP">AP Armed Forces (Pacific)</option><option value="AL">AL Alabama</option><option value="AK">AK Alaska</option><option value="AS">AS American Samoa</option><option value="AZ">AZ Arizona</option><option value="AR">AR Arkansas</option><option value="CA">CA California</option><option value="CO">CO Colorado</option><option value="CT">CT Connecticut</option><option value="DE">DE Delaware</option><option value="DC">DC District of Columbia</option><option value="FL">FL Florida</option><option value="FM">FM Federated States of Micronesia</option><option value="GA">GA Georgia</option><option value="GU">GU Guam</option><option value="HI">HI Hawaii</option><option value="ID">ID Idaho</option><option value="IL">IL Illinois</option><option value="IN">IN Indiana</option><option value="IA">IA Iowa</option><option value="KS">KS Kansas</option><option value="KY">KY Kentucky</option><option value="LA">LA Louisiana</option><option value="ME">ME Maine</option><option value="MD">MD Maryland</option><option value="MA">MA Massachusetts</option><option value="MH">MH Marshall Islands</option><option value="MI">MI Michigan</option><option value="MN">MN Minnesota</option><option value="MP">MP Northern Mariana Islands</option><option value="MS">MS Mississippi</option><option value="MO">MO Missouri</option><option value="MT">MT Montana</option><option value="NE">NE Nebraska</option><option value="NV">NV Nevada</option><option value="NH">NH New Hampshire</option><option value="NJ">NJ New Jersey</option><option value="NM">NM New Mexico</option><option value="NY">NY New York</option><option value="NC">NC North Carolina</option><option value="ND">ND North Dakota</option><option value="OH">OH Ohio</option><option value="OK">OK Oklahoma</option><option value="OR">OR Oregon</option><option value="PA">PA Pennsylvania</option><option value="PR">PR Puerto Rico</option><option value="PW">PW Palau</option><option value="RI">RI Rhode Island</option><option value="SC">SC South Carolina</option><option value="SD">SD South Dakota</option><option value="TN">TN Tennessee</option><option value="TX">TX Texas</option><option value="UT">UT Utah</option><option value="VT">VT Vermont</option><option value="VA">VA Virginia</option><option value="VI">VI Virgin Islands</option><option value="WA">WA Washington</option><option value="WV">WV West Virginia</option><option value="WI">WI Wisconsin</option><option value="WY">WY Wyoming</option>
+</select> </td></tr>
+
+<tr><td align="right">Zip(postal) code</td><td align="left"><input type="text" name="zip" maxlength="10" value="" /></td></tr></table>
+
+</div><!--shipping address container-->
+
+<div class="container" style="margin:10px;"><!--coupon code container-->
+<h3>Coupons</h3>
+Enter a coupon code here if you have one (optional): <input name="VIPpromocode" type="text" size="10" maxlength="7"  value="">
+</div><!--coupoin code container-->
+
+
+
+<div class="container" style="margin:10px;"><!--how will you be paying container-->
+<h3>How will you be paying?</h3>
+
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td><input type="radio" name="paymenu" value="PayPal">PayPal or Credit Card&nbsp;&nbsp;</td>
+<td><img src="http://www.wackybuttons.com/images/ppcc.gif" width="161" height="27" alt="Visa, Mastercard, Discover, American Express, PayPal" /></td>
+</tr>
+<tr>
+<td colspan="2"><input type="radio" name="paymenu" value="Check or Money Order">Check or Money Order</td>
 </tr>
 </table>
-<!--end instructions, see more-->
 
-<!--begin nested columns, button images-->
-<div class="row no-gutter">
-<div class="col-md-4">
-<img class="store-button-preview" src="http://www.wackybuttons.com/designcodes/047/0470121.jpg" border="0" alt="" data-toggle="modal" data-target="#dialog_win" onclick="moreDetails('0470121', 'Wacky Buttons Design');" />
-<img class="store-button-preview" src="http://www.wackybuttons.com/designcodes/047/0470121.jpg" border="0" alt="" data-toggle="modal" data-target="#dialog_win" onclick="moreDetails('0470121', 'Wacky Buttons Design');" />
-</div><!--col-md-4-->
-<div class="col-md-4">
-<img class="store-button-preview" src="http://www.wackybuttons.com/designcodes/047/0470121.jpg" border="0" alt="" data-toggle="modal" data-target="#dialog_win" onclick="moreDetails('0470121', 'Wacky Buttons Design');" />
-<img class="store-button-preview" src="http://www.wackybuttons.com/designcodes/047/0470121.jpg" border="0" alt="" data-toggle="modal" data-target="#dialog_win" onclick="moreDetails('0470121', 'Wacky Buttons Design');" />
-</div><!--col-md-4-->
-<div class="col-md-4">
-<img class="store-button-preview" src="http://www.wackybuttons.com/designcodes/047/0470121.jpg" border="0" alt="" data-toggle="modal" data-target="#dialog_win" onclick="moreDetails('0470121', 'Wacky Buttons Design');" />
-<img class="store-button-preview" src="http://www.wackybuttons.com/designcodes/047/0470121.jpg" border="0" alt="" data-toggle="modal" data-target="#dialog_win" onclick="moreDetails('0470121', 'Wacky Buttons Design');" />
-</div><!--col-md-4-->
-</div><!--row-->
-<!--end nested columns, button images-->
+</div><!--how will you be paying container-->
 
-</div><!--col-md-9-->
-<!--end wacky buttons to the right of menu-->
 
-</div><!--row-->
+<div class="container" style="padding:20px;"><!--bottom continue buttons container-->
+<a href="http://www.wackybuttons.com/shopcart.php?operation=viewcart">&lt;&lt; Go back to shopping</a>
+<input name="checkout2" class="btn btn-default btn-wacky pull-right" type="submit" value="Continue (Calculate Shipping Prices) >>" onClick="document.contents.operation.value = 'checkout2'">
+</div><!--end bottom continue buttons container-->
+
+</form><!--end form-->
+
+
 </div><!--container-->
-
-
-
-
-
-
 		<div class="wacky-footer">
 	<div class="container">
 		<div class="row">
@@ -993,7 +1020,7 @@
 <script src="/plugins/bootstrap/js/bootstrap.min.js"></script>
 
 <!-- Custom Javascript -->
-<script src="./js/preview-example.js"></script>
+
 
 
 <!-- face book script -->
