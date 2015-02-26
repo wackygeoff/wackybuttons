@@ -31,17 +31,20 @@ color: white;
 padding: 0px;
 }
 
+.store-navbar-brand:hover{
+font-size:18px;
+line-height: 25px;
+font-weight:bold;
+color: black;
+padding: 0px;
+text-decoration:none;
+}
 
 .store-button-preview{
 cursor:pointer;
 max-width:50%;
 display:inline;
 float:left;
-}
-
-.no-gutter [class*="-4"] {
-    padding-left:0;
-		padding-right:0;
 }
 
 .store-menu-ul{
@@ -54,6 +57,38 @@ border:0;
 }
 
 .store-menu-ul a{
+text-decoration:none;
 background-color:#ffffff;
 border:0;
+}
+
+.store-menu-ul a:hover{
+text-decoration:none;
+background-color:#ffffff;
+border:0;
+}
+
+.store-submenu-item{
+padding-top:10px;
+padding-left:20px;
+padding-right:10px;
+padding-bottom:10px;
+}
+
+.store-submenu-item:hover{<br />
+padding-top:10px;
+padding-left:20px;
+padding-right:10px;
+padding-bottom:10px;
+background-color:#eeeeee;
+text-decoration:none;
+}
+
+.store-item-selected{
+font-weight:bold;
+}
+
+.no-gutter [class*="-4"] {
+    padding-left:0;
+		padding-right:0;
 }
