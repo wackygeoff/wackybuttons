@@ -6,6 +6,10 @@ margin: 10px;
 background-color:#ffffff;
 }
 
+.store-menu-container .navbar-collapse{
+text-align: left;
+}
+
 .store-menu-header{
 background-color: orange;
 color: white;
