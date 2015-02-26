@@ -44,21 +44,21 @@ css_inc: <link href="./css/store.css" title="compact" rel="stylesheet" type="tex
         		<li><a href="#">Item 2</a></li>
 						
 						
-					<li><a href="#menu3" class="list-group-item" data-toggle="collapse">Item 3  <i class="fa fa-caret-down"></i></a>
-          <div class="collapse" id="menu3">
-            <a href="" class="list-group-item">Subitem 1</a>
-            <a href="" class="list-group-item">Subitem 2</a>
-            <a href="" class="list-group-item">Subitem 3</a>
+					<li><a href="#menu3" data-toggle="collapse">Item 3  <i class="fa fa-caret-down"></i></a>
+          <div class="collapse in" id="menu3"><!--for php - add the class "in" to this div to make the menu show-->
+            <a href=""><div class="store-submenu-item store-item-selected">Subitem 1</div></a><!--for php - add the class "store-item-selected" to bold the subcategory we are on-->
+            <a href=""><div class="store-submenu-item">Subitem 2</div></a>
+            <a href=""><div class="store-submenu-item">Subitem 3</div></a>
           </div>
 						</li>
 						
         		<li><a href="#">Item 4</a></li>
 						
-											<li><a href="#menu4" class="list-group-item" data-toggle="collapse">Item 4  <i class="fa fa-caret-down"></i></a>
+					<li><a href="#menu4" data-toggle="collapse">Item 4  <i class="fa fa-caret-down"></i></a>
           <div class="collapse" id="menu4">
-            <a href="" class="list-group-item">Subitem 1</a>
-            <a href="" class="list-group-item">Subitem 2</a>
-            <a href="" class="list-group-item">Subitem 3</a>
+            <a href=""><div class="store-submenu-item">Subitem 1</div></a>
+            <a href=""><div class="store-submenu-item">Subitem 2</div></a>
+            <a href=""><div class="store-submenu-item">Subitem 3</div></a>
           </div>
 						</li>
 						
@@ -102,6 +102,27 @@ css_inc: <link href="./css/store.css" title="compact" rel="stylesheet" type="tex
 </div><!--col-md-4-->
 </div><!--row-->
 <!--end nested columns, button images-->
+
+<!--bottom left or right advance buttons, offensive message-->
+<table summary="" width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+
+<td align="left"><a href="http://www.wackybuttons.com/buttonstore/Just%20Words/I%20Love.php" style="font-size:16px; font-weight:bold;"><img src="http://www.wackybuttons.com/images/Store/seemoreopp.gif" width="113" height="46" alt="...See More" border="0" /></a></td><td align="right"><a href="http://www.wackybuttons.com/buttonstore/Just%20Words/I%20Love/2.php" style="font-size:16px; font-weight:bold;"><img src="http://www.wackybuttons.com/images/general/btnseemore.gif" width="113" height="46" alt="See More..." border="0" /></a></td>
+
+
+</tr>
+<tr>
+
+<td align="left" colspan="2" style="color:#ff0000;"><br /> <br />
+
+*Some buttons could not be shown due to the offensive nature of the content. <a href="http://www.wackybuttons.com/buttonstore/Just Words/I Love/nofilter.php" method="post">Click here</a> to view all button designs.
+
+</td>
+</tr>
+
+</table>
+<!--end bottom left or right advance buttons, offensive message-->
+
 
 </div><!--col-md-9-->
 <!--end wacky buttons to the right of menu-->
