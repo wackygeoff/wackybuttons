@@ -125,10 +125,16 @@ filter: grayscale(0);
 
 .create-thumbnail{
 height:265px;
+max-width: 150px;
+margin-left:auto;
+margin-right:auto;
 }
 
 .order-thumbnail{
 height:245px;
+max-width: 250px;
+margin-left:auto;
+margin-right:auto;
 }
 
 /***** Utilities *****/
