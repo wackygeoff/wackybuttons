@@ -125,7 +125,7 @@
 						<a href="http://www.wackybuttons.com/documents/products/wbcomparison.pdf"><h4>Sizes</h4></a>
 						<a href="http://www.umakebuttons.com/"><h4>Machines</h4></a>
 					</div><!-- thumbnail -->
-					<a href="#">
+					<a href="/products.html">
 						<button class="btn btn-default btn-wacky" style="margin-top:65px;">See all products >></button>
 					</a>
 				</div><!-- col-md-3 -->           				                  				               				
@@ -133,6 +133,7 @@
 		</div><!-- yamm-content -->
 	</ul>
 </li>
+
         		<li><a href="#">Prices/Turnaround</a></li>
         		<!-- CREATE MENU -->
 <li class="dropdown yamm-fw">
@@ -227,7 +228,7 @@
 			<div class="col-md-10">
 			<!--div class="thumbnail"-->
 			<div style="color:white;margin-bottom:15px;">
-			<img src="/img/createoptionarrow.jpg" alt="" class="hidden-xs" style="max-width:100%;" /><br /> <br />
+			<img src="./img/createoptionarrow.jpg" alt="" class="hidden-xs" style="max-width:100%;" /><br /> <br />
 			All services are FREE! Setup your artwork first, then pay for your buttons when you are ready.</div>
 			</div>
 			<div class="col-md-2">
@@ -315,15 +316,15 @@
         		<li><a href="#">Help</a></li>
 				<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">About Us <span class="caret"></span></a>
 					<ul class="dropdown-menu navbar-wacky-nav" role="menu">
-						<li><a href="#">Why choose us?</a></li>
+						<li><a href="#">Who we are</a></li>
 						<li><a href="#">Our Blog</a></li>
 						<li><a href="#">Contact Us</a></li>
 					</ul>
 				</li>
       		</ul>
-      		<ul class="nav navbar-nav navbar-right navbar-wacky-nav">
+      		<!--ul class="nav navbar-nav navbar-right navbar-wacky-nav">
       			<li><a href="#"><span class="fa fa-shopping-cart"></span> Cart</a></li>
-      		</ul>
+      		</ul-->
     	</div><!-- collapse navbar-collapse -->
   	</div><!-- container -->
 </nav>
@@ -367,21 +368,21 @@
         		<li><a href="#">Item 2</a></li>
 						
 						
-					<li><a href="#menu3" class="list-group-item" data-toggle="collapse">Item 3  <i class="fa fa-caret-down"></i></a>
-          <div class="collapse" id="menu3">
-            <a href="" class="list-group-item">Subitem 1</a>
-            <a href="" class="list-group-item">Subitem 2</a>
-            <a href="" class="list-group-item">Subitem 3</a>
+					<li><a href="#menu3" data-toggle="collapse">Item 3  <i class="fa fa-caret-down"></i></a>
+          <div class="collapse in" id="menu3"><!--for php - add the class "in" to this div to make the menu show-->
+            <a href=""><div class="store-submenu-item store-item-selected">Subitem 1</div></a><!--for php - add the class "store-item-selected" to bold the subcategory we are on-->
+            <a href=""><div class="store-submenu-item">Subitem 2</div></a>
+            <a href=""><div class="store-submenu-item">Subitem 3</div></a>
           </div>
 						</li>
 						
         		<li><a href="#">Item 4</a></li>
 						
-											<li><a href="#menu4" class="list-group-item" data-toggle="collapse">Item 4  <i class="fa fa-caret-down"></i></a>
+					<li><a href="#menu4" data-toggle="collapse">Item 4  <i class="fa fa-caret-down"></i></a>
           <div class="collapse" id="menu4">
-            <a href="" class="list-group-item">Subitem 1</a>
-            <a href="" class="list-group-item">Subitem 2</a>
-            <a href="" class="list-group-item">Subitem 3</a>
+            <a href=""><div class="store-submenu-item">Subitem 1</div></a>
+            <a href=""><div class="store-submenu-item">Subitem 2</div></a>
+            <a href=""><div class="store-submenu-item">Subitem 3</div></a>
           </div>
 						</li>
 						
@@ -425,6 +426,27 @@
 </div><!--col-md-4-->
 </div><!--row-->
 <!--end nested columns, button images-->
+
+<!--bottom left or right advance buttons, offensive message-->
+<table summary="" width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+
+<td align="left"><a href="http://www.wackybuttons.com/buttonstore/Just%20Words/I%20Love.php" style="font-size:16px; font-weight:bold;"><img src="http://www.wackybuttons.com/images/Store/seemoreopp.gif" width="113" height="46" alt="...See More" border="0" /></a></td><td align="right"><a href="http://www.wackybuttons.com/buttonstore/Just%20Words/I%20Love/2.php" style="font-size:16px; font-weight:bold;"><img src="http://www.wackybuttons.com/images/general/btnseemore.gif" width="113" height="46" alt="See More..." border="0" /></a></td>
+
+
+</tr>
+<tr>
+
+<td align="left" colspan="2" style="color:#ff0000;"><br /> <br />
+
+*Some buttons could not be shown due to the offensive nature of the content. <a href="http://www.wackybuttons.com/buttonstore/Just Words/I Love/nofilter.php" method="post">Click here</a> to view all button designs.
+
+</td>
+</tr>
+
+</table>
+<!--end bottom left or right advance buttons, offensive message-->
+
 
 </div><!--col-md-9-->
 <!--end wacky buttons to the right of menu-->
@@ -486,7 +508,7 @@
 			</div><!-- col-md-4 -->
 		</div><!-- row -->
 		<div class="footer-menu">
-			<p><a href="#">About Us</a> | <a href="#">Blog</a> | <a href="#">Terms of Use</a> | <a href="#">Terms & Conditions</a> | <a href="#">Privacy Policy</a></p>
+			<p><a href="#">Terms of Use</a> | <a href="#">Terms & Conditions</a> | <a href="#">Privacy Policy</a></p>
 		</div><!-- footer-menu -->
 	</div><!-- container -->
 </div><!-- wacky-footer -->

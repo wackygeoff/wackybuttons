@@ -330,9 +330,103 @@
 </nav>
 		<div class="container">
 
-<!--begin form-->
-<form action="http://www.wackybuttons.com/shopcart.php" method="post" name="contents" style="color:#000000; font-weight:normal;" onSubmit="javascript:return checkpg1();">
-<input name="operation" type="hidden" value="checkout2">
+
+<script language="JavaScript" type="text/javascript">
+/* <![CDATA[ */
+function funShowHide(obj){
+if(obj.style.display == 'block'){
+obj.style.display = 'none';
+}else{obj.style.display = 'block';
+}
+}
+function emailcart(){
+newwindow = window.open("about:blank","name","height=410,width=400,left=300,top=300,resizable=yes,scrollbars=yes,toolbar=no,status=no");
+newwindow.document.write('<form name="emailcart" method="post" action="http://www.wackybuttons.com/shopcart.php">');
+newwindow.document.write('<input type="hidden" name="operation" value="emailcart">');
+newwindow.document.write('Email the contents of this cart to:<br /> <br />');
+newwindow.document.write('Your Email Address:<br /><input type="text" name="email" value="" size="40" maxlength="200"><br />');
+newwindow.document.write('Email Subject:<br /><input type="text" name="subject" value="" size="30" maxlength="200"><br />');
+newwindow.document.write('Message:<br /><textarea cols="30" rows="5" name="message"></textarea><br /> <br />');
+newwindow.document.write('Check this box if you also want to send this information to Wacky Buttons, Inc. Customer Service for help? <input type="checkbox" name="wackyservice" value="yes"><br />');
+newwindow.document.write(' <br /><input type="submit" name="submit" value="Email Cart"><br />');
+newwindow.document.write('</form>');
+}
+function pickuploc(){
+newwindow = window.open("about:blank","name","height=550,width=450,left=300,top=300,resizable=yes,scrollbars=yes,toolbar=no,status=no");
+newwindow.document.write("<b>Pick up location:</b><br /> <br />Wacky Buttons, Inc.<br />101 Lincoln Parkway Suite E<br />East Rochester, NY 14445<br /> <br />");
+newwindow.document.write('<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Wacky+Buttons,+East+Rochester,+NY&amp;aq=1&amp;sll=37.0625,-95.677068&amp;sspn=38.638819,56.953125&amp;vpsrc=0&amp;ie=UTF8&amp;hq=Wacky+Buttons,&amp;hnear=East+Rochester,+Monroe,+New+York&amp;t=m&amp;ll=43.11617,-77.480596&amp;spn=0.016491,0.01518&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Wacky+Buttons,+East+Rochester,+NY&amp;aq=1&amp;sll=37.0625,-95.677068&amp;sspn=38.638819,56.953125&amp;vpsrc=0&amp;ie=UTF8&amp;hq=Wacky+Buttons,&amp;hnear=East+Rochester,+Monroe,+New+York&amp;t=m&amp;ll=43.11617,-77.480596&amp;spn=0.016491,0.01518" style="color:#0000FF;text-align:left">View Larger Map</a></small>');
+}
+function streetaddyhelp(){
+newwindow = window.open("about:blank","name","height=300,width=450,left=300,top=300,resizable=yes,scrollbars=yes,toolbar=no,status=no");
+newwindow.document.write("<b>About Address (Line 2)</b><br /> <br />");
+newwindow.document.write("<ul><li>You can enter your apartment number, suite number, floor number, etc... on this line.</li><li>You can also use this line if your address is just really long and you just need more room to write your address.</li><li>If you have more than 2 lines in your address, you can combine 2 lines onto one line by separateing them with a comma(,).</li><li>If you have any questions about inputting your shipping address please feel free to ask. We would be glad to help you out (Our phone number is 585-267-7670).</li></ul><br /> <br />");
+}
+function wackyshiphelp(){
+newwindow = window.open("about:blank","name","height=300,width=450,left=300,top=300,resizable=yes,scrollbars=yes,toolbar=no,status=no");
+newwindow.document.write("<b>Wacky Saver Shipping</b><br /> <br />");
+newwindow.document.write("<ul><li>This option saves you money because we get to choose how we ship your package. Your package will ship either UPS Ground, USPS Priority Mail Flat Rate, or USPS Parcel Select depending on availablility. A tracking number is provided automatically by email after your order ships.</li></ul><br /> <br />");
+}
+function decodeshipping(inp){
+var build = false;
+var method = "";
+var shipcost = "";
+for(i = 0; i <= inp.value.length; i ++){
+if (inp.value.charAt(i) == "+"){
+build = true;
+}
+if (build == false && inp.value.charAt(i) != "+"){
+method = method + inp.value.charAt(i);
+}
+if (build == true && inp.value.charAt(i) != "+"){
+shipcost = shipcost + inp.value.charAt(i);
+}
+}
+document.checkout.item_name_3.value = method;
+document.checkout.amount_3.value = shipcost;
+}
+function checkpg1(){checker = 'no';
+for(var i=0; i<document.contents.paymenu.length; i++){if(document.contents.paymenu[i].checked){checker="yes";}
+}
+if(checker=='no'){
+alert("You need to select a payment method");return false;}else{
+return true;}
+}
+function changewin(){
+window.close();
+window.opener.focus();
+}
+function checkallshippable(){
+checkboxes0 = document.getElementById("checkBoxes0");
+if(checkboxes0.checked == true){
+checkboxes0.checked = false;
+}else{
+checkboxes0.checked = true;
+}checkboxes1 = document.getElementById("checkBoxes1");
+if(checkboxes1.checked == true){checkboxes1.checked = false;
+}else{checkboxes1.checked = true;
+}
+}
+/* ]]> */
+</script>
+
+<form method="post" action="https://www.sandbox.paypal.com/cgi-bin/webscr" name="checkout" style="color:#000000; font-weight:normal;" onSubmit="checker = 'no';if(document.checkout.parseshipping){for(var i=0; i<document.checkout.parseshipping.length; i++){if(document.checkout.parseshipping[i].checked){checker='yes';}}}if(document.checkout.parseshipping){if(document.checkout.parseshipping.checked){checker='yes';}}if(checker=='no'){alert('You need to select a shipping method.');return false;}">
+<input name="operation" type="hidden" value="viewcart">
+
+<input type="hidden" name="cmd" value="_cart">
+<input type="hidden" name="business" value="fakeorder@wackybuttons.com">
+<input type="hidden" name="upload" value="1">
+<input type="hidden" name="no_shipping" value="0">
+<input type="hidden" name="cn" value="Notes or comments regarding your order">
+<input type="hidden" name="notify_url" value="http://www.wackybuttons.com/PPengine/PPReceive.php">
+<input type="hidden" name="return" value="http://www.wackybuttons.com/orderreceived.php">
+<input type="hidden" name="first_name" value="test"><input type="hidden" name="last_name" value="test"><input type="hidden" name="address1" value="123 e st"><input type="hidden" name="address2" value="apt b"><input type="hidden" name="city" value="holland"><input type="hidden" name="state" value="NY"><input type="hidden" name="zip" value="14080"><input name="item_number_1" type="hidden" value="0470121">
+<input name="item_name_1" type="hidden" value="1 inch round button with locking pin back">
+<input name="quantity_1" type="hidden" value="100">
+<input name="amount_1" type="hidden" value="0.20">
+<input name="item_number_2" type="hidden" value="3262014">
+<input name="item_name_2" type="hidden" value="1-1/2 inch round button with magnet back">
+<input name="quantity_2" type="hidden" value="50">
+<input name="amount_2" type="hidden" value="0.90">
 
 <div class="row" style="margin-top:10px;">
 <div class="col-md-10">
@@ -400,86 +494,84 @@ Cart Subtotal: $37.50
 </div><!--end cart data container-->
 
 
+<div class="container" style="margin:10px;"><!--processing time container-->
+
+<h3>Estimated Processing Time</h3><br />
+
+It is estimated that your order will ship out within 48 hours<br>(Weekend and Friday orders will get shipped on Monday).
+
+
+</div>
 <div class="container" style="margin:10px;"><!--shipping address container-->
-<h2>Check Out</h2>
-
-
+<hr />
+<h3>Shipping to</h3>
 <br />
-<b>International</b><br />
-Ship to a different country other than United States of America?&nbsp;&nbsp;<a href="http://www.wackybuttons.com/shopcart.php?operation=icheckout"><button class="btn btn-default btn-wacky">Checkout Here &gt;&gt;</button></a>
-<br /> <br />
-<b>Local Pickup</b><br />
-Are you picking up your order in person in <a href="javascript:pickuploc();">Rochester, New York</a>? <a href="http://www.wackybuttons.com/shopcart.php?operation=pickup"><button class="btn btn-default btn-wacky">Checkout Here &gt;&gt;</button></a>
-<br /> <br />
-<h3>Shipping Address</h3>
-<!--b>Shipping Address</b><br /-->
-Must be an address within the United States of America
-<br /> <br />
+test test<br />
+123 e st<br />
+apt b<br />
+holland, NY 14080<br />
+<a href="http://www.wackybuttons.com/shopcart.php?operation=checkout&zip=14080&first_name=test&last_name=test&address1=123+e+st&address2=apt+b&city=holland&state=NY&VIPpromocode=&paymenu=PayPal">Edit Address</a>
 
-<div><!--shipping address form fields container-->
-<div class="form-group">
-<label for="first_name">First name</label><input type="text" class="form-control med-field" name="first_name" maxlength="32" value="">
 </div>
-<div class="form-group">
-<label for="last_name">last name</label><input type="text" class="form-control med-field" name="last_name" maxlength="64" value="">
-</div>
-<div class="form-group">
-<label for="address1">street address</label><input type="text" class="form-control long-field" name="address1" maxlength="100" value="">
-</div>
-<div class="form-group">
-<label for="address2">address, line 2 (optional) <a href="javascript:streetaddyhelp();" style="border:0;background-color:#eeeeee;text-decoration:none;color:#000000;" title="What is Address line 2?">&nbsp;?&nbsp;</a></label>
-<input type="text" class="form-control long-field" name="address2" maxlength="100" value="">
-</div>
-<div class="form-group">
-<label for="city">city/town</label><input type="text" class="form-control med-field" name="city" maxlength="40" value="">
-</div>
-<div class="form-group">
-<label for="state">state/territory</label>
-<select name="state" class="form-control med-field" size="1">
-<option value="NONE">Select a state</option>
-<option value="AE">AE Armed Forces (Africa, Canada, Europe, Middle East)</option><option value="AA">AA Armed Forces (Americas)</option><option value="AP">AP Armed Forces (Pacific)</option><option value="AL">AL Alabama</option><option value="AK">AK Alaska</option><option value="AS">AS American Samoa</option><option value="AZ">AZ Arizona</option><option value="AR">AR Arkansas</option><option value="CA">CA California</option><option value="CO">CO Colorado</option><option value="CT">CT Connecticut</option><option value="DE">DE Delaware</option><option value="DC">DC District of Columbia</option><option value="FL">FL Florida</option><option value="FM">FM Federated States of Micronesia</option><option value="GA">GA Georgia</option><option value="GU">GU Guam</option><option value="HI">HI Hawaii</option><option value="ID">ID Idaho</option><option value="IL">IL Illinois</option><option value="IN">IN Indiana</option><option value="IA">IA Iowa</option><option value="KS">KS Kansas</option><option value="KY">KY Kentucky</option><option value="LA">LA Louisiana</option><option value="ME">ME Maine</option><option value="MD">MD Maryland</option><option value="MA">MA Massachusetts</option><option value="MH">MH Marshall Islands</option><option value="MI">MI Michigan</option><option value="MN">MN Minnesota</option><option value="MP">MP Northern Mariana Islands</option><option value="MS">MS Mississippi</option><option value="MO">MO Missouri</option><option value="MT">MT Montana</option><option value="NE">NE Nebraska</option><option value="NV">NV Nevada</option><option value="NH">NH New Hampshire</option><option value="NJ">NJ New Jersey</option><option value="NM">NM New Mexico</option><option value="NY">NY New York</option><option value="NC">NC North Carolina</option><option value="ND">ND North Dakota</option><option value="OH">OH Ohio</option><option value="OK">OK Oklahoma</option><option value="OR">OR Oregon</option><option value="PA">PA Pennsylvania</option><option value="PR">PR Puerto Rico</option><option value="PW">PW Palau</option><option value="RI">RI Rhode Island</option><option value="SC">SC South Carolina</option><option value="SD">SD South Dakota</option><option value="TN">TN Tennessee</option><option value="TX">TX Texas</option><option value="UT">UT Utah</option><option value="VT">VT Vermont</option><option value="VA">VA Virginia</option><option value="VI">VI Virgin Islands</option><option value="WA">WA Washington</option><option value="WV">WV West Virginia</option><option value="WI">WI Wisconsin</option><option value="WY">WY Wyoming</option>
-</select>
-</div>
-<div class="form-group">
-<label for="zip">Zip(postal) code</label><input type="text" class="form-control short-field" name="zip" maxlength="10" value="" />
-</div>
-</div><!--shipping address form fields container-->
 
-</div><!--shipping address container-->
-
-<div class="container" style="margin:10px;"><!--coupon code container-->
+<div class="container" style="margin:10px;"><!--shipping options container-->
 <hr />
-<h3>Coupons</h3>
-<div class="form-group">
-<label for="VIPpromocode">Enter a coupon code here if you have one (optional):</label>
-<input name="VIPpromocode" class="form-control short-field" type="text" size="10" maxlength="7"  value="">
-</div>
-</div><!--coupoin code container-->
-
-
-
-<div class="container" style="margin:10px;"><!--how will you be paying container-->
-<hr />
-<h3>How will you be paying?</h3>
+<h3>Please select a shipping method</h3><br />
+<input name="item_name_3" type="hidden" value="">
+<input name="amount_3" type="hidden" value="">
 
 <div class="radio">
-<label><input type="radio" name="paymenu" value="PayPal">PayPal or Credit Card
-<img src="http://www.wackybuttons.com/images/ppcc.gif" width="161" height="27" alt="Visa, Mastercard, Discover, American Express, PayPal" />
+<label>
+<input type="radio" name="parseshipping" onChange="decodeshipping(this);" value="UPS Next Day Air: 14080+37.26" style="border:0px;" /></td><td>$37.26</td><td><img src="http://www.wackybuttons.com/images/ups.gif" width="20" height="20" />UPS Next Day Air (Guaranteed to arrive on Tuesday, March 3, 2015)
 </label>
 </div>
 
 <div class="radio">
 <label>
-<input type="radio" name="paymenu" value="Check or Money Order">Check or Money Order
+<input type="radio" name="parseshipping" onChange="decodeshipping(this);" value="UPS 2nd Day Air: 14080+24.36" style="border:0px;" /></td><td>$24.36</td><td><img src="http://www.wackybuttons.com/images/ups.gif" width="20" height="20" />UPS 2nd Day Air (Guaranteed to arrive on Wednesday, March 4, 2015)
 </label>
 </div>
 
-</div><!--how will you be paying container-->
+<div class="radio">
+<label>
+<input type="radio" name="parseshipping" onChange="decodeshipping(this);" value="UPS 3-Day Select: 14080+18.14" style="border:0px;" /></td><td>$18.14</td><td><img src="http://www.wackybuttons.com/images/ups.gif" width="20" height="20" />UPS 3-Day Select (Guaranteed to arrive on Thursday, March 5, 2015)
+</label>
+</div>
 
+<div class="radio">
+<label>
+<input type="radio" name="parseshipping" onChange="decodeshipping(this);" value="UPS Ground: 14080+15.26" style="border:0px;" /></td><td>$15.26</td><td><img src="http://www.wackybuttons.com/images/ups.gif" width="20" height="20" />UPS Ground (3-6 business days)
+</label>
+</div>
+
+<div class="radio">
+<label>
+<input type="radio" name="parseshipping" onChange="decodeshipping(this);" value="USPS Priority Mail Express: 14080+24.36" style="border:0px;" /></td><td>$24.36</td><td><img src="http://www.wackybuttons.com/images/usps.gif" width="20" height="20" />USPS Priority Mail Express (Guaranteed to arrive on Tuesday, March 3, 2015)
+</label>
+</div>
+
+<div class="radio">
+<label>
+<input type="radio" name="parseshipping" onChange="decodeshipping(this);" value="USPS Priority: 14080+9.42" style="border:0px;" /></td><td>$9.42</td><td><img src="http://www.wackybuttons.com/images/usps.gif" width="20" height="20" />USPS Priority Mail (Expected arrival Wednesday, March 4, 2015, NO guarantee)
+</label>
+</div>
+
+<div class="radio">
+<label>
+<input type="radio" name="parseshipping" onChange="decodeshipping(this);" value="Wacky Saver Shipping: 14080+8.01" style="border:0px;" /></td><td>$8.01</td><td><img src="http://www.wackybuttons.com/images/smwacky.gif" width="20" height="20" />Wacky Saver Shipping (2-9 business days)&nbsp;<a href="javascript:wackyshiphelp();" style="border:0;background-color:#eeeeee;text-decoration:none;color:#000000;" title="What is Wacky Saver Shipping?">&nbsp;?&nbsp;</a>
+</label>
+</div>
+
+
+</div><!--shipping options container-->
 
 <div class="container" style="padding:20px;"><!--bottom continue buttons container-->
 <a href="http://www.wackybuttons.com/shopcart.php?operation=viewcart">&lt;&lt; Go back to shopping</a>
-<input name="checkout2" class="btn btn-default btn-wacky pull-right" type="submit" value="Continue (Calculate Shipping Prices) >>" onClick="document.contents.operation.value = 'checkout2'">
+<div class="pull-right"><!--final checkout button-->
+<input name="finalcheckout" class="btn btn-default btn-wacky" type="submit" value="Continue (Calculate Shipping Prices) >>">
+<br />
+*You will either login to your PayPal account, or enter<br />your credit card and billing address on the next page.
+</div><!--end final checkout button-->
 </div><!--end bottom continue buttons container-->
 
 </form><!--end form-->
