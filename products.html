@@ -1,4 +1,26 @@
 ---
 layout: wackybuttons
 ---
-{% include products/products.html %}
+<div class="products u-blue">
+	<div class="container">
+		<div class="row">
+			<h2>Button products we make</h2>
+		</div><!-- row -->
+		<div class="row">
+			{% include products/standard_pinback.html %}
+			{% include products/refrigerator_magnet.html %}
+			{% include products/clothing_magnet.html %}
+			{% include products/bottle_opener.html %}
+		</div><!-- row -->
+		<div class="row">
+			{% include products/mirror.html %}
+			{% include products/clip.html %}
+			{% include products/nothing.html %}
+			<div class="col-md-3">
+					<a href="#">
+						<button class="btn btn-default btn-wacky" style="margin-top:65px;">See all products >></button>
+					</a>
+			</div><!-- col-md-3 -->  
+		</div><!-- row -->
+	</div><!-- container -->
+</div><!-- products -->
