@@ -25,7 +25,7 @@ $('#dialog_content').html(inpcode);
 function upsg_map(){
 $('#dialog_title').html("UPS Ground Map");
 inpcode = 'This map, provided by UPS, shows how long your package will take to receive from our location if you were to ship using UPS Ground.';
-inpcode = inpcode + '<img src="http://www.wackybuttons.com/images/UPSGMap.gif" alt="">';
+inpcode = inpcode + '<div style="overflow-x:scroll;"><img src="http://www.wackybuttons.com/images/UPSGMap.gif" alt=""></div>';
 
 $('#dialog_content').html(inpcode);
 }
