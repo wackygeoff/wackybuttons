@@ -13,3 +13,11 @@ max-width:150px;
 .med-field{
 max-width:300px;
 }
+
+.shipping-choices td{
+padding:5px;
+}
+
+.cart-display{
+overflow-x:scroll;
+}
