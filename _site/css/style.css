@@ -137,6 +137,12 @@ margin-left:auto;
 margin-right:auto;
 }
 
+.product-thumbnail{
+max-width: 225px;
+margin-left:auto;
+margin-right:auto;
+}
+
 /***** Utilities *****/
 .u-border-blue {
 border: 1px #1094c4 solid;
