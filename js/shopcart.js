@@ -4,6 +4,7 @@ obj.style.display = 'none';
 }else{obj.style.display = 'block';
 }
 }
+
 function emailcart(){
 $('#dialog_title').html("Email this cart");
 
@@ -20,7 +21,16 @@ inpcode = inpcode + '</form>';
 $('#dialog_content').html(inpcode);
 }
 
-function pickuploc(){<br />
+
+function upsg_map(){
+$('#dialog_title').html("UPS Ground Map");
+inpcode = 'This map, provided by UPS, shows how long your package will take to receive from our location if you were to ship using UPS Ground.';
+inpcode = inpcode + '<img src="http://www.wackybuttons.com/images/UPSGMap.gif" alt="">';
+
+$('#dialog_content').html(inpcode);
+}
+
+function pickuploc(){
 $('#dialog_title').html("Pick up location");
 inpcode = 'Wacky Buttons, Inc.<br />101 Lincoln Parkway Suite A<br />East Rochester, NY 14445<br /> <br />';
 inpcode = inpcode + '<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Wacky+Buttons,+East+Rochester,+NY&amp;aq=1&amp;sll=37.0625,-95.677068&amp;sspn=38.638819,56.953125&amp;vpsrc=0&amp;ie=UTF8&amp;hq=Wacky+Buttons,&amp;hnear=East+Rochester,+Monroe,+New+York&amp;t=m&amp;ll=43.11617,-77.480596&amp;spn=0.016491,0.01518&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Wacky+Buttons,+East+Rochester,+NY&amp;aq=1&amp;sll=37.0625,-95.677068&amp;sspn=38.638819,56.953125&amp;vpsrc=0&amp;ie=UTF8&amp;hq=Wacky+Buttons,&amp;hnear=East+Rochester,+Monroe,+New+York&amp;t=m&amp;ll=43.11617,-77.480596&amp;spn=0.016491,0.01518" style="color:#0000FF;text-align:left">View Larger Map</a></small>';
@@ -35,7 +45,14 @@ $('#dialog_content').html(inpcode);
 
 function wackyshiphelp(){
 $('#dialog_title').html("About Wacky Saver Shipping");
-inpcode = 'This option saves you money because we get to choose how we ship your package. Your package will ship either UPS Ground, USPS Priority Mail Flat Rate, or USPS Parcel Select depending on availablility. A tracking number is provided automatically by email after your order ships.';
+inpcode = 'This option saves you money because we get to choose how we ship your package.<br /> <br />';
+inpcode = inpcode + 'Depending on availablility, Your package will ship using one of the following services: <br /> <br />';
+inpcode = inpcode + '<ul>';
+inpcode = inpcode + '<li>UPS Ground</li>';
+inpcode = inpcode + '<li>USPS Priority Mail Flat Rate</li>';
+inpcode = inpcode + '<li>USPS Parcel Select</li>';
+inpcode = inpcode + '</ul>';
+inpcode = inpcode + 'We ship from East Rochester, NY, USA. The further you are located from our facility, the longer it will take to receive. A tracking number is provided automatically by email after your order ships.';
 $('#dialog_content').html(inpcode);
 }
 function decodeshipping(inp){
