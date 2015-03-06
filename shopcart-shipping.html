@@ -34,7 +34,7 @@ javascript_inc: <script src="./js/shopcart.js"></script>
 </div><!--col-md-2-->
 </div><!--row-->
 
-<div class="container"><!--cart data container-->
+<div class="container cart-display"><!--cart data container-->
 <table class="table">
     <thead style="background-color:orange; color:#ffffff; font-weight:bold;">
       <tr>
@@ -117,47 +117,19 @@ holland, NY 14080<br />
 <input name="item_name_3" type="hidden" value="">
 <input name="amount_3" type="hidden" value="">
 
-<div class="radio">
-<label>
-<input type="radio" name="parseshipping" onChange="decodeshipping(this);" value="UPS Next Day Air: 14080+37.26" style="border:0px;" /></td><td>$37.26</td><td><img src="http://www.wackybuttons.com/images/ups.gif" width="20" height="20" />UPS Next Day Air (Guaranteed to arrive on Tuesday, March 3, 2015)
-</label>
-</div>
 
-<div class="radio">
-<label>
-<input type="radio" name="parseshipping" onChange="decodeshipping(this);" value="UPS 2nd Day Air: 14080+24.36" style="border:0px;" /></td><td>$24.36</td><td><img src="http://www.wackybuttons.com/images/ups.gif" width="20" height="20" />UPS 2nd Day Air (Guaranteed to arrive on Wednesday, March 4, 2015)
-</label>
-</div>
+<table class="shipping-choices">
+<tr><td><input type="radio" class="" name="parseshipping" onChange="decodeshipping(this);" value="UPS Next Day Air: 14080+35.28" style="border:0px;" /></td><td>$35.28</td><td><img src="http://www.wackybuttons.com/images/ups.gif" width="20" height="20" /></td><td>UPS Next Day Air (Guaranteed to arrive on Monday, March 9, 2015)</td></tr>
+<tr><td><input type="radio" name="parseshipping" onChange="decodeshipping(this);" value="UPS 2nd Day Air: 14080+22.57" style="border:0px;" /></td><td>$22.57</td><td><img src="http://www.wackybuttons.com/images/ups.gif" width="20" height="20" /></td><td>UPS 2nd Day Air (Guaranteed to arrive on Tuesday, March 10, 2015)</td></tr>
+<tr><td><input type="radio" name="parseshipping" onChange="decodeshipping(this);" value="UPS 3-Day Select: 14080+16.14" style="border:0px;" /></td><td>$16.14</td><td><img src="http://www.wackybuttons.com/images/ups.gif" width="20" height="20" /></td><td>UPS 3-Day Select (Guaranteed to arrive on Wednesday, March 11, 2015)</td></tr>
+<tr><td><input type="radio" name="parseshipping" onChange="decodeshipping(this);" value="UPS Ground: 14080+13.24" style="border:0px;" /></td><td>$13.24</td><td><img src="http://www.wackybuttons.com/images/ups.gif" width="20" height="20" /></td><td>UPS Ground (up to business days) <a href="#" class="fa fa-info-circle" style="font-size:18px;" title="See UPS Ground transit times" data-toggle="modal" data-target="#dialog_win" onclick="upsg_map();"></a></td></tr>
+<tr><td><input type="radio" name="parseshipping" onChange="decodeshipping(this);" value="USPS Priority Mail Express: 14080+21.70" style="border:0px;" /></td><td>$21.70</td><td><img src="http://www.wackybuttons.com/images/usps.gif" width="20" height="20" /></td><td>USPS Priority Mail Express (Guaranteed to arrive on Saturday, March 7, 2015)</td></tr>
+<tr><td><input type="radio" name="parseshipping" onChange="decodeshipping(this);" value="USPS Priority: 14080+7.89" style="border:0px;" /></td><td>$7.89</td><td><img src="http://www.wackybuttons.com/images/usps.gif" width="20" height="20" /></td><td>USPS Priority Mail (Expected arrival Monday, March 9, 2015, NO guarantee)</td></tr>
+<tr><td><input type="radio" name="parseshipping" onChange="decodeshipping(this);" value="USPS First Class: 14080+5.78" style="border:0px;" /></td><td>$5.78</td><td><img src="http://www.wackybuttons.com/images/usps.gif" width="20" height="20" /></td><td>USPS First Class Mail (up to 9 days)</td></tr>
+<tr><td><input type="radio" name="parseshipping" onChange="decodeshipping(this);" value="Wacky Saver Shipping: 14080+6.71" style="border:0px;" /></td><td>$6.71</td><td><img src="http://www.wackybuttons.com/images/smwacky.gif" width="20" height="20" /></td><td>Wacky Saver Shipping (2-9 business days) <a href="#" class="fa fa-info-circle" style="font-size:18px;" title="What is Wacky Saver Shipping?" data-toggle="modal" data-target="#dialog_win" onclick="wackyshiphelp();"></a></td></tr>
+</table>
 
-<div class="radio">
-<label>
-<input type="radio" name="parseshipping" onChange="decodeshipping(this);" value="UPS 3-Day Select: 14080+18.14" style="border:0px;" /></td><td>$18.14</td><td><img src="http://www.wackybuttons.com/images/ups.gif" width="20" height="20" />UPS 3-Day Select (Guaranteed to arrive on Thursday, March 5, 2015)
-</label>
-</div>
 
-<div class="radio">
-<label>
-<input type="radio" name="parseshipping" onChange="decodeshipping(this);" value="UPS Ground: 14080+15.26" style="border:0px;" /></td><td>$15.26</td><td><img src="http://www.wackybuttons.com/images/ups.gif" width="20" height="20" />UPS Ground (3-6 business days)
-</label>
-</div>
-
-<div class="radio">
-<label>
-<input type="radio" name="parseshipping" onChange="decodeshipping(this);" value="USPS Priority Mail Express: 14080+24.36" style="border:0px;" /></td><td>$24.36</td><td><img src="http://www.wackybuttons.com/images/usps.gif" width="20" height="20" />USPS Priority Mail Express (Guaranteed to arrive on Tuesday, March 3, 2015)
-</label>
-</div>
-
-<div class="radio">
-<label>
-<input type="radio" name="parseshipping" onChange="decodeshipping(this);" value="USPS Priority: 14080+9.42" style="border:0px;" /></td><td>$9.42</td><td><img src="http://www.wackybuttons.com/images/usps.gif" width="20" height="20" />USPS Priority Mail (Expected arrival Wednesday, March 4, 2015, NO guarantee)
-</label>
-</div>
-
-<div class="radio">
-<label>
-<input type="radio" name="parseshipping" onChange="decodeshipping(this);" value="Wacky Saver Shipping: 14080+8.01" style="border:0px;" /></td><td>$8.01</td><td><img src="http://www.wackybuttons.com/images/smwacky.gif" width="20" height="20" />Wacky Saver Shipping (2-9 business days)&nbsp;<a href="#" style="border:0;background-color:#eeeeee;text-decoration:none;color:#000000;" title="What is Wacky Saver Shipping?" data-toggle="modal" data-target="#dialog_win" onclick="wackyshiphelp();">&nbsp;?&nbsp;</a>
-</label>
-</div>
 
 
 </div><!--shipping options container-->
@@ -165,8 +137,8 @@ holland, NY 14080<br />
 <div class="container" style="padding:20px;"><!--bottom continue buttons container-->
 <a href="http://www.wackybuttons.com/shopcart.php?operation=viewcart">&lt;&lt; Go back to shopping</a>
 <div class="pull-right"><!--final checkout button-->
-<input name="finalcheckout" class="btn btn-default btn-wacky" type="submit" value="Continue (Calculate Shipping Prices) >>">
-<br />
+<input name="finalcheckout" class="btn btn-default btn-wacky" type="submit" value="Continue Secure Checkout >>">
+<br /> <br />
 *You will either login to your PayPal account, or enter<br />your credit card and billing address on the next page.
 </div><!--end final checkout button-->
 </div><!--end bottom continue buttons container-->
