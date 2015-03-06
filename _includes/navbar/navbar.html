@@ -14,13 +14,13 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       		<ul class="nav navbar-nav navbar-wacky-nav">
-        		<li><a href="#">Home</a></li>
+        		<li><a href="{{ site.baseurl }}/">Home</a></li>
 				{% include navbar/navbar-products.html %}
-        		<li><a href="#">Prices/Turnaround</a></li>
+        		<li><a href="{{ site.baseurl }}/prices.html">Prices/Turnaround</a></li>
         		{% include navbar/navbar-create.html %}
-        		<li><a href="#">Store</a></li>
+        		<li><a href="{{ site.baseurl }}/store.html">Store</a></li>
         		{% include navbar/navbar-order.html %}
-        		<li><a href="#">Help</a></li>
+        		<li><a href="{{ site.baseurl }}/help.html">Help</a></li>
 				<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">About Us <span class="caret"></span></a>
 					<ul class="dropdown-menu navbar-wacky-nav" role="menu">
 						<li><a href="#">Who we are</a></li>
