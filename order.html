@@ -1,0 +1,181 @@
+---
+layout: wackybuttons
+javascript_inc: <script src="./js/order.js"></script>
+---
+
+
+<div class="container">
+
+<div class="row">
+<div class="col-md-6">
+
+
+
+
+<!--create-->
+
+<h2>Start Designing Your Buttons For FREE</h2>
+<img src="http://www.wackybuttons.com/images/spacer.gif" width="380" height="1" alt="spacer (1K)" /><br />
+
+<table summary="" align="left" cellpadding="10" cellspacing="0">
+<tr>
+<td><img src="http://www.wackybuttons.com/images/order/create.gif" width="42" height="36" alt="create (1K)" /></td>
+<td><div style="background-color:#f0f0f0; border:2px #1094c4 solid; display:inline; padding:3px;"><a href="http://www.wackybuttons.com/create.php" style="text-decoration:none; color:#000000; font-weight:bold;">Take me to the create page &gt;&gt;</a></div></td>
+</tr>
+</table>
+
+
+<!--end create-->
+
+
+
+
+</div><!--col-md-6-->
+<div class="col-md-6">
+
+
+
+
+
+<!--shop-->
+<h2>Shop for a Pre-Made Button Design</h2>
+<img src="http://www.wackybuttons.com/images/spacer.gif" width="380" height="1" alt="spacer (1K)" /><br />
+<table summary="" align="left" cellpadding="10" cellspacing="0">
+<tr>
+
+<td><img src="http://www.wackybuttons.com/images/order/shop.gif" width="42" height="36" alt="shop (1K)" /></td>
+<td><div style="background-color:#f0f0f0; border:2px #1094c4 solid; display:inline; padding:3px;"><a href="http://www.wackybuttons.com/store.php" style="text-decoration:none; color:#000000; font-weight:bold;">Take me to the store page &gt;&gt;</a></div></td>
+</tr>
+</table>
+
+
+<!--end shop-->
+
+
+
+
+</div><!--col-md-6-->
+</div><!--row-->
+
+<div class="row">
+<hr />
+<div class="col-md-6">
+
+
+
+
+<!--order form-->
+<form name="formx" action="http://www.wackybuttons.com/shopcart.php" onsubmit="return checkFields();" onreset="javascript:clearform();" method="post" enctype="application/x-www-form-urlencoded" id="formx" target="cart">
+
+<input type="hidden" name="operation" value="addtocart" />
+<input type="hidden" name="title" value=" " />
+
+
+<h2>Order by Design Code</h2>
+<img src="http://www.wackybuttons.com/images/spacer.gif" width="380" height="10" alt="spacer (1K)" /><br />
+<table summary="" align="center" cellpadding="10" cellspacing="0">
+<tr>
+<td>
+
+
+Design Code: <input type="text" name="item_number" maxlength="7" size="8" onchange="checkdc();" /> <input type="button" value="View Design" onclick="checkdc();" />
+<br />
+<a class="smalllink" href="javascript:info3('modalPage');">What's this?</a><br /><a class="smalllink" href="javascript:info2('modalPage');">How do I order many Design Codes?</a>
+
+<br /><img src="http://www.wackybuttons.com/images/spacer.gif" width="10" height="10" alt="spacer (1K)" />
+
+
+
+
+
+Choose a Product:
+<br /><img src="http://www.wackybuttons.com/images/spacer.gif" width="1" height="5" alt="" />
+<select name="prodchooser" onchange="javascript:toggleSize();">
+<option value="">Choose a Product</option>
+<option value="Standard Pin Back">Standard Pin Back</option><option value="Refrigerator Magnet">Refrigerator Magnet</option><option value="Clothing Magnet">Clothing Magnet</option><option value="Bottle Opener">Bottle Opener</option><option value="Mirror Back">Mirror Back</option><option value="Clip Back">Clip Back</option><option value="Nothing on Back">Nothing on Back</option></select>
+
+<br /><img src="http://www.wackybuttons.com/images/spacer.gif" width="1" height="10" alt="" />
+Choose a Button Size:
+<br /><img src="http://www.wackybuttons.com/images/spacer.gif" width="1" height="5" alt="" />
+<div id="sizechooser">
+<select name="item_name" onchange="javascript:changetype(this);" disabled="disabled">
+<option value="">Choose a Button Size</option>
+</select>
+</div>
+<a class="smalllink" href="javascript:info4('modalPage');">See difference in button sizes</a>
+
+
+<br /><img src="http://www.wackybuttons.com/images/spacer.gif" width="1" height="10" alt="" />
+Quantity: <input type="hidden" name="on0" value="number of buttons" />
+<input type="text" name="os0" maxlength="30" size="9" value="" /><br /> <br />
+
+<input name="button" type="button" value=" calculate price " onclick="javascript:calcprice();" />
+<div id="pricedispcont" style="display:none;"><iframe name="pricedisp" id="pricedisp" height="35" width="150" scrolling="no" src="" frameborder="0">Could not calculate price. Press "Add To Cart" Below to view the price of the item in your shopping cart.</iframe></div>
+
+
+</td>
+</tr>
+</table>
+
+<div align="center">
+<h3>Product Preview</h3>
+
+<table cellpadding="0" cellspacing="0" border="0"><tr><td valign="top" align="center">
+<div id="dc">
+<img src="http://www.wackybuttons.com/images/designpreview.jpg" width="150" height="150" border="0" alt="Preview of your button design will show here when you enter a design code in the form above" />
+</div>
+
+</td><td valign="top" align="center">
+<div id="prod">
+<img src="http://www.wackybuttons.com/images/backofbutton.jpg" width="150" height="150" border="0" alt="Preview of what the back of your button will look like will show here after you choose a product type in the form above." />
+</div>
+</td></tr></table>
+<br /><img src="http://www.wackybuttons.com/images/spacer.gif" width="1" height="5" alt="" /><br />
+<input type="image" name="Submit" value="Add to Cart" alt="Add to Cart" src="http://www.wackybuttons.com/images/order/addtocart.gif" style="border:0px;" onclick="javascript:if(navigator.userAgent.toLowerCase().indexOf('safari') > -1){window.open('http://www.wackybuttons.com/shopcart.php','cart')}" />
+</div>
+
+</form>
+<!--end order form-->
+
+
+
+
+
+</div><!--col-md-6-->
+<div class="col-md-6">
+
+
+
+
+
+<!--design lookup-->
+<h2>View All My Button Designs</h2>
+<table summary="" align="center" width="65%" cellpadding="10" cellspacing="0">
+
+<tr>
+<td>
+<div>Search by Email</div><br />
+If you forgot your Design Code, or if you want to view at all of your button designs on one page, please enter your email address below.
+<br /> <br />
+<form action="http://www.wackybuttons.com/dclookup.php" method="post">
+Enter your email address:
+<input type="text" name="email" value="" />
+<br /> <br />
+<input type="submit" name="submit" value="Continue" />
+</form>
+
+</td>
+
+</tr>
+</table>
+
+<!--end design lookup-->
+
+
+
+
+
+</div><!--col-md-6-->
+</div><!--row-->
+
+</div><!--container-->
