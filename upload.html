@@ -1,26 +1,21 @@
 ---
 layout: wackybuttons
 ---
+<div style="margin-top:10px"></div>
 <div class="container">
 	<div class="row">
 		<div class="col-md-6">
-			<form method="post" name="uploadform" enctype=
-                "multipart/form-data" action=
-                "http://www.wackybuttons.com/formemail/filerequest/requestfile.php"
-                onsubmit="return checkFields()" id="uploadform">
-                  <input type="hidden" name="ar_subject" value=
-                  "Wacky Buttons Create Page / upload.php" /> 
-									<input type="hidden" name="comingfrom" value="http://www.wackybuttons.com/create.php" />
-									Your
-                  name:<br />
-
-                  <input type="text" name="realname" size="25"
-                  maxlength="90" />
-                  <p>
-                    Your Email address<br />
-                    <input type="text" name="email" size="25"
-                    maxlength="90" />
-                  </p>
+			<form method="post" name="uploadform" enctype="multipart/form-data" action="http://www.wackybuttons.com/formemail/filerequest/requestfile.php" onsubmit="return checkFields()" id="uploadform">
+            	<div class="form-group">
+            		<label>Your name:</label>
+                  	<input type="hidden" name="ar_subject" value="Wacky Buttons Create Page / upload.php" class="form-control" /> 
+					<input type="hidden" name="comingfrom" value="http://www.wackybuttons.com/create.php" class="form-control" />
+                  	<input type="text" name="realname" size="25" maxlength="90" class="form-control" />
+				</div><!-- form-group -->
+				<div class="form-group">
+                	<label>Your Email address</label>
+                    <input type="text" name="email" size="25" maxlength="90" class="form-control" />
+				</div><!-- form-group -->
                   <p>
                     Button Size (diameter) you plan on
                     ordering<br />
@@ -118,7 +113,7 @@ What day do you need your buttons in hand?<br />
 									Add words or Comments:<br /><font size="-2">If you want to add words to your picture, or have us redesign anything, please use the <a href="http://www.wackybuttons.com/letusdesign.php">this form</a> instead.</font>
 
 
-                  
+
                 </form>
 
 </div><!--col-md-6-->								
