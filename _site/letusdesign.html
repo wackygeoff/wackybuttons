@@ -34,7 +34,7 @@
 		</div><!-- col-md-8 -->
 		<div class="col-md-4">
 			<div class="row pull-right">
-					<button class="btn btn-lg btn-default btn-wacky-lg"><span class="fa fa-paint-brush"></span> My Designs</button><button class="btn btn-lg btn-default btn-wacky-lg"><span class="fa fa-shopping-cart"></span> My Cart</button>
+					<button class="btn btn-lg btn-default btn-wacky-lg" data-toggle="modal" data-target="#dialog_win" onclick="my_design_window();"><span class="fa fa-paint-brush"></span> My Designs</button><button class="btn btn-lg btn-default btn-wacky-lg" data-toggle="modal" data-target="#dialog_win" onclick="my_cart_window();"><span class="fa fa-shopping-cart"></span> My Cart</button>
 			</div><!-- row -->
 		</div><!-- col-md-4 -->
 	</div><!-- row -->
@@ -147,7 +147,8 @@
 	</ul>
 </li>
 
-        		<li><a href="/prices.html">Prices/Turnaround</a></li>
+        		<li><a href="/prices.html">Prices</a></li>
+						<li><a href="/turnaround.html">Turnaround</a></li>
         		<!-- CREATE MENU -->
 <li class="dropdown yamm-fw">
 	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Create <span class="caret"></span></a>
@@ -591,9 +592,9 @@ else
 				<p class="caption">The pictures above are not to scale. We recommend using a standard unit of measurement like a ruler to get the best idea of the actual size.</p>
 				<h4>Size Comparisons</h4>
 				<div class="u-border-blue">
-					<table>
-						<tr><td><b>Size</b></td><td><b>Common Household Object</b></td></tr>
-						<tr><td>2.25 inch</td><td>soda can top</td></tr>
+					<table class="size-compare-table">
+						<tr><td><b>Size</b></td><td colspan="2"><b>Common Household Object</b></td></tr>
+						<tr><td>2.25 inch</td><td><img src="./img/products/sodacan.jpg"></td><td>top of a soda can</td></tr>
 					</table>
 					<a href="http://www.wackybuttons.com/documents/products/wbcomparison.pdf"><img src="http://www.wackybuttons.com/images/products/pdfproduct.jpg" width="221" height="50" alt="Download and print this -Button Sizes (PDF)- to see exact button sizes." border="0" class="center-block" /></a>
 				</div><!-- u-border-blue -->
@@ -611,7 +612,7 @@ else
       		</div><!-- modal-body -->
       		<div class="modal-footer">
         		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        		<button type="button" class="btn btn-primary btn-wacky">Order</button>
+        		<button type="button" class="btn btn-primary btn-wacky">Start Designing</button>
       		</div><!-- modal-footer -->
     	</div><!-- modal-content -->
 	</div><!-- modal-dialog -->
@@ -638,10 +639,10 @@ else
 				<p class="caption">The pictures above are not to scale. We recommend using a standard unit of measurement like a ruler to get the best idea of the actual size.</p>
 				<h4>Size Comparisons</h4>
 				<div class="u-border-blue">
-					<table>
-						<tr><td><b>Size</b></td><td><b>Common Household Object</b></td></tr>
-						<tr><td>2.25 inch</td><td>soda can top</td></tr>
-						<tr><td>3 inch</td><td>campbells chunky soup can top</td></tr>
+					<table class="size-compare-table">
+						<tr><td><b>Size</b></td><td colspan="2"><b>Common Household Object</b></td></tr>
+						<tr><td>2.25 inch</td><td><img src="./img/products/sodacan.jpg"></td><td>top of a soda can</td></tr>
+						<tr><td>3 inch</td><td><img src="./img/products/soupcan.jpg"></td><td>top of campbells chunky soup can</td></tr>
 					</table>
 					<a href="http://www.wackybuttons.com/documents/products/wbcomparison.pdf"><img src="http://www.wackybuttons.com/images/products/pdfproduct.jpg" width="221" height="50" alt="Download and print this -Button Sizes (PDF)- to see exact button sizes." border="0" class="center-block" /></a>
 				</div><!-- u-border-blue -->
@@ -659,7 +660,7 @@ else
       		</div><!-- modal-body -->
       		<div class="modal-footer">
         		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        		<button type="button" class="btn btn-primary btn-wacky">Order</button>
+        		<button type="button" class="btn btn-primary btn-wacky">Start Designing</button>
       		</div><!-- modal-footer -->
     	</div><!-- modal-content -->
 	</div><!-- modal-dialog -->
@@ -686,11 +687,11 @@ else
 				<p class="caption">The pictures above are not to scale. We recommend using a standard unit of measurement like a ruler to get the best idea of the actual size.</p>
 				<h4>Size Comparisons</h4>
 				<div class="u-border-blue">
-					<table>
-						<tr><td><b>Size</b></td><td><b>Common Household Object</b></td></tr>
-						<tr><td>1.5 inch</td><td>gallon milk jug or dixie cup bottom</td></tr>
-						<tr><td>2.25 inch</td><td>soda can top</td></tr>
-						<tr><td>3 inch</td><td>campbells chunky soup can top</td></tr>
+					<table class="size-compare-table">
+						<tr><td><b>Size</b></td><td colspan="2"><b>Common Household Object</b></td></tr>
+						<tr><td>1.5 inch</td><td><img src="./img/products/milkcap.jpg"></td><td>gallon milk jug cap</td></tr>
+						<tr><td>2.25 inch</td><td><img src="./img/products/sodacan.jpg"></td><td>top of a soda can</td></tr>
+						<tr><td>3 inch</td><td><img src="./img/products/soupcan.jpg"></td><td>top of campbells chunky soup can</td></tr>
 					</table>
 					<a href="http://www.wackybuttons.com/documents/products/wbcomparison.pdf"><img src="http://www.wackybuttons.com/images/products/pdfproduct.jpg" width="221" height="50" alt="Download and print this -Button Sizes (PDF)- to see exact button sizes." border="0" class="center-block" /></a>
 				</div><!-- u-border-blue -->
@@ -710,7 +711,7 @@ else
       		</div><!-- modal-body -->
       		<div class="modal-footer">
         		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        		<button type="button" class="btn btn-primary btn-wacky">Order</button>
+        		<button type="button" class="btn btn-primary btn-wacky">Start Designing</button>
       		</div><!-- modal-footer -->
     	</div><!-- modal-content -->
 	</div><!-- modal-dialog -->
@@ -737,10 +738,10 @@ else
 				<p class="caption">The pictures above are not to scale. We recommend using a standard unit of measurement like a ruler to get the best idea of the actual size.</p>
 				<h4>Size Comparisons</h4>
 				<div class="u-border-blue">
-					<table>
-						<tr><td><b>Size</b></td><td><b>Common Household Object</b></td></tr>
-						<tr><td>2.25 inch</td><td>soda can top</td></tr>
-						<tr><td>3 inch</td><td>campbells chunky soup can top</td></tr>
+					<table class="size-compare-table">
+						<tr><td><b>Size</b></td><td colspan="2"><b>Common Household Object</b></td></tr>
+						<tr><td>2.25 inch</td><td><img src="./img/products/sodacan.jpg"></td><td>top of a soda can</td></tr>
+						<tr><td>3 inch</td><td><img src="./img/products/soupcan.jpg"></td><td>top of campbells chunky soup can</td></tr>
 					</table>
 					<a href="http://www.wackybuttons.com/documents/products/wbcomparison.pdf"><img src="http://www.wackybuttons.com/images/products/pdfproduct.jpg" width="221" height="50" alt="Download and print this -Button Sizes (PDF)- to see exact button sizes." border="0" class="center-block" /></a>
 				</div><!-- u-border-blue -->
@@ -758,7 +759,7 @@ else
       		</div><!-- modal-body -->
       		<div class="modal-footer">
         		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        		<button type="button" class="btn btn-primary btn-wacky">Order</button>
+        		<button type="button" class="btn btn-primary btn-wacky">Start Designing</button>
       		</div><!-- modal-footer -->
     	</div><!-- modal-content -->
 	</div><!-- modal-dialog -->
@@ -785,12 +786,12 @@ else
 				<p class="caption">The pictures above are not to scale. We recommend using a standard unit of measurement like a ruler to get the best idea of the actual size.</p>
 				<h4>Size Comparisons</h4>
 				<div class="u-border-blue">
-					<table>
-						<tr><td><b>Size</b></td><td><b>Common Household Object</b></td></tr>
-						<tr><td>1 inch</td><td>US quarter</td></tr>
-						<tr><td>1.5 inch</td><td>gallon milk jug or dixie cup bottom</td></tr>
-						<tr><td>2.25 inch</td><td>soda can top</td></tr>
-						<tr><td>3 inch</td><td>campbells chunky soup can top</td></tr>
+					<table class="size-compare-table">
+						<tr><td><b>Size</b></td><td colspan="2"><b>Common Household Object</b></td></tr>
+						<tr><td>1 inch</td><td><img src="./img/products/quarter.jpg"></td><td>US quarter</td></tr>
+						<tr><td>1.5 inch</td><td><img src="./img/products/milkcap.jpg"></td><td>gallon milk jug cap</td></tr>
+						<tr><td>2.25 inch</td><td><img src="./img/products/sodacan.jpg"></td><td>top of a soda can</td></tr>
+						<tr><td>3 inch</td><td><img src="./img/products/soupcan.jpg"></td><td>top of campbells chunky soup can</td></tr>
 					</table>
 					<a href="http://www.wackybuttons.com/documents/products/wbcomparison.pdf"><img src="http://www.wackybuttons.com/images/products/pdfproduct.jpg" width="221" height="50" alt="Download and print this -Button Sizes (PDF)- to see exact button sizes." border="0" class="center-block" /></a>
 				</div><!-- u-border-blue -->
@@ -808,7 +809,7 @@ else
       		</div><!-- modal-body -->
       		<div class="modal-footer">
         		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        		<button type="button" class="btn btn-primary btn-wacky">Order</button>
+        		<button type="button" class="btn btn-primary btn-wacky">Start Designing</button>
       		</div><!-- modal-footer -->
     	</div><!-- modal-content -->
 	</div><!-- modal-dialog -->
@@ -835,12 +836,12 @@ else
 				<p class="caption">The pictures above are not to scale. We recommend using a standard unit of measurement like a ruler to get the best idea of the actual size.</p>
 				<h4>Size Comparisons</h4>
 				<div class="u-border-blue">
-					<table>
-						<tr><td><b>Size</b></td><td><b>Common Household Object</b></td></tr>
-						<tr><td>1 inch</td><td>US quarter</td></tr>
-						<tr><td>1.5 inch</td><td>gallon milk jug or dixie cup bottom</td></tr>
-						<tr><td>2.25 inch</td><td>soda can top</td></tr>
-						<tr><td>3 inch</td><td>campbells chunky soup can top</td></tr>
+					<table class="size-compare-table">
+						<tr><td><b>Size</b></td><td colspan="2"><b>Common Household Object</b></td></tr>
+						<tr><td>1 inch</td><td><img src="./img/products/quarter.jpg"></td><td>US quarter</td></tr>
+						<tr><td>1.5 inch</td><td><img src="./img/products/milkcap.jpg"></td><td>gallon milk jug cap</td></tr>
+						<tr><td>2.25 inch</td><td><img src="./img/products/sodacan.jpg"></td><td>top of a soda can</td></tr>
+						<tr><td>3 inch</td><td><img src="./img/products/soupcan.jpg"></td><td>top of campbells chunky soup can</td></tr>
 					</table>
 					<a href="http://www.wackybuttons.com/documents/products/wbcomparison.pdf"><img src="http://www.wackybuttons.com/images/products/pdfproduct.jpg" width="221" height="50" alt="Download and print this -Button Sizes (PDF)- to see exact button sizes." border="0" class="center-block" /></a>
 				</div><!-- u-border-blue -->
@@ -859,7 +860,7 @@ else
       		</div><!-- modal-body -->
       		<div class="modal-footer">
         		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        		<button type="button" class="btn btn-primary btn-wacky">Order</button>
+        		<button type="button" class="btn btn-primary btn-wacky">Start Designing</button>
       		</div><!-- modal-footer -->
     	</div><!-- modal-content -->
 	</div><!-- modal-dialog -->
@@ -886,12 +887,12 @@ else
 				<p class="caption">The pictures above are not to scale. We recommend using a standard unit of measurement like a ruler to get the best idea of the actual size.</p>
 				<h4>Size Comparisons</h4>
 				<div class="u-border-blue">
-					<table>
-						<tr><td><b>Size</b></td><td><b>Common Household Object</b></td></tr>
-						<tr><td>1 inch</td><td>US quarter</td></tr>
-						<tr><td>1.5 inch</td><td>gallon milk jug or dixie cup bottom</td></tr>
-						<tr><td>2.25 inch</td><td>soda can top</td></tr>
-						<tr><td>3 inch</td><td>campbells chunky soup can top</td></tr>
+					<table class="size-compare-table">
+						<tr><td><b>Size</b></td><td colspan="2"><b>Common Household Object</b></td></tr>
+						<tr><td>1 inch</td><td><img src="./img/products/quarter.jpg"></td><td>US quarter</td></tr>
+						<tr><td>1.5 inch</td><td><img src="./img/products/milkcap.jpg"></td><td>gallon milk jug cap</td></tr>
+						<tr><td>2.25 inch</td><td><img src="./img/products/sodacan.jpg"></td><td>top of a soda can</td></tr>
+						<tr><td>3 inch</td><td><img src="./img/products/soupcan.jpg"></td><td>top of campbells chunky soup can</td></tr>
 					</table>
 					<a href="http://www.wackybuttons.com/documents/products/wbcomparison.pdf"><img src="http://www.wackybuttons.com/images/products/pdfproduct.jpg" width="221" height="50" alt="Download and print this -Button Sizes (PDF)- to see exact button sizes." border="0" class="center-block" /></a>
 				</div><!-- u-border-blue -->
@@ -909,7 +910,7 @@ else
       		</div><!-- modal-body -->
       		<div class="modal-footer">
         		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        		<button type="button" class="btn btn-primary btn-wacky">Order</button>
+        		<button type="button" class="btn btn-primary btn-wacky">Start Designing</button>
       		</div><!-- modal-footer -->
     	</div><!-- modal-content -->
 	</div><!-- modal-dialog -->
@@ -979,7 +980,7 @@ else
       		</div><!-- modal-body -->
       		<div class="modal-footer">
         		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        		<button type="button" class="btn btn-primary btn-wacky">Order</button>
+        		<a href="mailto:order@wackybuttons.com?Subject=I%20am%20interested%20in%20bag%20packaging&body=Please%20email%20information%20regarding%20your%20bag%20packaging%20products."><button type="button" class="btn btn-primary btn-wacky">Request Quote</button></a>
       		</div><!-- modal-footer -->
     	</div><!-- modal-content -->
 	</div><!-- modal-dialog -->
@@ -1053,7 +1054,7 @@ else
       		</div><!-- modal-body -->
       		<div class="modal-footer">
         		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        		<button type="button" class="btn btn-primary btn-wacky">Order</button>
+        		<a href="mailto:order@wackybuttons.com?Subject=I%20am%20interested%20in%20pinned%20card%20packaging&body=Please%20email%20information%20regarding%20your%20pinned%20card%20packaging%20products."><button type="button" class="btn btn-primary btn-wacky">Request Quote</button></a>
       		</div><!-- modal-footer -->
     	</div><!-- modal-content -->
 	</div><!-- modal-dialog -->
@@ -1081,6 +1082,8 @@ else
 <script src="/plugins/bootstrap/js/bootstrap.min.js"></script>
 <!-- product_modals js -->
 <script src="/js/product_modals.js"></script>
+<!-- banner_button_modals js -->
+<script src="/js/banner_button_modals.js"></script>
 
 <!-- Custom Javascript -->
 
