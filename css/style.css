@@ -178,3 +178,8 @@ margin-bottom:15px;
 .size-compare-table td{
 padding:10px;
 }
+
+.size-compare-table img{
+max-height:75px;
+max-width:75px;
+}
