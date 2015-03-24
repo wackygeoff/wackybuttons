@@ -173,3 +173,8 @@ margin-right:auto;
 .multiple-add-cell{
 margin-bottom:15px;
 }
+
+/*** For size comparision table in product modals **/
+.size-compare-table td{
+padding:10px;
+}

@@ -8,7 +8,7 @@ inpcode = ' \
 				<p class="caption">The pictures above are not to scale. We recommend using a standard unit of measurement like a ruler to get the best idea of the actual size.</p> \
 				<h4>Size Comparisons</h4> \
 				<div class="u-border-blue"> \
-					<table> \
+					<table class="size-compare-table"> \
 						<tr><td><b>Size</b></td><td><b>Common Household Object</b></td></tr> \
 						<tr><td>2.25 inch</td><td>soda can top</td></tr> \
 					</table> \
@@ -48,7 +48,7 @@ inpcode = ' \
 				<p class="caption">The pictures above are not to scale. We recommend using a standard unit of measurement like a ruler to get the best idea of the actual size.</p> \
 				<h4>Size Comparisons</h4> \
 				<div class="u-border-blue"> \
-					<table> \
+					<table class="size-compare-table"> \
 						<tr><td><b>Size</b></td><td><b>Common Household Object</b></td></tr> \
 						<tr><td>2.25 inch</td><td>soda can top</td></tr> \
 						<tr><td>3 inch</td><td>campbells chunky soup can top</td></tr> \
@@ -84,7 +84,7 @@ inpcode = ' \
 				<p class="caption">The pictures above are not to scale. We recommend using a standard unit of measurement like a ruler to get the best idea of the actual size.</p> \
 				<h4>Size Comparisons</h4> \
 				<div class="u-border-blue"> \
-					<table> \
+					<table class="size-compare-table"> \
 						<tr><td><b>Size</b></td><td><b>Common Household Object</b></td></tr> \
 						<tr><td>1.5 inch</td><td>gallon milk jug or dixie cup bottom</td></tr> \
 						<tr><td>2.25 inch</td><td>soda can top</td></tr> \
@@ -123,7 +123,7 @@ inpcode = ' \
 				<p class="caption">The pictures above are not to scale. We recommend using a standard unit of measurement like a ruler to get the best idea of the actual size.</p> \
 				<h4>Size Comparisons</h4>  \
 				<div class="u-border-blue"> \
-					<table> \
+					<table class="size-compare-table"> \
 						<tr><td><b>Size</b></td><td><b>Common Household Object</b></td></tr> \
 						<tr><td>2.25 inch</td><td>soda can top</td></tr> \
 						<tr><td>3 inch</td><td>campbells chunky soup can top</td></tr> \
@@ -161,7 +161,7 @@ inpcode = ' \
 				<p class="caption">The pictures above are not to scale. We recommend using a standard unit of measurement like a ruler to get the best idea of the actual size.</p> \
 				<h4>Size Comparisons</h4> \
 				<div class="u-border-blue"> \
-					<table> \
+					<table class="size-compare-table"> \
 						<tr><td><b>Size</b></td><td><b>Common Household Object</b></td></tr> \
 						<tr><td>1 inch</td><td>US quarter</td></tr> \
 						<tr><td>1.5 inch</td><td>gallon milk jug or dixie cup bottom</td></tr> \
@@ -201,7 +201,7 @@ inpcode = ' \
 				<p class="caption">The pictures above are not to scale. We recommend using a standard unit of measurement like a ruler to get the best idea of the actual size.</p> \
 				<h4>Size Comparisons</h4> \
 				<div class="u-border-blue"> \
-					<table> \
+					<table class="size-compare-table"> \
 						<tr><td><b>Size</b></td><td><b>Common Household Object</b></td></tr> \
 						<tr><td>1 inch</td><td>US quarter</td></tr> \
 						<tr><td>1.5 inch</td><td>gallon milk jug or dixie cup bottom</td></tr> \
@@ -242,7 +242,7 @@ inpcode = ' \
 				<p class="caption">The pictures above are not to scale. We recommend using a standard unit of measurement like a ruler to get the best idea of the actual size.</p> \
 				<h4>Size Comparisons</h4> \
 				<div class="u-border-blue"> \
-					<table> \
+					<table class="size-compare-table"> \
 						<tr><td><b>Size</b></td><td><b>Common Household Object</b></td></tr> \
 						<tr><td>1 inch</td><td>US quarter</td></tr> \
 						<tr><td>1.5 inch</td><td>gallon milk jug or dixie cup bottom</td></tr> \
