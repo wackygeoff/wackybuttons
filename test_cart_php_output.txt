@@ -1,0 +1,61 @@
+<div class="container" style="max-width:550px;"><!--cart data container-->
+<table class="table">
+    <thead style="background-color:orange; color:#ffffff; font-weight:bold;">
+
+      <tr>
+        <th>Design</th>
+        <th>Product</th>
+        <th>Product Description</th>
+				<th>Design Code</th>
+				<th>Quantity</th>
+
+				<th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+
+<tr>
+<td>
+<a href="http://www.wackybuttons.com/designcodes/047/0470121.jpg" target="_blank">
+<img src="http://www.wackybuttons.com/designcodes/047/0470121.jpg" height="100" width="100" border="0"></a>
+</td>
+<td>
+<img src="http://www.wackybuttons.com/images/backs/1.5inchpinback.jpg" height="100" width="100" border="0">
+
+</td>
+<td>1-1/2 inch round button with locking pin back</td>
+<td>0470121<br />Wacky Buttons Design</td>
+<td>100</td>
+<td>$30.00</td>
+</tr>
+
+
+<tr>
+<td>
+<a href="http://www.wackybuttons.com/designcodes/110/1100071.jpg" target="_blank">
+<img src="http://www.wackybuttons.com/designcodes/110/1100071.jpg" height="100" width="100" border="0"></a>
+
+</td>
+<td>
+<img src="http://www.wackybuttons.com/images/backs/1inchpinback.jpg" height="100" width="100" border="0">
+</td>
+<td>1 inch round button with locking pin back</td>
+<td>1100071<br />Wacky Buttons Design</td>
+<td>25</td>
+<td>$7.50</td>
+</tr>
+
+<tr>
+<td colspan="3">
+
+Total number of items in cart: 2
+</td>
+<td colspan="3" style="text-align:right;">
+Cart Subtotal: $37.50
+</td>
+</tr>
+
+</tbody>
+</table>
+
+</div><!--end cart data container-->

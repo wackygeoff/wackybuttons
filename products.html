@@ -1,10 +1,17 @@
 ---
 layout: wackybuttons
 ---
-<div class="products u-blue">
+
+<div class="container"><!-- begin page container -->
+
+<h2>Button products we make</h2>
+
+<div class="products">
 	<div class="container">
 		<div class="row">
-			<h2>Button products we make</h2>
+			
+			<!--spacer--><div style="margin-bottom:10px;"></div><!--spacer-->
+			
 		</div><!-- row -->
 		<div class="row">
 			{% include products/standard_pinback.html %}
@@ -17,9 +24,9 @@ layout: wackybuttons
 			{% include products/clip.html %}
 			{% include products/nothing.html %}
 			<div class="col-md-3">
-				<a href="{{ site.baseurl }}/help.html">
+				<!--a href="{{ site.baseurl }}/help.html">
 					<button class="btn btn-default btn-wacky" style="margin-top:65px;">Need Help?</button>
-				</a>
+				</a-->
 			</div><!-- col-md-3 -->  
 		</div><!-- row -->
 	</div><!-- container -->
@@ -33,5 +40,9 @@ layout: wackybuttons
 			{% include affiliates.html %}
 		</div><!-- col-md-6 -->
 	</div><!-- row -->
-	<div style="margin-bottom:10px;"></div>
+	
+	<!--spacer--><div style="margin-bottom:10px;"></div><!--spacer-->
+	
 </div><!-- container -->
+
+</div><!-- end page container -->

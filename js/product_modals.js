@@ -8,9 +8,9 @@ inpcode = ' \
 				<p class="caption">The pictures above are not to scale. We recommend using a standard unit of measurement like a ruler to get the best idea of the actual size.</p> \
 				<h4>Size Comparisons</h4> \
 				<div class="u-border-blue"> \
-					<table> \
-						<tr><td><b>Size</b></td><td><b>Common Household Object</b></td></tr> \
-						<tr><td>2.25 inch</td><td>soda can top</td></tr> \
+					<table class="size-compare-table"> \
+						<tr><td><b>Size</b></td><td colspan="2"><b>Common Household Object</b></td></tr> \
+						<tr><td>2.25 inch</td><td><img src="./img/products/sodacan.jpg"></td><td>top of a soda can</td></tr> \
 					</table> \
 					<a href="http://www.wackybuttons.com/documents/products/wbcomparison.pdf"><img src="http://www.wackybuttons.com/images/products/pdfproduct.jpg" width="221" height="50" alt="Download and print this -Button Sizes (PDF)- to see exact button sizes." border="0" class="center-block" /></a> \
 				</div><!-- u-border-blue --> \
@@ -29,7 +29,7 @@ inpcode = ' \
 $('#dialog_content').html(inpcode);
 inpcode = ' \
 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> \
-<button type="button" class="btn btn-primary btn-wacky">Order</button> \
+<button type="button" class="btn btn-primary btn-wacky">Start Designing</button> \
 ';
 
 $('#dialog_footer').html(inpcode);
@@ -48,10 +48,10 @@ inpcode = ' \
 				<p class="caption">The pictures above are not to scale. We recommend using a standard unit of measurement like a ruler to get the best idea of the actual size.</p> \
 				<h4>Size Comparisons</h4> \
 				<div class="u-border-blue"> \
-					<table> \
-						<tr><td><b>Size</b></td><td><b>Common Household Object</b></td></tr> \
-						<tr><td>2.25 inch</td><td>soda can top</td></tr> \
-						<tr><td>3 inch</td><td>campbells chunky soup can top</td></tr> \
+					<table class="size-compare-table"> \
+						<tr><td><b>Size</b></td><td colspan="2"><b>Common Household Object</b></td></tr> \
+						<tr><td>2.25 inch</td><td><img src="./img/products/sodacan.jpg"></td><td>top of a soda can</td></tr> \
+						<tr><td>3 inch</td><td><img src="./img/products/soupcan.jpg"></td><td>top of campbells chunky soup can</td></tr> \
 					</table> \
 					<a href="http://www.wackybuttons.com/documents/products/wbcomparison.pdf"><img src="http://www.wackybuttons.com/images/products/pdfproduct.jpg" width="221" height="50" alt="Download and print this -Button Sizes (PDF)- to see exact button sizes." border="0" class="center-block" /></a> \
 				</div> \
@@ -69,7 +69,7 @@ inpcode = ' \
 $('#dialog_content').html(inpcode);
 inpcode = ' \
 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> \
-<button type="button" class="btn btn-primary btn-wacky">Order</button> \
+<button type="button" class="btn btn-primary btn-wacky">Start Designing</button> \
 ';
 $('#dialog_footer').html(inpcode);
 }//end prod_clip
@@ -84,11 +84,11 @@ inpcode = ' \
 				<p class="caption">The pictures above are not to scale. We recommend using a standard unit of measurement like a ruler to get the best idea of the actual size.</p> \
 				<h4>Size Comparisons</h4> \
 				<div class="u-border-blue"> \
-					<table> \
-						<tr><td><b>Size</b></td><td><b>Common Household Object</b></td></tr> \
-						<tr><td>1.5 inch</td><td>gallon milk jug or dixie cup bottom</td></tr> \
-						<tr><td>2.25 inch</td><td>soda can top</td></tr> \
-						<tr><td>3 inch</td><td>campbells chunky soup can top</td></tr> \
+					<table class="size-compare-table"> \
+						<tr><td><b>Size</b></td><td colspan="2"><b>Common Household Object</b></td></tr> \
+						<tr><td>1.5 inch</td><td><img src="./img/products/milkcap.jpg"></td><td>gallon milk jug cap</td></tr> \
+						<tr><td>2.25 inch</td><td><img src="./img/products/sodacan.jpg"></td><td>top of a soda can</td></tr> \
+						<tr><td>3 inch</td><td><img src="./img/products/soupcan.jpg"></td><td>top of campbells chunky soup can</td></tr> \
 					</table> \
 					<a href="http://www.wackybuttons.com/documents/products/wbcomparison.pdf"><img src="http://www.wackybuttons.com/images/products/pdfproduct.jpg" width="221" height="50" alt="Download and print this -Button Sizes (PDF)- to see exact button sizes." border="0" class="center-block" /></a> \
 				</div> \
@@ -108,7 +108,7 @@ inpcode = ' \
 $('#dialog_content').html(inpcode);
 inpcode = ' \
 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> \
-<button type="button" class="btn btn-primary btn-wacky">Order</button> \
+<button type="button" class="btn btn-primary btn-wacky">Start Designing</button> \
 ';
 $('#dialog_footer').html(inpcode);
 }//end prod_clothing_magnet
@@ -123,10 +123,10 @@ inpcode = ' \
 				<p class="caption">The pictures above are not to scale. We recommend using a standard unit of measurement like a ruler to get the best idea of the actual size.</p> \
 				<h4>Size Comparisons</h4>  \
 				<div class="u-border-blue"> \
-					<table> \
-						<tr><td><b>Size</b></td><td><b>Common Household Object</b></td></tr> \
-						<tr><td>2.25 inch</td><td>soda can top</td></tr> \
-						<tr><td>3 inch</td><td>campbells chunky soup can top</td></tr> \
+					<table class="size-compare-table"> \
+						<tr><td><b>Size</b></td><td colspan="2"><b>Common Household Object</b></td></tr> \
+						<tr><td>2.25 inch</td><td><img src="./img/products/sodacan.jpg"></td><td>top of a soda can</td></tr> \
+						<tr><td>3 inch</td><td><img src="./img/products/soupcan.jpg"></td><td>top of campbells chunky soup can</td></tr> \
 					</table> \
 					<a href="http://www.wackybuttons.com/documents/products/wbcomparison.pdf"><img src="http://www.wackybuttons.com/images/products/pdfproduct.jpg" width="221" height="50" alt="Download and print this -Button Sizes (PDF)- to see exact button sizes." border="0" class="center-block" /></a> \
 				</div><!-- u-border-blue --> \
@@ -145,7 +145,7 @@ inpcode = ' \
 $('#dialog_content').html(inpcode);
 inpcode = ' \
 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> \
-<button type="button" class="btn btn-primary btn-wacky">Order</button> \
+<button type="button" class="btn btn-primary btn-wacky">Start Designing</button> \
 ';
 
 $('#dialog_footer').html(inpcode);
@@ -161,12 +161,12 @@ inpcode = ' \
 				<p class="caption">The pictures above are not to scale. We recommend using a standard unit of measurement like a ruler to get the best idea of the actual size.</p> \
 				<h4>Size Comparisons</h4> \
 				<div class="u-border-blue"> \
-					<table> \
-						<tr><td><b>Size</b></td><td><b>Common Household Object</b></td></tr> \
-						<tr><td>1 inch</td><td>US quarter</td></tr> \
-						<tr><td>1.5 inch</td><td>gallon milk jug or dixie cup bottom</td></tr> \
-						<tr><td>2.25 inch</td><td>soda can top</td></tr> \
-						<tr><td>3 inch</td><td>campbells chunky soup can top</td></tr> \
+					<table class="size-compare-table"> \
+						<tr><td><b>Size</b></td><td colspan="2"><b>Common Household Object</b></td></tr> \
+						<tr><td>1 inch</td><td><img src="./img/products/quarter.jpg"></td><td>US quarter</td></tr> \
+						<tr><td>1.5 inch</td><td><img src="./img/products/milkcap.jpg"></td><td>gallon milk jug cap</td></tr> \
+						<tr><td>2.25 inch</td><td><img src="./img/products/sodacan.jpg"></td><td>top of a soda can</td></tr> \
+						<tr><td>3 inch</td><td><img src="./img/products/soupcan.jpg"></td><td>top of campbells chunky soup can</td></tr> \
 					</table> \
 					<a href="http://www.wackybuttons.com/documents/products/wbcomparison.pdf"><img src="http://www.wackybuttons.com/images/products/pdfproduct.jpg" width="221" height="50" alt="Download and print this -Button Sizes (PDF)- to see exact button sizes." border="0" class="center-block" /></a> \
 				</div><!-- u-border-blue --> \
@@ -185,7 +185,7 @@ inpcode = ' \
 $('#dialog_content').html(inpcode);
 inpcode = ' \
 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> \
-<button type="button" class="btn btn-primary btn-wacky">Order</button> \
+<button type="button" class="btn btn-primary btn-wacky">Start Designing</button> \
 ';
 
 $('#dialog_footer').html(inpcode);
@@ -201,12 +201,12 @@ inpcode = ' \
 				<p class="caption">The pictures above are not to scale. We recommend using a standard unit of measurement like a ruler to get the best idea of the actual size.</p> \
 				<h4>Size Comparisons</h4> \
 				<div class="u-border-blue"> \
-					<table> \
-						<tr><td><b>Size</b></td><td><b>Common Household Object</b></td></tr> \
-						<tr><td>1 inch</td><td>US quarter</td></tr> \
-						<tr><td>1.5 inch</td><td>gallon milk jug or dixie cup bottom</td></tr> \
-						<tr><td>2.25 inch</td><td>soda can top</td></tr> \
-						<tr><td>3 inch</td><td>campbells chunky soup can top</td></tr> \
+					<table class="size-compare-table"> \
+						<tr><td><b>Size</b></td><td colspan="2"><b>Common Household Object</b></td></tr> \
+						<tr><td>1 inch</td><td><img src="./img/products/quarter.jpg"></td><td>US quarter</td></tr> \
+						<tr><td>1.5 inch</td><td><img src="./img/products/milkcap.jpg"></td><td>gallon milk jug cap</td></tr> \
+						<tr><td>2.25 inch</td><td><img src="./img/products/sodacan.jpg"></td><td>top of a soda can</td></tr> \
+						<tr><td>3 inch</td><td><img src="./img/products/soupcan.jpg"></td><td>top of campbells chunky soup can</td></tr> \
 					</table> \
 					<a href="http://www.wackybuttons.com/documents/products/wbcomparison.pdf"><img src="http://www.wackybuttons.com/images/products/pdfproduct.jpg" width="221" height="50" alt="Download and print this -Button Sizes (PDF)- to see exact button sizes." border="0" class="center-block" /></a> \
 				</div><!-- u-border-blue --> \
@@ -226,7 +226,7 @@ inpcode = ' \
 $('#dialog_content').html(inpcode);
 inpcode = ' \
 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> \
-<button type="button" class="btn btn-primary btn-wacky">Order</button> \
+<button type="button" class="btn btn-primary btn-wacky">Start Designing</button> \
 ';
 
 $('#dialog_footer').html(inpcode);
@@ -242,12 +242,12 @@ inpcode = ' \
 				<p class="caption">The pictures above are not to scale. We recommend using a standard unit of measurement like a ruler to get the best idea of the actual size.</p> \
 				<h4>Size Comparisons</h4> \
 				<div class="u-border-blue"> \
-					<table> \
-						<tr><td><b>Size</b></td><td><b>Common Household Object</b></td></tr> \
-						<tr><td>1 inch</td><td>US quarter</td></tr> \
-						<tr><td>1.5 inch</td><td>gallon milk jug or dixie cup bottom</td></tr> \
-						<tr><td>2.25 inch</td><td>soda can top</td></tr> \
-						<tr><td>3 inch</td><td>campbells chunky soup can top</td></tr> \
+					<table class="size-compare-table"> \
+						<tr><td><b>Size</b></td><td colspan="2"><b>Common Household Object</b></td></tr> \
+						<tr><td>1 inch</td><td><img src="./img/products/quarter.jpg"></td><td>US quarter</td></tr> \
+						<tr><td>1.5 inch</td><td><img src="./img/products/milkcap.jpg"></td><td>gallon milk jug cap</td></tr> \
+						<tr><td>2.25 inch</td><td><img src="./img/products/sodacan.jpg"></td><td>top of a soda can</td></tr> \
+						<tr><td>3 inch</td><td><img src="./img/products/soupcan.jpg"></td><td>top of campbells chunky soup can</td></tr> \
 					</table> \
 					<a href="http://www.wackybuttons.com/documents/products/wbcomparison.pdf"><img src="http://www.wackybuttons.com/images/products/pdfproduct.jpg" width="221" height="50" alt="Download and print this -Button Sizes (PDF)- to see exact button sizes." border="0" class="center-block" /></a> \
 				</div><!-- u-border-blue --> \
@@ -266,7 +266,7 @@ inpcode = ' \
 $('#dialog_content').html(inpcode);
 inpcode = ' \
 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> \
-<button type="button" class="btn btn-primary btn-wacky">Order</button> \
+<button type="button" class="btn btn-primary btn-wacky">Start Designing</button> \
 ';
 
 $('#dialog_footer').html(inpcode);
@@ -329,7 +329,7 @@ inpcode = ' \
 $('#dialog_content').html(inpcode);
 inpcode = ' \
 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> \
-<button type="button" class="btn btn-primary btn-wacky">Order</button> \
+<a href="mailto:order@wackybuttons.com?Subject=I%20am%20interested%20in%20bag%20packaging&body=Please%20email%20information%20regarding%20your%20bag%20packaging%20products."><button type="button" class="btn btn-primary btn-wacky">Request Quote</button></a> \
 ';
 
 $('#dialog_footer').html(inpcode);
@@ -391,7 +391,7 @@ inpcode = ' \
 $('#dialog_content').html(inpcode);
 inpcode = ' \
 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> \
-<button type="button" class="btn btn-primary btn-wacky">Order</button> \
+<a href="mailto:order@wackybuttons.com?Subject=I%20am%20interested%20in%20pinned%20card%20packaging&body=Please%20email%20information%20regarding%20your%20pinned%20card%20packaging%20products."><button type="button" class="btn btn-primary btn-wacky">Request Quote</button></a> \
 ';
 
 $('#dialog_footer').html(inpcode);
