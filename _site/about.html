@@ -341,6 +341,9 @@
 </nav>
 		<div class="container">
 	<div class="row">
+		<div class="fitvid">
+			<iframe src="//player.vimeo.com/video/120789089?title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		</div><!-- fitvid -->
 		<div class="col-md-8 col-md-offset-2">
 			<h1>About Us</h1>
 			<img src="http://www.wackybuttons.com/images/general/storefront.jpg" width="280" height="200" alt="Store Front" style="float:right;padding:10px;"/>
@@ -931,6 +934,15 @@
 <!-- Custom Javascript -->
 
 
+<!-- FitVids JS -->
+<script src="/plugins/fitvids/jquery.fitvids.js"></script>
+	
+<!-- Fitvids variables -->
+<script>
+  $(document).ready(function(){
+	$('.fitvid').fitVids();
+  });
+</script>
 
 <!-- face book script -->
 <script>
