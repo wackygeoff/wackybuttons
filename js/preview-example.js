@@ -17,6 +17,10 @@ $('#dialog_title').html("Button Design Preview");
 inpcode = '<img src="' + photo + '" width="400" height="400" style="display:block;margin-left:auto;margin-right:auto;" />';
 //inpcode = inpcode + '</div>';
 $('#dialog_content').html(inpcode);
+inpcode = ' \
+<button type="button" class="btn btn-default" data-dismiss="modal">Close</button> \
+';
+$('#dialog_footer').html(inpcode);
 }
 
 function show_size_info(){
@@ -28,6 +32,10 @@ inpcode = inpcode + '<img src="http://www.wackybuttons.com/images/order/sizediff
 inpcode = inpcode + '<br />The size of the button is based on the length of the diameter. For example: a 3 inch button has exactly a 3 inch diameter across the face of the button. Using a ruler will help you determine the exact size.';
 inpcode = inpcode + '<br /> <br /></div>';
 $('#dialog_content').html(inpcode);
+inpcode = ' \
+<button type="button" class="btn btn-default" data-dismiss="modal">Close</button> \
+';
+$('#dialog_footer').html(inpcode);
 }
 
 
@@ -225,6 +233,11 @@ inpcode = inpcode + '</div>';//end div container
 $('#dialog_content').html(inpcode);
 //$('#jDialog').dialog("open");
 
+inpcode = ' \
+<button type="button" class="btn btn-default" data-dismiss="modal">Close</button> \
+';
+$('#dialog_footer').html(inpcode);
+
 }
 //---End More Details Popup---
 
@@ -355,6 +368,12 @@ inpcode = inpcode + '</form>';
 //$('#jDialog').dialog("option", "height", 500);
 $('#dialog_content').html(inpcode);
 //$('#jDialog').dialog("open");
+
+inpcode = ' \
+<button type="button" class="btn btn-default" data-dismiss="modal">Close</button> \
+';
+$('#dialog_footer').html(inpcode);
+
 }
 //---End Add Multiple Items Popup---
 
@@ -474,6 +493,12 @@ inpcode = inpcode + 'Once we complete your request, you will receive an email wi
 inpcode = inpcode + '</div>';
 
 $('#dialog_content').html(inpcode);
+
+inpcode = ' \
+<button type="button" class="btn btn-default" data-dismiss="modal">Close</button> \
+';
+$('#dialog_footer').html(inpcode);
+
 }
 
 function info1(){
@@ -482,4 +507,10 @@ inpcode = '<div align="left" style="font-family:Century Gothic, Arial, Helvetica
 inpcode = inpcode + 'It is a unique number that represents a design in our system. We use the Design Code to lookup and print your button design. The design code will never change so you can use it to order buttons anytime in the future.';
 inpcode = inpcode + '</div>';
 $('#dialog_content').html(inpcode);
+
+inpcode = ' \
+<button type="button" class="btn btn-default" data-dismiss="modal">Close</button> \
+';
+$('#dialog_footer').html(inpcode);
+
 }
