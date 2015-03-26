@@ -23,19 +23,18 @@ layout: wackybuttons
 <!--  END stardevelop.com Live Help Messenger Code - Copyright - NOT PERMITTED TO MODIFY COPYRIGHT LINE / LINK //-->
 <script language="JavaScript" type="text/javascript">
 //<![CDATA[
-function funShowHide(obj){
-if(obj.style.display == 'block'){
-obj.style.display = 'none';
-}else{
-obj.style.display = 'block';
-}
-}
 
-function upsgmap(){
-newwindow = window.open("about:blank",'name','height=500,width=600,left=300,top=300,resizable=no,scrollbars=yes,toolbar=no,status=no');
-newwindow.document.write('<div align="left"><b>UPS Ground Transit Time Map</b><br /> <br />');
-newwindow.document.write('<img src="http://www.wackybuttons.com/images/UPSGMap.gif" width="546" height="353" alt="UPSGMap (12K)" />');
-newwindow.document.write('</div>');
+function upsg_map(){
+$('#dialog_title').html("UPS Ground Map");
+inpcode = 'This map, provided by UPS, shows how long your package will take to receive from our location if you were to ship using UPS Ground.';
+inpcode = inpcode + '<div style="overflow-x:scroll;"><img src="http://www.wackybuttons.com/images/UPSGMap.gif" alt=""></div>';
+
+$('#dialog_content').html(inpcode);
+
+inpcode = ' \
+<button type="button" class="btn btn-default" data-dismiss="modal">Close</button> \
+';
+$('#dialog_footer').html(inpcode);
 }
 
 //]]>
@@ -200,7 +199,7 @@ newwindow.document.write('</div>');
 										<td>Carrier</td><td>Shipping Method</td><td>Time in Transit</td><td>Guaranteed</td><td>Applies to the following region</td>
 									</tr>
 									<tr>
-										<td><img src="http://www.wackybuttons.com/images/usps.gif" width="20" height="20" alt="USPS" />US Postal Service</td><td>Priority Mail Express</td><td>1 or 2 days depending on <a href="http://webapps.usps.com/expressmailcommitments/landing.jsp?origin=14445&amp;ship=<?php echo date("m/d/y", mktime(0, 0, 0, date("m"), date("d")+1, date("Y"))); ?>" target="_blank">location</a></td><td>Yes</td><td>All 50 states of the USA, US territories</td>
+										<td><img src="http://www.wackybuttons.com/images/usps.gif" width="20" height="20" alt="USPS" />US Postal Service</td><td>Priority Mail Express</td><td>1 or 2 days depending on location</td><td>Yes</td><td>All 50 states of the USA, US territories</td>
 									</tr>
 									<tr>
 										<td><img src="http://www.wackybuttons.com/images/ups.gif" width="20" height="20" alt="UPS" />UPS</td><td>Next Day Air</td><td>1 day</td><td>Yes</td><td>All 50 states of the USA</td>
@@ -215,7 +214,7 @@ newwindow.document.write('</div>');
 										<td><img src="http://www.wackybuttons.com/images/usps.gif" width="20" height="20" alt="USPS" />US Postal Service</td><td>Priority Mail</td><td>2 to 3 business days average</td><td>No</td><td>All 50 states of the USA, US territories, US military areas</td>
 									</tr>
 									<tr>
-										<td><img src="http://www.wackybuttons.com/images/ups.gif" width="20" height="20" alt="UPS" />UPS</td><td>Ground</td><td>3-6 business days <a href="javascript:upsgmap();">[See exact transit times]</a></td><td>Yes</td><td>All 50 states of the USA</td>
+										<td><img src="http://www.wackybuttons.com/images/ups.gif" width="20" height="20" alt="UPS" />UPS</td><td>Ground</td><td>3-6 business days <a href="#" onclick="upsg_map();" data-toggle="modal" data-target="#dialog_win">[See exact transit times]</a></td><td>Yes</td><td>All 50 states of the USA</td>
 									</tr>
 									<tr>
 										<td><img src="http://www.wackybuttons.com/images/usps.gif" width="20" height="20" alt="USPS" />US Postal Service</td><td>Standard Post (Ground)</td><td>up to 9 business days</td><td>No</td><td>All 50 states of the USA, US territories, US military areas</td>
