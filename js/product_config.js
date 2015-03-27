@@ -1,0 +1,77 @@
+//we can hard code these variables right in this file
+//another option could be to ajax in the variables from another source on the server
+
+var allprodshortnames = [];
+allprodshortnames[0] = "Standard Pin Back";
+allprodshortnames[1] = "Refrigerator Magnet";
+allprodshortnames[2] = "Clothing Magnet";
+allprodshortnames[3] = "Keychain";
+allprodshortnames[4] = "Bottle Opener";
+allprodshortnames[5] = "Mirror Back";
+allprodshortnames[6] = "Clip Back";
+allprodshortnames[7] = "Nothing on Back";
+
+var allprodsizes = [];
+allprodsizes['Standard Pin Back'] = [];
+allprodsizes['Standard Pin Back'][0] = "1 inch";
+allprodsizes['Standard Pin Back'][1] = "1.5 inch";
+allprodsizes['Standard Pin Back'][2] = "2.25 inch";
+allprodsizes['Standard Pin Back'][3] = "3 inch";
+allprodsizes['Refrigerator Magnet'] = [];
+allprodsizes['Refrigerator Magnet'][0] = "1 inch";
+allprodsizes['Refrigerator Magnet'][1] = "1.5 inch";
+allprodsizes['Refrigerator Magnet'][2] = "2.25 inch";
+allprodsizes['Refrigerator Magnet'][3] = "3 inch";
+allprodsizes['Clothing Magnet'] = [];
+allprodsizes['Clothing Magnet'][0] = "1.5 inch";
+allprodsizes['Clothing Magnet'][1] = "2.25 inch";
+allprodsizes['Clothing Magnet'][2] = "3 inch";
+allprodsizes['Keychain'] = [];
+allprodsizes['Keychain'][0] = "1.5 inch";
+allprodsizes['Keychain'][1] = "2.25 inch";
+allprodsizes['Bottle Opener'] = [];
+allprodsizes['Bottle Opener'][0] = "2.25 inch";
+allprodsizes['Mirror Back'] = [];
+allprodsizes['Mirror Back'][0] = "2.25 inch";
+allprodsizes['Mirror Back'][1] = "3 inch";
+allprodsizes['Nothing on Back'] = [];
+allprodsizes['Nothing on Back'][0] = "1 inch";
+allprodsizes['Nothing on Back'][1] = "1.5 inch";
+allprodsizes['Nothing on Back'][2] = "2.25 inch";
+allprodsizes['Nothing on Back'][3] = "3 inch";
+allprodsizes['Clip Back'] = [];
+allprodsizes['Clip Back'][0] = "2.25 inch";
+allprodsizes['Clip Back'][1] = "3 inch";
+
+var allproddescs = [];
+allproddescs['Standard Pin Back'] = [];
+allproddescs['Standard Pin Back'][0] = "1 inch round button with locking pin back";
+allproddescs['Standard Pin Back'][1] = "1-1/2 inch round button with locking pin back";
+allproddescs['Standard Pin Back'][2] = "2-1/4 inch round button with locking pin back";
+allproddescs['Standard Pin Back'][3] = "3 inch round button with locking pin back";
+allproddescs['Refrigerator Magnet'] = [];
+allproddescs['Refrigerator Magnet'][0] = "1 inch round button with magnet back";
+allproddescs['Refrigerator Magnet'][1] = "1-1/2 inch round button with magnet back";
+allproddescs['Refrigerator Magnet'][2] = "2-1/4 inch round button with magnet back";
+allproddescs['Refrigerator Magnet'][3] = "3 inch round button with magnet back";
+allproddescs['Clothing Magnet'] = [];
+allproddescs['Clothing Magnet'][0] = "1-1/2 inch round button with clothing magnet back";
+allproddescs['Clothing Magnet'][1] = "2-1/4 inch round button with clothing magnet back";
+allproddescs['Clothing Magnet'][2] = "3 inch round button with clothing magnet back";
+allproddescs['Keychain'] = [];
+allproddescs['Keychain'][0] = "1-1/2 inch round button with keychain back";
+allproddescs['Keychain'][1] = "2-1/4 inch round button with keychain back";
+allproddescs['Bottle Opener'] = [];
+allproddescs['Bottle Opener'][0] = "2-1/4 inch round button with bottle opener back";
+allproddescs['Mirror Back'] = [];
+allproddescs['Mirror Back'][0] = "2-1/4 inch round button with mirror back";
+allproddescs['Mirror Back'][1] = "3 inch round button with mirror back";
+allproddescs['Nothing on Back'] = [];
+allproddescs['Nothing on Back'][0] = "1 inch round button with nothing on back";
+allproddescs['Nothing on Back'][1] = "1-1/2 inch round button with nothing on back";
+allproddescs['Nothing on Back'][2] = "2-1/4 inch round button with nothing on back";
+allproddescs['Nothing on Back'][3] = "3 inch round button with nothing on back";
+allproddescs['Clip Back'] = [];
+allproddescs['Clip Back'][0] = "2-1/4 inch round button with clip back";
+allproddescs['Clip Back'][1] = "3 inch round button with clip back";
+
