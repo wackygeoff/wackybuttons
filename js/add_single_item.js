@@ -57,13 +57,9 @@ inpcode = inpcode + '<div style="max-width:75%;margin-left:auto;margin-right:aut
 inpcode = inpcode + '<select name="prod_chooser" class="form-control" id="prod_chooser" onchange="javascript:genButtonSizeDD('+"'"+'prod_chooser'+"'"+', '+"'"+'size_chooser'+"'"+', '+"'"+'item_name'+"'"+');">';
 inpcode = inpcode + '<option value="">Choose Product</option>';
 
-inpcode = inpcode + '<option value="Standard Pin Back">Standard Pin Back</option>';
-inpcode = inpcode + '<option value="Refrigerator Magnet">Refrigerator Magnet</option>';
-inpcode = inpcode + '<option value="Clothing Magnet">Clothing Magnet</option>';
-inpcode = inpcode + '<option value="Bottle Opener">Bottle Opener</option>';
-inpcode = inpcode + '<option value="Mirror Back">Mirror Back</option>';
-inpcode = inpcode + '<option value="Clip Back">Clip Back</option>';
-inpcode = inpcode + '<option value="Nothing on Back">Nothing on Back</option>';
+for(i = 0; i < allprodshortnames.length; i++){
+inpcode = inpcode + '<option value="'+allprodshortnames[i]+'">'+allprodshortnames[i]+'</option>';
+}
 
 inpcode = inpcode + '</select>';
 inpcode = inpcode + '</div>';
@@ -122,7 +118,11 @@ $('#dialog_footer').html(inpcode);
 function genButtonSizeDD(inpid, receivingid, itemid){
 
 //recode this section. just send the $('#'+inpid).val() and itemid off to php and have it return the html to write to $('#'+receivingid).html()
+//changed my mind lets just do it all in javascript
+//all we need is just a global js file with all the products stores as arrays
+//totally removes php so everything can depend on javascript
 
+/* ---old code---
 if($('#'+inpid).val() == "Standard Pin Back"){outputtext = "";outputtext = outputtext + '<select class="form-control"  name="'+itemid+'" id="'+itemid+'" onchange="javascript:changeProdTypeImage(this);">';outputtext = outputtext + '<option value="">Choose Size</option>';outputtext = outputtext + '<option value="1 inch round button with locking pin back">1 inch</option>';outputtext = outputtext + '<option value="1-1/2 inch round button with locking pin back">1.5 inch</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with locking pin back">2.25 inch</option>';outputtext = outputtext + '<option value="3 inch round button with locking pin back">3 inch</option>';outputtext = outputtext + '</select>';}if($('#'+inpid).val() == "Refrigerator Magnet"){outputtext = "";outputtext = outputtext + '<select class="form-control" name="'+itemid+'" id="'+itemid+'" onchange="javascript:changeProdTypeImage(this);">';outputtext = outputtext + '<option value="">Choose Size</option>';outputtext = outputtext + '<option value="1 inch round button with magnet back">1 inch</option>';outputtext = outputtext + '<option value="1-1/2 inch round button with magnet back">1.5 inch</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with magnet back">2.25 inch</option>';outputtext = outputtext + '<option value="3 inch round button with magnet back">3 inch</option>';outputtext = outputtext + '</select>';}if($('#'+inpid).val() == "Clothing Magnet"){outputtext = "";outputtext = outputtext + '<select class="form-control" name="'+itemid+'" id="'+itemid+'" onchange="javascript:changeProdTypeImage(this);">';outputtext = outputtext + '<option value="">Choose Size</option>';outputtext = outputtext + '<option value="1-1/2 inch round button with clothing magnet back">1.5 inch</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with clothing magnet back">2.25 inch</option>';outputtext = outputtext + '<option value="3 inch round button with clothing magnet back">3 inch</option>';outputtext = outputtext + '</select>';}if($('#'+inpid).val() == "Keychain"){outputtext = "";outputtext = outputtext + '<select class="form-control" name="'+itemid+'" id="'+itemid+'" onchange="javascript:changeProdTypeImage(this);">';outputtext = outputtext + '<option value="">Choose Size</option>';outputtext = outputtext + '<option value="1-1/2 inch round button with keychain back">1.5 inch</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with keychain back">2.25 inch</option>';outputtext = outputtext + '</select>';}if($('#'+inpid).val() == "Bottle Opener"){outputtext = "";outputtext = outputtext + '<select class="form-control" name="'+itemid+'" id="'+itemid+'" onchange="javascript:changeProdTypeImage(this);">';outputtext = outputtext + '<option value="">Choose Size</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with bottle opener back">2.25 inch</option>';outputtext = outputtext + '</select>';}if($('#'+inpid).val() == "Mirror Back"){outputtext = "";outputtext = outputtext + '<select class="form-control" name="'+itemid+'" id="'+itemid+'" onchange="javascript:changeProdTypeImage(this);">';outputtext = outputtext + '<option value="">Choose Size</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with mirror back">2.25 inch</option>';outputtext = outputtext + '<option value="3 inch round button with mirror back">3 inch</option>';outputtext = outputtext + '</select>';}if($('#'+inpid).val() == "Clip Back"){outputtext = "";outputtext = outputtext + '<select class="form-control" name="'+itemid+'" id="'+itemid+'" onchange="javascript:changeProdTypeImage(this);">';outputtext = outputtext + '<option value="">Choose Size</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with clip back">2.25 inch</option>';outputtext = outputtext + '<option value="3 inch round button with clip back">3 inch</option>';outputtext = outputtext + '</select>';}if($('#'+inpid).val() == "Nothing on Back"){outputtext = "";outputtext = outputtext + '<select class="form-control" name="'+itemid+'" id="'+itemid+'" onchange="javascript:changeProdTypeImage(this);">';outputtext = outputtext + '<option value="">Choose Size</option>';outputtext = outputtext + '<option value="1 inch round button with nothing on back">1 inch</option>';outputtext = outputtext + '<option value="1-1/2 inch round button with nothing on back">1.5 inch</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with nothing on back">2.25 inch</option>';outputtext = outputtext + '<option value="3 inch round button with nothing on back">3 inch</option>';outputtext = outputtext + '</select>';}
 if($('#'+inpid).val() == ''){
 outputtext = "";
@@ -130,8 +130,30 @@ outputtext = outputtext + '<select class="form-control" name="'+itemid+'" id="'+
 outputtext = outputtext + '<option value="">Choose Size</option>';
 outputtext = outputtext + '</select>';
 }
+ ---end old code--- */
+
+for(i = 0; i < allprodshortnames.length; i++){
+if($('#'+inpid).val() == allprodshortnames[i]){
+outputtext = "";
+outputtext = outputtext + '<select class="form-control" name="'+itemid+'" id="'+itemid+'" onchange="javascript:changeProdTypeImage(this);">';
+outputtext = outputtext + '<option value="">Choose a button size</option>';
+for(j = 0; j < allprodsizes[allprodshortnames[i]].length; j++){
+outputtext = outputtext + '<option value="' + allproddescs[allprodshortnames[i]][j] + '">' + allprodsizes[allprodshortnames[i]][j] + '</option>';
+}
+outputtext = outputtext + '</select>';
+}
+}
+
+if($('#'+inpid).val() == ''){
+outputtext = "";
+outputtext = outputtext + '<select class="form-control" name="'+itemid+'" id="'+itemid+'" onchange="javascript:changeProdTypeImage(this);" disabled="disabled">';
+outputtext = outputtext + '<option value="">Choose a button size</option>';
+outputtext = outputtext + '</select>';
+}
 
 $('#'+receivingid).html(outputtext);
+
+
 
 }
 //---end generate button size drop down list--
@@ -148,9 +170,23 @@ return;
 calcprice();
 
 //recode this section. just send the value off to php and have it return the html to write to $('#prod')
-
+/*
 if(inp.options[inp.selectedIndex].value == '1 inch round button with locking pin back'){var inphtml = "";inphtml = inphtml + '<img src="http://www.wackybuttons.com/images/backs/1inchpinback.jpg" width="200" height="200" border="0" alt="1 inch round button with locking pin back" /><br />Back: Standard Pin Back';$('#prod').html(inphtml);}if(inp.options[inp.selectedIndex].value == '1-1/2 inch round button with locking pin back'){var inphtml = "";inphtml = inphtml + '<img src="http://www.wackybuttons.com/images/backs/1.5inchpinback.jpg" width="200" height="200" border="0" alt="1-1/2 inch round button with locking pin back" /><br />Back: Standard Pin Back';$('#prod').html(inphtml);}if(inp.options[inp.selectedIndex].value == '2-1/4 inch round button with locking pin back'){var inphtml = "";inphtml = inphtml + '<img src="http://www.wackybuttons.com/images/backs/2.25inchpinback.jpg" width="200" height="200" border="0" alt="2-1/4 inch round button with locking pin back" /><br />Back: Standard Pin Back';$('#prod').html(inphtml);}if(inp.options[inp.selectedIndex].value == '3 inch round button with locking pin back'){var inphtml = "";inphtml = inphtml + '<img src="http://www.wackybuttons.com/images/backs/3inchpinback.jpg" width="200" height="200" border="0" alt="3 inch round button with locking pin back" /><br />Back: Standard Pin Back';$('#prod').html(inphtml);}if(inp.options[inp.selectedIndex].value == '1 inch round button with magnet back'){var inphtml = "";inphtml = inphtml + '<img src="http://www.wackybuttons.com/images/backs/magnet1.jpg" width="200" height="200" border="0" alt="1 inch round button with magnet back" /><br />Back: Refrigerator Magnet';$('#prod').html(inphtml);}if(inp.options[inp.selectedIndex].value == '1-1/2 inch round button with magnet back'){var inphtml = "";inphtml = inphtml + '<img src="http://www.wackybuttons.com/images/backs/magnet15.jpg" width="200" height="200" border="0" alt="1-1/2 inch round button with magnet back" /><br />Back: Refrigerator Magnet';$('#prod').html(inphtml);}if(inp.options[inp.selectedIndex].value == '2-1/4 inch round button with magnet back'){var inphtml = "";inphtml = inphtml + '<img src="http://www.wackybuttons.com/images/backs/magnet225.jpg" width="200" height="200" border="0" alt="2-1/4 inch round button with magnet back" /><br />Back: Refrigerator Magnet';$('#prod').html(inphtml);}if(inp.options[inp.selectedIndex].value == '3 inch round button with magnet back'){var inphtml = "";inphtml = inphtml + '<img src="http://www.wackybuttons.com/images/backs/magnet3.jpg" width="200" height="200" border="0" alt="3 inch round button with magnet back" /><br />Back: Refrigerator Magnet';$('#prod').html(inphtml);}if(inp.options[inp.selectedIndex].value == '1-1/2 inch round button with clothing magnet back'){var inphtml = "";inphtml = inphtml + '<img src="http://www.wackybuttons.com/images/backs/clothingmagnet15.jpg" width="200" height="200" border="0" alt="1-1/2 inch round button with clothing magnet back" /><br />Back: Clothing Magnet';$('#prod').html(inphtml);}if(inp.options[inp.selectedIndex].value == '2-1/4 inch round button with clothing magnet back'){var inphtml = "";inphtml = inphtml + '<img src="http://www.wackybuttons.com/images/backs/clothingmagnet225.jpg" width="200" height="200" border="0" alt="2-1/4 inch round button with clothing magnet back" /><br />Back: Clothing Magnet';$('#prod').html(inphtml);}if(inp.options[inp.selectedIndex].value == '3 inch round button with clothing magnet back'){var inphtml = "";inphtml = inphtml + '<img src="http://www.wackybuttons.com/images/backs/clothingmagnet3.jpg" width="200" height="200" border="0" alt="3 inch round button with clothing magnet back" /><br />Back: Clothing Magnet';$('#prod').html(inphtml);}if(inp.options[inp.selectedIndex].value == '1-1/2 inch round button with keychain back'){var inphtml = "";inphtml = inphtml + '<img src="http://www.wackybuttons.com/images/1.5inchkeychainback.jpg" width="200" height="200" border="0" alt="1-1/2 inch round button with keychain back" /><br />Back: Keychain';$('#prod').html(inphtml);}if(inp.options[inp.selectedIndex].value == '2-1/4 inch round button with keychain back'){var inphtml = "";inphtml = inphtml + '<img src="http://www.wackybuttons.com/images/1.5inchkeychainback.jpg" width="200" height="200" border="0" alt="2-1/4 inch round button with keychain back" /><br />Back: Keychain';$('#prod').html(inphtml);}if(inp.options[inp.selectedIndex].value == '2-1/4 inch round button with bottle opener back'){var inphtml = "";inphtml = inphtml + '<img src="http://www.wackybuttons.com/images/backs/bottleopener25.jpg" width="200" height="200" border="0" alt="2-1/4 inch round button with bottle opener back" /><br />Back: Bottle Opener';$('#prod').html(inphtml);}if(inp.options[inp.selectedIndex].value == '2-1/4 inch round button with mirror back'){var inphtml = "";inphtml = inphtml + '<img src="http://www.wackybuttons.com/images/backs/mirror25.jpg" width="200" height="200" border="0" alt="2-1/4 inch round button with mirror back" /><br />Back: Mirror Back';$('#prod').html(inphtml);}if(inp.options[inp.selectedIndex].value == '3 inch round button with mirror back'){var inphtml = "";inphtml = inphtml + '<img src="http://www.wackybuttons.com/images/backs/mirror3.jpg" width="200" height="200" border="0" alt="3 inch round button with mirror back" /><br />Back: Mirror Back';$('#prod').html(inphtml);}if(inp.options[inp.selectedIndex].value == '2-1/4 inch round button with clip back'){var inphtml = "";inphtml = inphtml + '<img src="http://www.wackybuttons.com/images/backs/clip225.jpg" width="200" height="200" border="0" alt="2-1/4 inch round button with clip back" /><br />Back: Clip Back';$('#prod').html(inphtml);}if(inp.options[inp.selectedIndex].value == '3 inch round button with clip back'){var inphtml = "";inphtml = inphtml + '<img src="http://www.wackybuttons.com/images/backs/clip3.jpg" width="200" height="200" border="0" alt="3 inch round button with clip back" /><br />Back: Clip Back';$('#prod').html(inphtml);}if(inp.options[inp.selectedIndex].value == '1 inch round button with nothing on back'){var inphtml = "";inphtml = inphtml + '<img src="http://www.wackybuttons.com/images/backs/noback1.jpg" width="200" height="200" border="0" alt="1 inch round button with nothing on back" /><br />Back: Nothing on Back';$('#prod').html(inphtml);}if(inp.options[inp.selectedIndex].value == '1-1/2 inch round button with nothing on back'){var inphtml = "";inphtml = inphtml + '<img src="http://www.wackybuttons.com/images/backs/noback15.jpg" width="200" height="200" border="0" alt="1-1/2 inch round button with nothing on back" /><br />Back: Nothing on Back';$('#prod').html(inphtml);}if(inp.options[inp.selectedIndex].value == '2-1/4 inch round button with nothing on back'){var inphtml = "";inphtml = inphtml + '<img src="http://www.wackybuttons.com/images/backs/noback225.jpg" width="200" height="200" border="0" alt="2-1/4 inch round button with nothing on back" /><br />Back: Nothing on Back';$('#prod').html(inphtml);}if(inp.options[inp.selectedIndex].value == '3 inch round button with nothing on back'){var inphtml = "";inphtml = inphtml + '<img src="http://www.wackybuttons.com/images/backs/noback3.jpg" width="200" height="200" border="0" alt="3 inch round button with nothing on back" /><br />Back: Nothing on Back';$('#prod').html(inphtml);}
 }
+*/
+
+for(i = 0; i < allprodshortnames.length; i++){
+for(j = 0; j < allproddescs[allprodshortnames[i]].length; j++){
+if(inp.options[inp.selectedIndex].value == allproddescs[allprodshortnames[i]][j]){
+var inphtml = "";
+inphtml = inphtml + '<img src="' + allprodimages[allprodshortnames[i]][j] + '" width="200" height="200" border="0" alt="' + allproddescs[allprodshortnames[i]][j] + '" /><br />Back: ' + allprodshortnames[i];
+$('#prod').html(inphtml);
+}//end if
+}//end for j
+}//end for i
+
+}
+
 //--end change product back type image--
 
 

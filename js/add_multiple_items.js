@@ -33,13 +33,9 @@ inpcode = inpcode + '</div>';//col-md-2
 inpcode = inpcode + '<div class="col-md-4 multiple-add-cell">';
 inpcode = inpcode + 'Product <br /><select name="main_prodchooser" id="main_prodchooser" class="form-control" onchange="javascript:changeAllProds(this.value, 34);">';
 inpcode = inpcode + '<option value="">Choose Product</option>';
-inpcode = inpcode + '<option value="Standard Pin Back">Standard Pin Back</option>';
-inpcode = inpcode + '<option value="Refrigerator Magnet">Refrigerator Magnet</option>';
-inpcode = inpcode + '<option value="Clothing Magnet">Clothing Magnet</option>';
-inpcode = inpcode + '<option value="Bottle Opener">Bottle Opener</option>';
-inpcode = inpcode + '<option value="Mirror Back">Mirror Back</option>';
-inpcode = inpcode + '<option value="Clip Back">Clip Back</option>';
-inpcode = inpcode + '<option value="Nothing on Back">Nothing on Back</option>';
+for(k = 0; k < allprodshortnames.length; k++){
+inpcode = inpcode + '<option value="'+allprodshortnames[k]+'">'+allprodshortnames[k]+'</option>';
+}
 
 inpcode = inpcode + '</select>';
 inpcode = inpcode + '</div>';//col-md-4
@@ -81,13 +77,9 @@ inpcode = inpcode + '<div class="col-md-4 multiple-add-cell">';
 inpcode = inpcode + 'Product<br />';
 inpcode = inpcode + '<select name="prod_chooser_'+i+'" id="prod_chooser_'+i+'" class="form-control" onchange="javascript:genButtonSizeDD('+"'"+'prod_chooser_'+i+"'"+', '+"'"+'size_chooser_cont_'+i+"'"+', '+"'"+'item_name_'+i+"'"+');">';
 inpcode = inpcode + '<option value="">Choose Product</option>';
-inpcode = inpcode + '<option value="Standard Pin Back">Standard Pin Back</option>';
-inpcode = inpcode + '<option value="Refrigerator Magnet">Refrigerator Magnet</option>';
-inpcode = inpcode + '<option value="Clothing Magnet">Clothing Magnet</option>';
-inpcode = inpcode + '<option value="Bottle Opener">Bottle Opener</option>';
-inpcode = inpcode + '<option value="Mirror Back">Mirror Back</option>';
-inpcode = inpcode + '<option value="Clip Back">Clip Back</option>';
-inpcode = inpcode + '<option value="Nothing on Back">Nothing on Back</option>';
+for(k = 0; k < allprodshortnames.length; k++){
+inpcode = inpcode + '<option value="'+allprodshortnames[k]+'">'+allprodshortnames[k]+'</option>';
+}
 
 inpcode = inpcode + '</select>';
 inpcode = inpcode + '</div>';//col-md-4
@@ -136,21 +128,21 @@ $('#dialog_footer').html(inpcode);
 
 
 function changeAllSizes(totalelems){
-for(i = 0; i < totalelems; i++){
-$('#prod_chooser_'+i).val($('#main_prodchooser').val()).change();
-$('#item_name_'+i).val($('#main_sizechooser').val());
+for(k = 0; k < totalelems; k++){
+$('#prod_chooser_'+k).val($('#main_prodchooser').val()).change();
+$('#item_name_'+k).val($('#main_sizechooser').val());
 }
 }
 
 function checkAllItems(totalelems){
-for(i = 0; i < totalelems; i++){
-$('#checked_'+i).prop('checked', $('#main_checkbox').prop('checked'));
+for(k = 0; k < totalelems; k++){
+$('#checked_'+k).prop('checked', $('#main_checkbox').prop('checked'));
 }
 }
 
 function changeAllQtys(totalelems){
-for(i = 0; i < totalelems; i++){
-$('#os0_'+i).val($('#main_qty').val());
+for(k = 0; k < totalelems; k++){
+$('#os0_'+k).val($('#main_qty').val());
 }
 }
 
@@ -162,8 +154,23 @@ function changeAllProds(inpval, totalelems){
 
 //recode this section
 //send $('#main_prodchooser').val() and totalelems off to php
-
+/*
 if($('#main_prodchooser').val() == "Standard Pin Back"){outputtext = "";outputtext = outputtext + '<select name="main_sizechooser"  id="main_sizechooser" class="form-control" onchange="javascript:changeAllSizes(34);">';outputtext = outputtext + '<option value="">Choose Size</option>';outputtext = outputtext + '<option value="1 inch round button with locking pin back">1 inch</option>';outputtext = outputtext + '<option value="1-1/2 inch round button with locking pin back">1.5 inch</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with locking pin back">2.25 inch</option>';outputtext = outputtext + '<option value="3 inch round button with locking pin back">3 inch</option>';outputtext = outputtext + '</select>';}if($('#main_prodchooser').val() == "Refrigerator Magnet"){outputtext = "";outputtext = outputtext + '<select name="main_sizechooser" id="main_sizechooser" class="form-control" onchange="javascript:changeAllSizes(34);">';outputtext = outputtext + '<option value="">Choose Size</option>';outputtext = outputtext + '<option value="1 inch round button with magnet back">1 inch</option>';outputtext = outputtext + '<option value="1-1/2 inch round button with magnet back">1.5 inch</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with magnet back">2.25 inch</option>';outputtext = outputtext + '<option value="3 inch round button with magnet back">3 inch</option>';outputtext = outputtext + '</select>';}if($('#main_prodchooser').val() == "Clothing Magnet"){outputtext = "";outputtext = outputtext + '<select name="main_sizechooser" id="main_sizechooser" class="form-control" onchange="javascript:changeAllSizes(34);">';outputtext = outputtext + '<option value="">Choose Size</option>';outputtext = outputtext + '<option value="1-1/2 inch round button with clothing magnet back">1.5 inch</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with clothing magnet back">2.25 inch</option>';outputtext = outputtext + '<option value="3 inch round button with clothing magnet back">3 inch</option>';outputtext = outputtext + '</select>';}if($('#main_prodchooser').val() == "Keychain"){outputtext = "";outputtext = outputtext + '<select name="main_sizechooser" id="main_sizechooser" class="form-control" onchange="javascript:changeAllSizes(34);">';outputtext = outputtext + '<option value="">Choose Size</option>';outputtext = outputtext + '<option value="1-1/2 inch round button with keychain back">1.5 inch</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with keychain back">2.25 inch</option>';outputtext = outputtext + '</select>';}if($('#main_prodchooser').val() == "Bottle Opener"){outputtext = "";outputtext = outputtext + '<select name="main_sizechooser" id="main_sizechooser"  class="form-control" onchange="javascript:changeAllSizes(34);">';outputtext = outputtext + '<option value="">Choose Size</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with bottle opener back">2.25 inch</option>';outputtext = outputtext + '</select>';}if($('#main_prodchooser').val() == "Mirror Back"){outputtext = "";outputtext = outputtext + '<select name="main_sizechooser" id="main_sizechooser" class="form-control" onchange="javascript:changeAllSizes(34);">';outputtext = outputtext + '<option value="">Choose Size</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with mirror back">2.25 inch</option>';outputtext = outputtext + '<option value="3 inch round button with mirror back">3 inch</option>';outputtext = outputtext + '</select>';}if($('#main_prodchooser').val() == "Clip Back"){outputtext = "";outputtext = outputtext + '<select name="main_sizechooser" id="main_sizechooser" class="form-control" onchange="javascript:changeAllSizes(34);">';outputtext = outputtext + '<option value="">Choose Size</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with clip back">2.25 inch</option>';outputtext = outputtext + '<option value="3 inch round button with clip back">3 inch</option>';outputtext = outputtext + '</select>';}if($('#main_prodchooser').val() == "Nothing on Back"){outputtext = "";outputtext = outputtext + '<select name="main_sizechooser" id="main_sizechooser" class="form-control" onchange="javascript:changeAllSizes(34);">';outputtext = outputtext + '<option value="">Choose Size</option>';outputtext = outputtext + '<option value="1 inch round button with nothing on back">1 inch</option>';outputtext = outputtext + '<option value="1-1/2 inch round button with nothing on back">1.5 inch</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with nothing on back">2.25 inch</option>';outputtext = outputtext + '<option value="3 inch round button with nothing on back">3 inch</option>';outputtext = outputtext + '</select>';}
+*/
+
+for(k = 0; k < allprodshortnames.length; k++){
+if($('#main_prodchooser').val() == allprodshortnames[k]){
+outputtext = "";
+outputtext = outputtext + '<select name="main_sizechooser" id="main_sizechooser" class="form-control" onchange="javascript:changeAllSizes(' + totalelems + ');">';
+outputtext = outputtext + '<option value="">Choose a button size</option>';
+for(L = 0; L < allprodsizes[allprodshortnames[k]].length; L++){
+outputtext = outputtext + '<option value="' + allproddescs[allprodshortnames[k]][L] + '">' + allprodsizes[allprodshortnames[k]][L] + '</option>';
+}//end for L
+outputtext = outputtext + '</select>';
+}//end if
+}//end for k
+
+
 if($('#main_prodchooser').val() == ''){
 outputtext = "";
 outputtext = outputtext + '<select name="main_sizechooser" id="main_sizechooser" class="form-control" disabled="disabled" onchange="javascript:changeAllSizes(34);">';
@@ -174,13 +181,9 @@ outputtext = outputtext + '</select>';
 $('#main_sizechooser_cont').html(outputtext);
 
 
-
-for(i = 0; i < totalelems; i++){
-$('#prod_chooser_'+i).val(inpval);
-//recode this section
-//using genButtonSizeDD will hit php a lot
-//we should try to get around this somehow
-genButtonSizeDD("prod_chooser_"+i, "size_chooser_cont_"+i, "item_name_"+i);
+for(k = 0; k < totalelems; k++){
+$('#prod_chooser_'+k).val(inpval);
+genButtonSizeDD("prod_chooser_"+k, "size_chooser_cont_"+k, "item_name_"+k);
 }
 }
 //---end multiple items add to cart function--

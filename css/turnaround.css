@@ -1,0 +1,60 @@
+.turnaround-quickcal{
+border: 2px #1094c4 solid;
+border-radius: 20px;
+text-align:center;
+max-width:600px;
+margin-left:auto;
+margin-right:auto;
+padding-bottom:0px;
+margin-bottom:20px;
+}
+
+.turnaround-quickcal-header{
+font-size:24px;
+line-height:28px;
+padding:10px;
+border-bottom: 2px #1094c4 solid;
+background-color: orange;
+font-color: #ffffff;
+border-top-left-radius: 20px;
+border-top-right-radius: 20px;
+}
+
+
+.turnaround-quickcal-abovedate{
+padding-top:10px;
+}
+
+.turnaround-quickcal-shipdate{
+font-size:32px;
+font-weight:bold;
+line-height:32px;
+padding-bottom:10px;
+}
+
+.turnaround-quickcal-table-footer{
+padding-top:10px;
+border-top: 2px #1094c4 solid;
+font-weight:bold;
+text-align:left;
+background-color: orange;
+border-bottom-left-radius: 20px;
+border-bottom-right-radius: 20px;
+}
+
+.turnaround-quickcal-table-footer ul{
+margin-bottom:0px;
+}
+
+
+.turnaround-table{
+text-align:left;
+}
+
+.turnaround-table td{
+padding:10px;
+}
+
+.turnaround-otherop{
+padding:10px;
+}
