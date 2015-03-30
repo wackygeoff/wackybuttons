@@ -18,7 +18,7 @@ javascript_inc: <script src="./js/turnaround.js"></script>
 
 <div class="turnaround-quickcal-header">Turnaround Time Calculator</div>
 
-<div class="turnaround-quickcal-abovedate">You should receive your buttons</div>
+<div class="turnaround-quickcal-abovedate">You could receive your buttons</div>
 
 <div class="turnaround-quickcal-shipdate"><span id="receivewhen">TOMORROW MORNING</span><br /><span id="receivedate">XX/XX/XXXX</span></div>
 
@@ -30,7 +30,7 @@ javascript_inc: <script src="./js/turnaround.js"></script>
 
 <li>Valid only if you pay with 
 
-<select name="paying" class="form-control" style="display:inline;max-width:300px;" onchange="calculateTime();">
+<select name="paying" class="form-control" style="display:inline;max-width:300px;" onchange="calculateTTime();">
 <option value="-1" selected="selected">Credit Card by phone</option>
 <option value="0">Credit Card online</option>
 <option value="0">PayPal - Balance</option>
@@ -56,21 +56,20 @@ javascript_inc: <script src="./js/turnaround.js"></script>
 
 <li>Valid for
 
-<select name="qty" class="form-control" style="display:inline;max-width:250px;" onchange="calculateTime();">
+<select name="qty" class="form-control" style="display:inline;max-width:250px;" onchange="calculateTTime();">
 <option value="1" selected="selected">1 - 500</option>
 <option value="2">501 - 1000</option>
 <option value="3">1001 - 2000</option>
 <option value="5">2001 - 5000</option>
 <option value="7">5001 - 10000</option>
 <option value="9">10001 - 25000</option>
-<option value="14">More than 25000</option>
 </select>
 
  buttons</li>
 
 <li>Has to ship today using 
 
-<select name="shipping" id="shipping" class="form-control" style="display:inline;max-width:300px;" onchange="calculateTime();">
+<select name="shipping" id="shipping" class="form-control" style="display:inline;max-width:300px;" onchange="calculateTTime();">
 <option value="1" selected="selected">UPS Next Day Air</option>
 <option value="2">USPS Priority Mail Express</option>
 <option value="2">UPS 2nd Day Air</option>
@@ -85,7 +84,7 @@ javascript_inc: <script src="./js/turnaround.js"></script>
 
 </ul>
 
-<div id="otherfineprint"></div>
+<ul id="otherfineprint" style="margin-top:0px;"></ul>
 
 </form>
 </div>
