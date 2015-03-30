@@ -6,9 +6,16 @@ javascript_inc: <script src="./js/turnaround.js"></script>
 
 <div class="container">
 
-<h1>Super Fast Turnaround Time</h1>
+<div class="row">
+<div class="col-md-7">
+<h1>Super Fast Turnaround</h1>
+<span style="font-weight:bold;">On Average </span><span style="font-weight:bold; color:#fea82b;">500</span><span style="font-weight:bold;"> buttons or less ships the day after you pay!</span>
 
-
+</div>
+<div class="col-md-5">
+<img src="http://www.wackybuttons.com/images/turnaround/turnaroundsymbols.gif" width="351" height="104" alt="turnaroundsymbols (9K)" />
+</div>
+</div><!-- row -->
 
 <br /> <br />
 
@@ -18,9 +25,9 @@ javascript_inc: <script src="./js/turnaround.js"></script>
 
 <div class="turnaround-quickcal-header">Turnaround Time Calculator</div>
 
-<div class="turnaround-quickcal-abovedate">You could receive your buttons</div>
+<div class="turnaround-quickcal-abovedate">You could receive your buttons on</div>
 
-<div class="turnaround-quickcal-shipdate"><span id="receivewhen">TOMORROW MORNING</span><br /><span id="receivedate">XX/XX/XXXX</span></div>
+<div class="turnaround-quickcal-shipdate"><span id="receivewhen"></span><br /><span id="receivedate">XX/XX/XXXX</span></div>
 
 <div class="turnaround-quickcal-timeleft">Time Left to order to get this deadline: <span id="timeleft"></span></div>
 
@@ -28,13 +35,13 @@ javascript_inc: <script src="./js/turnaround.js"></script>
 <form name="timecalc" action="">
 <ul>
 
-<li>Valid only if you pay with 
+<li>Valid if you pay with 
 
 <select name="paying" class="form-control" style="display:inline;max-width:300px;" onchange="calculateTTime();">
 <option value="-1" selected="selected">Credit Card by phone</option>
 <option value="0">Credit Card online</option>
 <option value="0">PayPal - Balance</option>
-<option value="3">PayPal - Bank Account (eCheck)</option>
+<option value="4">PayPal - Bank Account (eCheck)</option>
 <option value="7">Check by mail</option>
 <option value="7">Money Order by mail</option>
 </select>
@@ -42,16 +49,6 @@ javascript_inc: <script src="./js/turnaround.js"></script>
 <br />
 
 <span id="paymentdetails" style="line-height:28px;">by 12:00 PM Noon EST Today! Call us at 585-267-7670 to get your order scheduled.</span>
-</li>
-
-
-<li>Country Shipping to
-
-<select name="country" class="form-control" style="display:inline;max-width:300px;" onchange="changeCountry();">
-<option value="United States of America" selected="selected">United States of America</option>
-<option value="Great Britain and Northern Ireland">Great Britain and Northern Ireland</option><option value="Aruba">Aruba</option><option value="Australia">Australia</option><option value="Austria">Austria</option><option value="Bahamas">Bahamas</option><option value="Bangladesh">Bangladesh</option><option value="Barbados">Barbados</option><option value="Belgium">Belgium</option><option value="Bonaire">Bonaire</option><option value="Brazil">Brazil</option><option value="Brunei Darussalam">Brunei Darussalam</option><option value="Canada">Canada</option><option value="Cayman Islands">Cayman Islands</option><option value="Chile">Chile</option><option value="China">China</option><option value="Colombia">Colombia</option><option value="Costa Rica">Costa Rica</option><option value="Curacao">Curacao</option><option value="Cyprus">Cyprus</option><option value="Czech Republic">Czech Republic</option><option value="Denmark">Denmark</option><option value="Dominican Republic">Dominican Republic</option><option value="Egypt">Egypt</option><option value="El Salvador">El Salvador</option><option value="England">England</option><option value="Estonia">Estonia</option><option value="Finland">Finland</option><option value="France">France</option><option value="Gambia">Gambia</option><option value="Germany">Germany</option><option value="Ghana">Ghana</option><option value="Gibraltar">Gibraltar</option><option value="Greece">Greece</option><option value="Guyana">Guyana</option><option value="Haiti">Haiti</option><option value="Hong Kong">Hong Kong</option><option value="Hungary">Hungary</option><option value="Iceland">Iceland</option><option value="India">India</option><option value="Indonesia">Indonesia</option><option value="Ireland">Ireland</option><option value="Israel">Israel</option><option value="Italy">Italy</option><option value="Jamaica">Jamaica</option><option value="Japan">Japan</option><option value="Kenya">Kenya</option><option value="Korea, Republic of (South Korea)">Korea, Republic of (South Korea)</option><option value="Kuwait">Kuwait</option><option value="Latvia">Latvia</option><option value="Liechtenstein">Liechtenstein</option><option value="Luxembourg">Luxembourg</option><option value="Malaysia">Malaysia</option><option value="Malta">Malta</option><option value="Mauritius">Mauritius</option><option value="Mexico">Mexico</option><option value="Netherlands">Netherlands</option><option value="New Zealand">New Zealand</option><option value="Norway">Norway</option><option value="Panama">Panama</option><option value="Philippines">Philippines</option><option value="Poland">Poland</option><option value="Portugal">Portugal</option><option value="Saba">Saba</option><option value="Saint Eustatius">Saint Eustatius</option><option value="Saint Lucia">Saint Lucia</option><option value="Saint Maarten">Saint Maarten</option><option value="Saudi Arabia">Saudi Arabia</option><option value="Singapore">Singapore</option><option value="South Africa">South Africa</option><option value="Spain">Spain</option><option value="Sweden">Sweden</option><option value="Switzerland">Switzerland</option><option value="Taiwan">Taiwan</option><option value="Thailand">Thailand</option><option value="Trinidad and Tobago">Trinidad and Tobago</option><option value="Turkey">Turkey</option><option value="Turks and Caicos Islands">Turks and Caicos Islands</option><option value="United Arab Emirates">United Arab Emirates</option><option value="Vietnam">Vietnam</option></select>
-
-
 </li>
 
 <li>Valid for
@@ -66,6 +63,17 @@ javascript_inc: <script src="./js/turnaround.js"></script>
 </select>
 
  buttons</li>
+
+<li>Country Shipping to
+
+<select name="country" class="form-control" style="display:inline;max-width:300px;" onchange="changeCountry();">
+<option value="United States of America" selected="selected">United States of America</option>
+<option value="Great Britain and Northern Ireland">Great Britain and Northern Ireland</option><option value="Aruba">Aruba</option><option value="Australia">Australia</option><option value="Austria">Austria</option><option value="Bahamas">Bahamas</option><option value="Bangladesh">Bangladesh</option><option value="Barbados">Barbados</option><option value="Belgium">Belgium</option><option value="Bonaire">Bonaire</option><option value="Brazil">Brazil</option><option value="Brunei Darussalam">Brunei Darussalam</option><option value="Canada">Canada</option><option value="Cayman Islands">Cayman Islands</option><option value="Chile">Chile</option><option value="China">China</option><option value="Colombia">Colombia</option><option value="Costa Rica">Costa Rica</option><option value="Curacao">Curacao</option><option value="Cyprus">Cyprus</option><option value="Czech Republic">Czech Republic</option><option value="Denmark">Denmark</option><option value="Dominican Republic">Dominican Republic</option><option value="Egypt">Egypt</option><option value="El Salvador">El Salvador</option><option value="England">England</option><option value="Estonia">Estonia</option><option value="Finland">Finland</option><option value="France">France</option><option value="Gambia">Gambia</option><option value="Germany">Germany</option><option value="Ghana">Ghana</option><option value="Gibraltar">Gibraltar</option><option value="Greece">Greece</option><option value="Guyana">Guyana</option><option value="Haiti">Haiti</option><option value="Hong Kong">Hong Kong</option><option value="Hungary">Hungary</option><option value="Iceland">Iceland</option><option value="India">India</option><option value="Indonesia">Indonesia</option><option value="Ireland">Ireland</option><option value="Israel">Israel</option><option value="Italy">Italy</option><option value="Jamaica">Jamaica</option><option value="Japan">Japan</option><option value="Kenya">Kenya</option><option value="Korea, Republic of (South Korea)">Korea, Republic of (South Korea)</option><option value="Kuwait">Kuwait</option><option value="Latvia">Latvia</option><option value="Liechtenstein">Liechtenstein</option><option value="Luxembourg">Luxembourg</option><option value="Malaysia">Malaysia</option><option value="Malta">Malta</option><option value="Mauritius">Mauritius</option><option value="Mexico">Mexico</option><option value="Netherlands">Netherlands</option><option value="New Zealand">New Zealand</option><option value="Norway">Norway</option><option value="Panama">Panama</option><option value="Philippines">Philippines</option><option value="Poland">Poland</option><option value="Portugal">Portugal</option><option value="Saba">Saba</option><option value="Saint Eustatius">Saint Eustatius</option><option value="Saint Lucia">Saint Lucia</option><option value="Saint Maarten">Saint Maarten</option><option value="Saudi Arabia">Saudi Arabia</option><option value="Singapore">Singapore</option><option value="South Africa">South Africa</option><option value="Spain">Spain</option><option value="Sweden">Sweden</option><option value="Switzerland">Switzerland</option><option value="Taiwan">Taiwan</option><option value="Thailand">Thailand</option><option value="Trinidad and Tobago">Trinidad and Tobago</option><option value="Turkey">Turkey</option><option value="Turks and Caicos Islands">Turks and Caicos Islands</option><option value="United Arab Emirates">United Arab Emirates</option><option value="Vietnam">Vietnam</option></select>
+
+
+</li>
+
+
 
 <li>Has to ship today using 
 
@@ -95,21 +103,17 @@ javascript_inc: <script src="./js/turnaround.js"></script>
 
 <hr />
 
-<div class="col-md-6">
-<span style="font-weight:bold;">On Average </span><span style="font-weight:bold; color:#fea82b;">500</span><span style="font-weight:bold;"> buttons or less ships the day after you pay!</span>
-<br /> <br />
-It is possible to get your buttons as fast as tomorrow<br /> <br />
+<div class="col-md-12">
+
+<b>It is possible to get your buttons as fast as tomorrow!</b><br /> <br />
 If you need your buttons shipped overnight today, we recommend contacting us by phone (1-585-267-7670) to see what we can do for you. We will try our best to make adjustments and meet your deadline
 
 <br /> <br />
-For detailed pricing and turnaround, use our <a href="./prices.html#pricecalc">price calculator</a>. Our price calculator calculates exact prices and turnaround time estimates.
+Also our <a href="./prices.html#pricecalc">price calculator</a> provides detailed prices and turnaround times.
 
 
-</div><!--col-md-6-->
+</div><!--col-md-12-->
 
-<div class="col-md-6">
-<img src="http://www.wackybuttons.com/images/turnaround/turnaroundsymbols.gif" width="351" height="104" alt="turnaroundsymbols (9K)" />
-</div><!--col-md-6-->
 
 </div><!--row-->
 

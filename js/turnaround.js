@@ -115,6 +115,11 @@ specialcase = "This quotation assumes your payment will take 1 week (7 days) for
 }
 else{
 specialcase = "before 6:00 AM Eastern Standard Time.";
+//if after noon and paying with cc by phone
+if(payingval == -1){
+payingval = 0;
+specialcase = "You can order by phone from 9:00 AM - 5:00 PM Eastern Standard Time, Monday - Friday.";
+}
 }
 return new Array(payingval, specialcase);
 }
