@@ -1,4 +1,4 @@
-<div class="container" style="max-width:550px;"><!--cart data container-->
+<div class="container" style="max-width:550px;overflow-x:scroll;"><!--cart data container-->
 <table class="table">
     <thead style="background-color:orange; color:#ffffff; font-weight:bold;">
 
@@ -57,5 +57,4 @@ Cart Subtotal: $37.50
 
 </tbody>
 </table>
-
 </div><!--end cart data container-->
