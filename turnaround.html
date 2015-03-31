@@ -6,9 +6,16 @@ javascript_inc: <script src="./js/turnaround.js"></script>
 
 <div class="container">
 
-<h1>Super Fast Turnaround Time</h1>
+<div class="row">
+<div class="col-md-7">
+<h1>Super Fast Turnaround</h1>
+<span style="font-weight:bold;">On Average </span><span style="font-weight:bold; color:#fea82b;">500</span><span style="font-weight:bold;"> buttons or less ships the day after you pay!</span>
 
-
+</div>
+<div class="col-md-5">
+<img src="http://www.wackybuttons.com/images/turnaround/turnaroundsymbols.gif" width="351" height="104" alt="turnaroundsymbols (9K)" />
+</div>
+</div><!-- row -->
 
 <br /> <br />
 
@@ -18,9 +25,9 @@ javascript_inc: <script src="./js/turnaround.js"></script>
 
 <div class="turnaround-quickcal-header">Turnaround Time Calculator</div>
 
-<div class="turnaround-quickcal-abovedate">You should receive your buttons</div>
+<div class="turnaround-quickcal-abovedate">You could receive your buttons on</div>
 
-<div class="turnaround-quickcal-shipdate"><span id="receivewhen">TOMORROW MORNING</span><br /><span id="receivedate">XX/XX/XXXX</span></div>
+<div class="turnaround-quickcal-shipdate"><span id="receivewhen"></span><br /><span id="receivedate">XX/XX/XXXX</span></div>
 
 <div class="turnaround-quickcal-timeleft">Time Left to order to get this deadline: <span id="timeleft"></span></div>
 
@@ -28,13 +35,13 @@ javascript_inc: <script src="./js/turnaround.js"></script>
 <form name="timecalc" action="">
 <ul>
 
-<li>Valid only if you pay with 
+<li>Valid if you pay with 
 
-<select name="paying" class="form-control" style="display:inline;max-width:300px;" onchange="calculateTime();">
+<select name="paying" class="form-control" style="display:inline;max-width:300px;" onchange="calculateTTime();">
 <option value="-1" selected="selected">Credit Card by phone</option>
 <option value="0">Credit Card online</option>
 <option value="0">PayPal - Balance</option>
-<option value="3">PayPal - Bank Account (eCheck)</option>
+<option value="4">PayPal - Bank Account (eCheck)</option>
 <option value="7">Check by mail</option>
 <option value="7">Money Order by mail</option>
 </select>
@@ -44,6 +51,18 @@ javascript_inc: <script src="./js/turnaround.js"></script>
 <span id="paymentdetails" style="line-height:28px;">by 12:00 PM Noon EST Today! Call us at 585-267-7670 to get your order scheduled.</span>
 </li>
 
+<li>Valid for
+
+<select name="qty" class="form-control" style="display:inline;max-width:250px;" onchange="calculateTTime();">
+<option value="1" selected="selected">1 - 500</option>
+<option value="2">501 - 1000</option>
+<option value="3">1001 - 2000</option>
+<option value="5">2001 - 5000</option>
+<option value="7">5001 - 10000</option>
+<option value="9">10001 - 25000</option>
+</select>
+
+ buttons</li>
 
 <li>Country Shipping to
 
@@ -54,23 +73,11 @@ javascript_inc: <script src="./js/turnaround.js"></script>
 
 </li>
 
-<li>Valid for
 
-<select name="qty" class="form-control" style="display:inline;max-width:250px;" onchange="calculateTime();">
-<option value="1" selected="selected">1 - 500</option>
-<option value="2">501 - 1000</option>
-<option value="3">1001 - 2000</option>
-<option value="5">2001 - 5000</option>
-<option value="7">5001 - 10000</option>
-<option value="9">10001 - 25000</option>
-<option value="14">More than 25000</option>
-</select>
-
- buttons</li>
 
 <li>Has to ship today using 
 
-<select name="shipping" id="shipping" class="form-control" style="display:inline;max-width:300px;" onchange="calculateTime();">
+<select name="shipping" id="shipping" class="form-control" style="display:inline;max-width:300px;" onchange="calculateTTime();">
 <option value="1" selected="selected">UPS Next Day Air</option>
 <option value="2">USPS Priority Mail Express</option>
 <option value="2">UPS 2nd Day Air</option>
@@ -85,7 +92,7 @@ javascript_inc: <script src="./js/turnaround.js"></script>
 
 </ul>
 
-<div id="otherfineprint"></div>
+<ul id="otherfineprint" style="margin-top:0px;"></ul>
 
 </form>
 </div>
@@ -96,21 +103,17 @@ javascript_inc: <script src="./js/turnaround.js"></script>
 
 <hr />
 
-<div class="col-md-6">
-<span style="font-weight:bold;">On Average </span><span style="font-weight:bold; color:#fea82b;">500</span><span style="font-weight:bold;"> buttons or less ships the day after you pay!</span>
-<br /> <br />
-It is possible to get your buttons as fast as tomorrow<br /> <br />
+<div class="col-md-12">
+
+<b>It is possible to get your buttons as fast as tomorrow!</b><br /> <br />
 If you need your buttons shipped overnight today, we recommend contacting us by phone (1-585-267-7670) to see what we can do for you. We will try our best to make adjustments and meet your deadline
 
 <br /> <br />
-For detailed pricing and turnaround, use our <a href="./prices.html#pricecalc">price calculator</a>. Our price calculator calculates exact prices and turnaround time estimates.
+Also our <a href="./prices.html#pricecalc">price calculator</a> provides detailed prices and turnaround times.
 
 
-</div><!--col-md-6-->
+</div><!--col-md-12-->
 
-<div class="col-md-6">
-<img src="http://www.wackybuttons.com/images/turnaround/turnaroundsymbols.gif" width="351" height="104" alt="turnaroundsymbols (9K)" />
-</div><!--col-md-6-->
 
 </div><!--row-->
 

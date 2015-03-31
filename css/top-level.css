@@ -10,6 +10,12 @@ font-size:14px;
 line-height:16px;
 }
 
+h1 {
+font-family:Century Gothic, Arial, Helvetica, Verdana, MS Serif, Serif;
+font-size: 42px;
+color: #1094C4;
+}
+
 h2 {
 font-family:Century Gothic, Arial, Helvetica, Verdana, MS Serif, Serif;
 font-size: 30px;
