@@ -34,11 +34,30 @@ return testresult;
 }
 
 function pc_help_add(){
+$('#dialog_title').html("Add Another Design");
+inpcode = ' \
+ \
+<ul> \
+<li> \
+This allows you to get the price for different button designs. \
+Maybe you might want a button that says one thing and another button to say \
+something different. This calculator will let you build your button \
+order and give you a total price. \
+</li> \
+<li>Also use this feature if you want the same design on 2 or more different \
+button sizes. \
+</li> \
+</ul> \
+ \
+';
 
-newwindow = window.open("about:blank",'name','height=350,width=400,left=100,top=100,resizable=no,scrollbars=yes,toolbar=no,status=no');
-newwindow.document.write('<b>Add another design</b><br />');
-newwindow.document.write('<li>This allows you to get the price for different button designs. Maybe you might want a button that says one thing and another button to say something different. This calculator will let you build your button order and give you a total price.<br /> <br /></li>');
-newwindow.document.write('<li>Also use this feature if you want the same design on 2 or more different button sizes.<br /> <br /></li>');
+$('#dialog_content').html(inpcode);
+
+inpcode = ' \
+<button type="button" class="btn btn-default" data-dismiss="modal">Close</button> \
+';
+
+$('#dialog_footer').html(inpcode);
 
 }
 
@@ -225,7 +244,7 @@ outputhtml = outputhtml + ' \
  \
 </td> \
 </tr><tr> \
-<td valign="middle" colspan="3"><input type="button" value="Add another design" onclick="javascript:pc_add_one_more(2);"> <a href="javascript:pc_help_add();" style="color:white; text-decoration:none;"><font size="-2" color="white" style="color:white;">What does this mean?</font></a></td> \
+<td valign="middle" colspan="3"><input type="button" value="Add another design" onclick="javascript:pc_add_one_more(2);"> <a href="#" data-toggle="modal" data-target="#dialog_win" onclick="pc_help_add();">What does this mean?</a></td> \
  \
 </tr> \
 </table> \
