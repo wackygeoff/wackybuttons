@@ -1,4 +1,4 @@
-function countryzip(){
+function pc_country_zip(){
 if (document.getElementById('formx').country.value != "United States of America"){
 document.getElementById('zipcodefield').style.display = 'none';
 }else{
@@ -6,14 +6,14 @@ document.getElementById('zipcodefield').style.display = 'block';
 }
 }
 
-function showothercountries(){
+function pc_show_countries(){
 document.getElementById('countryfield').style.display = 'block';
 document.getElementById('defaultcountry').style.display = 'none';
 document.getElementById('zipcodefield').style.display = 'none';
 }
 
 
-function checkFields(){
+function pc_check_fields(){
 //alert(document.formx.elements['buttonsize[]'].value);
 buttonsizearr = document.getElementsByName('buttonsize[]');
 //alert('last'+buttonsizearr.length);
@@ -33,7 +33,7 @@ alert('You did not choose a product or button size for Design #' + fieldfailed);
 return testresult;
 }
 
-function helpAddMore(){
+function pc_help_add(){
 
 newwindow = window.open("about:blank",'name','height=350,width=400,left=100,top=100,resizable=no,scrollbars=yes,toolbar=no,status=no');
 newwindow.document.write('<b>Add another design</b><br />');
@@ -42,9 +42,8 @@ newwindow.document.write('<li>Also use this feature if you want the same design 
 
 }
 
-
-function toggleSize(designnum){
-
+//--rewrites the dropdown menu for product sizes available--
+function pc_size_dd(designnum){
 
 for(i = 0; i < prodshortnames.length; i ++){
 
@@ -75,12 +74,9 @@ document.getElementById('sizewrapper'+designnum).innerHTML = outputtext;
 
 
 
+//--rewrites the table for calculating a price--
+function pc_add_one_more(destoadd){
 
-function oneMoreDesign(destoadd){
-//texttoadd = 'Get the price of any quantity of buttons and for multiple button designs.';
-//texttoadd = texttoadd + '<br /><img src="http://www.wackybuttons.com/images/spacer.gif" width="1" height="5" alt="" />';
-//texttoadd = texttoadd + '<table summary="" border="1" style="width:700px;">';
-//texttoadd = texttoadd + '<tr>';
 texttoadd = '<tr>';
 
 texttoadd = texttoadd + '<td valign="bottom"></td><td valign="bottom"></td><td valign="bottom">Product Type</td><td valign="bottom">Button Size</td></tr><tr>';
@@ -96,7 +92,7 @@ texttoadd = texttoadd + '<td valign="bottom">Quantity: <input name="qty[]" id="q
 
 
 
-texttoadd = texttoadd + '<select name="product[]" id="prod'+k+'" onchange="javascript:toggleSize('+k+');" width="175" style="width:175px">';
+texttoadd = texttoadd + '<select name="product[]" id="prod'+k+'" onchange="javascript:pc_size_dd('+k+');" width="175" style="width:175px">';
 texttoadd = texttoadd + '<option value="">Choose a Product</option>';
 
 productwasselected = false;
@@ -178,40 +174,13 @@ texttoadd = texttoadd + '</tr><tr>';
 }
 //end loop
 texttoadd = texttoadd + '<td valign="middle" colspan="3">';
-texttoadd = texttoadd + '<input type="button" value="Add another design" onclick="oneMoreDesign('+(destoadd+1)+');">';
+texttoadd = texttoadd + '<input type="button" value="Add another design" onclick="pc_add_one_more('+(destoadd+1)+');">';
 if(destoadd > 1){
-texttoadd = texttoadd + '<input type="button" value="Remove one design" onclick="oneMoreDesign('+(destoadd-1)+');">';
+texttoadd = texttoadd + '<input type="button" value="Remove one design" onclick="pc_add_one_more('+(destoadd-1)+');">';
 }
 texttoadd = texttoadd + '</td>';
 texttoadd = texttoadd + '</tr>';
-//texttoadd = texttoadd + '</table>';
 
-/*
-texttoadd = texttoadd + '<br />';
-texttoadd = texttoadd + 'Calculate shipping (optional)<br /> <br />';
-
-if(document.formx.country.value != "" && document.formx.country.value != "United States of America"){
-texttoadd = texttoadd + '<div id="countryfield" style="display:block;">';
-}else{
-texttoadd = texttoadd + '<div id="countryfield" style="display:none;">';
-}
-texttoadd = texttoadd + 'Country: <select name="country" id="country_ddlist" onchange="javascript:countryzip();">';
-
-
-
-
-texttoadd = texttoadd + '</select><br /><br />';
-texttoadd = texttoadd + '</div>';
-
-if(document.formx.country.value != "" && document.formx.country.value != "United States of America"){
-texttoadd = texttoadd + '<div id="zipcodefield" style="display:none;">Destination Zipcode: <input type="text" name="zip" size="5" maxlength="5" /></div><br />';
-texttoadd = texttoadd + '<div id="defaultcountry" style="display:none;">Country: United States of America<br /><a href="javascript:showothercountries();">Choose a different country</a><br /> <br /></div>';
-}else{
-texttoadd = texttoadd + '<div id="zipcodefield">Destination Zipcode: <input type="text" name="zip" size="5" maxlength="5" /></div><br />';
-texttoadd = texttoadd + '<div id="defaultcountry">Country: United States of America<br /><a href="javascript:showothercountries();">Choose a different country</a><br /> <br /></div>';
-}
-texttoadd = texttoadd + '<input type="submit" value="Calculate Price" />';
-*/
 
 document.getElementById('pricecalc_table').innerHTML = texttoadd;
 
@@ -222,10 +191,10 @@ document.getElementById('pricecalc_table').innerHTML = texttoadd;
 
 
 
-function disp_default_price_calc(){
+function pc_disp_default(){
 
 outputhtml = ' \
-<form action="http://www.wackybuttons.com/pricecalc.php" id="formx" name="formx" method="post" onsubmit="javascript:return checkFields();"> \
+<form action="http://www.wackybuttons.com/pricecalc.php" id="formx" name="formx" method="post" onsubmit="javascript:return pc_check_fields();"> \
 Get the price of any quantity of buttons and for multiple button designs. \
 <br /><img src="http://www.wackybuttons.com/images/spacer.gif" width="1" height="5" alt="" /> \
  \
@@ -237,7 +206,7 @@ Get the price of any quantity of buttons and for multiple button designs. \
 <td valign="middle">Design #1: </td> \
 <td valign="bottom">Quantity: <input name="qty[]" id="qty1" type="text" size="6" /></td><td valign="bottom"> \
  \
-<select name="product[]" id="prod1" onchange="javascript:toggleSize(1);" width="175" style="width:175px"> \
+<select name="product[]" id="prod1" onchange="javascript:pc_size_dd(1);" width="175" style="width:175px"> \
 <option value="">Choose a Product</option> \
 ';
 
@@ -256,7 +225,7 @@ outputhtml = outputhtml + ' \
  \
 </td> \
 </tr><tr> \
-<td valign="middle" colspan="3"><input type="button" value="Add another design" onclick="javascript:oneMoreDesign(2);"> <a href="javascript:helpAddMore();" style="color:white; text-decoration:none;"><font size="-2" color="white" style="color:white;">What does this mean?</font></a></td> \
+<td valign="middle" colspan="3"><input type="button" value="Add another design" onclick="javascript:pc_add_one_more(2);"> <a href="javascript:pc_help_add();" style="color:white; text-decoration:none;"><font size="-2" color="white" style="color:white;">What does this mean?</font></a></td> \
  \
 </tr> \
 </table> \
@@ -265,7 +234,7 @@ outputhtml = outputhtml + ' \
 <br /> \
 Calculate shipping (optional)<br /> <br /> \
 <div id="countryfield" style="display:none;"> \
-Country: <select name="country" id="country_ddlist" onchange="javascript:countryzip();"> \
+Country: <select name="country" id="country_ddlist" onchange="javascript:pc_country_zip();"> \
 <option value="">Select your country</option> \
  \
 <option value="United States of America">United States of America</option> \
@@ -280,7 +249,7 @@ outputhtml = outputhtml + ' \
 </select><br /><br /> \
 </div> \
 <div id="zipcodefield">Destination Zipcode: <input type="text" name="zip" size="5" maxlength="5" /></div><br /> \
-<div id="defaultcountry">Country: United States of America<br /><a href="javascript:showothercountries();">Choose a different country</a><br /> <br /></div> \
+<div id="defaultcountry">Country: United States of America<br /><a href="javascript:pc_show_countries();">Choose a different country</a><br /> <br /></div> \
 <input type="submit" value="Calculate Price" /> \
 </form> \
 ';
@@ -292,5 +261,5 @@ $('#country_ddlist').load('country_dropdown_php_output.txt');
 }
 
 
-
-window.addEventListener("load", disp_default_price_calc());
+//--default window onload to get everything started--
+window.addEventListener("load", pc_disp_default());
