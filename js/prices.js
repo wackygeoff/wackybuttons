@@ -68,7 +68,7 @@ for(i = 0; i < prodshortnames.length; i ++){
 
 if(document.getElementById('prod'+designnum).value == prodshortnames[i]){
 outputtext = "";
-outputtext = outputtext + '<select name="buttonsize[]" id="size'+designnum+'" width="200" style="width:200px;">';
+outputtext = outputtext + '<select name="buttonsize[]" id="size'+designnum+'" class="form-control" style="width:200px;">';
 outputtext = outputtext + '<option value="">Choose a button size</option>';
 
 for(j = 0; j < proddescs[prodshortnames[i]].length; j ++){
@@ -82,7 +82,7 @@ outputtext = outputtext + '</select>';
 
 if(document.getElementById('prod'+designnum).value == ''){
 outputtext = "";
-outputtext = outputtext + '<select name="buttonsize[]" id="size'+designnum+'" width="200" style="width:200px" disabled="disabled">';
+outputtext = outputtext + '<select name="buttonsize[]" id="size'+designnum+'" class="form-control" style="width:200px" disabled="disabled">';
 outputtext = outputtext + '<option value="">Choose a button size</option>';
 outputtext = outputtext + '</select>';
 }
@@ -96,22 +96,32 @@ document.getElementById('sizewrapper'+designnum).innerHTML = outputtext;
 //--rewrites the table for calculating a price--
 function pc_add_one_more(destoadd){
 
-texttoadd = '<tr>';
-
-texttoadd = texttoadd + '<td valign="bottom"></td><td valign="bottom"></td><td valign="bottom">Product Type</td><td valign="bottom">Button Size</td></tr><tr>';
+texttoadd = '\
+<thead style="background-color:orange; color:#ffffff; font-weight:bold;"> \
+<tr> \
+<td valign="bottom"></td> \
+<td valign="bottom">Quantity</td> \
+<td valign="bottom">Product Type</td> \
+<td valign="bottom">Button Size</td> \
+</tr> \
+</thead> \
+<tbody> \
+ \
+<tr> \
+';
 
 //big loop
 for (k = 1; k <= destoadd; k ++){
 texttoadd = texttoadd + '<td valign="middle">Design #'+(k)+': </td>';
 if(document.getElementById('qty'+k)){
-texttoadd = texttoadd + '<td valign="bottom">Quantity: <input name="qty[]" id="qty'+k+'" type="text" size="6" value="'+ document.getElementById('qty'+k).value +'" /></td><td>';
+texttoadd = texttoadd + '<td valign="bottom"><input name="qty[]" id="qty'+k+'" type="text" class="form-control" size="6" style="width:100px;" value="'+ document.getElementById('qty'+k).value +'" /></td><td>';
 }else{
-texttoadd = texttoadd + '<td valign="bottom">Quantity: <input name="qty[]" id="qty'+k+'" type="text" size="6" value="'+ document.getElementById('qty'+(k-1)).value +'" /></td><td>';
+texttoadd = texttoadd + '<td valign="bottom"><input name="qty[]" id="qty'+k+'" type="text" class="form-control" size="6" style="width:100px;" value="'+ document.getElementById('qty'+(k-1)).value +'" /></td><td>';
 }
 
 
 
-texttoadd = texttoadd + '<select name="product[]" id="prod'+k+'" onchange="javascript:pc_size_dd('+k+');" width="175" style="width:175px">';
+texttoadd = texttoadd + '<select name="product[]" id="prod'+k+'" class="form-control" onchange="javascript:pc_size_dd('+k+');" width="175" style="width:175px">';
 texttoadd = texttoadd + '<option value="">Choose a Product</option>';
 
 productwasselected = false;
@@ -146,9 +156,9 @@ texttoadd = texttoadd + '</select></td><td valign="bottom">';
 texttoadd = texttoadd + '<div id="sizewrapper'+k+'">';
 
 if(productwasselected == false){
-texttoadd = texttoadd + '<select name="buttonsize[]" id="size'+k+'" width="200" style="width:200px" disabled=disabled>';
+texttoadd = texttoadd + '<select name="buttonsize[]" id="size'+k+'" class="form-control" style="width:200px" disabled=disabled>';
 }else{
-texttoadd = texttoadd + '<select name="buttonsize[]" id="size'+k+'" width="200" style="width:200px">';
+texttoadd = texttoadd + '<select name="buttonsize[]" id="size'+k+'" class="form-control" style="width:200px">';
 }
 
 texttoadd = texttoadd + '<option value="">Choose a button size</option>';
@@ -192,14 +202,14 @@ texttoadd = texttoadd + '</td>';
 texttoadd = texttoadd + '</tr><tr>';
 }
 //end loop
-texttoadd = texttoadd + '<td valign="middle" colspan="3">';
+texttoadd = texttoadd + '<td valign="middle" colspan="4">';
 texttoadd = texttoadd + '<input type="button" value="Add another design" onclick="pc_add_one_more('+(destoadd+1)+');">';
 if(destoadd > 1){
 texttoadd = texttoadd + '<input type="button" value="Remove one design" onclick="pc_add_one_more('+(destoadd-1)+');">';
 }
 texttoadd = texttoadd + '</td>';
 texttoadd = texttoadd + '</tr>';
-
+texttoadd = texttoadd + '</tbody>';
 
 document.getElementById('pricecalc_table').innerHTML = texttoadd;
 
@@ -217,15 +227,22 @@ outputhtml = ' \
 Get the price of any quantity of buttons and for multiple button designs. \
 <br /><img src="http://www.wackybuttons.com/images/spacer.gif" width="1" height="5" alt="" /> \
  \
-<table id="pricecalc_table" style="width:700px;" border="1"> \
+<table id="pricecalc_table" class="table" style="width:700px;"> \
+<thead style="background-color:orange; color:#ffffff; font-weight:bold;"> \
 <tr> \
+<td valign="bottom"></td> \
+<td valign="bottom">Quantity</td> \
+<td valign="bottom">Product Type</td> \
+<td valign="bottom">Button Size</td> \
+</tr> \
+</thead> \
+<tbody> \
  \
-<td valign="bottom"></td><td valign="bottom"></td><td valign="bottom">Product Type</td><td valign="bottom">Button Size</td></tr><tr> \
- \
+<tr> \
 <td valign="middle">Design #1: </td> \
-<td valign="bottom">Quantity: <input name="qty[]" id="qty1" type="text" size="6" /></td><td valign="bottom"> \
+<td valign="bottom"><input name="qty[]" class="form-control" id="qty1" type="text" size="6" style="width:100px;" /></td><td valign="bottom"> \
  \
-<select name="product[]" id="prod1" onchange="javascript:pc_size_dd(1);" width="175" style="width:175px"> \
+<select name="product[]" id="prod1" class="form-control" onchange="javascript:pc_size_dd(1);" style="width:175px"> \
 <option value="">Choose a Product</option> \
 ';
 
@@ -234,19 +251,22 @@ outputhtml = outputhtml + '<option value="' + prodshortnames[i] + '" id="' + pro
 }
 
 outputhtml = outputhtml + ' \
-</select></td><td valign="bottom"> \
+</select> \
+</td> \
+<td valign="bottom"> \
  \
 <div id="sizewrapper1"> \
-<select name="buttonsize[]" id="size1" width="200" style="width:200px" disabled="disabled"> \
+<select name="buttonsize[]" id="size1" class="form-control" style="width:200px;" disabled="disabled"> \
 <option value="">Choose a button size</option> \
 </select> \
 </div> \
  \
 </td> \
 </tr><tr> \
-<td valign="middle" colspan="3"><input type="button" value="Add another design" onclick="javascript:pc_add_one_more(2);"> <a href="#" data-toggle="modal" data-target="#dialog_win" onclick="pc_help_add();">What does this mean?</a></td> \
+<td valign="middle" colspan="4"><input type="button" value="Add another design" onclick="javascript:pc_add_one_more(2);"> <a href="#" data-toggle="modal" data-target="#dialog_win" onclick="pc_help_add();">What does this mean?</a></td> \
  \
 </tr> \
+</tbody> \
 </table> \
  \
  \
@@ -271,6 +291,7 @@ outputhtml = outputhtml + ' \
 <div id="defaultcountry">Country: United States of America<br /><a href="javascript:pc_show_countries();">Choose a different country</a><br /> <br /></div> \
 <input type="submit" value="Calculate Price" /> \
 </form> \
+<br /> <br /> \
 ';
 
 $('#disp_pricecalc').html(outputhtml);
