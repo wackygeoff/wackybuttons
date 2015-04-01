@@ -57,8 +57,8 @@ inpcode = inpcode + '<div style="max-width:75%;margin-left:auto;margin-right:aut
 inpcode = inpcode + '<select name="prod_chooser" class="form-control" id="prod_chooser" onchange="javascript:genButtonSizeDD('+"'"+'prod_chooser'+"'"+', '+"'"+'size_chooser'+"'"+', '+"'"+'item_name'+"'"+');">';
 inpcode = inpcode + '<option value="">Choose Product</option>';
 
-for(i = 0; i < allprodshortnames.length; i++){
-inpcode = inpcode + '<option value="'+allprodshortnames[i]+'">'+allprodshortnames[i]+'</option>';
+for(i = 0; i < prodshortnames.length; i++){
+inpcode = inpcode + '<option value="'+prodshortnames[i]+'">'+prodshortnames[i]+'</option>';
 }
 
 inpcode = inpcode + '</select>';
