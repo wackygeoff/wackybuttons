@@ -244,7 +244,7 @@
 			All services are FREE! Setup your artwork first, then pay for your buttons when you are ready.</div>
 			</div>
 			<div class="col-md-2">
-					<a href="#">
+					<a href="create.html">
 						<button class="btn btn-default btn-wacky pull-right">More details >></button>
 					</a>
 					</div><!-- col-md-3 -->
@@ -271,22 +271,37 @@
 	<ul class="dropdown-menu" role="menu">
 		<div class="yamm-content">
 			<div class="row"> 
+
 			
 				<div class="col-md-3">				
 					<div class="thumbnail order-thumbnail">
-						<a href="#">
+						<a href="create.html">
 					<div class="order-icon">
 						<span class="fa fa-pencil-square-o"></span>
 					</div><!-- icon -->
 						<h4>Start Designing</h4>
 						</a>
-						<p>If this is your first time ordering then you will want to start here.</p>
+						<p>If this is your first time ordering custom buttons then you will want to start here.</p>
 					</div><!-- thumbnail -->
 				</div><!-- col-md-3 -->
 				
+				
 				<div class="col-md-3">				
 					<div class="thumbnail order-thumbnail">
-						<a href="#">
+						<a href="store.html">
+					<div class="order-icon">
+						<span class="fa fa-tags"></span>
+					</div><!-- icon -->
+						<h4>Browse our Store</h4>
+						</a>
+						<p>Our catalog has thousands of buttons ready to order. You can also get ideas for buttons you want to create.</p>
+					</div><!-- thumbnail -->
+				</div><!-- col-md-3 -->
+				
+				
+				<div class="col-md-3">				
+					<div class="thumbnail order-thumbnail">
+						<a href="#" data-toggle="modal" data-target="#dialog_win" onclick="design_code_order_window();">
 					<div class="order-icon">
 						<span class="fa fa-star"></span>
 					</div><!-- icon -->
@@ -298,7 +313,7 @@
 				
 				<div class="col-md-3">				
 					<div class="thumbnail order-thumbnail">
-						<a href="#">
+						<a href="#" data-toggle="modal" data-target="#dialog_win" onclick="my_design_window();">
 					<div class="order-icon">
 						<span class="fa fa-binoculars"></span>
 					</div><!-- icon -->
@@ -308,17 +323,18 @@
 					</div><!-- thumbnail -->
 				</div><!-- col-md-3 -->
 				
-				<div class="col-md-3">				
+				
+				<!--div class="col-md-3">				
 					<div class="thumbnail order-thumbnail">
 						<a href="#">
 					<div class="order-icon">
 						<span class="fa fa-key"></span>
 					</div><!-- icon -->
-						<h4>Account Login</h4>
+						<!--h4>Account Login</h4>
 						</a>
 						<p>If you have an account, you can view past orders and reorder here.</p>
 					</div><!-- thumbnail -->
-				</div><!-- col-md-3 -->
+				<!--/div--><!-- col-md-3 -->
 
 				
 			</div><!-- row -->										
@@ -344,7 +360,7 @@
 	<!-- Wrapper for slides -->
   	<div class="carousel-inner" role="listbox">
     	<div class="item active">
-      		<img src="img/homepage%20carousel/caro_img1.jpg" alt="...">
+      		<img src="img/homepage%20carousel/caro_img4.jpg" alt="...">
       		<div class="carousel-caption">
       			<div class="carousel-caption-wacky">
 					<h3>Custom buttons!</h3>
@@ -520,7 +536,7 @@
 			<option value="1 inch round button with locking pin back">1 inch - Standard Pin Back</option><option value="1 inch round button with magnet back">1 inch - Fridge Magnet Back</option><option value="1 inch round button with nothing on back">1 inch - Nothing on Back</option><option value="1-1/2 inch round button with locking pin back">1.5 inch - Standard Pin Back</option><option value="1-1/2 inch round button with magnet back">1.5 inch - Fridge Magnet Back</option><option value="1-1/2 inch round button with clothing magnet back">1.5 inch - Clothing Magnet Back</option><option value="1-1/2 inch round button with nothing on back">1.5 inch - Nothing on Back</option><option value="2-1/4 inch round button with locking pin back">2.25 inch - Standard Pin Back</option><option value="2-1/4 inch round button with magnet back">2.25 inch - Fridge Magnet Back</option><option value="2-1/4 inch round button with clothing magnet back">2.25 inch - Clothing Magnet Back</option><option value="2-1/4 inch round button with bottle opener back">2.25 inch - Bottle Opener</option><option value="2-1/4 inch round button with mirror back">2.25 inch - Mirror Back</option><option value="2-1/4 inch round button with clip back">2.25 inch - Clip Back</option><option value="2-1/4 inch round button with nothing on back">2.25 inch - Nothing on Back</option><option value="3 inch round button with locking pin back">3 inch - Standard Pin Back</option><option value="3 inch round button with magnet back">3 inch - Fridge Magnet Back</option><option value="3 inch round button with clothing magnet back">3 inch - Clothing Magnet Back</option><option value="3 inch round button with mirror back">3 inch - Mirror Back</option><option value="3 inch round button with clip back">3 inch - Clip Back</option><option value="3 inch round button with nothing on back">3 inch - Nothing on Back</option></select></td></tr>
 		</div><!-- form-group -->
 		<div class="form-group">
-			<label for="qty[]">Quantity:</label> <input name="qty[]" type="text" class="form-control" size="6" style="width:25%;display:inline;" /> <span><a href="javascript:info4();"> See Size Differences</a></span>
+			<label for="qty[]">Quantity:</label> <input name="qty[]" type="text" class="form-control" size="6" style="width:25%;display:inline;" /> <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" onclick="show_size_info();" data-toggle="modal" data-target="#dialog_win"> See Size Differences</a></span>
 		</div><!-- form-group -->
 		<div class="form-group">
 			Calculate shipping (optional)
@@ -616,6 +632,9 @@
 				<span class="fa fa-check"></span>
 			</div><!-- icon -->
 			<a href="http://www.yelp.com/biz/wacky-buttons-inc-east-rochester"><h4>Read wacky reviews</h4></a>
+		
+		<div id="yelp-biz-badge-rrc-p6rQczuNjmPqptA72vGMGQ" class="u-center u-block-center"><a href="http://www.yelp.com/biz/wacky-buttons-inc-east-rochester">Check out Wacky Buttons, Inc on Yelp</a></div><script type="text/javascript">(function(d, t) {var g = d.createElement(t);var s = d.getElementsByTagName(t)[0];g.id = "yelp-biz-badge-script-rrc-p6rQczuNjmPqptA72vGMGQ";g.src = "//dyn.yelpcdn.com/biz_badge_js/en_US/rrc/p6rQczuNjmPqptA72vGMGQ.js";s.parentNode.insertBefore(g, s);}(document, 'script'));</script>
+		
 		</div><!-- col-md-3 -->
 	</div><!-- row -->
 </div><!-- container -->
@@ -1182,11 +1201,20 @@
 <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
 <!-- Bootstrap js -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<!-- product_config js -->
+<script src="/js/product_config.js"></script>
+<!-- general js -->
+<script src="/js/general.js"></script>
 <!-- product_modals js -->
 <script src="/js/product_modals.js"></script>
 <!-- banner_button_modals js -->
 <script src="/js/banner_button_modals.js"></script>
-
+<!-- dc_order_modal js -->
+<script src="/js/dc_order_modal.js"></script>
+<!-- add_single_item js -->
+<script src="/js/add_single_item.js"></script>
+<!-- add_multiple_items js -->
+<script src="/js/add_multiple_items.js"></script>
 <!-- Custom Javascript -->
 
 
