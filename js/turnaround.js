@@ -241,4 +241,5 @@ calcTimeLeftCounter();
 window.addEventListener("load", function(){
 //set defaults
 calculateTTime();
+$('#country_dd').load('country_dropdown_php_output.txt');
 });
