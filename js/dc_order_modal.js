@@ -33,14 +33,11 @@ inpcode = ' \
 Design Code: <input type="text" class="form-control short-field" style="display:inline;" name="item_number" maxlength="7" size="8" onchange="dcwin_checkdc();" /> \
 <input type="button" class="btn-default btn-wacky" style="display:inline;" value="View Design" onclick="dcwin_checkdc();" /> \
 <select name="prod_chooser" class="form-control" id="dcwin_prod_chooser" style="margin-top:10px;" onchange="javascript:genButtonSizeDD('+"'"+'dcwin_prod_chooser'+"'"+', '+"'"+'dcwin_size_chooser'+"'"+', '+"'"+'item_name'+"'"+');"> \
-<option value="">Choose Product</option> \
-<option value="Standard Pin Back">Standard Pin Back</option> \
-<option value="Refrigerator Magnet">Refrigerator Magnet</option> \
-<option value="Clothing Magnet">Clothing Magnet</option> \
-<option value="Bottle Opener">Bottle Opener</option> \
-<option value="Mirror Back">Mirror Back</option> \
-<option value="Clip Back">Clip Back</option> \
-<option value="Nothing on Back">Nothing on Back</option> \
+<option value="">Choose Product</option>';
+for(i = 0; i < prodshortnames.length; i++){
+inpcode = inpcode + '<option value="'+prodshortnames[i]+'">'+prodshortnames[i]+'</option>';
+}
+inpcode = inpcode + ' \
 </select> \
 </div> \
 <div id="dcwin_size_chooser" style="max-width:75%;margin-top:10px;margin-bottom:10px;margin-left:auto;margin-right:auto;"> \
