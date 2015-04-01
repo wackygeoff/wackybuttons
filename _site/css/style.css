@@ -169,6 +169,8 @@ margin-left:auto;
 margin-right:auto;
 }
 
+
+
 /***** For modal in store, dclookup, and preview pages *****/
 .multiple-add-cell{
 margin-bottom:15px;
@@ -182,4 +184,18 @@ padding:10px;
 .size-compare-table img{
 max-height:75px;
 max-width:75px;
+}
+
+/*** For sizing form fields **/
+
+.long-field{
+max-width:400px;
+}
+
+.short-field{
+max-width:150px;
+}
+
+.med-field{
+max-width:300px;
 }

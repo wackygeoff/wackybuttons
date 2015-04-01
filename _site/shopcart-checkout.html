@@ -244,7 +244,7 @@
 			All services are FREE! Setup your artwork first, then pay for your buttons when you are ready.</div>
 			</div>
 			<div class="col-md-2">
-					<a href="#">
+					<a href="create.html">
 						<button class="btn btn-default btn-wacky pull-right">More details >></button>
 					</a>
 					</div><!-- col-md-3 -->
@@ -271,22 +271,37 @@
 	<ul class="dropdown-menu" role="menu">
 		<div class="yamm-content">
 			<div class="row"> 
+
 			
 				<div class="col-md-3">				
 					<div class="thumbnail order-thumbnail">
-						<a href="#">
+						<a href="create.html">
 					<div class="order-icon">
 						<span class="fa fa-pencil-square-o"></span>
 					</div><!-- icon -->
 						<h4>Start Designing</h4>
 						</a>
-						<p>If this is your first time ordering then you will want to start here.</p>
+						<p>If this is your first time ordering custom buttons then you will want to start here.</p>
 					</div><!-- thumbnail -->
 				</div><!-- col-md-3 -->
 				
+				
 				<div class="col-md-3">				
 					<div class="thumbnail order-thumbnail">
-						<a href="#">
+						<a href="store.html">
+					<div class="order-icon">
+						<span class="fa fa-tags"></span>
+					</div><!-- icon -->
+						<h4>Browse our Store</h4>
+						</a>
+						<p>Our catalog has thousands of buttons ready to order. You can also get ideas for buttons you want to create.</p>
+					</div><!-- thumbnail -->
+				</div><!-- col-md-3 -->
+				
+				
+				<div class="col-md-3">				
+					<div class="thumbnail order-thumbnail">
+						<a href="#" data-toggle="modal" data-target="#dialog_win" onclick="design_code_order_window();">
 					<div class="order-icon">
 						<span class="fa fa-star"></span>
 					</div><!-- icon -->
@@ -298,7 +313,7 @@
 				
 				<div class="col-md-3">				
 					<div class="thumbnail order-thumbnail">
-						<a href="#">
+						<a href="#" data-toggle="modal" data-target="#dialog_win" onclick="my_design_window();">
 					<div class="order-icon">
 						<span class="fa fa-binoculars"></span>
 					</div><!-- icon -->
@@ -308,17 +323,18 @@
 					</div><!-- thumbnail -->
 				</div><!-- col-md-3 -->
 				
-				<div class="col-md-3">				
+				
+				<!--div class="col-md-3">				
 					<div class="thumbnail order-thumbnail">
 						<a href="#">
 					<div class="order-icon">
 						<span class="fa fa-key"></span>
 					</div><!-- icon -->
-						<h4>Account Login</h4>
+						<!--h4>Account Login</h4>
 						</a>
 						<p>If you have an account, you can view past orders and reorder here.</p>
 					</div><!-- thumbnail -->
-				</div><!-- col-md-3 -->
+				<!--/div--><!-- col-md-3 -->
 
 				
 			</div><!-- row -->										
@@ -1058,11 +1074,20 @@ Must be an address within the United States of America
 <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
 <!-- Bootstrap js -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<!-- product_config js -->
+<script src="/js/product_config.js"></script>
+<!-- general js -->
+<script src="/js/general.js"></script>
 <!-- product_modals js -->
 <script src="/js/product_modals.js"></script>
 <!-- banner_button_modals js -->
 <script src="/js/banner_button_modals.js"></script>
-
+<!-- dc_order_modal js -->
+<script src="/js/dc_order_modal.js"></script>
+<!-- add_single_item js -->
+<script src="/js/add_single_item.js"></script>
+<!-- add_multiple_items js -->
+<script src="/js/add_multiple_items.js"></script>
 <!-- Custom Javascript -->
 <script src="./js/shopcart.js"></script>
 

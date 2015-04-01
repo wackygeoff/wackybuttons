@@ -2,18 +2,6 @@
 font-weight:normal;
 }
 
-.long-field{
-max-width:400px;
-}
-
-.short-field{
-max-width:150px;
-}
-
-.med-field{
-max-width:300px;
-}
-
 .shipping-choices td{
 padding:5px;
 }
