@@ -466,10 +466,15 @@ paymentError = paymentArr[3];
 productionError = productionArr[3];
 shippingError = shippingArr[3];
 
-
+//calculate best and worst turnaround times
 turnaroundTimeBest = eval(paymentTimeBest) + eval(productionTimeBest) + eval(shippingTimeBest);
 turnaroundTimeWorst = eval(paymentTimeWorst) + eval(productionTimeWorst) + eval(shippingTimeWorst);
 
+//show or hide countdown
+var showcountdown = false; //default is false
+if(getPaymentTypes()[0][document.timecalc.paying.value] == "Credit card by phone" || getPaymentTypes()[0][document.timecalc.paying.value] == "Credit card or PayPal online"){
+showcountdown = true;
+}
 
 //figure out when we will ship out
 var curtime = new Date();
@@ -489,7 +494,11 @@ deliverydateWorst = calculate_delivery_date(turnaroundTimeWorst, shipdate);
 //alert(deliverydateBest + " " + deliverydateWorst);
 
 var receivewhen = "XX/XX/XXXX";
-if(deliverydateBest.getTime() == deliverydateWorst.getTime()){
+if(paymentError || productionError || shippingError){
+receivewhen = "Contact Wacky Buttons";
+receivewhentitle = "Could not calculate"; 
+showcountdown = false;
+}else if(deliverydateBest.getTime() == deliverydateWorst.getTime()){
 receivewhen = translateWeekday(deliverydateBest.getDay()) + "<br />" + (deliverydateBest.getMonth() + 1) + "/" + deliverydateBest.getDate() + "/" + deliverydateBest.getFullYear();
 receivewhentitle = "You could receive your buttons on";
 }else{
@@ -528,8 +537,14 @@ $('#receivewhen_title').html(receivewhentitle);
 $('#receivewhen').html(receivewhen);
 $('#paymentdetails').html(paymentdetailstext);
 $('#otherfineprint').html(otherfineprinttext);
+
 //update the time left countdown
+if(showcountdown == true){
+$('#timeleft_container').show();
 calcTimeLeftCounter();
+}else{
+$('#timeleft_container').hide();
+}
 
 }
 
