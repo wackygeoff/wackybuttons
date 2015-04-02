@@ -54,20 +54,21 @@ javascript_inc: <script src="./js/turnaround.js"></script>
 
  buttons</li>
 
-<li>Country Shipping to
 
-<select name="country" id="country_dd" class="form-control" style="display:inline;max-width:300px;" onchange="changeCountry();">
-<option value="United States of America">United States of America</option>
+
+<li>Must ship using 
+
+<select name="shipping" id="shipping" class="form-control" style="display:inline;max-width:300px;" onchange="calculateTTime();">
+
 </select>
 
 </li>
 
 
+<li>Country Shipping to
 
-<li>Has to ship using 
-
-<select name="shipping" id="shipping" class="form-control" style="display:inline;max-width:300px;" onchange="calculateTTime();">
-
+<select name="country" id="country_dd" class="form-control" style="display:inline;max-width:300px;" onchange="changeCountry();">
+<option value="United States of America">United States of America</option>
 </select>
 
 </li>
