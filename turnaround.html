@@ -37,13 +37,8 @@ javascript_inc: <script src="./js/turnaround.js"></script>
 
 <li>Valid if you pay with 
 
-<select name="paying" class="form-control" style="display:inline;max-width:300px;" onchange="calculateTTime();">
-<option value="-1" selected="selected">Credit Card by phone</option>
-<option value="0">Credit Card or PayPal online</option>
-<option value="4">PayPal - Bank Account (eCheck)</option>
-<option value="5">Bank - Wire Transfer</option>
-<option value="7">Check by mail</option>
-<option value="7">Money Order by mail</option>
+<select name="paying" id="payment_types" class="form-control" style="display:inline;max-width:300px;" onchange="calculateTTime();">
+
 </select>
 
 <br />
@@ -53,13 +48,8 @@ javascript_inc: <script src="./js/turnaround.js"></script>
 
 <li>Valid for
 
-<select name="qty" class="form-control" style="display:inline;max-width:250px;" onchange="calculateTTime();">
-<option value="1" selected="selected">1 - 500</option>
-<option value="2">501 - 1000</option>
-<option value="3">1001 - 2000</option>
-<option value="5">2001 - 5000</option>
-<option value="7">5001 - 10000</option>
-<option value="9">10001 - 25000</option>
+<select name="qty" id="qty_selection" class="form-control" style="display:inline;max-width:250px;" onchange="calculateTTime();">
+
 </select>
 
  buttons</li>
@@ -74,17 +64,10 @@ javascript_inc: <script src="./js/turnaround.js"></script>
 
 
 
-<li>Has to ship today using 
+<li>Has to ship using 
 
 <select name="shipping" id="shipping" class="form-control" style="display:inline;max-width:300px;" onchange="calculateTTime();">
-<option value="1" selected="selected">UPS Next Day Air</option>
-<option value="2">USPS Priority Mail Express</option>
-<option value="2">UPS 2nd Day Air</option>
-<option value="3">UPS 3 Day Select</option>
-<option value="3">USPS Priority Mail</option>
-<option value="6">UPS Ground</option>
-<option value="7">USPS First Class Mail</option>
-<option value="7">Wacky Saver Shipping</option>
+
 </select>
 
 </li>
