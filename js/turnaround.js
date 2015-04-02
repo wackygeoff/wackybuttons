@@ -41,7 +41,7 @@ var productionTime = [];
 qtySelection[0] = '1 - 500';
 productionTime[0] = [];
 productionTime[0]['best'] = 0;
-productionTime[0]['worst'] = 1;
+productionTime[0]['worst'] = 0;
 qtySelection[1] = '501 - 1000';
 productionTime[1] = [];
 productionTime[1]['best'] = 1;
@@ -293,10 +293,11 @@ return outputhtml;
 
 //calculate date we are shipping out
 function calculate_ship_date(inpdate){
-var shipday = inpdate || new Date();//date inputted otherwise use todays date
-
-if(!inpdate){//if no date inputted as the shipping date, assume shipping tomorrow
-shipday.setDate(shipday.getDate() + 1);//set to next day
+if(inpdate){
+var shipday = new Date(inpdate.getTime());
+}else{
+var shipday = new Date(); //if no input date, set to todays date
+shipday.setDate(shipday.getDate() + 1); //set to tomorrows date - default 
 }
 //then check if the day we set falls on a day that cannot be shipped out
 //if so change to the day after
@@ -327,8 +328,10 @@ return shipday;
 //calculate date of delivery
 function calculate_delivery_date(transitdays, shipdate){
 //takes the number of days in transit as an integer
+//also must take a starting date (shipping date) as input
 var upsorpo = is_ups_or_po();
-var deliveryday = shipdate || calculate_ship_date();//use date inputted as ship date otherwise use tomorrows date
+var deliveryday = new Date(shipdate.getTime());
+
 
 for(i = 1; i <= transitdays; i++){//loop for each transit day
 
@@ -466,7 +469,7 @@ shippingError = shippingArr[3];
 
 turnaroundTimeBest = eval(paymentTimeBest) + eval(productionTimeBest) + eval(shippingTimeBest);
 turnaroundTimeWorst = eval(paymentTimeWorst) + eval(productionTimeWorst) + eval(shippingTimeWorst);
-//alert(transitTime);
+
 
 //figure out when we will ship out
 var curtime = new Date();
@@ -480,7 +483,33 @@ shipdate = calculate_ship_date(); //ship tomorrow or next available day
 }
 
 
-deliverydate = calculate_delivery_date(turnaroundTimeBest, shipdate);
+
+deliverydateBest = calculate_delivery_date(turnaroundTimeBest, shipdate);
+deliverydateWorst = calculate_delivery_date(turnaroundTimeWorst, shipdate);
+//alert(deliverydateBest + " " + deliverydateWorst);
+
+var receivewhen = "XX/XX/XXXX";
+if(deliverydateBest.getTime() == deliverydateWorst.getTime()){
+receivewhen = translateWeekday(deliverydateBest.getDay()) + "<br />" + (deliverydateBest.getMonth() + 1) + "/" + deliverydateBest.getDate() + "/" + deliverydateBest.getFullYear();
+receivewhentitle = "You could receive your buttons on";
+}else{
+receivewhen = ' \
+<table align="center"> \
+<tr> \
+<td> \
+';
+receivewhen = receivewhen + translateWeekday(deliverydateBest.getDay()) + "<br />" + (deliverydateBest.getMonth() + 1) + "/" + deliverydateBest.getDate() + "/" + deliverydateBest.getFullYear();
+receivewhen = receivewhen + "</td><td>&nbsp; - &nbsp;</td><td>";
+receivewhen = receivewhen + translateWeekday(deliverydateWorst.getDay()) + "<br />" + (deliverydateWorst.getMonth() + 1) + "/" + deliverydateWorst.getDate() + "/" + deliverydateWorst.getFullYear();
+receivewhen = receivewhen + '\
+</td> \
+</tr> \
+</table> \
+';
+
+receivewhentitle = "You could receive your buttons sometime";
+}
+
 //--end figure out delivery date--
 
 //--include any special cases--
@@ -494,8 +523,9 @@ if(shippingSpecialCase){
 otherfineprinttext = otherfineprinttext + "<li>" + shippingSpecialCase + "</li>";
 }
 
-$('#receivewhen').html(translateWeekday(deliverydate.getDay()));
-$('#receivedate').html((deliverydate.getMonth() + 1) + "/" + deliverydate.getDate() + "/" + deliverydate.getFullYear());
+
+$('#receivewhen_title').html(receivewhentitle);
+$('#receivewhen').html(receivewhen);
 $('#paymentdetails').html(paymentdetailstext);
 $('#otherfineprint').html(otherfineprinttext);
 //update the time left countdown
