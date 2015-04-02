@@ -25,11 +25,11 @@ javascript_inc: <script src="./js/turnaround.js"></script>
 
 <div class="turnaround-quickcal-header">Turnaround Time Calculator</div>
 
-<div class="turnaround-quickcal-abovedate">You could receive your buttons on</div>
+<div class="turnaround-quickcal-abovedate" id="receivewhen_title">You could receive your buttons on</div>
 
-<div class="turnaround-quickcal-shipdate"><span id="receivewhen"></span><br /><span id="receivedate">XX/XX/XXXX</span></div>
+<div class="turnaround-quickcal-shipdate" id="receivewhen">XX/XX/XXXX</div>
 
-<div class="turnaround-quickcal-timeleft">Time Left to order to get this deadline: <span id="timeleft"></span></div>
+<div class="turnaround-quickcal-timeleft" id="timeleft_container">Time Left to order to get this deadline: <span id="timeleft"></span></div>
 
 <div class="turnaround-quickcal-table-footer">
 <form name="timecalc" action="">
@@ -37,13 +37,8 @@ javascript_inc: <script src="./js/turnaround.js"></script>
 
 <li>Valid if you pay with 
 
-<select name="paying" class="form-control" style="display:inline;max-width:300px;" onchange="calculateTTime();">
-<option value="-1" selected="selected">Credit Card by phone</option>
-<option value="0">Credit Card online</option>
-<option value="0">PayPal - Balance</option>
-<option value="4">PayPal - Bank Account (eCheck)</option>
-<option value="7">Check by mail</option>
-<option value="7">Money Order by mail</option>
+<select name="paying" id="payment_types" class="form-control" style="display:inline;max-width:300px;" onchange="calculateTTime();">
+
 </select>
 
 <br />
@@ -53,39 +48,26 @@ javascript_inc: <script src="./js/turnaround.js"></script>
 
 <li>Valid for
 
-<select name="qty" class="form-control" style="display:inline;max-width:250px;" onchange="calculateTTime();">
-<option value="1" selected="selected">1 - 500</option>
-<option value="2">501 - 1000</option>
-<option value="3">1001 - 2000</option>
-<option value="5">2001 - 5000</option>
-<option value="7">5001 - 10000</option>
-<option value="9">10001 - 25000</option>
+<select name="qty" id="qty_selection" class="form-control" style="display:inline;max-width:250px;" onchange="calculateTTime();">
+
 </select>
 
  buttons</li>
 
 <li>Country Shipping to
 
-<select name="country" class="form-control" style="display:inline;max-width:300px;" onchange="changeCountry();">
-<option value="United States of America" selected="selected">United States of America</option>
-<option value="Great Britain and Northern Ireland">Great Britain and Northern Ireland</option><option value="Aruba">Aruba</option><option value="Australia">Australia</option><option value="Austria">Austria</option><option value="Bahamas">Bahamas</option><option value="Bangladesh">Bangladesh</option><option value="Barbados">Barbados</option><option value="Belgium">Belgium</option><option value="Bonaire">Bonaire</option><option value="Brazil">Brazil</option><option value="Brunei Darussalam">Brunei Darussalam</option><option value="Canada">Canada</option><option value="Cayman Islands">Cayman Islands</option><option value="Chile">Chile</option><option value="China">China</option><option value="Colombia">Colombia</option><option value="Costa Rica">Costa Rica</option><option value="Curacao">Curacao</option><option value="Cyprus">Cyprus</option><option value="Czech Republic">Czech Republic</option><option value="Denmark">Denmark</option><option value="Dominican Republic">Dominican Republic</option><option value="Egypt">Egypt</option><option value="El Salvador">El Salvador</option><option value="England">England</option><option value="Estonia">Estonia</option><option value="Finland">Finland</option><option value="France">France</option><option value="Gambia">Gambia</option><option value="Germany">Germany</option><option value="Ghana">Ghana</option><option value="Gibraltar">Gibraltar</option><option value="Greece">Greece</option><option value="Guyana">Guyana</option><option value="Haiti">Haiti</option><option value="Hong Kong">Hong Kong</option><option value="Hungary">Hungary</option><option value="Iceland">Iceland</option><option value="India">India</option><option value="Indonesia">Indonesia</option><option value="Ireland">Ireland</option><option value="Israel">Israel</option><option value="Italy">Italy</option><option value="Jamaica">Jamaica</option><option value="Japan">Japan</option><option value="Kenya">Kenya</option><option value="Korea, Republic of (South Korea)">Korea, Republic of (South Korea)</option><option value="Kuwait">Kuwait</option><option value="Latvia">Latvia</option><option value="Liechtenstein">Liechtenstein</option><option value="Luxembourg">Luxembourg</option><option value="Malaysia">Malaysia</option><option value="Malta">Malta</option><option value="Mauritius">Mauritius</option><option value="Mexico">Mexico</option><option value="Netherlands">Netherlands</option><option value="New Zealand">New Zealand</option><option value="Norway">Norway</option><option value="Panama">Panama</option><option value="Philippines">Philippines</option><option value="Poland">Poland</option><option value="Portugal">Portugal</option><option value="Saba">Saba</option><option value="Saint Eustatius">Saint Eustatius</option><option value="Saint Lucia">Saint Lucia</option><option value="Saint Maarten">Saint Maarten</option><option value="Saudi Arabia">Saudi Arabia</option><option value="Singapore">Singapore</option><option value="South Africa">South Africa</option><option value="Spain">Spain</option><option value="Sweden">Sweden</option><option value="Switzerland">Switzerland</option><option value="Taiwan">Taiwan</option><option value="Thailand">Thailand</option><option value="Trinidad and Tobago">Trinidad and Tobago</option><option value="Turkey">Turkey</option><option value="Turks and Caicos Islands">Turks and Caicos Islands</option><option value="United Arab Emirates">United Arab Emirates</option><option value="Vietnam">Vietnam</option></select>
-
+<select name="country" id="country_dd" class="form-control" style="display:inline;max-width:300px;" onchange="changeCountry();">
+<option value="United States of America">United States of America</option>
+</select>
 
 </li>
 
 
 
-<li>Has to ship today using 
+<li>Has to ship using 
 
 <select name="shipping" id="shipping" class="form-control" style="display:inline;max-width:300px;" onchange="calculateTTime();">
-<option value="1" selected="selected">UPS Next Day Air</option>
-<option value="2">USPS Priority Mail Express</option>
-<option value="2">UPS 2nd Day Air</option>
-<option value="3">UPS 3 Day Select</option>
-<option value="3">USPS Priority Mail</option>
-<option value="6">UPS Ground</option>
-<option value="7">USPS First Class Mail</option>
-<option value="7">Wacky Saver Shipping</option>
+
 </select>
 
 </li>
