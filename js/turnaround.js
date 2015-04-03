@@ -171,7 +171,7 @@ var curhours = curtime.getUTCHours()
 
 //-------conditions for how long it takes to pay--------------
 if(paymenttypes[payingval] == "Credit card by phone" && curhours < 16 && curhours > 11){
-specialcase = "by 12:00 PM Noon EST Today! Call us at 585-267-7670 to get your order scheduled.";
+specialcase = "by 12:00 PM Noon EST Today! Call us at 585-267-7670 to see if we can schedule you order to ship today.";
 }
 else if(paymenttypes[payingval] == 'Check by mail' || paymenttypes[payingval] == 'Money order by mail'){
 specialcase = "This quotation assumes your payment will take 1 week (7 days) for us to receive your payment in the mail.";
