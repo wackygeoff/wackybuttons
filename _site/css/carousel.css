@@ -1,15 +1,22 @@
 /***** Carousel *****/
+
+
+
 .carousel {
 height: 400px;
 overflow: hidden;
 }
 
 .carousel-caption {
-top: 100px;
+top: 75px;
+font-weight: bold;
 }
 
 .carousel-caption h3 {
 font-weight: bold;
+font-size:64px;
+font-family: Bebas Neue, Century Gothic, Arial, Helvetica, Verdana, MS Serif, Serif;
+text-shadow: 10px 5px 10px #000000;
 }
 
 /* Centers the Carousel Image */
@@ -19,7 +26,7 @@ min-width: 100%;
 }
 
 .carousel-caption-wacky {
-background-color: rgba(0, 0, 0, 0.4);
+background-color: rgba(0, 0, 0, 0.6);
 padding: 1px 5px 10px 5px;
 border-radius: 20px;
 }
@@ -31,6 +38,13 @@ border-radius: 20px;
 	}
 
 	.carousel-caption {
-	top: 20px;
+	top: 10px;
 	}
+	
+	.carousel-caption h3 {
+font-weight: bold;
+font-size:32px;
+font-family: Bebas Neue, Century Gothic, Arial, Helvetica, Verdana, MS Serif, Serif;
+}
+
 }
