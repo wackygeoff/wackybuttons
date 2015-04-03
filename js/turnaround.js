@@ -160,7 +160,7 @@ return cutofftime;
 function check_if_holiday(inpdate){
 var retval = false;
 var testDate;
-for(k = 0; k < holidays.length; k++){
+for(var k = 0; k < holidays.length; k++){
 testDate = new Date(holidays[k]);
 if(testDate.getMonth() == inpdate.getMonth() && testDate.getDate() == inpdate.getDate() && testDate.getYear() == inpdate.getYear()){
 retval = true;
@@ -174,7 +174,7 @@ return retval;
 function convertHolidayStrToDates(){
 //works off of global array of holiday strings
 //converts holiday strings to datastrings that javascript can recognize with date object
-for(i = 0; i < holidays.length; i++){
+for(var i = 0; i < holidays.length; i++){
 holidays[i] = Date.parse(holidays[i]);
 }
 
@@ -302,7 +302,7 @@ var curtime = new Date();
 var curhours = curtime.getUTCHours();
 var curday = curtime.getUTCDay();
 
-for(i = 0; i < paymenttypes.length; i++){
+for(var i = 0; i < paymenttypes.length; i++){
 
 //--special case--if not between proper times to pay by phone and not a weekend then display cc/paypal online by default
 if(paymenttypes[i] == 'Credit card or PayPal online' && (curhours > 16 || curhours < 11) && curday != 6 && curday != 0){
@@ -320,7 +320,7 @@ return outputhtml;
 function qty_selections_html(){
 qtysel = getQtySelections()[0];
 outputhtml = "";
-for(i = 0; i < qtysel.length; i++){
+for(var i = 0; i < qtysel.length; i++){
 outputhtml = outputhtml + '<option value="'+i+'">'+qtysel[i]+'</option>';
 }
 return outputhtml;
@@ -334,7 +334,7 @@ var curtime = new Date();
 var curhours = curtime.getUTCHours();
 var curday = curtime.getUTCDay();
 
-for(i = 0; i < domshipsel.length; i++){
+for(var i = 0; i < domshipsel.length; i++){
 //--special case--if paying by phone today during proper time and it is Friday, select Express
 if(getPaymentTypes()[0][document.timecalc.paying.value] == "Credit card by phone" && curhours < 16 && curhours > 11 && curday == 5 && domshipsel[i] == "USPS Priority Mail Express"){
 outputhtml = outputhtml + '<option value="'+i+'" selected="selected">'+domshipsel[i]+'</option>';
@@ -350,7 +350,7 @@ return outputhtml;
 function international_shipping_html(){
 intershipsel = getInternationalShipping()[0];
 outputhtml = "";
-for(i = 0; i < intershipsel.length; i++){
+for(var i = 0; i < intershipsel.length; i++){
 outputhtml = outputhtml + '<option value="'+i+'">'+intershipsel[i]+'</option>';
 }
 return outputhtml;
@@ -400,7 +400,7 @@ var upsorpo = is_ups_or_po();
 var deliveryday = new Date(shipdate.getTime());
 
 
-for(i = 1; i <= transitdays; i++){//loop for each transit day
+for(var i = 1; i <= transitdays; i++){//loop for each transit day
 
 //set the day to the next day
 deliveryday.setDate(deliveryday.getDate() + 1);//add a day
