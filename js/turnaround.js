@@ -160,8 +160,8 @@ return cutofftime;
 function check_if_holiday(inpdate){
 var retval = false;
 var testDate;
-for(i = 0; i < holidays.length; i++){
-testDate = new Date(holidays[i]);
+for(k = 0; k < holidays.length; k++){
+testDate = new Date(holidays[k]);
 if(testDate.getMonth() == inpdate.getMonth() && testDate.getDate() == inpdate.getDate() && testDate.getYear() == inpdate.getYear()){
 retval = true;
 }
