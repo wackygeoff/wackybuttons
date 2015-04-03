@@ -9,7 +9,7 @@ javascript_inc: <script src="./js/turnaround.js"></script>
 <div class="row">
 <div class="col-md-7">
 <h1>Super Fast Turnaround</h1>
-<span style="font-weight:bold;">On Average </span><span style="font-weight:bold; color:#fea82b;">500</span><span style="font-weight:bold;"> buttons or less ships the day after you pay!</span>
+<span style="font-weight:bold;">On Average </span><span style="font-weight:bold; color:#1094c4;">500</span><span style="font-weight:bold;"> buttons or less ships the day after you pay!</span>
 
 </div>
 <div class="col-md-5">
@@ -23,7 +23,7 @@ javascript_inc: <script src="./js/turnaround.js"></script>
 <!--if between 9:00 AM and 12:00 PM-->
 <div class="turnaround-quickcal">
 
-<div class="turnaround-quickcal-header">Turnaround Time Calculator</div>
+<div class="turnaround-quickcal-header">Turnaround Time Estimator</div>
 
 <div class="turnaround-quickcal-abovedate" id="receivewhen_title">You could receive your buttons on</div>
 
@@ -54,6 +54,17 @@ javascript_inc: <script src="./js/turnaround.js"></script>
 
  buttons</li>
 
+
+
+<li>Must ship using 
+
+<select name="shipping" id="shipping" class="form-control" style="display:inline;max-width:300px;" onchange="calculateTTime();">
+
+</select>
+
+</li>
+
+
 <li>Country Shipping to
 
 <select name="country" id="country_dd" class="form-control" style="display:inline;max-width:300px;" onchange="changeCountry();">
@@ -62,14 +73,8 @@ javascript_inc: <script src="./js/turnaround.js"></script>
 
 </li>
 
-
-
-<li>Has to ship using 
-
-<select name="shipping" id="shipping" class="form-control" style="display:inline;max-width:300px;" onchange="calculateTTime();">
-
-</select>
-
+<li>
+This estimation assumes you are ready to pay for your buttons. It does not consider the time it takes to setup and design your buttons prior to being ready to order. 
 </li>
 
 </ul>
@@ -91,7 +96,20 @@ javascript_inc: <script src="./js/turnaround.js"></script>
 If you need your buttons shipped overnight today, we recommend contacting us by phone (1-585-267-7670) to see what we can do for you. We will try our best to make adjustments and meet your deadline
 
 <br /> <br />
-Also our <a href="./prices.html#pricecalc">price calculator</a> provides detailed prices and turnaround times.
+
+<b>We gladly accept special requests!</b>
+
+<br /> <br />
+
+You are always welcome to contact us for special arrangements to meet your deadline and budget. We are capible of shipping different ways other than our website allows, like using a customer UPS or FedEx account, or shipping with Saturday or Sunday Delivery. It is also possible our volume can be lower than normal and we can squeeze an order in at the end of the day to still ship the same day. If you visit us in person it may be possible to fulfill your order as you wait as long as your order is small enough and we can fit it in our production line for the day.
+
+<br /> <br />
+
+<b>Next step: calculate the price of your order.</b>
+
+<br /> <br />
+
+Our <a href="./prices.html#pricecalc">price calculator</a> provides detailed prices and turnaround times.
 
 
 </div><!--col-md-12-->

@@ -3,6 +3,11 @@
 //--by adding or removing from the arays below will control how the forms will display on the page--
 //--and what will be available to the customer to choose from--
 
+//--globals--
+//array to store holidays. we only need to get this one so it will
+//get populated using fetchholidays function which is called in the load function at the very bottom of this script
+holidays = [];
+
 //types of payment accepted
 function getPaymentTypes(){
 var paymentType = [];
@@ -151,9 +156,39 @@ return cutofftime;
 //--end determine the cutoff time to pay for an order--
 
 
+//-----begin holiday functions, to see if it is a holiday that we are closed and shipping is not delivered--------
+function check_if_holiday(inpdate){
+var retval = false;
+var testDate;
+for(var k = 0; k < holidays.length; k++){
+testDate = new Date(holidays[k]);
+if(testDate.getMonth() == inpdate.getMonth() && testDate.getDate() == inpdate.getDate() && testDate.getYear() == inpdate.getYear()){
+retval = true;
+}
+}
+
+return retval;
+}
 
 
+function convertHolidayStrToDates(){
+//works off of global array of holiday strings
+//converts holiday strings to datastrings that javascript can recognize with date object
+for(var i = 0; i < holidays.length; i++){
+holidays[i] = Date.parse(holidays[i]);
+}
 
+}
+
+function fetchHolidays(){
+$.get("holiday_php_output.txt", function(data){
+//alert(data);
+holidays = data.split("|"); //get array of holidays
+convertHolidayStrToDates();
+calculateTTime();
+});
+}//end fetch holidays
+//-----end holiday functions, to see if it is a holiday that we are closed and shipping is not delivered--------
 
 
 function evalPaymentTime(){
@@ -166,22 +201,28 @@ var payingval = document.timecalc.paying.value;
 var best = paymenttime[payingval]['best'];
 var worst = paymenttime[payingval]['worst'];
 var curtime = new Date();
-var curhours = curtime.getUTCHours()
-
+var curhours = curtime.getUTCHours();
+var curday = curtime.getUTCDay();
 
 //-------conditions for how long it takes to pay--------------
 if(paymenttypes[payingval] == "Credit card by phone" && curhours < 16 && curhours > 11){
-specialcase = "by 12:00 PM Noon EST Today! Call us at 585-267-7670 to get your order scheduled.";
+specialcase = "by 12:00 PM Noon EST Today! Call us at 585-267-7670 to see if we can schedule you order to ship today.";
 }
 else if(paymenttypes[payingval] == 'Check by mail' || paymenttypes[payingval] == 'Money order by mail'){
-specialcase = "This quotation assumes your payment will take 1 week (7 days) for us to receive your payment in the mail.";
+specialcase = "This estimation assumes your payment will take 1 week (7 days) for us to receive your payment in the mail.";
 }
-else{
-specialcase = "before 6:00 AM Eastern Standard Time.";
+
 //if after noon and paying with cc by phone
-if(paymenttypes[payingval] == "Credit card by phone"){
+else if(paymenttypes[payingval] == "Credit card by phone"){
 specialcase = "You can order by phone from 9:00 AM - 5:00 PM Eastern Standard Time, Monday - Friday.";
 }
+//if friday saturday or sunday deadline to pay is monday
+else if(curday == 5 || curday == 6 || curday == 0){
+specialcase = "before 6:00 AM, Monday, Eastern Standard Time.";
+}
+
+else{
+specialcase = "before 6:00 AM Eastern Standard Time.";
 }
 //-------end conditions for how long it takes to pay--------------
 
@@ -239,7 +280,7 @@ var worst = shippingtime[document.timecalc.shipping.value]['worst'];
 
 //-------conditions for how long it takes to ship--------------
 if(shippingtypes[document.timecalc.shipping.value].toLowerCase().indexOf("international") > -1){
-specialcase = "This quotation assumes minimal customs delays for international shipments. Delays at customs could cause your package to be received later than expected.";
+specialcase = "This estimation assumes minimal customs delays for international shipments. Delays at customs could cause your package to be received later than expected.";
 }
 //-------conditions for how long it takes to ship--------------
 
@@ -256,8 +297,22 @@ return new Array(best, worst, specialcase, error);
 function payment_types_html(){
 paymenttypes = getPaymentTypes()[0];
 outputhtml = "";
-for(i = 0; i < paymenttypes.length; i++){
+
+var curtime = new Date();
+var curhours = curtime.getUTCHours();
+var curday = curtime.getUTCDay();
+
+for(var i = 0; i < paymenttypes.length; i++){
+
+//--special case--if not between proper times to pay by phone and not a weekend then display cc/paypal online by default
+if(paymenttypes[i] == 'Credit card or PayPal online' && (curhours > 16 || curhours < 11) && curday != 6 && curday != 0){
+outputhtml = outputhtml + '<option value="'+i+'" selected="selected">'+paymenttypes[i]+'</option>';
+}//--end special case--if not between proper times to pay by phone and not a weekend then display cc/paypal online by default
+else{
 outputhtml = outputhtml + '<option value="'+i+'">'+paymenttypes[i]+'</option>';
+}
+
+
 }
 return outputhtml;
 }
@@ -265,7 +320,7 @@ return outputhtml;
 function qty_selections_html(){
 qtysel = getQtySelections()[0];
 outputhtml = "";
-for(i = 0; i < qtysel.length; i++){
+for(var i = 0; i < qtysel.length; i++){
 outputhtml = outputhtml + '<option value="'+i+'">'+qtysel[i]+'</option>';
 }
 return outputhtml;
@@ -274,8 +329,20 @@ return outputhtml;
 function domestic_shipping_html(){
 domshipsel = getDomesticShipping()[0];
 outputhtml = "";
-for(i = 0; i < domshipsel.length; i++){
+
+var curtime = new Date();
+var curhours = curtime.getUTCHours();
+var curday = curtime.getUTCDay();
+
+for(var i = 0; i < domshipsel.length; i++){
+//--special case--if paying by phone today during proper time and it is Friday, select Express
+if(getPaymentTypes()[0][document.timecalc.paying.value] == "Credit card by phone" && curhours < 16 && curhours > 11 && curday == 5 && domshipsel[i] == "USPS Priority Mail Express"){
+outputhtml = outputhtml + '<option value="'+i+'" selected="selected">'+domshipsel[i]+'</option>';
+}//--end special case--if paying by phone today during proper time and it is Friday, select Express
+else{
 outputhtml = outputhtml + '<option value="'+i+'">'+domshipsel[i]+'</option>';
+}
+
 }
 return outputhtml;
 }
@@ -283,7 +350,7 @@ return outputhtml;
 function international_shipping_html(){
 intershipsel = getInternationalShipping()[0];
 outputhtml = "";
-for(i = 0; i < intershipsel.length; i++){
+for(var i = 0; i < intershipsel.length; i++){
 outputhtml = outputhtml + '<option value="'+i+'">'+intershipsel[i]+'</option>';
 }
 return outputhtml;
@@ -301,7 +368,7 @@ shipday.setDate(shipday.getDate() + 1); //set to tomorrows date - default
 }
 //then check if the day we set falls on a day that cannot be shipped out
 //if so change to the day after
-while(shipday.getDay() == 6 || shipday.getDay() == 0){ // || shipday == holiday
+while(shipday.getUTCDay() == 6 || shipday.getUTCDay() == 0 || check_if_holiday(shipday)){ // || shipday == holiday
 shipday.setDate(shipday.getDate() + 1);
 }
 
@@ -333,13 +400,13 @@ var upsorpo = is_ups_or_po();
 var deliveryday = new Date(shipdate.getTime());
 
 
-for(i = 1; i <= transitdays; i++){//loop for each transit day
+for(var i = 1; i <= transitdays; i++){//loop for each transit day
 
 //set the day to the next day
 deliveryday.setDate(deliveryday.getDate() + 1);//add a day
 //then check if the day we set falls on a day that cannot be delivered
 //if so change to the day after
-while( (upsorpo == 'ups' && deliveryday.getDay() == 6) || deliveryday.getDay() == 0){ // || shipday == holiday
+while( (upsorpo == 'ups' && deliveryday.getUTCDay() == 6) || deliveryday.getUTCDay() == 0 || check_if_holiday(deliveryday)){ // || shipday == holiday
 deliveryday.setDate(deliveryday.getDate() + 1);
 }
 
@@ -419,12 +486,30 @@ var curtime = new Date();
 //figureout current time
 var curhours = curtime.getUTCHours(); //0 - 23
 var curminutes = curtime.getUTCMinutes(); //0 - 59
+var curday = curtime.getUTCDay();
 
 var cutofftime = getCutOffTime(curhours);
 
-if(curhours > cutofftime){
+//if past the cutoff time for today, if friday add the weekend to the countown
+if(curhours > cutofftime && (curday == 5)){
+hoursleft = ((72-curhours) + cutofftime) - 1;
+minsleft = 60 - curminutes;
+}
+//if past the cutoff time for today, if saturday add the weekend to the countown
+else if(curhours > cutofftime && (curday == 6)){
+hoursleft = ((48-curhours) + cutofftime) - 1;
+minsleft = 60 - curminutes;
+}
+//if past the cutoff time for today, if sunday add the weekend to the countown
+else if(curday == 0){
 hoursleft = ((24-curhours) + cutofftime) - 1;
 minsleft = 60 - curminutes;
+}
+//if past the cutoff time for today set it to tomorrow's custoff time
+else if(curhours > cutofftime){
+hoursleft = ((24-curhours) + cutofftime) - 1;
+minsleft = 60 - curminutes;
+//else it is not past the cutoff time for today
 }else{
 hoursleft = (cutofftime - curhours) - 1;
 minsleft = 60 - curminutes;
@@ -439,7 +524,7 @@ setTimeout(calcTimeLeftCounter, 30000); //every 30 seconds
 
 
 
-//Main function to calculate the turnaround and populate all the html
+//----Main function to calculate the turnaround and populate all the html----
 function calculateTTime(){
 
 //--evaluate the form fields submitted--
@@ -478,7 +563,7 @@ showcountdown = true;
 
 //figure out when we will ship out
 var curtime = new Date();
-var curhours = curtime.getUTCHours()
+var curhours = curtime.getUTCHours();
 var shipdate;
 //if paying by phone today during proper time
 if(getPaymentTypes()[0][document.timecalc.paying.value] == "Credit card by phone" && curhours < 16 && curhours > 11){
@@ -499,7 +584,7 @@ receivewhen = "Contact Wacky Buttons";
 receivewhentitle = "Could not calculate"; 
 showcountdown = false;
 }else if(deliverydateBest.getTime() == deliverydateWorst.getTime()){
-receivewhen = translateWeekday(deliverydateBest.getDay()) + "<br />" + (deliverydateBest.getMonth() + 1) + "/" + deliverydateBest.getDate() + "/" + deliverydateBest.getFullYear();
+receivewhen = translateWeekday(deliverydateBest.getUTCDay()) + "<br />" + (deliverydateBest.getUTCMonth() + 1) + "/" + deliverydateBest.getUTCDate() + "/" + deliverydateBest.getUTCFullYear();
 receivewhentitle = "You could receive your buttons on";
 }else{
 receivewhen = ' \
@@ -507,9 +592,9 @@ receivewhen = ' \
 <tr> \
 <td> \
 ';
-receivewhen = receivewhen + translateWeekday(deliverydateBest.getDay()) + "<br />" + (deliverydateBest.getMonth() + 1) + "/" + deliverydateBest.getDate() + "/" + deliverydateBest.getFullYear();
+receivewhen = receivewhen + translateWeekday(deliverydateBest.getUTCDay()) + "<br />" + (deliverydateBest.getUTCMonth() + 1) + "/" + deliverydateBest.getUTCDate() + "/" + deliverydateBest.getUTCFullYear();
 receivewhen = receivewhen + "</td><td>&nbsp; - &nbsp;</td><td>";
-receivewhen = receivewhen + translateWeekday(deliverydateWorst.getDay()) + "<br />" + (deliverydateWorst.getMonth() + 1) + "/" + deliverydateWorst.getDate() + "/" + deliverydateWorst.getFullYear();
+receivewhen = receivewhen + translateWeekday(deliverydateWorst.getUTCDay()) + "<br />" + (deliverydateWorst.getUTCMonth() + 1) + "/" + deliverydateWorst.getUTCDate() + "/" + deliverydateWorst.getUTCFullYear();
 receivewhen = receivewhen + '\
 </td> \
 </tr> \
@@ -547,6 +632,8 @@ $('#timeleft_container').hide();
 }
 
 }
+//----End Main function to calculate the turnaround and populate all the html----
+
 
 
 //after the page is loaded initiate all the dropdowns and calculate turnaround time if someone were to pay right now
@@ -556,5 +643,6 @@ $('#country_dd').load('country_dropdown_php_output.txt');
 $('#payment_types').html(payment_types_html());
 $('#qty_selection').html(qty_selections_html());
 $('#shipping').html(domestic_shipping_html());
-calculateTTime();
+fetchHolidays(); //calls calculateTTime(); after holidays are loaded
+
 });

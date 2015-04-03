@@ -14,15 +14,17 @@ font-size:24px;
 line-height:28px;
 padding:10px;
 border-bottom: 2px #1094c4 solid;
-background-color: orange;
-font-color: #ffffff;
+background-color: #FD9A00;
 border-top-left-radius: 20px;
 border-top-right-radius: 20px;
 }
 
 
 .turnaround-quickcal-abovedate{
+font-weight:bold;
 padding-top:10px;
+background-color: #ffffff;
+color: #1094c4;
 }
 
 .turnaround-quickcal-shipdate{
@@ -30,14 +32,23 @@ font-size:32px;
 font-weight:bold;
 line-height:32px;
 padding-bottom:10px;
+background-color: #ffffff;
+color: #1094c4;
+}
+
+.turnaround-quickcal-timeleft{
+font-weight:bold;
+background-color: #ffffff;
+color: #1094c4;
+padding-bottom:10px;
 }
 
 .turnaround-quickcal-table-footer{
-padding-top:10px;
+padding:10px;
 border-top: 2px #1094c4 solid;
 font-weight:bold;
 text-align:left;
-background-color: orange;
+background-color: #FD9A00;
 border-bottom-left-radius: 20px;
 border-bottom-right-radius: 20px;
 }
