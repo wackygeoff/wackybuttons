@@ -41,3 +41,16 @@ color: #1094C4;
 li {
 padding-bottom: 10px;
 }
+
+/** Shadows **/
+.thumbnail, .btn, .carousel-caption-wacky, .u-border-blue, .turnaround-quickcal, .store-menu-container, iframe {
+-webkit-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+-moz-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+.icon .fa {
+-webkit-text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+-moz-text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+}
