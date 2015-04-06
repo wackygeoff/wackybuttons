@@ -13,15 +13,15 @@ layout: wackybuttons
             		<label>Your name:</label>
                   	<input type="hidden" name="ar_subject" value="Wacky Buttons Create Page / upload.php" class="form-control" /> 
 					<input type="hidden" name="comingfrom" value="http://www.wackybuttons.com/create.php" class="form-control" />
-                  	<input type="text" name="realname" size="25" maxlength="90" class="form-control" />
+                  	<input type="text" name="realname" size="25" maxlength="90" class="form-control long-field" />
 				</div><!-- form-group -->
 				<div class="form-group">
                 	<label>Your Email address</label>
-                    <input type="text" name="email" size="25" maxlength="90" class="form-control" />
+                    <input type="text" name="email" size="25" maxlength="90" class="form-control long-field" />
 				</div><!-- form-group -->
 				<div class="form-group">
                 	<label>Button Size (diameter) you plan on ordering</label>
-                    <select name="Button Size" class="form-control">
+                    <select name="Button Size" class="form-control med-field">
                     	<option value="1 inch">1 inch</option>
                       	<option value="1 and 1/2 inch">1 and 1/2 inch</option>
                       	<option value="2 and 1/4 inch">2 and 1/4 inch</option>
@@ -30,7 +30,7 @@ layout: wackybuttons
                 </div><!-- form-group -->
                 <div class="form-group">
 					<label>What day do you need your buttons in hand?</label>
-					<select id="month" name="month" class="form-control">
+					<select id="month" name="month" class="form-control med-field">
   						<option id="asap" value="ASAP">No Deadline (ASAP)</option>
 						<option id="january" value="january">January</option>
 						<option id="february" value="february">February</option>
@@ -45,7 +45,7 @@ layout: wackybuttons
 						<option id="november" value="november">November</option>
 						<option id="december" value="december">December</option>
 					</select>
-					<select id="day" name="day" class="form-control">
+					<select id="day" name="day" class="form-control med-field">
   						<option value="ASAP">Select day of month (If applicable)</option>
 						<option value="1">1</option>
 						<option value="2">2</option>
@@ -84,7 +84,7 @@ layout: wackybuttons
                 	<label>Upload Image</label>
                     <input type="file" name="attachment" />
 					<p class="help-block">Size Limit: 25 MB - If your design is larger: Email your design to <a href="mailto:order@wackybuttons.com">order@wackybuttons.com</a></p>
-                    <input type="submit" value="Submit My Design" />
+                    <input type="submit" class="form-control btn-wacky short-field" value="Submit My Design" />
                 </div><!-- form-group -->				
 				<p>Add words or Comments:</p>
 				<p class="help-block">If you want to add words to your picture, or have us redesign anything, please use the <a href="http://www.wackybuttons.com/letusdesign.php">this form</a> instead.</p>
