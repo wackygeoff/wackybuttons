@@ -147,7 +147,7 @@ var cutofftime = 10;
 //check for special case
 //if cc by phone, shipping to US, 1-500 buttons, Next Day Air
 //12 pm is 4pm GMT (16 hundred hours GMT)
-if(getPaymentTypes()[0][document.timecalc.paying.value] == 'Credit card by phone' && (getDomesticShipping()[0][document.timecalc.shipping.value] == 'UPS Next Day Air' || getDomesticShipping()[0][document.timecalc.shipping.value] == 'USPS Priority Mail Express') && document.timecalc.country.value == "United States of America" && curhours < 16 && curhours > 11){
+if(getPaymentTypes()[0][document.timecalc.paying.value] == 'Credit card by phone' && (getDomesticShipping()[0][document.timecalc.shipping.value] == 'UPS Next Day Air' || getDomesticShipping()[0][document.timecalc.shipping.value] == 'USPS Priority Mail Express') && document.timecalc.country.value == "United States of America" && curhours < 16 && curhours >= 10){
 cutofftime = 16;
 }
 
@@ -205,17 +205,22 @@ var curhours = curtime.getUTCHours();
 var curday = curtime.getUTCDay();
 
 //-------conditions for how long it takes to pay--------------
-if(paymenttypes[payingval] == "Credit card by phone" && curhours < 16 && curhours > 11){
+//if paying by phone and before 12:00 pm and after 6:00 AM and not saturday and not sunday and not a holiday
+if(paymenttypes[payingval] == "Credit card by phone" && curhours < 16 && curhours >= 10 && curday != 6 && curday != 0 && !check_if_holiday(curtime)){
 specialcase = "by 12:00 PM Noon EST Today! Call us at 585-267-7670 to see if we can schedule you order to ship today.";
 }
+//if paying with a check by mail
 else if(paymenttypes[payingval] == 'Check by mail' || paymenttypes[payingval] == 'Money order by mail'){
 specialcase = "This estimation assumes your payment will take 1 week (7 days) for us to receive your payment in the mail.";
 }
 
-//if after noon and paying with cc by phone
+//if paying with cc by phone
 else if(paymenttypes[payingval] == "Credit card by phone"){
 specialcase = "You can order by phone from 9:00 AM - 5:00 PM Eastern Standard Time, Monday - Friday.";
 }
+
+//assuming only ordering online or wire transfer if got to this point
+
 //if friday saturday or sunday deadline to pay is monday
 else if(curday == 5 || curday == 6 || curday == 0){
 specialcase = "before 6:00 AM, Monday, Eastern Standard Time.";
@@ -304,10 +309,10 @@ var curday = curtime.getUTCDay();
 
 for(var i = 0; i < paymenttypes.length; i++){
 
-//--special case--if not between proper times to pay by phone and not a weekend then display cc/paypal online by default
-if(paymenttypes[i] == 'Credit card or PayPal online' && (curhours > 16 || curhours < 11) && curday != 6 && curday != 0){
+//--special case--if not between proper times to pay by phone or its the weekend then display cc/paypal online by default
+if(paymenttypes[i] == 'Credit card or PayPal online' && (curhours > 16 || curhours < 10 || curday == 6 || curday == 0)){
 outputhtml = outputhtml + '<option value="'+i+'" selected="selected">'+paymenttypes[i]+'</option>';
-}//--end special case--if not between proper times to pay by phone and not a weekend then display cc/paypal online by default
+}//--end special case--if not between proper times to pay by phone or its the weekend then display cc/paypal online by default
 else{
 outputhtml = outputhtml + '<option value="'+i+'">'+paymenttypes[i]+'</option>';
 }
@@ -336,7 +341,7 @@ var curday = curtime.getUTCDay();
 
 for(var i = 0; i < domshipsel.length; i++){
 //--special case--if paying by phone today during proper time and it is Friday, select Express
-if(getPaymentTypes()[0][document.timecalc.paying.value] == "Credit card by phone" && curhours < 16 && curhours > 11 && curday == 5 && domshipsel[i] == "USPS Priority Mail Express"){
+if(getPaymentTypes()[0][document.timecalc.paying.value] == "Credit card by phone" && curhours < 16 && curhours >= 10 && curday == 5 && domshipsel[i] == "USPS Priority Mail Express"){
 outputhtml = outputhtml + '<option value="'+i+'" selected="selected">'+domshipsel[i]+'</option>';
 }//--end special case--if paying by phone today during proper time and it is Friday, select Express
 else{
@@ -490,13 +495,13 @@ var curday = curtime.getUTCDay();
 
 var cutofftime = getCutOffTime(curhours);
 
-//if past the cutoff time for today, if friday add the weekend to the countown
-if(curhours > cutofftime && (curday == 5)){
+//if past the cutoff time for friday add the weekend to the countown
+if(curhours > cutofftime && curday == 5){
 hoursleft = ((72-curhours) + cutofftime) - 1;
 minsleft = 60 - curminutes;
 }
 //if past the cutoff time for today, if saturday add the weekend to the countown
-else if(curhours > cutofftime && (curday == 6)){
+else if(curday == 6){
 hoursleft = ((48-curhours) + cutofftime) - 1;
 minsleft = 60 - curminutes;
 }
@@ -564,9 +569,10 @@ showcountdown = true;
 //figure out when we will ship out
 var curtime = new Date();
 var curhours = curtime.getUTCHours();
+
 var shipdate;
 //if paying by phone today during proper time
-if(getPaymentTypes()[0][document.timecalc.paying.value] == "Credit card by phone" && curhours < 16 && curhours > 11){
+if(getPaymentTypes()[0][document.timecalc.paying.value] == "Credit card by phone" && curhours < 16 && curhours >= 10){
 shipdate = calculate_ship_date(curtime); //ship today
 }else{
 shipdate = calculate_ship_date(); //ship tomorrow or next available day

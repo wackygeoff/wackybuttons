@@ -385,13 +385,13 @@
 					<input type="hidden" name="ar_subject" value="Wacky Buttons Create Page / letusdesign.php" class="form-control"/> 
 					<input type="hidden" name="comingfrom" value="" class="form-control"/>
 					<label>Your name (required)</label>
-					<input type="text" name="realname" size="25" maxlength="90" class="form-control"/>
+					<input type="text" name="realname" size="25" maxlength="90" class="form-control long-field"/>
 				</div><!-- form-group -->
 				<div class="form-group">
 					<label>Your Email address (required)</label>
-					<input type="text" name="email" size="25" maxlength="90" class="form-control"/>
+					<input type="text" name="email" size="25" maxlength="90" class="form-control long-field"/>
 				</div><!-- form-group -->
-				<div class="form-group">
+				<div class="form-group med-field">
 					<label>Button Size (diameter) you plan on ordering</label>
 					<select name="Button Size" class="form-control">
 						<option value="1 inch">1 inch (standard size for bands)</option>
@@ -400,7 +400,7 @@
 						<option value="3 inch">3 inch</option>
 					</select>
 				</div><!-- form-group -->
-				<div class="form-group">
+				<div class="form-group med-field">
 					<label>What day do you need your buttons in hand?</label>
 					<select id="month" name="month" class="form-control">
 						<option id="asap" value="ASAP">No Deadline (ASAP)</option>
@@ -417,7 +417,7 @@
 						<option id="november" value="november">November</option>
 						<option id="december" value="december">December</option>
 					</select>
-					<select id="day" name="day" class="form-control">
+					<select id="day" name="day" class="form-control med-field">
 						<option value="ASAP">Select day of month (If applicable)</option>
 						<option value="1">1</option>
 						<option value="2">2</option>
@@ -454,17 +454,17 @@
 				</div><!-- form-group -->
 				<div class="form-group">
 					<label>Background color (optional)</label>
-					<input id="backgroundcolor" name="backgroundcolor" class="form-control color {adjust:false, pickerClosable:true, pickerOnfocus:false}" type="text" maxlength="120" value="Don't Care" />
-					<a href="javascript:document.getElementById('backgroundcolor').color.showPicker()"><button class="btn btn-default btn-wacky">Choose Color</button></a>
+					<input id="backgroundcolor" name="backgroundcolor" class="form-control med-field color {adjust:false, pickerClosable:true, pickerOnfocus:false}" type="text" maxlength="120" value="Don't Care" />
+					<button form="noform" class="form-control btn-wacky short-field" onclick="document.getElementById('backgroundcolor').color.showPicker();">Choose Color</button>
 				</div><!-- form-group -->
 				<div class="form-group">
 					<label>Text Color (optional)</label>
-					<input id="textcolor" name="textcolor" class="form-control color {adjust:false, pickerClosable:true, pickerOnfocus:false}" name="textcolor" type="text" maxlength="120" value="Don't Care" />
-					<a href="javascript:document.getElementById('textcolor').color.showPicker()"><button class="btn btn-default btn-wacky">Choose Color</button></a>
+					<input id="textcolor" name="textcolor" class="form-control med-field color {adjust:false, pickerClosable:true, pickerOnfocus:false}" name="textcolor" type="text" maxlength="120" value="Don't Care" />
+					<button form="noform" class="form-control btn-wacky short-field" onclick="document.getElementById('textcolor').color.showPicker();">Choose Color</button>
 				</div><!-- form-group -->
 				<div class="form-group">
 					<label>Font Type (optional)</label>
-					<input name="fonttype" type="text" maxlength="120" value="Don't Care" class="form-control" />
+					<input name="fonttype" type="text" maxlength="120" value="Don't Care" class="form-control med-field" />
 				</div><!-- form-group -->
 				<div class="form-group">
 					<label>Upload a digital picture you want us to work on (optional)</label>
@@ -476,7 +476,7 @@
 					<textarea class="form-control" cols="30" rows="4" name="WhatIWantittolooklike"></textarea>
 				</div><!-- form-group -->
 				<div class="form-group">
-					<input type="submit" value="Send Me My FREE Designs" class="form-control btn-wacky" />
+					<input type="submit" value="Send Me My FREE Designs" class="form-control btn-wacky med-field" />
 				</div><!-- form-group -->
             </form>
 		</div><!--col-md-6-->								
@@ -1113,7 +1113,7 @@ else
 <!-- add_multiple_items js -->
 <script src="/js/add_multiple_items.js"></script>
 <!-- Custom Javascript -->
-
+<script type="text/javascript" src="http://www.wackybuttons.com/jscolor/jscolor.js"></script>
 
 <!-- FitVids JS -->
 <script src="/plugins/fitvids/jquery.fitvids.js"></script>

@@ -418,16 +418,16 @@ $('#dialog_footer').html(inpcode);
 	<hr>
 	<h2>Video Help</h2>
 	<div class="row">
-		<div class="col-md-4">
-			<a href="http://www.wackybuttons.com/videos.php?vid=bW4c5St-okE"><img src="http://www.wackybuttons.com/images/home/vid1.jpg" class="img-responsive" alt="How to order buttons" border="0" /></a>
+		<div class="col-md-4 u-center">
+			<a href="http://www.wackybuttons.com/videos.php?vid=bW4c5St-okE"><img src="http://www.wackybuttons.com/images/home/vid1.jpg" class="img-responsive u-block-center" alt="How to order buttons" border="0" /></a>
 			<p><a href="http://www.wackybuttons.com/videos.php?vid=bW4c5St-okE">How to order custom buttons</a></p>
 		</div><!--col-md-4-->
-		<div class="col-md-4">
-			<a href="http://www.wackybuttons.com/videos.php?vid=xIyVxiI6n-c"><img src="http://www.wackybuttons.com/images/home/vid2.jpg" class="img-responsive" alt="How to create a button" border="0" /></a>
+		<div class="col-md-4 u-center">
+			<a href="http://www.wackybuttons.com/videos.php?vid=xIyVxiI6n-c"><img src="http://www.wackybuttons.com/images/home/vid2.jpg" class="img-responsive u-block-center" alt="How to create a button" border="0" /></a>
 			<p><a href="http://www.wackybuttons.com/videos.php?vid=xIyVxiI6n-c">How to use our create page</a></p>
 		</div><!--col-md-4-->
-		<div class="col-md-4">
-			<a href="http://www.wackybuttons.com/videos.php?vid=WkLwvgLGLMo"><img src="http://www.wackybuttons.com/images/home/vid3.jpg" class="img-responsive" alt="How to order buttons" border="0" /></a>
+		<div class="col-md-4 u-center">
+			<a href="http://www.wackybuttons.com/videos.php?vid=WkLwvgLGLMo"><img src="http://www.wackybuttons.com/images/home/vid3.jpg" class="img-responsive u-block-center" alt="How to order buttons" border="0" /></a>
 			<p><a href="http://www.wackybuttons.com/videos.php?vid=WkLwvgLGLMo">How to use the online design studio</a></p>
 		</div><!--col-md-4-->
 	</div><!--row-->
@@ -441,13 +441,13 @@ $('#dialog_footer').html(inpcode);
 			<div class="panel-heading" role="tab" id="headingOne">
 				<h4 class="panel-title">
 					<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-				  		<p>Am I allowed to purchase 2 or more designs for the same price as 1? for example if I order 50 of one design and 50 of another can I buy them for the same price as an order for 100 buttons?</p>
+				  		<p>Am I allowed to purchase several designs for the same price as just one design? for example if I order 50 blue buttons and 50 red buttons can I buy them for the same price as 100 blue buttons?</p>
 					</a>
 			  	</h4>
 			</div><!-- panel-heading -->
 			<div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
 			  	<div class="panel-body">
-					<p>Sorry, you are not able to combine 2 different designs and be able to order it for the price of just 1. To calculate the price for a split order of multiple designs please use our <a href="http://www.wackybuttons.com/prices.php">button order calculator</a>.</p>
+					<p>Sorry, you are not able to combine 2 or more different designs and be able to order it for the price of just 1. To calculate the price for a split order of multiple designs please use our <a href="prices.html#pricecalc">price and turnaround calculator</a>.</p>
 			  	</div><!-- panel-body -->
 			</div><!-- panel-collapse collapse in -->
 		</div><!-- panel panel-default -->
@@ -527,7 +527,7 @@ $('#dialog_footer').html(inpcode);
 			</div><!-- panel-heading -->
 			<div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
 			  	<div class="panel-body">
-					<p>You can visit the following page to view your designs: <a href="http://www.wackybuttons.com/order.php">http://www.wackybuttons.com/order.php</a>. There is a form on the bottom right of that page that says "View All My Button Designs" where you can enter your email address and lookup all your designs. If you are unable to find your deigns using that site, email <a href="mailto:order@wackybuttons.com">order@wackybuttons.com</a> and say you forgot your Design Code and include your name and email address.</p>
+					<p>Try looking up your button designs <a href="#" data-toggle="modal" data-target="#dialog_win" onclick="my_design_window();">here</a>. If you are unable to find your deigns using that site, email <a href="mailto:order@wackybuttons.com">order@wackybuttons.com</a> and say you forgot your Design Code and include your name and email address.</p>
 			  	</div><!-- panel-body -->
 			</div><!-- panel-collapse collapse in -->
 		</div><!-- panel panel-default -->
@@ -620,7 +620,7 @@ $('#dialog_footer').html(inpcode);
 			</div><!-- panel-heading -->
 			<div id="collapseEight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
 			  	<div class="panel-body">
-					<p>If you have not received a response from us within 1 business day of either submitting a form on our site or sending a design request by email please check this page to see if your button designs have been setup: <a href="http://www.wackybuttons.com/order.php">http://www.wackybuttons.com/order.php</a>. There is a form on the bottom right of that page that says "View All My Button Designs" where you can enter your email address and lookup all your designs. If you wrote an email to us, and have not received a response, chances are you have our email address, order@wackybuttons.com, blocked or on your spam list. We are not responsible for email that bounces back to us. If you have not yet received a response, you should either call or email us through an alternate email address of yours.</p>
+					<p>If you have not received a response from us within 1 business day of either submitting a form on our site or sending a design request by email, please try looking up your designs <a href="#" data-toggle="modal" data-target="#dialog_win" onclick="my_design_window();">here</a>. If you wrote an email to us, and have not received a response, chances are you have our email address, order@wackybuttons.com, blocked or on your spam list. We are not responsible for email that bounces back to us. If you have not yet received a response, you should either call or email us through an alternate email address of yours.</p>
 			  	</div><!-- panel-body -->
 			</div><!-- panel-collapse collapse in -->
 		</div><!-- panel panel-default -->
@@ -630,13 +630,13 @@ $('#dialog_footer').html(inpcode);
 			<div class="panel-heading" role="tab" id="headingNine">
 				<h4 class="panel-title">
 					<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-				  		<p>I forgot my coupon code can you tell me again what it is?</p>
+				  		<p>Do you sell square buttons or any other different shapes?</p>
 					</a>
 			  	</h4>
 			</div><!-- panel-heading -->
 			<div id="collapseNine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
 			  	<div class="panel-body">
-					<p>Email <a href="mailto:order@wackybuttons.com">order@wackybuttons.com</a> and include your name, email address, and any Design Code of yours we have on file if you remember it. A valid email address you have used to communicate with us is good enough though.</p>
+					<p>At this time we are only capible of manufacturing round buttons.</p>
 			  	</div><!-- panel-body -->
 			</div><!-- panel-collapse collapse in -->
 		</div><!-- panel panel-default -->
@@ -668,7 +668,7 @@ $('#dialog_footer').html(inpcode);
 			</div><!-- panel-heading -->
 			<div id="collapseEleven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEleven">
 			  	<div class="panel-body">
-					<p>Yes you can send us copyrighted or protected material to be made into custom buttons. We leave it up to the customer's discretion to submit government protected material. We must assume that any protected material we receive is property belonging to whomever submits it. Also we assume that the customer submitting any protected material has the proper rights to give us permission to print and sell their protected material strictly to them or anyone they specify.</p>
+					<p>We leave it up to the customer's discretion to submit government protected material. We must assume that any protected material we receive is property belonging to whomever submits it. Also we assume that the customer submitting any protected material has the proper rights to give us permission to print and sell their protected material strictly to them or anyone they specify.</p>
 			  	</div><!-- panel-body -->
 			</div><!-- panel-collapse collapse in -->
 		</div><!-- panel panel-default -->
