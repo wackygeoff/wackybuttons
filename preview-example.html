@@ -22,7 +22,7 @@ javascript_inc: <script src="./js/preview-example.js"></script>
 			<div style="border: #1094c4 2px solid;margin:15px;"><!--white blue orange div container-->
 				<div><!--white top photo section-->
 					<div style="font-size:20px;font-weight:bold;margin-top:10px;padding:5px;">
-						<p>Design Code: <span style="border:black 2px solid;padding:2px;">5076349</span></p>
+						Design Code: <span style="border:black 2px solid;padding:2px;">5076349</span><br />
 						<a href="#" style="font-size:16px;font-weight:normal;padding:15px;" data-toggle="modal" data-target="#dialog_win" onclick="what_is_design_code();">What's This?</a>
 					</div>
 					<img src="http://www.wackybuttons.com/designcodes/507/5076349.jpg" alt="5076349 - click to see larger image" style="max-width:100%;" data-toggle="modal" data-target="#dialog_win" onclick="show_large_photo('http://www.wackybuttons.com/designcodes/507/5076349.jpg');">
@@ -51,52 +51,33 @@ javascript_inc: <script src="./js/preview-example.js"></script>
 							</a>
 						</div><!--end fb and pinterest-->
 					</div><!--end buttons right-->
-
-
-</div><!--end middle blue section-->
-
-<div style="background-color:#fea82b;float:center;text-align:center;align:center;"><!--bottom orange section-->
-
-<form target="cart" action="http://www.wackybuttons.com/shopcart.php" method="post" style="color:#000000;" onsubmit="javascript:return checkSingleForm(this);">
-<input type="hidden" name="operation" value="addtocart">
-<input type="hidden" name="item_number" maxlength="7" size="6" value="5076349">
-
-
-
-<div style="color:black;padding:5px;">Order This Button</div>
-
-<!--Choose Product:-->
-<!--br /><img src="http://www.wackybuttons.com/images/spacer.gif" width="1" height="5" alt=""><br /-->
-<select name="prodchooser" id="prodchooser0" class="form-control" style="max-width:75%;margin-left:auto;margin-right:auto;" onchange="javascript:genButtonSizeDD('prodchooser0', 'sizechooser0', 'item_name');">
-
-<option value="">Choose a Product</option>
-<option value="Standard Pin Back">Standard Pin Back</option><option value="Refrigerator Magnet">Refrigerator Magnet</option><option value="Clothing Magnet">Clothing Magnet</option><option value="Bottle Opener">Bottle Opener</option><option value="Mirror Back">Mirror Back</option><option value="Clip Back">Clip Back</option><option value="Nothing on Back">Nothing on Back</option></select>
-<!--br /><img src="http://www.wackybuttons.com/images/spacer.gif" width="1" height="5" alt="" /><br /-->
-
-<!--Choose a Button Size:-->
-
-<div id="sizechooser0" style="max-width:75%;margin-left:auto;margin-right:auto;margin-top:10px;margin-bottom:10px;">
-<select name="item_name" class="form-control" disabled="disabled">
-<option value="">Choose a Button Size</option>
-</select>
-</div>
-<a href="#" data-toggle="modal" data-target="#dialog_win" onclick="show_size_info();">See Size Differences</a>
-<br /> <br />Quantity: <input type="text" name="os0" class="form-control" style="max-width:25%;margin-left:auto;margin-right:auto;display:inline;" size="7" value="1" maxlength="7">
-
-<input name="title" type="hidden" value="Custom Design">
-<!--input type="image" name="Submit" value="add to cart" alt="Add to Cart" src="http://www.wackybuttons.com/images/previewpage/addtocart.gif" style="border:0px;" onclick="javascript:if(navigator.userAgent.toLowerCase().indexOf('safari') > -1){window.open('http://www.wackybuttons.com/shopcart.php','cart')}"><br /-->
-<br />
-<input type="image" name="Submit" value="add to cart" alt="Add to Cart" src="http://www.wackybuttons.com/images/previewpage/addtocart.gif" style="border:0px;margin-top:10px;" onclick="javascript:if(navigator.userAgent.toLowerCase().indexOf('safari') > -1){window.open('http://www.wackybuttons.com/shopcart.php','cart')}"><br />
-
-
-
-</form>
-
-
-
-</div><!--bottom orange section-->
-
-</div><!--end white blue orange div container-->
+				</div><!--end middle blue section-->
+				<div style="background-color:#fea82b;float:center;text-align:center;align:center;"><!--bottom orange section-->
+					<form target="cart" action="http://www.wackybuttons.com/shopcart.php" method="post" style="color:#000000;" onsubmit="javascript:return checkSingleForm(this);">
+						<input type="hidden" name="operation" value="addtocart">
+						<input type="hidden" name="item_number" maxlength="7" size="6" value="5076349">
+						<div style="color:black;padding:5px;">Order This Button</div>
+							<!--Choose Product:-->
+							<!--br /><img src="http://www.wackybuttons.com/images/spacer.gif" width="1" height="5" alt=""><br /-->
+							<select name="prodchooser" id="prodchooser0" class="form-control" style="max-width:75%;margin-left:auto;margin-right:auto;" onchange="javascript:genButtonSizeDD('prodchooser0', 'sizechooser0', 'item_name');">
+								<option value="">Choose a Product</option>
+								<option value="Standard Pin Back">Standard Pin Back</option><option value="Refrigerator Magnet">Refrigerator Magnet</option><option value="Clothing Magnet">Clothing Magnet</option><option value="Bottle Opener">Bottle Opener</option><option value="Mirror Back">Mirror Back</option><option value="Clip Back">Clip Back</option><option value="Nothing on Back">Nothing on Back</option></select>
+								<!--br /><img src="http://www.wackybuttons.com/images/spacer.gif" width="1" height="5" alt="" /><br /-->
+								<!--Choose a Button Size:-->
+								<div id="sizechooser0" style="max-width:75%;margin-left:auto;margin-right:auto;margin-top:10px;margin-bottom:10px;">
+									<select name="item_name" class="form-control" disabled="disabled">
+										<option value="">Choose a Button Size</option>
+									</select>
+								</div>
+								<a href="#" data-toggle="modal" data-target="#dialog_win" onclick="show_size_info();">See Size Differences</a>
+								<br /> <br />Quantity: <input type="text" name="os0" class="form-control" style="max-width:25%;margin-left:auto;margin-right:auto;display:inline;" size="7" value="1" maxlength="7">
+								<input name="title" type="hidden" value="Custom Design">
+								<!--input type="image" name="Submit" value="add to cart" alt="Add to Cart" src="http://www.wackybuttons.com/images/previewpage/addtocart.gif" style="border:0px;" onclick="javascript:if(navigator.userAgent.toLowerCase().indexOf('safari') > -1){window.open('http://www.wackybuttons.com/shopcart.php','cart')}"><br /-->
+								<br />
+								<input type="image" name="Submit" value="add to cart" alt="Add to Cart" src="http://www.wackybuttons.com/images/previewpage/addtocart.gif" style="border:0px;margin-top:10px;" onclick="javascript:if(navigator.userAgent.toLowerCase().indexOf('safari') > -1){window.open('http://www.wackybuttons.com/shopcart.php','cart')}"><br />
+					</form>
+				</div><!--bottom orange section-->
+			</div><!--end white blue orange div container-->
 
 <!---end design preview----->
 </div><!-- col-md-4 -->
