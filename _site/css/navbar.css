@@ -65,10 +65,17 @@ text-align: center;
 
 .nav img {
 opacity: 0.8;
+-webkit-filter: grayscale(1);
 }
 
 .nav img:hover {
 opacity: 1;
+-webkit-filter: grayscale(0);
+}
+
+img.hidden-xs {
+opacity: 1;
+-webkit-filter: grayscale(0);
 }
 
 .nav li {

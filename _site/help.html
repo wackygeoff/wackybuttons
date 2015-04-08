@@ -240,8 +240,8 @@
 			<div class="col-md-10">
 			<!--div class="thumbnail"-->
 			<div style="color:white;margin-bottom:15px;">
-			<img src="./img/createoptionarrow.jpg" alt="" class="hidden-xs" style="max-width:100%;" /><br /> <br />
-			All services are FREE! Setup your artwork first, then pay for your buttons when you are ready.</div>
+				<img src="./img/createoptionarrow.jpg" alt="" class="hidden-xs" style="max-width:100%;" /><br /> <br />
+				All services are FREE! Setup your artwork first, then pay for your buttons when you are ready.</div>
 			</div>
 			<div class="col-md-2">
 					<a href="create.html">
@@ -418,16 +418,16 @@ $('#dialog_footer').html(inpcode);
 	<hr>
 	<h2>Video Help</h2>
 	<div class="row">
-		<div class="col-md-4">
-			<a href="http://www.wackybuttons.com/videos.php?vid=bW4c5St-okE"><img src="http://www.wackybuttons.com/images/home/vid1.jpg" class="img-responsive" alt="How to order buttons" border="0" /></a>
+		<div class="col-md-4 u-center">
+			<a href="http://www.wackybuttons.com/videos.php?vid=bW4c5St-okE"><img src="http://www.wackybuttons.com/images/home/vid1.jpg" class="img-responsive u-block-center" alt="How to order buttons" border="0" /></a>
 			<p><a href="http://www.wackybuttons.com/videos.php?vid=bW4c5St-okE">How to order custom buttons</a></p>
 		</div><!--col-md-4-->
-		<div class="col-md-4">
-			<a href="http://www.wackybuttons.com/videos.php?vid=xIyVxiI6n-c"><img src="http://www.wackybuttons.com/images/home/vid2.jpg" class="img-responsive" alt="How to create a button" border="0" /></a>
+		<div class="col-md-4 u-center">
+			<a href="http://www.wackybuttons.com/videos.php?vid=xIyVxiI6n-c"><img src="http://www.wackybuttons.com/images/home/vid2.jpg" class="img-responsive u-block-center" alt="How to create a button" border="0" /></a>
 			<p><a href="http://www.wackybuttons.com/videos.php?vid=xIyVxiI6n-c">How to use our create page</a></p>
 		</div><!--col-md-4-->
-		<div class="col-md-4">
-			<a href="http://www.wackybuttons.com/videos.php?vid=WkLwvgLGLMo"><img src="http://www.wackybuttons.com/images/home/vid3.jpg" class="img-responsive" alt="How to order buttons" border="0" /></a>
+		<div class="col-md-4 u-center">
+			<a href="http://www.wackybuttons.com/videos.php?vid=WkLwvgLGLMo"><img src="http://www.wackybuttons.com/images/home/vid3.jpg" class="img-responsive u-block-center" alt="How to order buttons" border="0" /></a>
 			<p><a href="http://www.wackybuttons.com/videos.php?vid=WkLwvgLGLMo">How to use the online design studio</a></p>
 		</div><!--col-md-4-->
 	</div><!--row-->
@@ -441,13 +441,13 @@ $('#dialog_footer').html(inpcode);
 			<div class="panel-heading" role="tab" id="headingOne">
 				<h4 class="panel-title">
 					<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-				  		<p>Am I allowed to purchase 2 or more designs for the same price as 1? for example if I order 50 of one design and 50 of another can I buy them for the same price as an order for 100 buttons?</p>
+				  		<p>Am I allowed to purchase several designs for the same price as just one design? for example if I order 50 blue buttons and 50 red buttons can I buy them for the same price as 100 blue buttons?</p>
 					</a>
 			  	</h4>
 			</div><!-- panel-heading -->
 			<div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
 			  	<div class="panel-body">
-					<p>Sorry, you are not able to combine 2 different designs and be able to order it for the price of just 1. To calculate the price for a split order of multiple designs please use our <a href="http://www.wackybuttons.com/prices.php">button order calculator</a>.</p>
+					<p>Sorry, you are not able to combine 2 or more different designs and be able to order it for the price of just 1. To calculate the price for a split order of multiple designs please use our <a href="prices.html#pricecalc">price and turnaround calculator</a>.</p>
 			  	</div><!-- panel-body -->
 			</div><!-- panel-collapse collapse in -->
 		</div><!-- panel panel-default -->
@@ -527,7 +527,7 @@ $('#dialog_footer').html(inpcode);
 			</div><!-- panel-heading -->
 			<div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
 			  	<div class="panel-body">
-					<p>You can visit the following page to view your designs: <a href="http://www.wackybuttons.com/order.php">http://www.wackybuttons.com/order.php</a>. There is a form on the bottom right of that page that says "View All My Button Designs" where you can enter your email address and lookup all your designs. If you are unable to find your deigns using that site, email <a href="mailto:order@wackybuttons.com">order@wackybuttons.com</a> and say you forgot your Design Code and include your name and email address.</p>
+					<p>Try looking up your button designs <a href="#" data-toggle="modal" data-target="#dialog_win" onclick="my_design_window();">here</a>. If you are unable to find your deigns using that site, email <a href="mailto:order@wackybuttons.com">order@wackybuttons.com</a> and say you forgot your Design Code and include your name and email address.</p>
 			  	</div><!-- panel-body -->
 			</div><!-- panel-collapse collapse in -->
 		</div><!-- panel panel-default -->
@@ -620,7 +620,7 @@ $('#dialog_footer').html(inpcode);
 			</div><!-- panel-heading -->
 			<div id="collapseEight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
 			  	<div class="panel-body">
-					<p>If you have not received a response from us within 1 business day of either submitting a form on our site or sending a design request by email please check this page to see if your button designs have been setup: <a href="http://www.wackybuttons.com/order.php">http://www.wackybuttons.com/order.php</a>. There is a form on the bottom right of that page that says "View All My Button Designs" where you can enter your email address and lookup all your designs. If you wrote an email to us, and have not received a response, chances are you have our email address, order@wackybuttons.com, blocked or on your spam list. We are not responsible for email that bounces back to us. If you have not yet received a response, you should either call or email us through an alternate email address of yours.</p>
+					<p>If you have not received a response from us within 1 business day of either submitting a form on our site or sending a design request by email, please try looking up your designs <a href="#" data-toggle="modal" data-target="#dialog_win" onclick="my_design_window();">here</a>. If you wrote an email to us, and have not received a response, chances are you have our email address, order@wackybuttons.com, blocked or on your spam list. We are not responsible for email that bounces back to us. If you have not yet received a response, you should either call or email us through an alternate email address of yours.</p>
 			  	</div><!-- panel-body -->
 			</div><!-- panel-collapse collapse in -->
 		</div><!-- panel panel-default -->
@@ -630,13 +630,13 @@ $('#dialog_footer').html(inpcode);
 			<div class="panel-heading" role="tab" id="headingNine">
 				<h4 class="panel-title">
 					<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-				  		<p>I forgot my coupon code can you tell me again what it is?</p>
+				  		<p>Do you sell square buttons or any other different shapes?</p>
 					</a>
 			  	</h4>
 			</div><!-- panel-heading -->
 			<div id="collapseNine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
 			  	<div class="panel-body">
-					<p>Email <a href="mailto:order@wackybuttons.com">order@wackybuttons.com</a> and include your name, email address, and any Design Code of yours we have on file if you remember it. A valid email address you have used to communicate with us is good enough though.</p>
+					<p>At this time we are only capible of manufacturing round buttons.</p>
 			  	</div><!-- panel-body -->
 			</div><!-- panel-collapse collapse in -->
 		</div><!-- panel panel-default -->
@@ -668,7 +668,7 @@ $('#dialog_footer').html(inpcode);
 			</div><!-- panel-heading -->
 			<div id="collapseEleven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEleven">
 			  	<div class="panel-body">
-					<p>Yes you can send us copyrighted or protected material to be made into custom buttons. We leave it up to the customer's discretion to submit government protected material. We must assume that any protected material we receive is property belonging to whomever submits it. Also we assume that the customer submitting any protected material has the proper rights to give us permission to print and sell their protected material strictly to them or anyone they specify.</p>
+					<p>We leave it up to the customer's discretion to submit government protected material. We must assume that any protected material we receive is property belonging to whomever submits it. Also we assume that the customer submitting any protected material has the proper rights to give us permission to print and sell their protected material strictly to them or anyone they specify.</p>
 			  	</div><!-- panel-body -->
 			</div><!-- panel-collapse collapse in -->
 		</div><!-- panel panel-default -->
@@ -861,491 +861,7 @@ $('#dialog_footer').html(inpcode);
 	</div><!-- container -->
 </div><!-- wacky-footer -->
 
-<!-- #bottleOpener -->
-<div class="modal fade" id="bottleOpener" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
-    	<div class="modal-content">
-      		<div class="modal-header">
-        		<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        		<h2 class="modal-title" id="myModalLabel">Bottle Opener</h2>
-      		</div><!-- modal-header -->
-      		<div class="modal-body">
-      		
-				<!----- CONTENT ----->      		
-				<iframe src="//player.vimeo.com/video/113842425?title=0&amp;byline=0&amp;portrait=0" width="100%" height="350px" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-				<p>The strong metal back of this button is perfect for opening beer and soda bottles. There are also holes on the back which allow you to attach this bottle opener to your keychain(keyring not included). Promote a product, band, event, idea, or yourself!</p>
-				<h4>Available in the following size</h4>
-				<img src="http://www.wackybuttons.com/images/products/bottleopenersize.jpg" alt="pin back buttons different button sizes" class="img-responsive center-block" />
-				<p class="caption">The pictures above are not to scale. We recommend using a standard unit of measurement like a ruler to get the best idea of the actual size.</p>
-				<h4>Size Comparisons</h4>
-				<div class="u-border-blue">
-					<table class="size-compare-table">
-						<tr><td><b>Size</b></td><td colspan="2"><b>Common Household Object</b></td></tr>
-						<tr><td>2.25 inch</td><td><img src="./img/products/sodacan.jpg"></td><td>top of a soda can</td></tr>
-					</table>
-					<a href="http://www.wackybuttons.com/documents/products/wbcomparison.pdf"><img src="http://www.wackybuttons.com/images/products/pdfproduct.jpg" width="221" height="50" alt="Download and print this -Button Sizes (PDF)- to see exact button sizes." border="0" class="center-block" /></a>
-				</div><!-- u-border-blue -->
-				<h4>Product Specifications</h4>
-				<div class="u-border-blue">
-					<li>The entire button is made of 4 pieces (Rigid Metal Bottle Opener Back, Metal Shell, Paper Graphic, Clear Plastic Cover)</li>
-					<li>The metal components are made of tin-plated steel</li>
-					<li>We print using high quality Epson Photo Inkjet Printers (Digital CMYK).</li>
-					<li>The paper we use is a special ordered thin custom bright white paper with a matte finish specifically designed for superior color quality and brightness for inkjet printing.</li>
-					<!--li>We have had graphic professionals tell us they actually prefer our printing quality to professional digital offset printing because of the quality and cost.</li-->
-					<li>All products are made in the USA</li>
-					<li>Please note: Our buttons are not waterproof. The metal will rust when exposed to moisture over time. The ink on the paper can also fade after being exposed to lots of sunlight over time.</li>
-				</div><!-- u-border-blue -->
 
-      		</div><!-- modal-body -->
-      		<div class="modal-footer">
-        		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        		<button type="button" class="btn btn-primary btn-wacky">Start Designing</button>
-      		</div><!-- modal-footer -->
-    	</div><!-- modal-content -->
-	</div><!-- modal-dialog -->
-</div><!-- modal fade -->
-
-
-
-
-<!-- #clip -->
-<div class="modal fade" id="clip" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
-    	<div class="modal-content">
-      		<div class="modal-header">
-        		<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        		<h2 class="modal-title" id="myModalLabel">Clip Back Buttons</h2>
-      		</div><!-- modal-header -->
-      		<div class="modal-body">
-      		
-				<!----- CONTENT ----->      		
-				<iframe src="//player.vimeo.com/video/113842426?title=0&amp;byline=0&amp;portrait=0" width="100%" height="350px" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-				<p>Our Clip Back Buttons are a perfect alternative to our pin back buttons. Less dangerous than pins, and they won't poke holes. Great for schools, hospitals and businesses. Get your message across by clipping these buttons to your shirt, hat, lanyard, or even a necklace!</p>
-				<h4>Available in the following sizes</h4>
-				<img src="http://www.wackybuttons.com/images/products/clipsize.jpg" alt="pin back buttons different button sizes" class="img-responsive center-block" />
-				<p class="caption">The pictures above are not to scale. We recommend using a standard unit of measurement like a ruler to get the best idea of the actual size.</p>
-				<h4>Size Comparisons</h4>
-				<div class="u-border-blue">
-					<table class="size-compare-table">
-						<tr><td><b>Size</b></td><td colspan="2"><b>Common Household Object</b></td></tr>
-						<tr><td>2.25 inch</td><td><img src="./img/products/sodacan.jpg"></td><td>top of a soda can</td></tr>
-						<tr><td>3 inch</td><td><img src="./img/products/soupcan.jpg"></td><td>top of campbells chunky soup can</td></tr>
-					</table>
-					<a href="http://www.wackybuttons.com/documents/products/wbcomparison.pdf"><img src="http://www.wackybuttons.com/images/products/pdfproduct.jpg" width="221" height="50" alt="Download and print this -Button Sizes (PDF)- to see exact button sizes." border="0" class="center-block" /></a>
-				</div><!-- u-border-blue -->
-				<h4>Product Specifications</h4>
-				<div class="u-border-blue">
-					<li>The entire button is made of 5 pieces (bull dog clip, Metal Back, Metal Shell, Paper Graphic, Clear Plastic Cover)</li>
-					<li>The metal components are made of tin-plated steel</li>
-					<li>We print using high quality Epson Photo Inkjet Printers (Digital CMYK).</li>
-					<li>The paper we use is a special ordered thin custom bright white paper with a matte finish specifically designed for superior color quality and brightness for inkjet printing.</li>
-					<!--li>We have had graphic professionals tell us they actually prefer our printing quality to professional digital offset printing because of the quality and cost.</li-->
-					<li>All products are made in the USA</li>
-					<li>Please note: Our buttons are not waterproof. The metal will rust when exposed to moisture over time. The ink on the paper can also fade after being exposed to lots of sunlight over time.</li>
-				</div><!-- u-border-blue -->
-
-      		</div><!-- modal-body -->
-      		<div class="modal-footer">
-        		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        		<button type="button" class="btn btn-primary btn-wacky">Start Designing</button>
-      		</div><!-- modal-footer -->
-    	</div><!-- modal-content -->
-	</div><!-- modal-dialog -->
-</div><!-- modal fade -->
-
-
-
-
-<!-- #clothingMagnet -->
-<div class="modal fade" id="clothingMagnet" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
-    	<div class="modal-content">
-      		<div class="modal-header">
-        		<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        		<h2 class="modal-title" id="myModalLabel">Clothing/Shirt Magnet Buttons</h2>
-      		</div><!-- modal-header -->
-      		<div class="modal-body">
-      		
-				<!----- CONTENT ----->      		
-				<iframe src="//player.vimeo.com/video/113842427?title=0&amp;byline=0&amp;portrait=0" width="100%" height="350px" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-				<p>Our Clothing Magnet Buttons are a perfect alternative to our pin back buttons. The button has a flat back and the strong magnet separates from the button. Your clothing goes between the button and the magnet. They won't poke holes in clothes like buttons with pins. Great for hospitals and businesses.</p>
-				<h4>Available in the following sizes</h4>
-				<img src="http://www.wackybuttons.com/images/products/clothingmagnetssize.jpg" alt="pin back buttons different button sizes" class="img-responsive center-block" />
-				<p class="caption">The pictures above are not to scale. We recommend using a standard unit of measurement like a ruler to get the best idea of the actual size.</p>
-				<h4>Size Comparisons</h4>
-				<div class="u-border-blue">
-					<table class="size-compare-table">
-						<tr><td><b>Size</b></td><td colspan="2"><b>Common Household Object</b></td></tr>
-						<tr><td>1.5 inch</td><td><img src="./img/products/milkcap.jpg"></td><td>gallon milk jug cap</td></tr>
-						<tr><td>2.25 inch</td><td><img src="./img/products/sodacan.jpg"></td><td>top of a soda can</td></tr>
-						<tr><td>3 inch</td><td><img src="./img/products/soupcan.jpg"></td><td>top of campbells chunky soup can</td></tr>
-					</table>
-					<a href="http://www.wackybuttons.com/documents/products/wbcomparison.pdf"><img src="http://www.wackybuttons.com/images/products/pdfproduct.jpg" width="221" height="50" alt="Download and print this -Button Sizes (PDF)- to see exact button sizes." border="0" class="center-block" /></a>
-				</div><!-- u-border-blue -->
-				<h4>Product Specifications</h4>
-				<div class="u-border-blue">
-					<li><strong>Warning:</strong> This product contains strong magnets which can be dangerous to children, people with pacemakers, electronics, and magnetic media. Full product warning can be found <a href="http://www.wackybuttons.com/documents/products/magnet_caution.pdf">here</a>.
-					<li>The entire button is made of 5 pieces (Round Neodymium Magnet, Metal Back, Metal Shell, Paper Graphic, Clear Plastic Cover)</li>
-					<li>The magnet is strong enough to hold the button to a thick sweater or jacket</li>
-					<li>The metal components are made of tin-plated steel</li>
-					<li>We print using high quality Epson Photo Inkjet Printers (Digital CMYK).</li>
-					<li>The paper we use is a special ordered thin custom bright white paper with a matte finish specifically designed for superior color quality and brightness for inkjet printing.</li>
-					<!--li>We have had graphic professionals tell us they actually prefer our printing quality to professional digital offset printing because of the quality and cost.</li-->
-					<li>All products are made in the USA</li>
-					<li>Please note: Our buttons are not waterproof. The metal will rust when exposed to moisture over time. The ink on the paper can also fade after being exposed to lots of sunlight over time.</li>
-				</div><!-- u-border-blue -->
-
-      		</div><!-- modal-body -->
-      		<div class="modal-footer">
-        		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        		<button type="button" class="btn btn-primary btn-wacky">Start Designing</button>
-      		</div><!-- modal-footer -->
-    	</div><!-- modal-content -->
-	</div><!-- modal-dialog -->
-</div><!-- modal fade -->
-
-
-
-
-<!-- #mirror -->
-<div class="modal fade" id="mirror" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
-    	<div class="modal-content">
-      		<div class="modal-header">
-        		<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        		<h2 class="modal-title" id="myModalLabel">Pocket Mirror Buttons</h2>
-      		</div><!-- modal-header -->
-      		<div class="modal-body">
-      		
-				<!----- CONTENT ----->      		
-				<iframe src="//player.vimeo.com/video/113842429?title=0&amp;byline=0&amp;portrait=0" width="100%" height="350px" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-				<p>Mirror Buttons are handy for when you need to see your reflection. Easily fits in a pocket or purse. Great for styling businesses, weddings, decorating, and giveaways.</p>
-				<h4>Available in the following sizes</h4>
-				<img src="http://www.wackybuttons.com/images/products/mirrorsize.jpg" alt="pin back buttons different button sizes" class="img-responsive center-block" />
-				<p class="caption">The pictures above are not to scale. We recommend using a standard unit of measurement like a ruler to get the best idea of the actual size.</p>
-				<h4>Size Comparisons</h4>
-				<div class="u-border-blue">
-					<table class="size-compare-table">
-						<tr><td><b>Size</b></td><td colspan="2"><b>Common Household Object</b></td></tr>
-						<tr><td>2.25 inch</td><td><img src="./img/products/sodacan.jpg"></td><td>top of a soda can</td></tr>
-						<tr><td>3 inch</td><td><img src="./img/products/soupcan.jpg"></td><td>top of campbells chunky soup can</td></tr>
-					</table>
-					<a href="http://www.wackybuttons.com/documents/products/wbcomparison.pdf"><img src="http://www.wackybuttons.com/images/products/pdfproduct.jpg" width="221" height="50" alt="Download and print this -Button Sizes (PDF)- to see exact button sizes." border="0" class="center-block" /></a>
-				</div><!-- u-border-blue -->
-				<h4>Product Specifications</h4>
-				<div class="u-border-blue">
-					<li>The entire button is made of 6 pieces (Mirror, Metal Shim, Metal Collet, Metal Shell, Paper Graphic, Clear Plastic Cover)</li>
-					<li>The metal components are made of tin-plated steel</li>
-					<li>We print using high quality Epson Photo Inkjet Printers (Digital CMYK).</li>
-					<li>The paper we use is a special ordered thin custom bright white paper with a matte finish specifically designed for superior color quality and brightness for inkjet printing.</li>
-					<!--li>We have had graphic professionals tell us they actually prefer our printing quality to professional digital offset printing because of the quality and cost.</li-->
-					<li>All products are made in the USA</li>
-					<li>Please note: Our buttons are not waterproof. The metal will rust when exposed to moisture over time. The ink on the paper can also fade after being exposed to lots of sunlight over time.</li>
-				</div><!-- u-border-blue -->
-
-      		</div><!-- modal-body -->
-      		<div class="modal-footer">
-        		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        		<button type="button" class="btn btn-primary btn-wacky">Start Designing</button>
-      		</div><!-- modal-footer -->
-    	</div><!-- modal-content -->
-	</div><!-- modal-dialog -->
-</div><!-- modal fade -->
-
-
-
-
-<!-- #nothing -->
-<div class="modal fade" id="nothing" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
-    	<div class="modal-content">
-      		<div class="modal-header">
-        		<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        		<h2 class="modal-title" id="myModalLabel">Buttons with nothing on back</h2>
-      		</div><!-- modal-header -->
-      		<div class="modal-body">
-      		
-				<!----- CONTENT ----->      		
-				<iframe src="//player.vimeo.com/video/113842510?title=0&amp;byline=0&amp;portrait=0" width="100%" height="350px" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-				<p>These buttons have no pins on the back. With a hot glue gun, the options are endless for what you can attach to the back. You can find all sorts of items at your local craft store like glitter, felt, adhesive hooks, and pins you could attach to the back of these buttons. Great for people who want to be a little more crafty or creative with their button project.</p>
-				<h4>Available in the following sizes</h4>
-				<img src="http://www.wackybuttons.com/images/products/nobacksize.jpg" alt="pin back buttons different button sizes" class="img-responsive center-block" />
-				<p class="caption">The pictures above are not to scale. We recommend using a standard unit of measurement like a ruler to get the best idea of the actual size.</p>
-				<h4>Size Comparisons</h4>
-				<div class="u-border-blue">
-					<table class="size-compare-table">
-						<tr><td><b>Size</b></td><td colspan="2"><b>Common Household Object</b></td></tr>
-						<tr><td>1 inch</td><td><img src="./img/products/quarter.jpg"></td><td>US quarter</td></tr>
-						<tr><td>1.5 inch</td><td><img src="./img/products/milkcap.jpg"></td><td>gallon milk jug cap</td></tr>
-						<tr><td>2.25 inch</td><td><img src="./img/products/sodacan.jpg"></td><td>top of a soda can</td></tr>
-						<tr><td>3 inch</td><td><img src="./img/products/soupcan.jpg"></td><td>top of campbells chunky soup can</td></tr>
-					</table>
-					<a href="http://www.wackybuttons.com/documents/products/wbcomparison.pdf"><img src="http://www.wackybuttons.com/images/products/pdfproduct.jpg" width="221" height="50" alt="Download and print this -Button Sizes (PDF)- to see exact button sizes." border="0" class="center-block" /></a>
-				</div><!-- u-border-blue -->
-				<h4>Product Specifications</h4>
-				<div class="u-border-blue">
-					<li>The entire button is made of 4 pieces (Metal Back, Metal Shell, Paper Graphic, Clear Plastic Cover)</li>
-					<li>The metal components are made of tin-plated steel</li>
-					<li>We print using high quality Epson Photo Inkjet Printers (Digital CMYK).</li>
-					<li>The paper we use is a special ordered thin custom bright white paper with a matte finish specifically designed for superior color quality and brightness for inkjet printing.</li>
-					<!--li>We have had graphic professionals tell us they actually prefer our printing quality to professional digital offset printing because of the quality and cost.</li-->
-					<li>All products are made in the USA</li>
-					<li>Please note: Our buttons are not waterproof. The metal will rust when exposed to moisture over time. The ink on the paper can also fade after being exposed to lots of sunlight over time.</li>
-				</div><!-- u-border-blue -->
-
-      		</div><!-- modal-body -->
-      		<div class="modal-footer">
-        		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        		<button type="button" class="btn btn-primary btn-wacky">Start Designing</button>
-      		</div><!-- modal-footer -->
-    	</div><!-- modal-content -->
-	</div><!-- modal-dialog -->
-</div><!-- modal fade -->
-
-
-
-
-<!-- #refrigeratorMagnet -->
-<div class="modal fade" id="refrigeratorMagnet" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
-    	<div class="modal-content">
-      		<div class="modal-header">
-        		<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        		<h2 class="modal-title" id="myModalLabel">Refrigerator Magnet Buttons</h2>
-      		</div><!-- modal-header -->
-      		<div class="modal-body">
-      		
-				<!----- CONTENT ----->      		
-				<iframe src="//player.vimeo.com/video/113842428?title=0&amp;byline=0&amp;portrait=0" width="100%" height="350px" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-				<p>Refrigerator Magnet Buttons are perfect for sticking to a refrigerator, locker, or metal object. Promote a wedding (save the date), event, business, or anything!</p>
-				<h4>Available in the following sizes</h4>
-				<img src="http://www.wackybuttons.com/images/products/magnetsize.jpg" alt="pin back buttons different button sizes" class="img-responsive center-block" />
-				<p class="caption">The pictures above are not to scale. We recommend using a standard unit of measurement like a ruler to get the best idea of the actual size.</p>
-				<h4>Size Comparisons</h4>
-				<div class="u-border-blue">
-					<table class="size-compare-table">
-						<tr><td><b>Size</b></td><td colspan="2"><b>Common Household Object</b></td></tr>
-						<tr><td>1 inch</td><td><img src="./img/products/quarter.jpg"></td><td>US quarter</td></tr>
-						<tr><td>1.5 inch</td><td><img src="./img/products/milkcap.jpg"></td><td>gallon milk jug cap</td></tr>
-						<tr><td>2.25 inch</td><td><img src="./img/products/sodacan.jpg"></td><td>top of a soda can</td></tr>
-						<tr><td>3 inch</td><td><img src="./img/products/soupcan.jpg"></td><td>top of campbells chunky soup can</td></tr>
-					</table>
-					<a href="http://www.wackybuttons.com/documents/products/wbcomparison.pdf"><img src="http://www.wackybuttons.com/images/products/pdfproduct.jpg" width="221" height="50" alt="Download and print this -Button Sizes (PDF)- to see exact button sizes." border="0" class="center-block" /></a>
-				</div><!-- u-border-blue -->
-				<h4>Product Specifications</h4>
-				<div class="u-border-blue">
-					<li>The entire button is made of 5 pieces (Round Magnet, Metal Back, Metal Shell, Paper Graphic, Clear Plastic Cover)</li>
-					<li>The magnet is strong enough to hold up 3 pieces of paper to a fridge</li>
-					<li>The metal components are made of tin-plated steel</li>
-					<li>We print using high quality Epson Photo Inkjet Printers (Digital CMYK).</li>
-					<li>The paper we use is a special ordered thin custom bright white paper with a matte finish specifically designed for superior color quality and brightness for inkjet printing.</li>
-					<!--li>We have had graphic professionals tell us they actually prefer our printing quality to professional digital offset printing because of the quality and cost.</li-->
-					<li>All products are made in the USA</li>
-					<li>Please note: Our buttons are not waterproof. The metal will rust when exposed to moisture over time. The ink on the paper can also fade after being exposed to lots of sunlight over time.</li>
-				</div><!-- u-border-blue -->
-
-      		</div><!-- modal-body -->
-      		<div class="modal-footer">
-        		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        		<button type="button" class="btn btn-primary btn-wacky">Start Designing</button>
-      		</div><!-- modal-footer -->
-    	</div><!-- modal-content -->
-	</div><!-- modal-dialog -->
-</div><!-- modal fade -->
-
-
-
-
-<!-- #standardPinback -->
-<div class="modal fade" id="standardPinback" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
-    	<div class="modal-content">
-      		<div class="modal-header">
-        		<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        		<h2 class="modal-title" id="myModalLabel">Standard Pinback</h2>
-      		</div><!-- modal-header -->
-      		<div class="modal-body">
-      		
-				<!----- CONTENT ----->      		
-				<iframe src="//player.vimeo.com/video/113842509?title=0&amp;byline=0&amp;portrait=0" height="350px" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-				<p>Buttons are great for political, special interest campaigns, or fundraising! Promote a product, band, event, idea, or yourself! Express yourself by pinning your buttons on your clothing, hat, backpack, or purse!</p>
-				<h4>Available in the following sizes</h4>
-				<img src="http://www.wackybuttons.com/images/products/sizescompare.jpg" alt="pin back buttons different button sizes" class="img-responsive center-block" />
-				<p class="caption">The pictures above are not to scale. We recommend using a standard unit of measurement like a ruler to get the best idea of the actual size.</p>
-				<h4>Size Comparisons</h4>
-				<div class="u-border-blue">
-					<table class="size-compare-table">
-						<tr><td><b>Size</b></td><td colspan="2"><b>Common Household Object</b></td></tr>
-						<tr><td>1 inch</td><td><img src="./img/products/quarter.jpg"></td><td>US quarter</td></tr>
-						<tr><td>1.5 inch</td><td><img src="./img/products/milkcap.jpg"></td><td>gallon milk jug cap</td></tr>
-						<tr><td>2.25 inch</td><td><img src="./img/products/sodacan.jpg"></td><td>top of a soda can</td></tr>
-						<tr><td>3 inch</td><td><img src="./img/products/soupcan.jpg"></td><td>top of campbells chunky soup can</td></tr>
-					</table>
-					<a href="http://www.wackybuttons.com/documents/products/wbcomparison.pdf"><img src="http://www.wackybuttons.com/images/products/pdfproduct.jpg" width="221" height="50" alt="Download and print this -Button Sizes (PDF)- to see exact button sizes." border="0" class="center-block" /></a>
-				</div><!-- u-border-blue -->
-				<h4>Product Specifications</h4>
-				<div class="u-border-blue">
-					<li>The entire button is made of 5 pieces (Clasp Pin, Metal Back, Metal Shell, Paper Graphic, Clear Plastic Cover)</li>
-					<li>The metal components are made of tin-plated steel</li>
-					<li>We print using high quality Epson Photo Inkjet Printers (Digital CMYK).</li>
-					<li>The paper we use is a special ordered thin custom bright white paper with a matte finish specifically designed for superior color quality and brightness for inkjet printing.</li>
-					<!--li>We have had graphic professionals tell us they actually prefer our printing quality to professional digital offset printing because of the quality and cost.</li-->
-					<li>All products are made in the USA</li>
-					<li>Please note: Our buttons are not waterproof. The metal will rust when exposed to moisture over time. The ink on the paper can also fade after being exposed to lots of sunlight over time.</li>
-				</div><!-- u-border-blue -->
-
-      		</div><!-- modal-body -->
-      		<div class="modal-footer">
-        		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        		<button type="button" class="btn btn-primary btn-wacky">Start Designing</button>
-      		</div><!-- modal-footer -->
-    	</div><!-- modal-content -->
-	</div><!-- modal-dialog -->
-</div><!-- modal fade -->
-
-<!-- #packaging-bags -->
-<div class="modal fade" id="packaging-bags" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
-    	<div class="modal-content">
-      		<div class="modal-header">
-        		<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        		<h2 class="modal-title" id="myModalLabel">Custom Button Packaging - Display Bag Option</h2>
-      		</div><!-- modal-header -->
-      		<div class="modal-body">
-      		
-				<!----- CONTENT ----->
-				<div class="row">  
-					<div class="col-md-3">    		
-						<img src="http://www.wackybuttons.com/images/products/baggedcard001.jpg" class="img-responsive center-block" />
-					</div><!-- col-md-3 -->
-					<div class="col-md-3">
-						<img src="http://www.wackybuttons.com/images/products/baggedcard002.jpg" class="img-responsive center-block" />
-					</div><!-- col-md-3 -->
-					<div class="col-md-3">
-						<img src="http://www.wackybuttons.com/images/products/baggedcard003.jpg" class="img-responsive center-block" />
-					</div><!-- col-md-3 -->
-					<div class="col-md-3">
-						<img src="http://www.wackybuttons.com/images/products/baggedcard004.jpg" class="img-responsive center-block" />
-					</div><!-- col-md-3 -->
-				</div><!-- row -->
-				<br>
-					<ul>	
-						<li>We offer custom packaging options available upon request.</li>
-						<li>These professional display bags add a nice touch to any merchandise display.</li>
-						<li>Your customers or fans will definitely appreciate the extra level of detail this packaging provides for your buttons.</li>
-					</ul>
-					<img src="http://www.wackybuttons.com/images/products/baggedcardexamples.gif" class="img-responsive center-block" />
-					<ul>
-						<li>If you are interested in getting cards like these made feel free to email us at <a href="mailto:order@wackybuttons.com">order@wackybuttons.com</a> or start a live chat <a href="http://www.wackybuttons.com/help.php">here</a>.</li>
-					</ul>
-					<div class="u-border-blue">	
-						<h4>Level of Customization Available</h4>
-						<ul>
-							<li>Most of our products we sell can be packaged using this option. Our products that can be packaged this way include standard pin back buttons, refrigerator magnets, pocket mirrors, bottle openers, or clips.</li>
-							<li>Card size: 4x6 or 5x7 inches (folded in half horizontally or vertically to seal the top of the bag)</li>
-							<li>full color printed</li>
-							<li>FREE graphic design (no charge for artwork setup)</li>
-							<li>A digital proof (preview) of the product is emailed to you for FREE before you decide to pay for anything</li>
-							<li>hangar hole punch at the top</li>
-							<li>Square Corners only</li>
-							<li>bag size is flexible so you can hold enough buttons to the card display</li>
-							<li>We can mix and match button sizes in one bag</li>
-							<li>number of buttons that can be put in a bag:</li>
-							<ul><li>up to (100) 1 inch buttons can be put in one bag</li>
-							<li>up to (50) 1.5 inch buttons can be put in one bag</li>
-							<li>up to (10) 2.25 inch buttons can be put in one bag</li>
-							<li>only (1) 3 inch button can be put in one bag</li>
-							</ul></li>
-							<li>Turnaround time is 1 week (orders of 5000 cards or more may take longer)</li>
-							<li>Minimum quantity is 25 cards with prices starting at $1.99 per card + price of buttons and shipping</li>
-							<li>For a quantity of 100 cards average price is about $0.99 per card + price of buttons and shipping</li>
-							<li>the more cards you buy, the bigger the bulk discount will be</li>
-							<li>prices are subject to the level of customization and price quotations are provided by email</li>
-						</ul>
-					</div><!-- u-border-blue -->
-
-      		</div><!-- modal-body -->
-      		<div class="modal-footer">
-        		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        		<a href="mailto:order@wackybuttons.com?Subject=I%20am%20interested%20in%20bag%20packaging&body=Please%20email%20information%20regarding%20your%20bag%20packaging%20products."><button type="button" class="btn btn-primary btn-wacky">Request Quote</button></a>
-      		</div><!-- modal-footer -->
-    	</div><!-- modal-content -->
-	</div><!-- modal-dialog -->
-</div><!-- modal fade -->
-
-
-
-
-
-<!-- #packaging-cards -->
-<div class="modal fade" id="packaging-cards" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
-    	<div class="modal-content">
-      		<div class="modal-header">
-        		<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        		<h2 class="modal-title" id="myModalLabel">Custom Button Packaging - Pinned Card Option</h2>
-      		</div><!-- modal-header -->
-      		<div class="modal-body">
-      		
-				<!----- CONTENT ----->
-				<div class="row">  
-					<div class="col-md-3">    		
-						<img src="http://www.wackybuttons.com/images/products/pinnedcard001.jpg" class="img-responsive center-block" />
-					</div><!-- col-md-3 -->
-					<div class="col-md-3">
-						<img src="http://www.wackybuttons.com/images/products/pinnedcard002.jpg" class="img-responsive center-block" />
-					</div><!-- col-md-3 -->
-					<div class="col-md-3">
-						<img src="http://www.wackybuttons.com/images/products/pinnedcard003.jpg" class="img-responsive center-block" />
-					</div><!-- col-md-3 -->
-					<div class="col-md-3">
-						<img src="http://www.wackybuttons.com/images/products/pinnedcard004.jpg" class="img-responsive center-block" />
-					</div><!-- col-md-3 -->
-				</div><!-- row -->
-				<br>
-					<ul>
-						<li>We offer custom packaging options available upon request.</li>
-						<li>These professional cards add a nice touch to any merchandise display.</li>
-						<li>Your customers or fans will definitely appreciate the extra level of detail these cards provide for your buttons.</li>
-					</ul>
-					<img src="http://www.wackybuttons.com/images/products/pinnedcardexamples.gif" class="img-responsive center-block" />
-					<ul>
-						<li>If you are interested in getting cards like these made feel free to email us at <a href="mailto:order@wackybuttons.com">order@wackybuttons.com</a> or start a live chat <a href="http://www.wackybuttons.com/help.php">here</a>.</li>
-					</ul>
-					<div class="u-border-blue">	
-						<h4>Level of Customization Available</h4>
-						<ul>
-							<li>only standard pin back buttons can be pinned to the card</li>
-							<li>Card size: 4x6 or 5x7 inches</li>
-							<li>full color printed</li>
-							<li>FREE graphic design (no charge for artwork setup)</li>
-							<li>A digital proof (preview) of the product is emailed to you for FREE before you decide to pay for anything</li>
-							<li>hangar hole punch at the top</li>
-							<li>Rounded or Square Corners</li>
-							<li>We can mix and match button sizes on one card</li>
-							<li>We can place the buttons on the cards in odd positions (they do not have to be in neat rows and columns)</li>
-							<li>number of buttons that can be pinned to a display card:</li>
-							<ul><li>up to (6) 1 inch buttons can be placed on a card</li>
-							<li>up to (6) 1.5 inch buttons can be placed on a card</li>
-							<li>up to (4) 2.25 inch buttons can be placed on a card</li>
-							<li>only (1) 3 inch button can be placed on a card</li>
-							</ul></li>
-							<li>Turnaround time is 1 week (orders of 5000 cards or more may take longer)</li>
-							<li>Minimum quantity is 25 cards with prices starting at $1.99 per card + price of buttons and shipping</li>
-							<li>For a quantity of 100 cards average price is about $1.39 per card + price of buttons and shipping</li>
-							<li>the more cards you buy, the bigger the bulk discount will be</li>
-							<li>prices are subject to the level of customization and price quotations are provided by email</li>
-						</ul>
-					</div><!-- u-border-blue -->
-
-      		</div><!-- modal-body -->
-      		<div class="modal-footer">
-        		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        		<a href="mailto:order@wackybuttons.com?Subject=I%20am%20interested%20in%20pinned%20card%20packaging&body=Please%20email%20information%20regarding%20your%20pinned%20card%20packaging%20products."><button type="button" class="btn btn-primary btn-wacky">Request Quote</button></a>
-      		</div><!-- modal-footer -->
-    	</div><!-- modal-content -->
-	</div><!-- modal-dialog -->
-</div><!-- modal fade -->
 <div class="modal fade" id="dialog_win" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	<div class="modal-dialog">
     	<div class="modal-content">

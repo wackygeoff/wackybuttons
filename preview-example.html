@@ -2,31 +2,90 @@
 layout: wackybuttons
 javascript_inc: <script src="./js/preview-example.js"></script>
 ---
-
 <div class="container">
-<div class="row">
-<div class="col-md-12">
+	<div class="row">
+		<div class="col-md-12">
+			<h1>Custom Designs - Ready to order</h1>
+			<hr>
+			If you removed any designs from your preview page you can restore them:
+			<form action="http://www.wackybuttons.com/dclookuprest.php" method="post" style="display:inline;">
+				<input type="hidden" name="email" value="order@wackybuttons.com" />
+				<input type="submit" name="Submit" value="Restore designs that were removed" alt="Restore designs that were removed" style="border:1px green solid; font-weight:bold; color:green;" />
+			</form>
+			<p><strong>Important:</strong></p>
+			<p>All sales are final. If you are worried about how your buttons will look, we recommend buying just one button before buying a lot more. Wacky Buttons, Inc. does not offer refunds or accept returns for all button orders. Make sure you like what you see before you buy. Complete terms and conditions can be found <a href="http://www.wackybuttons.com/termsandconditions.php">here</a>.</p>
+			<img src="http://www.wackybuttons.com/images/order/addmultiplecart.gif" style="margin-bottom:0px; margin-top:10px; display:block; text-decoration:none; float:right; cursor:pointer;" width="250" height="29" alt="Add Multiple Items To Cart" data-toggle="modal" data-target="#dialog_win" onclick="addMultipleItems();" />
+		</div><!--col-md-12-->
+	</div><!--row-->
+	<div class="row">			
+		<div class="col-md-4">
+			<!---begin design preview-->
+			<div style="border: #1094c4 2px solid;margin:15px;"><!--white blue orange div container-->
+				<div><!--white top photo section-->
+					<div style="font-size:20px;font-weight:bold;margin-top:10px;padding:5px;">
+						Design Code: <span style="border:black 2px solid;padding:2px;">5076349</span><br />
+						<a href="#" style="font-size:16px;font-weight:normal;padding:15px;" data-toggle="modal" data-target="#dialog_win" onclick="what_is_design_code();">What's This?</a>
+					</div>
+					<img src="http://www.wackybuttons.com/designcodes/507/5076349.jpg" alt="5076349 - click to see larger image" style="max-width:100%;" data-toggle="modal" data-target="#dialog_win" onclick="show_large_photo('http://www.wackybuttons.com/designcodes/507/5076349.jpg');">
+					<form action="http://www.wackybuttons.com/php/removefrompreview.php" method="post" onsubmit="if(confirm('Are you sure you want to remove this button design from your preview page?')){return true;}else{return false;}">
+						<input type="hidden" name="removepreview" value="yes" />
+						<input type="hidden" name="email" value="order@wackybuttons.com" />
+						<input type="hidden" name="designcode" value="5076349" />
+						<input type="submit" name="Submit" value="X Remove" alt="Remove this design" style="border:1px red solid; color:red; font-weight:bold; background-color:#ffffff;" />
+					</form>
+				</div><!--end white top photo section-->
+				<div style="background-color:#1094c4; padding:15px; color:white; font-weight:bold;position:relative;height:75px;"><!--middle blue section-->
+					<div style="display:inline-block;position:absolute;left:25px;"><!--buttons left-->
+						<a href="#" data-toggle="modal" data-target="#dialog_win" onclick="show_large_photo('http://www.wackybuttons.com/designcodes/507/5076349.jpg');"><img src="http://www.wackybuttons.com/images/previewpage/enlarge.gif" alt="See Enlarged Image" width="50" height="50" border="0" /></a>
+						<a href="#" data-toggle="modal" data-target="#dialog_win" onclick="designChangeReq('5076349');"><img src="http://www.wackybuttons.com/images/previewpage/change.gif" width="50" height="50" alt="Make changes to this button design" border="0" /></a>
+					</div><!--end buttons left-->
+					<div style="display:inline-block;position:absolute;left:150px;"><!--buttons right-->
+						<div>
+							Share:
+						</div>
+						<div><!--fb and pinterest-->
+							<a href="http://www.facebook.com/share.php?u=http://www.wackybuttons.com/designcodes/507/5076349.jpg">
+								<img src="{{ site.baseurl }}/img/social_media/facebook.png" height="20" style="margin-top:-12px;" alt="Show your friends this button design on you facebook" border="0" />
+							</a>
+							<a href="//pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.wackybuttons.com%2Fpreview.php%3Fdisplay%3Dorder%26dc1%3D5076349&media=http%3A%2F%2Fwww.wackybuttons.com%2Fdesigncodes%2F507%2F5076349.jpg&description=Look%20at%20the%20button%20I%20made%20on%20wackybuttons.com" data-pin-do="buttonPin" data-pin-config="none">
+								<img src="//assets.pinterest.com/images/pidgets/pin_it_button.png" height="30" />
+							</a>
+						</div><!--end fb and pinterest-->
+					</div><!--end buttons right-->
+				</div><!--end middle blue section-->
+				<div style="background-color:#fea82b;float:center;text-align:center;align:center;"><!--bottom orange section-->
+					<form target="cart" action="http://www.wackybuttons.com/shopcart.php" method="post" style="color:#000000;" onsubmit="javascript:return checkSingleForm(this);">
+						<input type="hidden" name="operation" value="addtocart">
+						<input type="hidden" name="item_number" maxlength="7" size="6" value="5076349">
+						<div style="color:black;padding:5px;">Order This Button</div>
+							<!--Choose Product:-->
+							<!--br /><img src="http://www.wackybuttons.com/images/spacer.gif" width="1" height="5" alt=""><br /-->
+							<select name="prodchooser" id="prodchooser0" class="form-control" style="max-width:75%;margin-left:auto;margin-right:auto;" onchange="javascript:genButtonSizeDD('prodchooser0', 'sizechooser0', 'item_name');">
+								<option value="">Choose a Product</option>
+								<option value="Standard Pin Back">Standard Pin Back</option><option value="Refrigerator Magnet">Refrigerator Magnet</option><option value="Clothing Magnet">Clothing Magnet</option><option value="Bottle Opener">Bottle Opener</option><option value="Mirror Back">Mirror Back</option><option value="Clip Back">Clip Back</option><option value="Nothing on Back">Nothing on Back</option></select>
+								<!--br /><img src="http://www.wackybuttons.com/images/spacer.gif" width="1" height="5" alt="" /><br /-->
+								<!--Choose a Button Size:-->
+								<div id="sizechooser0" style="max-width:75%;margin-left:auto;margin-right:auto;margin-top:10px;margin-bottom:10px;">
+									<select name="item_name" class="form-control" disabled="disabled">
+										<option value="">Choose a Button Size</option>
+									</select>
+								</div>
+								<a href="#" data-toggle="modal" data-target="#dialog_win" onclick="show_size_info();">See Size Differences</a>
+								<br /> <br />Quantity: <input type="text" name="os0" class="form-control" style="max-width:25%;margin-left:auto;margin-right:auto;display:inline;" size="7" value="1" maxlength="7">
+								<input name="title" type="hidden" value="Custom Design">
+								<!--input type="image" name="Submit" value="add to cart" alt="Add to Cart" src="http://www.wackybuttons.com/images/previewpage/addtocart.gif" style="border:0px;" onclick="javascript:if(navigator.userAgent.toLowerCase().indexOf('safari') > -1){window.open('http://www.wackybuttons.com/shopcart.php','cart')}"><br /-->
+								<br />
+								<input type="image" name="Submit" value="add to cart" alt="Add to Cart" src="http://www.wackybuttons.com/images/previewpage/addtocart.gif" style="border:0px;margin-top:10px;" onclick="javascript:if(navigator.userAgent.toLowerCase().indexOf('safari') > -1){window.open('http://www.wackybuttons.com/shopcart.php','cart')}"><br />
+					</form>
+				</div><!--bottom orange section-->
+			</div><!--end white blue orange div container-->
 
-<h1>Custom Designs - Ready to order</h1>
-
-If you removed any designs from your preview page you can restore them: 
-<form action="http://www.wackybuttons.com/dclookuprest.php" method="post" style="display:inline;">
-<input type="hidden" name="email" value="order@wackybuttons.com" />
-<input type="submit" name="Submit" value="Restore designs that were removed" alt="Restore designs that were removed" style="border:1px green solid; font-weight:bold; color:green;" />
-</form>
-<br /> <br />
-<b>Important:</b><br />
-All sales are final. If you are worried about how your buttons will look, we recommend buying just one button before buying a lot more. Wacky Buttons, Inc. does not offer refunds or accept returns for all button orders. Make sure you like what you see before you buy. Complete terms and conditions can be found <a href="http://www.wackybuttons.com/termsandconditions.php">here</a>.
-
-<img src="http://www.wackybuttons.com/images/order/addmultiplecart.gif" style="margin-bottom:0px; margin-top:10px; display:block; text-decoration:none; float:right; cursor:pointer;" width="250" height="29" alt="Add Multiple Items To Cart" data-toggle="modal" data-target="#dialog_win" onclick="addMultipleItems();" />
+<!---end design preview----->
+</div><!-- col-md-4 -->
 
 
 
-</div><!--col-md-12-->
-</div><!--row-->
 
-<div class="row">
-			
 <div class="col-md-4">
 <!---begin design preview-->
 
@@ -73,7 +132,7 @@ Share:
 
 <div><!--fb and pinterest-->
 <a href="http://www.facebook.com/share.php?u=http://www.wackybuttons.com/designcodes/507/5076349.jpg">
-<img src="http://www.wackybuttons.com/images/previewpage/facebook.gif" width="30" height="30" alt="Show your friends this button design on you facebook" border="0" />
+								<img src="{{ site.baseurl }}/img/social_media/facebook.png" height="20" style="margin-top:-12px;" alt="Show your friends this button design on you facebook" border="0" />
 </a>
 
 
@@ -182,116 +241,7 @@ Share:
 
 <div><!--fb and pinterest-->
 <a href="http://www.facebook.com/share.php?u=http://www.wackybuttons.com/designcodes/507/5076349.jpg">
-<img src="http://www.wackybuttons.com/images/previewpage/facebook.gif" width="30" height="30" alt="Show your friends this button design on you facebook" border="0" />
-</a>
-
-
-<a href="//pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.wackybuttons.com%2Fpreview.php%3Fdisplay%3Dorder%26dc1%3D5076349&media=http%3A%2F%2Fwww.wackybuttons.com%2Fdesigncodes%2F507%2F5076349.jpg&description=Look%20at%20the%20button%20I%20made%20on%20wackybuttons.com" data-pin-do="buttonPin" data-pin-config="none">
-<img src="//assets.pinterest.com/images/pidgets/pin_it_button.png" height="30" />
-</a>
-</div><!--end fb and pinterest-->
-
-</div><!--end buttons right-->
-
-
-</div><!--end middle blue section-->
-
-<div style="background-color:#fea82b;float:center;text-align:center;align:center;"><!--bottom orange section-->
-
-<form target="cart" action="http://www.wackybuttons.com/shopcart.php" method="post" style="color:#000000;" onsubmit="javascript:return checkSingleForm(this);">
-<input type="hidden" name="operation" value="addtocart">
-<input type="hidden" name="item_number" maxlength="7" size="6" value="5076349">
-
-
-
-<div style="color:black;padding:5px;">Order This Button</div>
-
-<!--Choose Product:-->
-<!--br /><img src="http://www.wackybuttons.com/images/spacer.gif" width="1" height="5" alt=""><br /-->
-<select name="prodchooser" id="prodchooser0" class="form-control" style="max-width:75%;margin-left:auto;margin-right:auto;" onchange="javascript:genButtonSizeDD('prodchooser0', 'sizechooser0', 'item_name');">
-
-<option value="">Choose a Product</option>
-<option value="Standard Pin Back">Standard Pin Back</option><option value="Refrigerator Magnet">Refrigerator Magnet</option><option value="Clothing Magnet">Clothing Magnet</option><option value="Bottle Opener">Bottle Opener</option><option value="Mirror Back">Mirror Back</option><option value="Clip Back">Clip Back</option><option value="Nothing on Back">Nothing on Back</option></select>
-<!--br /><img src="http://www.wackybuttons.com/images/spacer.gif" width="1" height="5" alt="" /><br /-->
-
-<!--Choose a Button Size:-->
-
-<div id="sizechooser0" style="max-width:75%;margin-left:auto;margin-right:auto;margin-top:10px;margin-bottom:10px;">
-<select name="item_name" class="form-control" disabled="disabled">
-<option value="">Choose a Button Size</option>
-</select>
-</div>
-<a href="#" data-toggle="modal" data-target="#dialog_win" onclick="show_size_info();">See Size Differences</a>
-<br /> <br />Quantity: <input type="text" name="os0" class="form-control" style="max-width:25%;margin-left:auto;margin-right:auto;display:inline;" size="7" value="1" maxlength="7">
-
-<input name="title" type="hidden" value="Custom Design">
-<!--input type="image" name="Submit" value="add to cart" alt="Add to Cart" src="http://www.wackybuttons.com/images/previewpage/addtocart.gif" style="border:0px;" onclick="javascript:if(navigator.userAgent.toLowerCase().indexOf('safari') > -1){window.open('http://www.wackybuttons.com/shopcart.php','cart')}"><br /-->
-<br />
-<input type="image" name="Submit" value="add to cart" alt="Add to Cart" src="http://www.wackybuttons.com/images/previewpage/addtocart.gif" style="border:0px;margin-top:10px;" onclick="javascript:if(navigator.userAgent.toLowerCase().indexOf('safari') > -1){window.open('http://www.wackybuttons.com/shopcart.php','cart')}"><br />
-
-
-
-</form>
-
-
-
-</div><!--bottom orange section-->
-
-</div><!--end white blue orange div container-->
-
-<!---end design preview----->
-</div><!-- col-md-4 -->
-
-
-
-
-<div class="col-md-4">
-<!---begin design preview-->
-
-<div style="border: #1094c4 2px solid;margin:15px;"><!--white blue orange div container-->
-
-<div><!--white top photo section-->
-
-<div style="font-size:20px;font-weight:bold;margin-top:10px;padding:5px;">
-Design Code: <span style="border:black 2px solid;padding:2px;">5076349</span>
-<br />
-<a href="#" style="font-size:16px;font-weight:normal;padding:15px;" data-toggle="modal" data-target="#dialog_win" onclick="what_is_design_code();">What's This?</a>
-</div>
-
-
-<img src="http://www.wackybuttons.com/designcodes/507/5076349.jpg" alt="5076349 - click to see larger image" style="max-width:100%;" data-toggle="modal" data-target="#dialog_win" onclick="show_large_photo('http://www.wackybuttons.com/designcodes/507/5076349.jpg');">
-
-
-<form action="http://www.wackybuttons.com/php/removefrompreview.php" method="post" onsubmit="if(confirm('Are you sure you want to remove this button design from your preview page?')){return true;}else{return false;}">
-<input type="hidden" name="removepreview" value="yes" />
-
-<input type="hidden" name="email" value="order@wackybuttons.com" />
-<input type="hidden" name="designcode" value="5076349" />
-<input type="submit" name="Submit" value="X Remove" alt="Remove this design" style="border:1px red solid; color:red; font-weight:bold; background-color:#ffffff;" />
-</form>
-
-</div><!--end white top photo section-->
-
-<div style="background-color:#1094c4; padding:15px; color:white; font-weight:bold;position:relative;height:75px;"><!--middle blue section-->
-
-<div style="display:inline-block;position:absolute;left:25px;"><!--buttons left-->
-
-<a href="#" data-toggle="modal" data-target="#dialog_win" onclick="show_large_photo('http://www.wackybuttons.com/designcodes/507/5076349.jpg');"><img src="http://www.wackybuttons.com/images/previewpage/enlarge.gif" alt="See Enlarged Image" width="50" height="50" border="0" /></a>
-
-<a href="#" data-toggle="modal" data-target="#dialog_win" onclick="designChangeReq('5076349');"><img src="http://www.wackybuttons.com/images/previewpage/change.gif" width="50" height="50" alt="Make changes to this button design" border="0" /></a>
-
-</div><!--end buttons left-->
-
-<div style="display:inline-block;position:absolute;left:150px;"><!--buttons right-->
-
-<div>
-Share:
-</div>
-
-
-<div><!--fb and pinterest-->
-<a href="http://www.facebook.com/share.php?u=http://www.wackybuttons.com/designcodes/507/5076349.jpg">
-<img src="http://www.wackybuttons.com/images/previewpage/facebook.gif" width="30" height="30" alt="Show your friends this button design on you facebook" border="0" />
+								<img src="{{ site.baseurl }}/img/social_media/facebook.png" height="20" style="margin-top:-12px;" alt="Show your friends this button design on you facebook" border="0" />
 </a>
 
 
