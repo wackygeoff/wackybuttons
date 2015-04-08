@@ -55,6 +55,10 @@ float:left;
 background-color:#ffffff;
 }
 
+.store-menu-ul li:first-child{
+margin-top:40px;
+}
+
 .store-menu-ul li{
 background-color:#ffffff;
 border:0;

@@ -5,9 +5,11 @@
 //---Add Multiple Items Popup---
 function addMultipleItems(){
 
+//---begin comment out this section when launched---
 var designcodes = new Array();
 var titlet = new Array();
 designcodes[0] = "5097325";designcodes[1] = "5091829";designcodes[2] = "5091827";designcodes[3] = "5085850";designcodes[4] = "5085282";designcodes[5] = "5085192";designcodes[6] = "5085130";designcodes[7] = "5081890";designcodes[8] = "5056456";designcodes[9] = "5056455";designcodes[10] = "5055401";designcodes[11] = "5054146";designcodes[12] = "5054144";designcodes[13] = "5054137";designcodes[14] = "5052449";designcodes[15] = "5052076";designcodes[16] = "5052075";designcodes[17] = "5052074";designcodes[18] = "5051383";designcodes[19] = "5051308";designcodes[20] = "5046425";designcodes[21] = "5045670";designcodes[22] = "5045181";designcodes[23] = "5044053";designcodes[24] = "5044052";designcodes[25] = "5043972";designcodes[26] = "5043970";designcodes[27] = "5030292";designcodes[28] = "5028558";designcodes[29] = "5028061";designcodes[30] = "5027910";designcodes[31] = "5026854";designcodes[32] = "5024481";designcodes[33] = "5024330";titlet[0] = " ";titlet[1] = " ";titlet[2] = " ";titlet[3] = " ";titlet[4] = " ";titlet[5] = " ";titlet[6] = " ";titlet[7] = " ";titlet[8] = " ";titlet[9] = " ";titlet[10] = " ";titlet[11] = " ";titlet[12] = " ";titlet[13] = " ";titlet[14] = " ";titlet[15] = " ";titlet[16] = " ";titlet[17] = " ";titlet[18] = " ";titlet[19] = " ";titlet[20] = " ";titlet[21] = " ";titlet[22] = " ";titlet[23] = " ";titlet[24] = " ";titlet[25] = " ";titlet[26] = " ";titlet[27] = " ";titlet[28] = " ";titlet[29] = " ";titlet[30] = " ";titlet[31] = " ";titlet[32] = " ";titlet[33] = " ";
+//---end comment out this section when launched---
 
 $('#dialog_title').html("Add multiple items to your cart");
 
