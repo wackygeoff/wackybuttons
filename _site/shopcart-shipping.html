@@ -357,7 +357,8 @@
   	</div><!-- container -->
 </nav>
 		<div class="container">
-
+	<h1>Shopping Cart Contents</h1>
+	<hr>
 <form method="post" action="https://www.sandbox.paypal.com/cgi-bin/webscr" name="checkout" style="color:#000000; font-weight:normal;" onSubmit="checker = 'no';if(document.checkout.parseshipping){for(var i=0; i<document.checkout.parseshipping.length; i++){if(document.checkout.parseshipping[i].checked){checker='yes';}}}if(document.checkout.parseshipping){if(document.checkout.parseshipping.checked){checker='yes';}}if(checker=='no'){alert('You need to select a shipping method.');return false;}">
 <input name="operation" type="hidden" value="viewcart">
 
@@ -379,7 +380,6 @@
 
 <div class="row" style="margin-top:10px;">
 <div class="col-md-10">
-<h1>Shopping Cart Contents</h1>
 </div><!--col-md-10-->
 <div class="col-md-2">
 <a href="#" data-toggle="modal" data-target="#dialog_win" onclick="emailcart();">Email this Cart</a>
