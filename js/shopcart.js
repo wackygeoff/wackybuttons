@@ -82,43 +82,7 @@ $('#dialog_footer').html(inpcode);
 }
 
 
-function decodeshipping(inp){
-var build = false;
-var method = "";
-var shipcost = "";
-for(i = 0; i <= inp.value.length; i ++){
-if (inp.value.charAt(i) == "+"){
-build = true;
-}
-if (build == false && inp.value.charAt(i) != "+"){
-method = method + inp.value.charAt(i);
-}
-if (build == true && inp.value.charAt(i) != "+"){
-shipcost = shipcost + inp.value.charAt(i);
-}
-}
-document.checkout.item_name_3.value = method;
-document.checkout.amount_3.value = shipcost;
-}
-function checkpg1(){checker = 'no';
-for(var i=0; i<document.contents.paymenu.length; i++){if(document.contents.paymenu[i].checked){checker="yes";}
-}
-if(checker=='no'){
-alert("You need to select a payment method");return false;}else{
-return true;}
-}
 function changewin(){
 window.close();
 window.opener.focus();
-}
-function checkallshippable(){
-checkboxes0 = document.getElementById("checkBoxes0");
-if(checkboxes0.checked == true){
-checkboxes0.checked = false;
-}else{
-checkboxes0.checked = true;
-}checkboxes1 = document.getElementById("checkBoxes1");
-if(checkboxes1.checked == true){checkboxes1.checked = false;
-}else{checkboxes1.checked = true;
-}
 }
