@@ -85,6 +85,10 @@ $('#dialog_footer').html(inpcode);
 
 
 function changewin(){
+if(!window.opener){
+window.location = "http://www.wackybuttons.com";
+}else{
 window.close();
 window.opener.focus();
+}
 }
