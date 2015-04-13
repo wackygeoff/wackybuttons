@@ -5,9 +5,13 @@
 //---Add Multiple Items Popup---
 function addMultipleItems(){
 
+//---begin comment out this section when launched---
+/*
 var designcodes = new Array();
 var titlet = new Array();
 designcodes[0] = "5097325";designcodes[1] = "5091829";designcodes[2] = "5091827";designcodes[3] = "5085850";designcodes[4] = "5085282";designcodes[5] = "5085192";designcodes[6] = "5085130";designcodes[7] = "5081890";designcodes[8] = "5056456";designcodes[9] = "5056455";designcodes[10] = "5055401";designcodes[11] = "5054146";designcodes[12] = "5054144";designcodes[13] = "5054137";designcodes[14] = "5052449";designcodes[15] = "5052076";designcodes[16] = "5052075";designcodes[17] = "5052074";designcodes[18] = "5051383";designcodes[19] = "5051308";designcodes[20] = "5046425";designcodes[21] = "5045670";designcodes[22] = "5045181";designcodes[23] = "5044053";designcodes[24] = "5044052";designcodes[25] = "5043972";designcodes[26] = "5043970";designcodes[27] = "5030292";designcodes[28] = "5028558";designcodes[29] = "5028061";designcodes[30] = "5027910";designcodes[31] = "5026854";designcodes[32] = "5024481";designcodes[33] = "5024330";titlet[0] = " ";titlet[1] = " ";titlet[2] = " ";titlet[3] = " ";titlet[4] = " ";titlet[5] = " ";titlet[6] = " ";titlet[7] = " ";titlet[8] = " ";titlet[9] = " ";titlet[10] = " ";titlet[11] = " ";titlet[12] = " ";titlet[13] = " ";titlet[14] = " ";titlet[15] = " ";titlet[16] = " ";titlet[17] = " ";titlet[18] = " ";titlet[19] = " ";titlet[20] = " ";titlet[21] = " ";titlet[22] = " ";titlet[23] = " ";titlet[24] = " ";titlet[25] = " ";titlet[26] = " ";titlet[27] = " ";titlet[28] = " ";titlet[29] = " ";titlet[30] = " ";titlet[31] = " ";titlet[32] = " ";titlet[33] = " ";
+*/
+//---end comment out this section when launched---
 
 $('#dialog_title').html("Add multiple items to your cart");
 
@@ -33,7 +37,7 @@ inpcode = inpcode + '</div>';//col-md-2
 inpcode = inpcode + '<div class="col-md-4 multiple-add-cell">';
 inpcode = inpcode + 'Product <br /><select name="main_prodchooser" id="main_prodchooser" class="form-control" onchange="javascript:changeAllProds(this.value, 34);">';
 inpcode = inpcode + '<option value="">Choose Product</option>';
-for(k = 0; k < allprodshortnames.length; k++){
+for(var k = 0; k < allprodshortnames.length; k++){
 inpcode = inpcode + '<option value="'+allprodshortnames[k]+'">'+allprodshortnames[k]+'</option>';
 }
 
@@ -56,7 +60,7 @@ inpcode = inpcode + '</div>'; //row
 //--end next row
 
 //--next row
-for(i = 0; i < designcodes.length; i++){
+for(var i = 0; i < designcodes.length; i++){
 
 
 inpcode = inpcode + '<div class="row">';
@@ -77,7 +81,7 @@ inpcode = inpcode + '<div class="col-md-4 multiple-add-cell">';
 inpcode = inpcode + 'Product<br />';
 inpcode = inpcode + '<select name="prod_chooser_'+i+'" id="prod_chooser_'+i+'" class="form-control" onchange="javascript:genButtonSizeDD('+"'"+'prod_chooser_'+i+"'"+', '+"'"+'size_chooser_cont_'+i+"'"+', '+"'"+'item_name_'+i+"'"+');">';
 inpcode = inpcode + '<option value="">Choose Product</option>';
-for(k = 0; k < allprodshortnames.length; k++){
+for(var k = 0; k < allprodshortnames.length; k++){
 inpcode = inpcode + '<option value="'+allprodshortnames[k]+'">'+allprodshortnames[k]+'</option>';
 }
 
@@ -128,20 +132,20 @@ $('#dialog_footer').html(inpcode);
 
 
 function changeAllSizes(totalelems){
-for(k = 0; k < totalelems; k++){
+for(var k = 0; k < totalelems; k++){
 $('#prod_chooser_'+k).val($('#main_prodchooser').val()).change();
 $('#item_name_'+k).val($('#main_sizechooser').val());
 }
 }
 
 function checkAllItems(totalelems){
-for(k = 0; k < totalelems; k++){
+for(var k = 0; k < totalelems; k++){
 $('#checked_'+k).prop('checked', $('#main_checkbox').prop('checked'));
 }
 }
 
 function changeAllQtys(totalelems){
-for(k = 0; k < totalelems; k++){
+for(var k = 0; k < totalelems; k++){
 $('#os0_'+k).val($('#main_qty').val());
 }
 }
@@ -158,12 +162,12 @@ function changeAllProds(inpval, totalelems){
 if($('#main_prodchooser').val() == "Standard Pin Back"){outputtext = "";outputtext = outputtext + '<select name="main_sizechooser"  id="main_sizechooser" class="form-control" onchange="javascript:changeAllSizes(34);">';outputtext = outputtext + '<option value="">Choose Size</option>';outputtext = outputtext + '<option value="1 inch round button with locking pin back">1 inch</option>';outputtext = outputtext + '<option value="1-1/2 inch round button with locking pin back">1.5 inch</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with locking pin back">2.25 inch</option>';outputtext = outputtext + '<option value="3 inch round button with locking pin back">3 inch</option>';outputtext = outputtext + '</select>';}if($('#main_prodchooser').val() == "Refrigerator Magnet"){outputtext = "";outputtext = outputtext + '<select name="main_sizechooser" id="main_sizechooser" class="form-control" onchange="javascript:changeAllSizes(34);">';outputtext = outputtext + '<option value="">Choose Size</option>';outputtext = outputtext + '<option value="1 inch round button with magnet back">1 inch</option>';outputtext = outputtext + '<option value="1-1/2 inch round button with magnet back">1.5 inch</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with magnet back">2.25 inch</option>';outputtext = outputtext + '<option value="3 inch round button with magnet back">3 inch</option>';outputtext = outputtext + '</select>';}if($('#main_prodchooser').val() == "Clothing Magnet"){outputtext = "";outputtext = outputtext + '<select name="main_sizechooser" id="main_sizechooser" class="form-control" onchange="javascript:changeAllSizes(34);">';outputtext = outputtext + '<option value="">Choose Size</option>';outputtext = outputtext + '<option value="1-1/2 inch round button with clothing magnet back">1.5 inch</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with clothing magnet back">2.25 inch</option>';outputtext = outputtext + '<option value="3 inch round button with clothing magnet back">3 inch</option>';outputtext = outputtext + '</select>';}if($('#main_prodchooser').val() == "Keychain"){outputtext = "";outputtext = outputtext + '<select name="main_sizechooser" id="main_sizechooser" class="form-control" onchange="javascript:changeAllSizes(34);">';outputtext = outputtext + '<option value="">Choose Size</option>';outputtext = outputtext + '<option value="1-1/2 inch round button with keychain back">1.5 inch</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with keychain back">2.25 inch</option>';outputtext = outputtext + '</select>';}if($('#main_prodchooser').val() == "Bottle Opener"){outputtext = "";outputtext = outputtext + '<select name="main_sizechooser" id="main_sizechooser"  class="form-control" onchange="javascript:changeAllSizes(34);">';outputtext = outputtext + '<option value="">Choose Size</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with bottle opener back">2.25 inch</option>';outputtext = outputtext + '</select>';}if($('#main_prodchooser').val() == "Mirror Back"){outputtext = "";outputtext = outputtext + '<select name="main_sizechooser" id="main_sizechooser" class="form-control" onchange="javascript:changeAllSizes(34);">';outputtext = outputtext + '<option value="">Choose Size</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with mirror back">2.25 inch</option>';outputtext = outputtext + '<option value="3 inch round button with mirror back">3 inch</option>';outputtext = outputtext + '</select>';}if($('#main_prodchooser').val() == "Clip Back"){outputtext = "";outputtext = outputtext + '<select name="main_sizechooser" id="main_sizechooser" class="form-control" onchange="javascript:changeAllSizes(34);">';outputtext = outputtext + '<option value="">Choose Size</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with clip back">2.25 inch</option>';outputtext = outputtext + '<option value="3 inch round button with clip back">3 inch</option>';outputtext = outputtext + '</select>';}if($('#main_prodchooser').val() == "Nothing on Back"){outputtext = "";outputtext = outputtext + '<select name="main_sizechooser" id="main_sizechooser" class="form-control" onchange="javascript:changeAllSizes(34);">';outputtext = outputtext + '<option value="">Choose Size</option>';outputtext = outputtext + '<option value="1 inch round button with nothing on back">1 inch</option>';outputtext = outputtext + '<option value="1-1/2 inch round button with nothing on back">1.5 inch</option>';outputtext = outputtext + '<option value="2-1/4 inch round button with nothing on back">2.25 inch</option>';outputtext = outputtext + '<option value="3 inch round button with nothing on back">3 inch</option>';outputtext = outputtext + '</select>';}
 */
 
-for(k = 0; k < allprodshortnames.length; k++){
+for(var k = 0; k < allprodshortnames.length; k++){
 if($('#main_prodchooser').val() == allprodshortnames[k]){
 outputtext = "";
 outputtext = outputtext + '<select name="main_sizechooser" id="main_sizechooser" class="form-control" onchange="javascript:changeAllSizes(' + totalelems + ');">';
 outputtext = outputtext + '<option value="">Choose a button size</option>';
-for(L = 0; L < allprodsizes[allprodshortnames[k]].length; L++){
+for(var L = 0; L < allprodsizes[allprodshortnames[k]].length; L++){
 outputtext = outputtext + '<option value="' + allproddescs[allprodshortnames[k]][L] + '">' + allprodsizes[allprodshortnames[k]][L] + '</option>';
 }//end for L
 outputtext = outputtext + '</select>';
@@ -181,7 +185,7 @@ outputtext = outputtext + '</select>';
 $('#main_sizechooser_cont').html(outputtext);
 
 
-for(k = 0; k < totalelems; k++){
+for(var k = 0; k < totalelems; k++){
 $('#prod_chooser_'+k).val(inpval);
 genButtonSizeDD("prod_chooser_"+k, "size_chooser_cont_"+k, "item_name_"+k);
 }
@@ -196,7 +200,7 @@ function checkMultipleForm(inpform, numelements){
 
 var anythingechecked = false;
 
-for(i=0; i<numelements; i++){
+for(var i=0; i<numelements; i++){
 
 if($('#checked_'+i).is(':checked')){
 

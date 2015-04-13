@@ -14,8 +14,8 @@ font-weight: bold;
 
 .carousel-caption h3 {
 font-weight: bold;
-font-size:64px;
-font-family: Bebas Neue, Century Gothic, Arial, Helvetica, Verdana, MS Serif, Serif;
+font-size:48px;
+font-family: Century Gothic, Arial, Helvetica, Verdana, MS Serif, Serif;
 text-shadow: 10px 5px 10px #000000;
 }
 
@@ -38,13 +38,13 @@ border-radius: 20px;
 	}
 
 	.carousel-caption {
-	top: 10px;
+	top: 0px;
 	}
 	
 	.carousel-caption h3 {
 font-weight: bold;
 font-size:32px;
-font-family: Bebas Neue, Century Gothic, Arial, Helvetica, Verdana, MS Serif, Serif;
+font-family: Century Gothic, Arial, Helvetica, Verdana, MS Serif, Serif;
 }
 
 }
