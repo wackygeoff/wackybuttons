@@ -16,7 +16,7 @@ designcodes[0] = "5097325";designcodes[1] = "5091829";designcodes[2] = "5091827"
 $('#dialog_title').html("Add multiple items to your cart");
 
 inpcode = '<div align="center" style="background-color:#ffffff;padding:5px;">';
-inpcode = inpcode + '<form name="frm_add_multiple" action="http://www.wackybuttons.com/shopcart.php" onsubmit="return checkMultipleForm(this, 34);" method="post" enctype="application/x-www-form-urlencoded" id="frm_add_multiple" target="cart" style="color:black;">';
+inpcode = inpcode + '<form name="frm_add_multiple" action="http://www.wackybuttons.com/shopcart.php" onsubmit="return checkMultipleForm(this, designcodes.length);" method="post" enctype="application/x-www-form-urlencoded" id="frm_add_multiple" target="cart" style="color:black;">';
 inpcode = inpcode + '<input type="hidden" name="operation" value="addmultipletocart" />';
 
 inpcode = inpcode + '<div class="container" style="max-width:550px;">';
@@ -31,11 +31,11 @@ inpcode = inpcode + '</div>';
 //--next row
 inpcode = inpcode + '<div class="row">';
 inpcode = inpcode + '<div class="col-md-2 multiple-add-cell">';
-inpcode = inpcode + 'Check All <br /><input type="checkbox" id="main_checkbox" onchange="javascript:checkAllItems(34);" />';
+inpcode = inpcode + 'Check All <br /><input type="checkbox" id="main_checkbox" onchange="javascript:checkAllItems(designcodes.length);" />';
 inpcode = inpcode + '</div>';//col-md-2
 
 inpcode = inpcode + '<div class="col-md-4 multiple-add-cell">';
-inpcode = inpcode + 'Product <br /><select name="main_prodchooser" id="main_prodchooser" class="form-control" onchange="javascript:changeAllProds(this.value, 34);">';
+inpcode = inpcode + 'Product <br /><select name="main_prodchooser" id="main_prodchooser" class="form-control" onchange="javascript:changeAllProds(this.value, designcodes.length);">';
 inpcode = inpcode + '<option value="">Choose Product</option>';
 for(var k = 0; k < allprodshortnames.length; k++){
 inpcode = inpcode + '<option value="'+allprodshortnames[k]+'">'+allprodshortnames[k]+'</option>';
@@ -46,14 +46,14 @@ inpcode = inpcode + '</div>';//col-md-4
 
 inpcode = inpcode + '<div class="col-md-4 multiple-add-cell">';
 inpcode = inpcode + 'Size <br /><div id="main_sizechooser_cont">';
-inpcode = inpcode + '<select name="main_sizechooser" id="main_sizechooser" class="form-control" disabled="disabled" onchange="javascript:changeAllSizes(34);">';
+inpcode = inpcode + '<select name="main_sizechooser" id="main_sizechooser" class="form-control" disabled="disabled" onchange="javascript:changeAllSizes(designcodes.length);">';
 inpcode = inpcode + '<option value="">Choose Size</option>';
 inpcode = inpcode + '</select>';
 inpcode = inpcode + '</div>';
 inpcode = inpcode + '</div>';//col-md-4
 
 inpcode = inpcode + '<div class="col-md-2 multiple-add-cell">';
-inpcode = inpcode + 'Quantity <br /><input type="text" name="main_qty" id="main_qty" class="form-control" style="max-width:100px;" maxlength="30" size="5" value="" onchange="changeAllQtys(34);" /><br /><a href="javascript:changeAllQtys(34);" style="color:blue;font-size:12px;">apply</a>';
+inpcode = inpcode + 'Quantity <br /><input type="text" name="main_qty" id="main_qty" class="form-control" style="max-width:100px;" maxlength="30" size="5" value="" onchange="changeAllQtys(designcodes.length);" /><br /><a href="javascript:changeAllQtys(designcodes.length);" style="color:blue;font-size:12px;">apply</a>';
 inpcode = inpcode + '</div>'; //col-md-2
 
 inpcode = inpcode + '</div>'; //row
@@ -177,7 +177,7 @@ outputtext = outputtext + '</select>';
 
 if($('#main_prodchooser').val() == ''){
 outputtext = "";
-outputtext = outputtext + '<select name="main_sizechooser" id="main_sizechooser" class="form-control" disabled="disabled" onchange="javascript:changeAllSizes(34);">';
+outputtext = outputtext + '<select name="main_sizechooser" id="main_sizechooser" class="form-control" disabled="disabled" onchange="javascript:changeAllSizes(designcodes.length);">';
 outputtext = outputtext + '<option value="">Choose Size</option>';
 outputtext = outputtext + '</select>';
 }

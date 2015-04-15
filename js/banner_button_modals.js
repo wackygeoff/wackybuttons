@@ -27,6 +27,7 @@ $('#dialog_footer').html(inpcode);
 function my_cart_window(){
 $('#dialog_title').html("Shopping Cart");
  //loads the contents of php output to the #dialog_content div
+$('#dialog_content').html("Loading Shipping Cart Details...");//show this in case load time takes long
 $('#dialog_content').load("./test_cart_php_output.txt");//replace with url to the proper php file
 inpcode = ' \
 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> \
