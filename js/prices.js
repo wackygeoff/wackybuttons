@@ -297,7 +297,9 @@ outputhtml = outputhtml + ' \
 $('#disp_pricecalc').html(outputhtml);
 
 //ajax in the country list
-$('#country_ddlist').load('country_dropdown_php_output.txt');
+$('#country_ddlist').load('country_dropdown_php_output.txt', function(response,status,xhr){
+$('#country_ddlist').prepend('<option value="United States of America">United States of America</option>');
+});
 }
 
 
