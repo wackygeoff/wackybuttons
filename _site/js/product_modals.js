@@ -329,7 +329,7 @@ inpcode = ' \
 $('#dialog_content').html(inpcode);
 inpcode = ' \
 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> \
-<a href="mailto:order@wackybuttons.com?Subject=I%20am%20interested%20in%20bag%20packaging&body=Please%20email%20information%20regarding%20your%20bag%20packaging%20products."><button type="button" class="btn btn-primary btn-wacky">Request Quote</button></a> \
+<a href="mailto:order@wackybuttons.com?Subject=I%20am%20interested%20in%20bag%20packaging&body=Please%20email%20information%20regarding%20your%20bag%20packaging%20products."><div type="button" class="btn btn-primary btn-wacky">Request Quote</div></a> \
 ';
 
 $('#dialog_footer').html(inpcode);
@@ -391,7 +391,7 @@ inpcode = ' \
 $('#dialog_content').html(inpcode);
 inpcode = ' \
 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> \
-<a href="mailto:order@wackybuttons.com?Subject=I%20am%20interested%20in%20pinned%20card%20packaging&body=Please%20email%20information%20regarding%20your%20pinned%20card%20packaging%20products."><button type="button" class="btn btn-primary btn-wacky">Request Quote</button></a> \
+<a href="mailto:order@wackybuttons.com?Subject=I%20am%20interested%20in%20pinned%20card%20packaging&body=Please%20email%20information%20regarding%20your%20pinned%20card%20packaging%20products."><div type="button" class="btn btn-primary btn-wacky">Request Quote</div></a> \
 ';
 
 $('#dialog_footer').html(inpcode);

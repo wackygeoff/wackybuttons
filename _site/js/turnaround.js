@@ -252,7 +252,7 @@ var worst = productiontime[document.timecalc.qty.value]['worst'];
 
 //-------conditions for how long it takes to produce--------------
 if(best == -1){
-error = 'Unable to determine turnaround time. <a href="contact.php">Contact us</a> directly for turnaround quotation.';
+error = 'Unable to determine turnaround time. <a href="http://www.wackybuttons.com/contact.php">Contact us</a> directly for turnaround quotation.';
 }
 //-------end conditions for how long it takes to produce--------------
 
