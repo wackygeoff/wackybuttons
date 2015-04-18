@@ -289,7 +289,7 @@ outputhtml = outputhtml + ' \
 </div> \
 <div id="zipcodefield">Destination Zipcode: <input type="text" name="zip" size="5" maxlength="5" /></div><br /> \
 <div id="defaultcountry">Country: United States of America<br /><a href="javascript:pc_show_countries();">Choose a different country</a><br /> <br /></div> \
-<input type="submit" value="Calculate Price" /> \
+<input type="submit" class="btn btn-default btn-wacky" value="Calculate Price" /> \
 </form> \
 <br /> <br /> \
 ';
@@ -297,7 +297,9 @@ outputhtml = outputhtml + ' \
 $('#disp_pricecalc').html(outputhtml);
 
 //ajax in the country list
-$('#country_ddlist').load('country_dropdown_php_output.txt');
+$('#country_ddlist').load('country_dropdown_php_output.txt', function(response,status,xhr){
+$('#country_ddlist').prepend('<option value="United States of America" selected="selected">United States of America</option>');
+});
 }
 
 
