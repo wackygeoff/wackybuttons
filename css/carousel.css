@@ -25,7 +25,6 @@ font-weight: bold;
 font-size:48px;
 font-family: Century Gothic, Arial, Helvetica, Verdana, MS Serif, Serif;
 
- 
    text-shadow:
        3px 3px 20px #000,
      -1px -1px 20px #000,  
@@ -69,13 +68,24 @@ box-shadow: 3px 3px 10px rgba(0, 0, 0, 1);
 	}
 
 	.carousel-caption {
-	top: 0px;
+	top: -10px;
 	}
 	
 	.carousel-caption h3 {
 font-weight: bold;
-font-size:32px;
+font-size:24px;
 font-family: Century Gothic, Arial, Helvetica, Verdana, MS Serif, Serif;
+   text-shadow:
+       3px 3px 20px #000,
+     -1px -1px 20px #000,  
+      1px -1px 20px #000,
+      -1px 1px 20px #000,
+       1px 1px 20px #000;
+}
+
+.carousel-caption-wacky p{
+font-size:16px;
+line-height:18px;
 }
 
 }

@@ -23,6 +23,18 @@ font-weight: bold;
 color: white;
 }
 
+.btn-wacky-big {
+background-color: #FD9A00;
+border-radius: 20px;
+font-size: 18px;
+font-family: Century Gothic, Arial, Helvetica, Verdana, MS Serif, Serif;
+font-weight: bold;
+color: white;
+-webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 1);
+-moz-box-shadow: 3px 3px 10px rgba(0, 0, 0, 1);
+box-shadow: 3px 3px 10px rgba(0, 0, 0, 1);
+}
+
 @media (min-width: 767px) {
 	.btn-wacky-lg {
 	margin-top: 24px;
