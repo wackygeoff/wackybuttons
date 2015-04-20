@@ -645,7 +645,9 @@ $('#timeleft_container').hide();
 //after the page is loaded initiate all the dropdowns and calculate turnaround time if someone were to pay right now
 window.addEventListener("load", function(){
 //set defaults
-$('#country_dd').load('country_dropdown_php_output.txt');
+$('#country_dd').load('country_dropdown_php_output.txt', function(response,status,xhr){
+$('#country_dd').prepend('<option value="United States of America" selected="selected">United States of America</option>');
+});
 $('#payment_types').html(payment_types_html());
 $('#qty_selection').html(qty_selections_html());
 $('#shipping').html(domestic_shipping_html());
