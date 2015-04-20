@@ -72,18 +72,21 @@ font-style: italic;
 font-size: 80px;
 text-align: center;
 margin: 20px;
+color: #333;
 }
 
 .create-icon {
 font-size: 50px;
 text-align: center;
 margin: 5px;
+color: #333;
 }
 
 .order-icon {
 font-size: 80px;
 text-align: center;
 margin: 5px;
+color: #333;
 }
 
 .responsive-table {
@@ -124,15 +127,19 @@ color: white;
 }
 
 .products img {
-opacity: 0.8;
+opacity: 0.7;
+/*
 -webkit-filter: grayscale(1);
 filter: grayscale(1);
+*/
 }
 
 .products img:hover {
 opacity: 1;
+/*
 -webkit-filter: grayscale(0);
 filter: grayscale(0);
+*/
 }
 
 .create-thumbnail{
