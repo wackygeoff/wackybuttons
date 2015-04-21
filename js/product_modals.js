@@ -10,7 +10,7 @@ inpcode = ' \
 				<div class="u-border-blue"> \
 					<table class="size-compare-table"> \
 						<tr><td><b>Size</b></td><td colspan="2"><b>Common Household Object</b></td></tr> \
-						<tr><td>2.25 inch</td><td><img src="{{ site.baseurl }}/img/products/sodacan.jpg"></td><td>top of a soda can</td></tr> \
+						<tr><td>2.25 inch</td><td><img src="http://www.wackybuttons.com/images/products/sodacan.jpg"></td><td>top of a soda can</td></tr> \
 					</table> \
 					<a href="http://www.wackybuttons.com/documents/products/wbcomparison.pdf"><img src="http://www.wackybuttons.com/images/products/pdfproduct.jpg" width="221" height="50" alt="Download and print this -Button Sizes (PDF)- to see exact button sizes." border="0" class="center-block" /></a> \
 				</div><!-- u-border-blue --> \
@@ -50,8 +50,8 @@ inpcode = ' \
 				<div class="u-border-blue"> \
 					<table class="size-compare-table"> \
 						<tr><td><b>Size</b></td><td colspan="2"><b>Common Household Object</b></td></tr> \
-						<tr><td>2.25 inch</td><td><img src="{{ site.baseurl }}/img/products/sodacan.jpg"></td><td>top of a soda can</td></tr> \
-						<tr><td>3 inch</td><td><img src="{{ site.baseurl }}/img/products/soupcan.jpg"></td><td>top of campbells chunky soup can</td></tr> \
+						<tr><td>2.25 inch</td><td><img src="http://www.wackybuttons.com/images/products/sodacan.jpg"></td><td>top of a soda can</td></tr> \
+						<tr><td>3 inch</td><td><img src="http://www.wackybuttons.com/images/products/soupcan.jpg"></td><td>top of campbells chunky soup can</td></tr> \
 					</table> \
 					<a href="http://www.wackybuttons.com/documents/products/wbcomparison.pdf"><img src="http://www.wackybuttons.com/images/products/pdfproduct.jpg" width="221" height="50" alt="Download and print this -Button Sizes (PDF)- to see exact button sizes." border="0" class="center-block" /></a> \
 				</div> \
@@ -86,9 +86,9 @@ inpcode = ' \
 				<div class="u-border-blue"> \
 					<table class="size-compare-table"> \
 						<tr><td><b>Size</b></td><td colspan="2"><b>Common Household Object</b></td></tr> \
-						<tr><td>1.5 inch</td><td><img src="{{ site.baseurl }}/img/products/milkcap.jpg"></td><td>gallon milk jug cap</td></tr> \
-						<tr><td>2.25 inch</td><td><img src="{{ site.baseurl }}/img/products/sodacan.jpg"></td><td>top of a soda can</td></tr> \
-						<tr><td>3 inch</td><td><img src="{{ site.baseurl }}/img/products/soupcan.jpg"></td><td>top of campbells chunky soup can</td></tr> \
+						<tr><td>1.5 inch</td><td><img src="http://www.wackybuttons.com/images/products/milkcap.jpg"></td><td>gallon milk jug cap</td></tr> \
+						<tr><td>2.25 inch</td><td><img src="http://www.wackybuttons.com/images/products/sodacan.jpg"></td><td>top of a soda can</td></tr> \
+						<tr><td>3 inch</td><td><img src="http://www.wackybuttons.com/images/products/soupcan.jpg"></td><td>top of campbells chunky soup can</td></tr> \
 					</table> \
 					<a href="http://www.wackybuttons.com/documents/products/wbcomparison.pdf"><img src="http://www.wackybuttons.com/images/products/pdfproduct.jpg" width="221" height="50" alt="Download and print this -Button Sizes (PDF)- to see exact button sizes." border="0" class="center-block" /></a> \
 				</div> \
@@ -125,8 +125,8 @@ inpcode = ' \
 				<div class="u-border-blue"> \
 					<table class="size-compare-table"> \
 						<tr><td><b>Size</b></td><td colspan="2"><b>Common Household Object</b></td></tr> \
-						<tr><td>2.25 inch</td><td><img src="{{ site.baseurl }}/img/products/sodacan.jpg"></td><td>top of a soda can</td></tr> \
-						<tr><td>3 inch</td><td><img src="{{ site.baseurl }}/img/products/soupcan.jpg"></td><td>top of campbells chunky soup can</td></tr> \
+						<tr><td>2.25 inch</td><td><img src="http://www.wackybuttons.com/images/products/sodacan.jpg"></td><td>top of a soda can</td></tr> \
+						<tr><td>3 inch</td><td><img src="http://www.wackybuttons.com/images/products/soupcan.jpg"></td><td>top of campbells chunky soup can</td></tr> \
 					</table> \
 					<a href="http://www.wackybuttons.com/documents/products/wbcomparison.pdf"><img src="http://www.wackybuttons.com/images/products/pdfproduct.jpg" width="221" height="50" alt="Download and print this -Button Sizes (PDF)- to see exact button sizes." border="0" class="center-block" /></a> \
 				</div><!-- u-border-blue --> \
@@ -163,10 +163,10 @@ inpcode = ' \
 				<div class="u-border-blue"> \
 					<table class="size-compare-table"> \
 						<tr><td><b>Size</b></td><td colspan="2"><b>Common Household Object</b></td></tr> \
-						<tr><td>1 inch</td><td><img src="{{ site.baseurl }}/img/products/quarter.jpg"></td><td>US quarter</td></tr> \
-						<tr><td>1.5 inch</td><td><img src="{{ site.baseurl }}/img/products/milkcap.jpg"></td><td>gallon milk jug cap</td></tr> \
-						<tr><td>2.25 inch</td><td><img src="{{ site.baseurl }}/img/products/sodacan.jpg"></td><td>top of a soda can</td></tr> \
-						<tr><td>3 inch</td><td><img src="{{ site.baseurl }}/img/products/soupcan.jpg"></td><td>top of campbells chunky soup can</td></tr> \
+						<tr><td>1 inch</td><td><img src="http://www.wackybuttons.com/images/products/quarter.jpg"></td><td>US quarter</td></tr> \
+						<tr><td>1.5 inch</td><td><img src="http://www.wackybuttons.com/images/products/milkcap.jpg"></td><td>gallon milk jug cap</td></tr> \
+						<tr><td>2.25 inch</td><td><img src="http://www.wackybuttons.com/images/products/sodacan.jpg"></td><td>top of a soda can</td></tr> \
+						<tr><td>3 inch</td><td><img src="http://www.wackybuttons.com/images/products/soupcan.jpg"></td><td>top of campbells chunky soup can</td></tr> \
 					</table> \
 					<a href="http://www.wackybuttons.com/documents/products/wbcomparison.pdf"><img src="http://www.wackybuttons.com/images/products/pdfproduct.jpg" width="221" height="50" alt="Download and print this -Button Sizes (PDF)- to see exact button sizes." border="0" class="center-block" /></a> \
 				</div><!-- u-border-blue --> \
@@ -203,10 +203,10 @@ inpcode = ' \
 				<div class="u-border-blue"> \
 					<table class="size-compare-table"> \
 						<tr><td><b>Size</b></td><td colspan="2"><b>Common Household Object</b></td></tr> \
-						<tr><td>1 inch</td><td><img src="{{ site.baseurl }}/img/products/quarter.jpg"></td><td>US quarter</td></tr> \
-						<tr><td>1.5 inch</td><td><img src="{{ site.baseurl }}/img/products/milkcap.jpg"></td><td>gallon milk jug cap</td></tr> \
-						<tr><td>2.25 inch</td><td><img src="{{ site.baseurl }}/img/products/sodacan.jpg"></td><td>top of a soda can</td></tr> \
-						<tr><td>3 inch</td><td><img src="{{ site.baseurl }}/img/products/soupcan.jpg"></td><td>top of campbells chunky soup can</td></tr> \
+						<tr><td>1 inch</td><td><img src="http://www.wackybuttons.com/images/products/quarter.jpg"></td><td>US quarter</td></tr> \
+						<tr><td>1.5 inch</td><td><img src="http://www.wackybuttons.com/images/products/milkcap.jpg"></td><td>gallon milk jug cap</td></tr> \
+						<tr><td>2.25 inch</td><td><img src="http://www.wackybuttons.com/images/products/sodacan.jpg"></td><td>top of a soda can</td></tr> \
+						<tr><td>3 inch</td><td><img src="http://www.wackybuttons.com/images/products/soupcan.jpg"></td><td>top of campbells chunky soup can</td></tr> \
 					</table> \
 					<a href="http://www.wackybuttons.com/documents/products/wbcomparison.pdf"><img src="http://www.wackybuttons.com/images/products/pdfproduct.jpg" width="221" height="50" alt="Download and print this -Button Sizes (PDF)- to see exact button sizes." border="0" class="center-block" /></a> \
 				</div><!-- u-border-blue --> \
@@ -244,10 +244,10 @@ inpcode = ' \
 				<div class="u-border-blue"> \
 					<table class="size-compare-table"> \
 						<tr><td><b>Size</b></td><td colspan="2"><b>Common Household Object</b></td></tr> \
-						<tr><td>1 inch</td><td><img src="{{ site.baseurl }}/img/products/quarter.jpg"></td><td>US quarter</td></tr> \
-						<tr><td>1.5 inch</td><td><img src="{{ site.baseurl }}/img/products/milkcap.jpg"></td><td>gallon milk jug cap</td></tr> \
-						<tr><td>2.25 inch</td><td><img src="{{ site.baseurl }}/img/products/sodacan.jpg"></td><td>top of a soda can</td></tr> \
-						<tr><td>3 inch</td><td><img src="{{ site.baseurl }}/img/products/soupcan.jpg"></td><td>top of campbells chunky soup can</td></tr> \
+						<tr><td>1 inch</td><td><img src="http://www.wackybuttons.com/images/products/quarter.jpg"></td><td>US quarter</td></tr> \
+						<tr><td>1.5 inch</td><td><img src="http://www.wackybuttons.com/images/products/milkcap.jpg"></td><td>gallon milk jug cap</td></tr> \
+						<tr><td>2.25 inch</td><td><img src="http://www.wackybuttons.com/images/products/sodacan.jpg"></td><td>top of a soda can</td></tr> \
+						<tr><td>3 inch</td><td><img src="http://www.wackybuttons.com/images/products/soupcan.jpg"></td><td>top of campbells chunky soup can</td></tr> \
 					</table> \
 					<a href="http://www.wackybuttons.com/documents/products/wbcomparison.pdf"><img src="http://www.wackybuttons.com/images/products/pdfproduct.jpg" width="221" height="50" alt="Download and print this -Button Sizes (PDF)- to see exact button sizes." border="0" class="center-block" /></a> \
 				</div><!-- u-border-blue --> \

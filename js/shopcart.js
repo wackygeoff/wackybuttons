@@ -13,11 +13,11 @@ $('#dialog_title').html("Email this cart");
 inpcode = '<form name="emailcart" method="post" action="http://www.wackybuttons.com/shopcart.php">';
 inpcode = inpcode + '<input type="hidden" name="operation" value="emailcart">';
 inpcode = inpcode + 'Email the contents of this cart to:<br /> <br />';
-inpcode = inpcode + 'Your Email Address:<br /><input type="text" name="email" value="" size="40" maxlength="200"><br />';
-inpcode = inpcode + 'Email Subject:<br /><input type="text" name="subject" value="" size="30" maxlength="200"><br />';
-inpcode = inpcode + 'Message:<br /><textarea cols="30" rows="5" name="message"></textarea><br /> <br />';
+inpcode = inpcode + 'Your Email Address:<br /><input type="text" class="form-control med-field" name="email" value="" size="40" maxlength="200"><br />';
+inpcode = inpcode + 'Email Subject:<br /><input type="text" class="form-control med-field" name="subject" value="" size="30" maxlength="200"><br />';
+inpcode = inpcode + 'Message:<br /><textarea cols="30" class="form-control" rows="5" name="message"></textarea><br /> <br />';
 inpcode = inpcode + 'Check this box if you also want to send this information to Wacky Buttons, Inc. Customer Service for help? <input type="checkbox" name="wackyservice" value="yes"><br />';
-inpcode = inpcode + '<br /><input type="submit" name="submit" value="Email Cart"><br />';
+inpcode = inpcode + '<br /><input type="submit" class="btn btn-default btn-wacky" name="submit" value="Email Your Cart"><br />';
 inpcode = inpcode + '</form>';
 
 $('#dialog_content').html(inpcode);
