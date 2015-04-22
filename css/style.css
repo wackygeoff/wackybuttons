@@ -147,6 +147,7 @@ height:265px;
 max-width: 250px;
 margin-left:auto;
 margin-right:auto;
+/*opacity:0.85;*/
 }
 
 .order-thumbnail{
@@ -154,12 +155,14 @@ height:245px;
 max-width: 250px;
 margin-left:auto;
 margin-right:auto;
+
 }
 
 .product-thumbnail{
 max-width: 225px;
 margin-left:auto;
 margin-right:auto;
+
 }
 
 /***** Utilities *****/
