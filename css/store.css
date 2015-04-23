@@ -78,14 +78,15 @@ border:0;
 
 .store-submenu-item{
 padding-top:10px;
-padding-left:20px;
+padding-left:30px;
 padding-right:10px;
 padding-bottom:10px;
+background-color:#ffedd2;
 }
 
 .store-submenu-item:hover{
 padding-top:10px;
-padding-left:20px;
+padding-left:30px;
 padding-right:10px;
 padding-bottom:10px;
 background-color:#eeeeee;
@@ -95,6 +96,7 @@ text-decoration:none;
 .store-item-selected{
 font-weight:bold;
 }
+
 
 .no-gutter [class*="-4"] {
     padding-left:0;
